@@ -1,0 +1,4 @@
+sku,title,description,image_url,brand,category
+DEMO-001,Air Filter 16x25x1,"replaces old sku 16-25-1 see sheet",https://example.com/images/f1.jpg,AcmeCo,HVAC
+DEMO-002,bolt M8,"M8 bolt zinc",,Northline,Hardware
+DEMO-003,Compressor 5 ton,Compressor 5TON R410A,,Veldt,HVAC
