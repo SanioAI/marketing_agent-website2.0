@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { ButtonLink } from "@/components/landing/buttons";
 import { Container } from "@/components/ui/Container";
@@ -41,34 +42,6 @@ const capabilities = [
   "Support vendor feeds, PDFs, spreadsheets, images, and unstructured text",
   "Produce exports with confidence indicators and structured evidence",
   "Deploy alongside your existing PIM—no rip and replace",
-] as const;
-
-const workflow = [
-  {
-    step: "01",
-    t: "Ingest raw feeds",
-    d: "Connect vendor feeds, PDFs, spreadsheets, and images. The agent ingests everything without manual preprocessing.",
-  },
-  {
-    step: "02",
-    t: "Evaluate and score",
-    d: "Each product is evaluated for correctness, completeness, and channel readiness. Every issue gets a confidence score and a reason.",
-  },
-  {
-    step: "03",
-    t: "Correct automatically",
-    d: "Taxonomy, attributes, brand normalization, and duplicate collapse—fixed in place, with structured reasoning behind every change.",
-  },
-  {
-    step: "04",
-    t: "Escalate ambiguity",
-    d: "Genuinely ambiguous cases surface in a human-review queue with context and a suggested resolution—not a raw flag.",
-  },
-  {
-    step: "05",
-    t: "Export to your stack",
-    d: "Deliver clean catalog data to your PIM, channels, or downstream systems in XLSX, CSV, or JSON—with before/after diffs.",
-  },
 ] as const;
 
 const kpis = [
@@ -122,13 +95,104 @@ export default function EcommerceAgentsPage() {
         title="Enrich, trust, and syndicate your catalog."
         description="AI agents that continuously evaluate, correct, and enhance product catalogs using structured reasoning—not one-time enrichment."
       >
-        <ButtonLink href="/try-it" variant="primaryLg">
-          See it on real data
-        </ButtonLink>
-        <ButtonLink href="/about#contact" variant="secondaryLg">
+        <ButtonLink href="#contact" variant="primaryLg">
           Book a demo
         </ButtonLink>
+        <ButtonLink href="#how-it-works" variant="secondaryLg">
+          See how it works
+        </ButtonLink>
       </PageHero>
+
+      {/* Hero visual — enrichment mind-map */}
+      <section className="border-t border-slate-200/60 bg-white py-14 sm:py-20">
+        <Container>
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="section-kicker mx-auto mb-4">
+                <span className="dot" aria-hidden />
+                What it does
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                From fragmented inputs to structured catalog data
+              </h2>
+              <p className="mt-3 text-slate-600">
+                The agent ingests PDFs, feeds, and unstructured text—then produces a verified, enriched product record with taxonomy, attributes, and confidence scores.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl shadow-2xl shadow-slate-900/15">
+              <Image
+                src="/images/enrichment-mindmap-dark.png"
+                alt="Catalog Agent enriching an ABS Wheel Speed Sensor from OEM PDFs, supplier feeds, and unstructured text into structured product data with taxonomy"
+                width={1200}
+                height={675}
+                className="w-full"
+                priority
+              />
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Before / After transformation */}
+      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="before-after">
+        <Container>
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="section-kicker mx-auto mb-4">
+                <span className="dot" aria-hidden />
+                The transformation
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                From manual chaos to AI-driven accuracy
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Same product. Completely different catalog record—corrected, classified, and ready for every channel.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Full iPhone before/after */}
+          <Reveal delay={0.08}>
+            <div className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-3xl border border-slate-200/70 bg-white shadow-2xl shadow-slate-900/10">
+              <Image
+                src="/images/before-after-iphone.png"
+                alt="Before and after: manual product intake process on the left versus AI-driven automated enrichment on the right, with iPhone 17 Pro as the example product"
+                width={1200}
+                height={800}
+                className="w-full"
+              />
+            </div>
+          </Reveal>
+
+          {/* Side-by-side before/after lists */}
+          <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
+            <Reveal delay={0.04}>
+              <div className="overflow-hidden rounded-2xl border border-slate-200/70 bg-white shadow-sm">
+                <Image
+                  src="/images/before-list.png"
+                  alt="Before: Human-driven process — Manual Product Intake, Human Attribute Review, Manual Attribute Correction, Human Taxonomy Mapping, Reactive Fixes Loop"
+                  width={600}
+                  height={500}
+                  className="w-full"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <div className="overflow-hidden rounded-2xl border border-blue-100/70 bg-white shadow-sm">
+                <Image
+                  src="/images/after-list.png"
+                  alt="After: AI-Driven Automation — Automated Product Ingestion, Attribute Extraction, Attribute Standardization, Schema Validation, Continuous Monitoring"
+                  width={600}
+                  height={500}
+                  className="w-full"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
 
       {/* Problems */}
       <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="problems">
@@ -161,34 +225,44 @@ export default function EcommerceAgentsPage() {
         </Container>
       </section>
 
-      {/* Capabilities */}
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="capabilities">
+      {/* How it works — workflow diagram */}
+      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="how-it-works">
         <Container>
-          <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-start">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="section-kicker mx-auto mb-4">
+                <span className="dot" aria-hidden />
+                How it works
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                From raw feed to verified outcomes
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Raw data flows in. The Catalog Agent coordinates enrichment, taxonomy, pricing, and compliance—then delivers verified outcomes your team can act on.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* Enrichment detail */}
+      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="enrichment">
+        <Container>
+          <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-center">
             <Reveal>
               <div>
                 <p className="section-kicker mb-4">
                   <span className="dot" aria-hidden />
-                  What Catalog Agents do
+                  Enrichment in depth
                 </p>
                 <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                  Continuous evaluation, not one-time cleanup
+                  Every product. Every input. Structured output.
                 </h2>
                 <p className="mt-4 text-pretty text-slate-600 sm:text-lg">
-                  Catalog Agents are the foundation. They run continuously, not on a schedule—so your catalog improves with every new feed, not just during a migration sprint.
+                  The agent pulls from OEM technical sheets, aftermarket feeds, unstructured service notes, and inconsistent brand names—reconciling them into a single verified product record.
                 </p>
-                <p className="mt-4 text-sm text-slate-500">
-                  Catalog Agents sit upstream of your PIM. Nothing gets ripped out.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.06}>
-              <div className="card p-7">
-                <p className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                  Capabilities
-                </p>
-                <ul className="mt-5 space-y-2.5 text-sm text-slate-700">
-                  {capabilities.map((b) => (
+                <ul className="mt-6 space-y-2.5 text-sm text-slate-700">
+                  {capabilities.slice(0, 5).map((b) => (
                     <li key={b} className="flex gap-2.5">
                       <span
                         className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
@@ -200,38 +274,17 @@ export default function EcommerceAgentsPage() {
                 </ul>
               </div>
             </Reveal>
-          </div>
-        </Container>
-      </section>
-
-      {/* Workflow */}
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="workflow">
-        <Container>
-          <Reveal>
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="section-kicker mx-auto mb-4">
-                <span className="dot" aria-hidden />
-                How it works
-              </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                From raw feed to channel-ready catalog
-              </h2>
-            </div>
-          </Reveal>
-          <div className="mx-auto mt-10 max-w-3xl space-y-4">
-            {workflow.map((w, i) => (
-              <Reveal key={w.step} delay={0.04 * i}>
-                <div className="card-soft flex gap-5 p-6">
-                  <p className="font-display text-2xl font-semibold text-slate-200 shrink-0 leading-none pt-0.5">
-                    {w.step}
-                  </p>
-                  <div>
-                    <p className="text-base font-semibold text-slate-900">{w.t}</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{w.d}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+            <Reveal delay={0.06}>
+              <div className="overflow-hidden rounded-2xl shadow-xl shadow-slate-900/10">
+                <Image
+                  src="/images/enrichment-detail.png"
+                  alt="ABS Wheel Speed Sensor enrichment: inputs (OEM PDF, aftermarket feed, unstructured text, inconsistent brand names) flowing through Paladio agent to structured output with taxonomy and normalized brands"
+                  width={700}
+                  height={600}
+                  className="w-full"
+                />
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>
@@ -297,51 +350,8 @@ export default function EcommerceAgentsPage() {
         </Container>
       </section>
 
-      {/* Trust */}
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="trust">
-        <Container>
-          <Reveal>
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="section-kicker mx-auto mb-4">
-                <span className="dot" aria-hidden />
-                Trust, verification, safety
-              </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                Built for real catalogs, not sandbox demos
-              </h2>
-              <p className="mt-3 text-slate-600">
-                Every output is designed to be reviewed, audited, and shipped.
-              </p>
-            </div>
-          </Reveal>
-          <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
-            {[
-              {
-                t: "Evaluated against real inputs",
-                p: "Not best effort—measured against your data and standards.",
-              },
-              {
-                t: "Corrected with structured reasoning",
-                p: "Clear structure, not just prose. Better reliability on edge cases.",
-              },
-              {
-                t: "Confidence + explainability",
-                p: "Confidence indicators, evidence, and escalation for anything ambiguous.",
-              },
-            ].map((x, i) => (
-              <Reveal key={x.t} delay={0.04 * i}>
-                <div className="card-soft h-full p-6">
-                  <p className="text-base font-semibold text-slate-900">{x.t}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{x.p}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* FAQs */}
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="faqs">
+      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="faqs">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -375,7 +385,7 @@ export default function EcommerceAgentsPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="contact">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -386,11 +396,11 @@ export default function EcommerceAgentsPage() {
                 Not more cleanup tools.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-                <ButtonLink href="/try-it" variant="primaryLg">
-                  See it on real data
-                </ButtonLink>
-                <ButtonLink href="/about#contact" variant="secondaryLg">
+                <ButtonLink href="/#contact" variant="primaryLg">
                   Book a demo
+                </ButtonLink>
+                <ButtonLink href="/agents/aec" variant="secondaryLg">
+                  Explore AEC Agents →
                 </ButtonLink>
               </div>
             </div>

@@ -27,12 +27,6 @@ function GlowOrbs() {
         animate={!reduce && visible ? { opacity: 0.5, scale: 1.06 } : { opacity: 0.18, scale: 1 }}
         transition={{ duration: 1.3 }}
       />
-      <motion.div
-        className="absolute right-1/3 bottom-10 h-40 w-40 rounded-full bg-[#38bdf8]/12 blur-2xl"
-        initial={false}
-        animate={!reduce && visible ? { opacity: 0.4 } : { opacity: 0 }}
-        transition={{ duration: 1.4 }}
-      />
     </div>
   );
 }
@@ -49,34 +43,35 @@ export function FinalCta() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-medium text-white/80">
               <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]" />
-              One week. One sprint. One working agent.
+              Built fast. In production.
             </p>
             <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-              Your catalog, always accurate.{" "}
+              Your first AI agent, live.{" "}
               <span className="bg-gradient-to-r from-[#38bdf8] to-[#93c5fd] bg-clip-text text-transparent">
-                Automatically.
+                Fast.
               </span>
             </h2>
             <p className="mt-4 text-pretty text-white/70 sm:text-lg">
-              Start with a focused pilot. We deliver structured outputs, before/after
-              exports, and clear review workflows your team can act on—in days, not months.
+              Start with a focused pilot. We scope, build, evaluate, and deploy
+              your first agent — with structured outputs, confidence indicators,
+              and review workflows your team can act on from day one.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <a
                 href="#contact"
                 className="inline-flex h-12 min-w-[200px] items-center justify-center rounded-2xl bg-white px-6 text-[15px] font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100 active:scale-[0.99]"
               >
-                Book a demo
+                Book a pilot
               </a>
               <a
-                href="/try-it"
+                href="/products"
                 className="inline-flex h-12 min-w-[160px] items-center justify-center rounded-2xl border border-white/20 bg-white/8 px-6 text-[15px] font-medium text-white transition hover:bg-white/15"
               >
-                Try it free →
+                Explore the platform →
               </a>
             </div>
             <p className="mt-5 text-sm text-white/40">
-              No lock-in. If the agent doesn't perform, you don't pay.
+              No lock-in. If the agent doesn&apos;t perform, you don&apos;t pay.
             </p>
           </div>
         </Reveal>

@@ -12,15 +12,17 @@ export const metadata = {
 const caseStudies = [
   {
     t: "Voomi Supply",
-    p: "How Paladio helped turn messy product inputs into structured, reviewable outputs—ready for downstream catalog workflows.",
+    p: "How Catalog Agents turned messy HVAC supplier feeds into structured, marketplace-ready product data — 75% faster publishing, 70% lower cost per product.",
     status: "Case study" as const,
-    href: "/case-studies/paladio_voomi_case_study_FINAL.pdf",
+    kpis: ["75% faster publishing", "70% lower cost/product", "300M+ listings matched"],
+    href: "/resources/case-studies/voomi",
   },
   {
     t: "Profitero",
-    p: "A practical look at deploying agent workflows with measurable operational wins—without sacrificing governance or reviewability.",
+    p: "A five-layer identity resolution system that achieved 80%+ automated accuracy across 300+ client datasets and 1,000+ dataset scalability.",
     status: "Case study" as const,
-    href: "/case-studies/paladio_profitero_case_study_FINAL.pdf",
+    kpis: ["80%+ automated accuracy", "1,000+ dataset scale", "300+ client datasets"],
+    href: "/resources/case-studies/profitero",
   },
 ] as const;
 
@@ -52,11 +54,9 @@ export default function ResourcesPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {caseStudies.map((x, i) => (
               <Reveal key={x.t} delay={0.04 * i}>
-                <a
-                  className="card card-hover flex h-full flex-col p-7"
+                <Link
+                  className="card card-hover group flex h-full flex-col p-7"
                   href={x.href}
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <p className="text-lg font-semibold text-slate-900">{x.t}</p>
@@ -65,8 +65,15 @@ export default function ResourcesPage() {
                     </span>
                   </div>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{x.p}</p>
-                  <p className="mt-5 text-sm font-medium text-blue-700">Download PDF →</p>
-                </a>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {x.kpis.map((k) => (
+                      <span key={k} className="rounded-full border border-slate-200/80 bg-slate-50 px-2.5 py-0.5 text-[11px] font-medium text-slate-600">
+                        {k}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm font-medium text-blue-700 group-hover:gap-2">Read case study →</p>
+                </Link>
               </Reveal>
             ))}
           </div>

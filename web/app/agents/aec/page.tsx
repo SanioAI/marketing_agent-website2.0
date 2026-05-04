@@ -237,7 +237,7 @@ export default function AecAgentsPage() {
                 Ready to cut your preconstruction cycle?
               </h2>
               <p className="mt-3 text-slate-600">
-                AEC Agents are in early access. Share your drawing sets and we'll show you what the agent finds.
+                AEC Agents are in early access. Share your drawing sets and we&apos;ll show you what the agent finds.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <ButtonLink href="/try-it" variant="primaryLg">

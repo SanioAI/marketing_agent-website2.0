@@ -15,8 +15,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
-  /** Smaller Docker images and faster cold starts when self-hosting */
-  output: "standalone",
+  /**
+   * `standalone` is for Docker/VM deploys. Vercel uses its own output layout;
+   * forcing standalone there can break or confuse the build.
+   */
+  ...(process.env.VERCEL ? {} : { output: "standalone" as const }),
   async headers() {
     return [
       {

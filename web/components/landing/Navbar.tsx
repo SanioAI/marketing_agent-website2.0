@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/landing/buttons";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { href: "/products", label: "Products" },
@@ -42,16 +43,16 @@ export function Navbar() {
         animate={{ y: 0 }}
       >
         <Container className="flex h-16 items-center justify-between gap-6">
-          <a
-            href="#"
-            className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-slate-900"
-          >
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-r from-[#2563eb] via-[#0284c7] to-[#0ea5e9] text-white text-xs font-bold shadow-sm shadow-blue-900/15">
-              P
-            </span>
-            Paladio.ai
-            <span className="hidden text-slate-400 sm:inline">AI Agents</span>
-          </a>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/paladio-logo.png"
+              alt="Paladio.ai"
+              width={140}
+              height={40}
+              priority
+              className="h-12 w-auto"
+            />
+          </Link>
           <nav
             className="hidden items-center gap-1 md:flex"
             aria-label="Primary"

@@ -64,8 +64,8 @@ export function BeforeAfter() {
             <div className="relative mx-auto w-full max-w-5xl p-3 sm:p-5">
               <div className="relative aspect-[1024/552] w-full overflow-hidden rounded-2xl">
               <Image
-                src="/images/before-after.png"
-                alt="Before and after catalog enrichment: agent working to standardize attributes, correct classification, and raise confidence"
+                src="/images/before-after-iphone.png"
+                alt="Before and after catalog enrichment: manual product intake on the left versus AI-driven automation on the right, showing iPhone 17 Pro enriched with standardized attributes, correct classification, and high confidence"
                 fill
                 className="object-contain"
                 sizes="(min-width: 1024px) 1024px, 100vw"

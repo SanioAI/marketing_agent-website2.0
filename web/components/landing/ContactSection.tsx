@@ -8,6 +8,7 @@ export function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -50,7 +51,7 @@ export function ContactSection() {
                     const res = await fetch("/api/contact", {
                       method: "POST",
                       headers: { "content-type": "application/json" },
-                      body: JSON.stringify({ name, email, phone }),
+                      body: JSON.stringify({ name, email, phone, company }),
                     });
                     if (!res.ok) {
                       const data = (await res.json().catch(() => null)) as { error?: string } | null;
@@ -65,7 +66,7 @@ export function ContactSection() {
                 className="space-y-4"
               >
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="sm:col-span-1">
+                  <div>
                     <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
                       Name
                     </label>
@@ -78,7 +79,22 @@ export function ContactSection() {
                       autoComplete="name"
                     />
                   </div>
-                  <div className="sm:col-span-1">
+                  <div>
+                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
+                      Company
+                    </label>
+                    <input
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                      disabled={status === "sending" || status === "sent"}
+                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      placeholder="Your company"
+                      autoComplete="organization"
+                    />
+                  </div>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
                     <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
                       Email
                     </label>
@@ -93,20 +109,20 @@ export function ContactSection() {
                       required
                     />
                   </div>
-                </div>
-                <div>
-                  <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                    Phone (optional)
-                  </label>
-                  <input
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    disabled={status === "sending" || status === "sent"}
-                    className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                    placeholder="+1 (555) 000-0000"
-                    autoComplete="tel"
-                    inputMode="tel"
-                  />
+                  <div>
+                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
+                      Phone (optional)
+                    </label>
+                    <input
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      disabled={status === "sending" || status === "sent"}
+                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      placeholder="+1 (555) 000-0000"
+                      autoComplete="tel"
+                      inputMode="tel"
+                    />
+                  </div>
                 </div>
                 <div className="pt-2">
                   <button
