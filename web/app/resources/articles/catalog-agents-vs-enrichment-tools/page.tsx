@@ -125,7 +125,7 @@ export default function ArticlePage() {
                 Evaluation loops, scoped autonomy, measurable quality
               </h2>
               <p className="leading-relaxed">
-                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/agents/ecommerce" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog agents
                 </Link>{" "}
                 don&apos;t close when the SOW closes. They run
@@ -186,15 +186,15 @@ export default function ArticlePage() {
               <p className="mt-4 leading-relaxed">
                 The model that works: use enrichment for the initial attribute
                 fill, then deploy{" "}
-                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/agents/ecommerce" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   catalog agents
                 </Link>{" "}
                 to maintain correctness as the catalog grows. Use{" "}
-                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/catalog-readiness" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog Readiness
                 </Link>{" "}
                 to benchmark where you stand before and after, and{" "}
-                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/product-intelligence" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Product Intelligence
                 </Link>{" "}
                 to track ongoing quality over time.

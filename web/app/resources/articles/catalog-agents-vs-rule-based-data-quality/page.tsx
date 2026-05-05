@@ -127,7 +127,7 @@ export default function ArticlePage() {
                 Scoped autonomy at the semantic layer
               </h2>
               <p className="leading-relaxed">
-                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/agents/ecommerce" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog agents
                 </Link>{" "}
                 operate at the layer rules can&apos;t reach: semantic
@@ -198,11 +198,11 @@ export default function ArticlePage() {
                 alignment as supplier-contributed browse paths drifted over
                 time. Rules enforced the structure; agents maintained the
                 semantic correctness. Use{" "}
-                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/catalog-readiness" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog Readiness
                 </Link>{" "}
                 to benchmark your rule coverage gaps before deploying agents, and{" "}
-                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/product-intelligence" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Product Intelligence
                 </Link>{" "}
                 to track quality improvement over time.

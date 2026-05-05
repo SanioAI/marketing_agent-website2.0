@@ -69,7 +69,7 @@ export default function ArticlePage() {
                 Matching, and Compliance — with visible inputs, structured diffs,
                 and confidence indicators at every stage. These are the same
                 agents that make up the{" "}
-                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/agents/ecommerce" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog Agent suite
                 </Link>
                 {" "}running in production today.
@@ -243,13 +243,13 @@ export default function ArticlePage() {
               </p>
               <p className="mt-4 leading-relaxed">
                 Before running a pilot, it&apos;s worth running a{" "}
-                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/catalog-readiness" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Catalog Readiness
                 </Link>{" "}
                 assessment — it surfaces the exact defect categories in your
                 catalog so the pilot focuses on the highest-impact SKU slice.
                 After deployment,{" "}
-                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                <Link href="/platform/product-intelligence" className="bg-blue-50 text-blue-700 rounded px-1 py-0.5 hover:bg-blue-100 transition-colors">
                   Product Intelligence
                 </Link>{" "}
                 tracks ongoing quality improvement against baseline.
