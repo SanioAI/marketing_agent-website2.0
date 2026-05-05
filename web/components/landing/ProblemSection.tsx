@@ -4,23 +4,20 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 
-const pain = [
-  {
-    t: "AI projects stall before reaching production",
-    d: "Most proofs-of-concept die in R&D. The infrastructure to evaluate, review, and ship AI reliably is missing.",
-  },
-  {
-    t: "Every new domain means rebuilding from scratch",
-    d: "Teams re-solve the same orchestration, evaluation, and HITL problems for every new use case. That overhead compounds.",
-  },
-  {
-    t: "No structured way to evaluate AI outputs",
-    d: "Without a systematic evaluation layer, you can't know if the agent is actually working — or quietly making things worse.",
-  },
-  {
-    t: "Teams can't review or audit what the AI changed",
-    d: "Black-box outputs block adoption. When stakeholders can't see the reasoning, nothing gets approved.",
-  },
+const before = [
+  "Manual cleanup that repeats every cycle",
+  "Reactive fixes after feed rejections",
+  "Taxonomy errors caught downstream",
+  "Brand duplicates causing catalog bloat",
+  "Missing attributes discovered at publish",
+];
+
+const after = [
+  "Continuously evaluate product correctness and completeness",
+  "Fix taxonomy, attributes, and structure automatically",
+  "Flag ambiguity and escalate only when needed",
+  "Normalize brands and resolve duplicates",
+  "Enhance raw inputs into human-readable product understanding",
 ];
 
 export function ProblemSection() {
@@ -32,45 +29,85 @@ export function ProblemSection() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="section-kicker mx-auto mb-4">
               <span className="dot" aria-hidden />
-              Why It Matters
+              How Catalog Operations Change
             </p>
             <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              The infrastructure gap between AI demos and production
+              From reactive cleanup to continuous evaluation
             </h2>
             <p className="mt-3 text-slate-600">
-              Building an AI agent is the easy part. Deploying one that teams actually trust and use is where most projects fail.
+              This is production infrastructure, not experimental AI. Catalog
+              Agents run continuously — so your team ships faster instead of
+              cleaning up the same problems on repeat.
             </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
-          {pain.map((p, i) => (
-            <motion.div
-              key={p.t}
-              initial={reduce ? false : { opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
-              whileHover={{ y: -3, transition: { duration: 0.18, ease: "easeOut" } }}
-              className="card card-hover group relative h-full overflow-hidden p-6"
-            >
-              {/* Subtle hover glow */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(400px_200px_at_0%_0%,rgba(37,99,235,0.06),transparent)]" />
 
-              <div className="relative">
-                <motion.div
-                  className="mb-3 flex h-7 w-7 items-center justify-center rounded-lg border border-blue-200/70 bg-blue-50/60 text-xs font-bold text-blue-700"
-                  initial={reduce ? false : { scale: 0.6, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
+        <div className="mt-12 grid gap-4 lg:grid-cols-2">
+          {/* Before */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            className="rounded-2xl border border-red-100 bg-red-50/40 p-7"
+          >
+            <div className="mb-5 flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">
+                ✕
+              </span>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-red-600">
+                Manual Cleanup &amp; Reactive Fixes
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              {before.map((b, i) => (
+                <motion.li
+                  key={b}
+                  className="flex items-start gap-3 text-sm text-slate-600"
+                  initial={reduce ? false : { opacity: 0, x: -8 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: i * 0.08 + 0.2, ease: [0.34, 1.56, 0.64, 1] }}
+                  transition={{ duration: 0.3, delay: i * 0.07 }}
                 >
-                  {i + 1}
-                </motion.div>
-                <h3 className="text-base font-semibold text-slate-900">{p.t}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{p.d}</p>
-              </div>
-            </motion.div>
-          ))}
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-300" aria-hidden />
+                  {b}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* After */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="rounded-2xl border border-emerald-100 bg-emerald-50/40 p-7"
+          >
+            <div className="mb-5 flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-600">
+                ✓
+              </span>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-700">
+                Continuous Evaluation with Catalog Agents
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              {after.map((a, i) => (
+                <motion.li
+                  key={a}
+                  className="flex items-start gap-3 text-sm text-slate-700"
+                  initial={reduce ? false : { opacity: 0, x: 8 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: i * 0.07 + 0.1 }}
+                >
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" aria-hidden />
+                  {a}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </Container>
     </section>

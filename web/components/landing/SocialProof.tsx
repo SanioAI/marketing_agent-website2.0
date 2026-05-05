@@ -6,10 +6,10 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 
 const metrics = [
-  { k: 85, suffix: "%", v: "faster catalog enrichment" },
-  { k: 94, suffix: "%", v: "reduction in manual cleanup" },
-  { k: 75, suffix: "%", v: "fewer downstream errors" },
-  { k: 84, suffix: "%", v: "edge cases resolved automatically" },
+  { k: 85, suffix: "%", v: "faster catalog enrichment", sub: "Products go live in hours, not weeks." },
+  { k: 94, suffix: "%", v: "reduction in manual cleanup", sub: "No more fixing the same issues repeatedly." },
+  { k: 75, suffix: "%", v: "fewer downstream errors", sub: "Fewer feed rejections, returns, and compliance issues." },
+  { k: 84, suffix: "%", v: "edge cases resolved automatically", sub: "Handles missing fields and noisy inputs at scale." },
 ];
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
@@ -54,7 +54,8 @@ export function SocialProof() {
               <p className="font-display text-3xl font-semibold text-slate-900">
                 <Counter target={m.k} suffix={m.suffix} />
               </p>
-              <p className="mt-1 text-sm text-slate-500">{m.v}</p>
+              <p className="mt-1 text-sm font-medium text-slate-700">{m.v}</p>
+              <p className="mt-1 text-xs text-slate-400">{m.sub}</p>
             </motion.div>
           ))}
         </div>

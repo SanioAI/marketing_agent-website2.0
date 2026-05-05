@@ -44,16 +44,16 @@ export function Hero() {
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-white/70 px-3 py-1 text-xs font-medium text-blue-900 shadow-sm shadow-blue-900/5"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]" />
-              Production AI agents · Not experimental pilots
+              Get Ready For Agentic Commerce
             </motion.p>
 
             <motion.h1
               variants={reduce ? undefined : item}
               className="font-display text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem]"
             >
-              Ship AI agents in weeks.{" "}
+              Enrich, Trust &amp; Syndicate{" "}
               <span className="bg-gradient-to-r from-[#2563eb] via-[#0284c7] to-[#0ea5e9] bg-clip-text text-transparent">
-                For any domain.
+                Your Catalog.
               </span>
             </motion.h1>
 
@@ -61,9 +61,9 @@ export function Hero() {
               variants={reduce ? undefined : item}
               className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-slate-600 sm:text-[17px]"
             >
-              Paladio.ai is the platform that builds, evaluates, and deploys
-              domain-specific AI agents at production speed — from first spec
-              to live system, fast.
+              AI agents that continuously evaluate, correct, and enhance your
+              product catalog using structured reasoning — not one-time
+              enrichment. Products go live in hours, not weeks.
             </motion.p>
 
             <motion.div

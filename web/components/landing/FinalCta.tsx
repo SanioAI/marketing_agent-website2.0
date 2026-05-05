@@ -46,15 +46,15 @@ export function FinalCta() {
               Built fast. In production.
             </p>
             <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl">
-              Your first AI agent, live.{" "}
+              If you want catalogs your team can trust,{" "}
               <span className="bg-gradient-to-r from-[#38bdf8] to-[#93c5fd] bg-clip-text text-transparent">
-                Fast.
+                you need continuous evaluation.
               </span>
             </h2>
             <p className="mt-4 text-pretty text-white/70 sm:text-lg">
-              Start with a focused pilot. We scope, build, evaluate, and deploy
-              your first agent — with structured outputs, confidence indicators,
-              and review workflows your team can act on from day one.
+              Not more cleanup tools. Catalog Agents evaluate, correct, and
+              enhance your product data on an ongoing basis — with confidence
+              indicators and review workflows your team can act on from day one.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <a
