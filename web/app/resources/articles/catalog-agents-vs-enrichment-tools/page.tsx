@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { PageBottomCta } from "@/components/ui/PageBottomCta";
+import { RelatedPlatform } from "@/components/ui/RelatedPlatform";
 import Link from "next/link";
 
 export const metadata = {
@@ -50,7 +51,9 @@ export default function ArticlePage() {
 
       <section className="py-14 sm:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-14 text-slate-700">
+          <div className="mx-auto max-w-5xl">
+          <div className="flex gap-12">
+          <div className="min-w-0 flex-1 space-y-14 text-slate-700">
 
             {/* 1 */}
             <div>
@@ -122,7 +125,10 @@ export default function ArticlePage() {
                 Evaluation loops, scoped autonomy, measurable quality
               </h2>
               <p className="leading-relaxed">
-                Catalog agents don&apos;t close when the SOW closes. They run
+                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog agents
+                </Link>{" "}
+                don&apos;t close when the SOW closes. They run
                 evaluation loops: detect what changed, decide what to correct,
                 produce structured diffs with confidence scores, and escalate
                 only when confidence falls below threshold.
@@ -179,10 +185,19 @@ export default function ArticlePage() {
               </p>
               <p className="mt-4 leading-relaxed">
                 The model that works: use enrichment for the initial attribute
-                fill, then deploy catalog agents to maintain correctness as the
-                catalog grows, supplier data changes, and channel requirements
-                evolve. Enrichment handles the point-in-time coverage problem;
-                agents handle the ongoing maintenance problem.
+                fill, then deploy{" "}
+                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  catalog agents
+                </Link>{" "}
+                to maintain correctness as the catalog grows. Use{" "}
+                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog Readiness
+                </Link>{" "}
+                to benchmark where you stand before and after, and{" "}
+                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Product Intelligence
+                </Link>{" "}
+                to track ongoing quality over time.
               </p>
             </div>
 
@@ -204,6 +219,15 @@ export default function ArticlePage() {
               </div>
             </div>
 
+          </div>
+
+          {/* Sidebar */}
+          <aside className="hidden w-56 shrink-0 lg:block">
+            <div className="sticky top-24">
+              <RelatedPlatform />
+            </div>
+          </aside>
+          </div>
           </div>
         </Container>
       </section>

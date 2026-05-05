@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { PageBottomCta } from "@/components/ui/PageBottomCta";
+import { RelatedPlatform } from "@/components/ui/RelatedPlatform";
 import Link from "next/link";
 
 export const metadata = {
@@ -50,7 +51,9 @@ export default function ArticlePage() {
 
       <section className="py-14 sm:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-14 text-slate-700">
+          <div className="mx-auto max-w-5xl">
+          <div className="flex gap-12">
+          <div className="min-w-0 flex-1 space-y-14 text-slate-700">
 
             {/* 1 */}
             <div>
@@ -124,7 +127,10 @@ export default function ArticlePage() {
                 Scoped autonomy at the semantic layer
               </h2>
               <p className="leading-relaxed">
-                Catalog agents operate at the layer rules can&apos;t reach: semantic
+                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog agents
+                </Link>{" "}
+                operate at the layer rules can&apos;t reach: semantic
                 understanding of product descriptions, context-aware classification,
                 and inference from attributes that aren&apos;t explicitly labeled.
                 They run evaluation loops — not rule checks — and produce
@@ -191,7 +197,15 @@ export default function ArticlePage() {
                 for SFCC field constraints, and agents to maintain taxonomy
                 alignment as supplier-contributed browse paths drifted over
                 time. Rules enforced the structure; agents maintained the
-                semantic correctness.
+                semantic correctness. Use{" "}
+                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog Readiness
+                </Link>{" "}
+                to benchmark your rule coverage gaps before deploying agents, and{" "}
+                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Product Intelligence
+                </Link>{" "}
+                to track quality improvement over time.
               </p>
             </div>
 
@@ -213,6 +227,15 @@ export default function ArticlePage() {
               </div>
             </div>
 
+          </div>
+
+          {/* Sidebar */}
+          <aside className="hidden w-56 shrink-0 lg:block">
+            <div className="sticky top-24">
+              <RelatedPlatform />
+            </div>
+          </aside>
+          </div>
           </div>
         </Container>
       </section>

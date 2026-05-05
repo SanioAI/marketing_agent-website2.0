@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { PageBottomCta } from "@/components/ui/PageBottomCta";
+import { RelatedPlatform } from "@/components/ui/RelatedPlatform";
 import Link from "next/link";
 
 export const metadata = {
@@ -52,7 +53,9 @@ export default function ArticlePage() {
       {/* Article body */}
       <section className="py-14 sm:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl space-y-14 text-slate-700">
+          <div className="mx-auto max-w-5xl">
+          <div className="flex gap-12">
+          <div className="min-w-0 flex-1 space-y-14 text-slate-700">
 
             {/* 1 */}
             <div>
@@ -64,7 +67,12 @@ export default function ArticlePage() {
                 The demo is evidence, not theater. It shows a single SKU slice
                 flowing through four agent types — Attribute, Taxonomy, Channel
                 Matching, and Compliance — with visible inputs, structured diffs,
-                and confidence indicators at every stage.
+                and confidence indicators at every stage. These are the same
+                agents that make up the{" "}
+                <Link href="/agents/ecommerce" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog Agent suite
+                </Link>
+                {" "}running in production today.
               </p>
               <p className="mt-4 leading-relaxed">
                 This mirrors exactly how Voomi Supply proved correctness across
@@ -234,12 +242,29 @@ export default function ArticlePage() {
                 signs off on confidence thresholds before anything is published.
               </p>
               <p className="mt-4 leading-relaxed">
-                The pilot is scoped, time-boxed, and produces a KPI table: time
-                saved, error rate before/after, confidence distribution. That
-                table is what you bring to procurement — not a slide deck.
+                Before running a pilot, it&apos;s worth running a{" "}
+                <Link href="/platform/catalog-readiness" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Catalog Readiness
+                </Link>{" "}
+                assessment — it surfaces the exact defect categories in your
+                catalog so the pilot focuses on the highest-impact SKU slice.
+                After deployment,{" "}
+                <Link href="/platform/product-intelligence" className="text-blue-600 underline underline-offset-2 hover:text-blue-800">
+                  Product Intelligence
+                </Link>{" "}
+                tracks ongoing quality improvement against baseline.
               </p>
             </div>
 
+          </div>
+
+          {/* Sidebar */}
+          <aside className="hidden w-56 shrink-0 lg:block">
+            <div className="sticky top-24">
+              <RelatedPlatform />
+            </div>
+          </aside>
+          </div>
           </div>
         </Container>
       </section>
