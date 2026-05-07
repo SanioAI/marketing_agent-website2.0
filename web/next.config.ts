@@ -20,6 +20,13 @@ const nextConfig: NextConfig = {
    * forcing standalone there can break or confuse the build.
    */
   ...(process.env.VERCEL ? {} : { output: "standalone" as const }),
+  async redirects() {
+    return [
+      { source: "/agents/ecommerce", destination: "/catalog-agents", permanent: true },
+      { source: "/platform/catalog-readiness", destination: "/catalog-readiness", permanent: true },
+      { source: "/platform/product-intelligence", destination: "/product-intelligence", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

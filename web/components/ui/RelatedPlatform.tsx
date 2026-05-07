@@ -4,7 +4,7 @@ const platformLinks = [
   {
     label: "Catalog Agents",
     desc: "AI-powered product data enrichment",
-    href: "/agents/ecommerce",
+    href: "/catalog-agents",
     icon: (
       <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden>
         <rect x="2" y="2" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.9" />
@@ -17,7 +17,7 @@ const platformLinks = [
   {
     label: "Catalog Readiness",
     desc: "Score and improve your catalog health",
-    href: "/platform/catalog-readiness",
+    href: "/catalog-readiness",
     icon: (
       <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden>
         <circle cx="9" cy="9" r="7" stroke="#2563eb" strokeWidth="1.5" opacity="0.4" />
@@ -28,7 +28,7 @@ const platformLinks = [
   {
     label: "Product Intelligence",
     desc: "Deep insights across your product data",
-    href: "/platform/product-intelligence",
+    href: "/product-intelligence",
     icon: (
       <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden>
         <rect x="2" y="10" width="3" height="6" rx="1" fill="#2563eb" opacity="0.4" />

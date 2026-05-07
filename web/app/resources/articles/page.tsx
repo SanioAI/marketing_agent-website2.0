@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import { PageHero } from "@/components/ui/PageHero";
 import { PageBottomCta } from "@/components/ui/PageBottomCta";
 import { Container } from "@/components/ui/Container";
@@ -9,14 +12,14 @@ export const metadata = {
   description: "In-depth reads on AI agents, catalog operations, and product data strategy.",
 };
 
-const articles = [
+// Hand-built full-prose articles always appear first
+const FEATURED = [
   {
     title: "Catalog Agents Demo: Before / After SKU Analysis",
     description:
       "SKU-level receipts, not slides. See how Attribute, Taxonomy, Channel Matching, and Compliance agents transform real products — with inputs, diffs, and confidence scores at every stage.",
     tag: "Decision Stage",
     href: "/resources/articles/catalog-agents-demo-before-after-sku",
-    date: "2025",
     readTime: "8 min read",
   },
   {
@@ -25,7 +28,6 @@ const articles = [
       "Enrichment tools fill fields. Catalog agents operate catalogs. The difference becomes visible after the SOW closes — when drift, multipack regressions, and taxonomy deltas start accumulating.",
     tag: "Consideration Stage",
     href: "/resources/articles/catalog-agents-vs-enrichment-tools",
-    date: "2025",
     readTime: "9 min read",
   },
   {
@@ -34,12 +36,39 @@ const articles = [
       "The 250,000th rule is never the last one. Rule engines encode yesterday's exceptions — catalog agents learn and re-verify under drift. Here's where the line is.",
     tag: "Consideration Stage",
     href: "/resources/articles/catalog-agents-vs-rule-based-data-quality",
-    date: "2025",
     readTime: "10 min read",
   },
 ];
 
+const FEATURED_SLUGS = new Set([
+  "catalog-agents-demo-before-after-sku",
+  "catalog-agents-vs-enrichment-tools",
+  "catalog-agents-vs-rule-based-data-quality",
+]);
+
+function getMarkdownArticles() {
+  const dir = path.join(process.cwd(), "content/articles");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md") && !FEATURED_SLUGS.has(f.replace(/\.md$/, "")))
+    .map((f) => {
+      const { data } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
+      return {
+        title: data.title as string,
+        description: (data.description as string)?.slice(0, 180) || "",
+        tag: (data.tag as string) || "Deep Dive",
+        href: `/resources/articles/${f.replace(/\.md$/, "")}`,
+        readTime: (data.readTime as string) || "8 min read",
+      };
+    })
+    .sort((a, b) => a.title.localeCompare(b.title));
+}
+
 export default function ArticlesPage() {
+  const mdArticles = getMarkdownArticles();
+  const all = [...FEATURED, ...mdArticles];
+
   return (
     <main className="pt-16">
       <PageHero
@@ -51,7 +80,7 @@ export default function ArticlesPage() {
       <section className="gradient-surface border-t border-slate-200/60 py-16 sm:py-20">
         <Container>
           <div className="grid gap-6 lg:grid-cols-3">
-            {articles.map((a, i) => (
+            {all.map((a) => (
               <Reveal key={a.href}>
                 <Link
                   href={a.href}

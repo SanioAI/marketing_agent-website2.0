@@ -39,7 +39,7 @@ const CATALOG_AGENTS: Agent[] = [
 const PLATFORM_ITEMS = [
   {
     label: "Catalog Agents",
-    href: "/agents/ecommerce",
+    href: "/catalog-agents",
     desc: "AI-powered product data enrichment",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
@@ -52,7 +52,7 @@ const PLATFORM_ITEMS = [
   },
   {
     label: "Catalog Readiness",
-    href: "/platform/catalog-readiness",
+    href: "/catalog-readiness",
     desc: "Score and improve your catalog health",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
@@ -63,7 +63,7 @@ const PLATFORM_ITEMS = [
   },
   {
     label: "Product Intelligence",
-    href: "/platform/product-intelligence",
+    href: "/product-intelligence",
     desc: "Deep insights across your product data",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
@@ -80,7 +80,7 @@ const SIMPLE_NAV: NavItem[] = [
   {
     label: "Solutions",
     children: [
-      { label: "E-commerce", href: "/agents/ecommerce", desc: "Catalog enrichment for distributors & retailers" },
+      { label: "E-commerce", href: "/catalog-agents", desc: "Catalog enrichment for distributors & retailers" },
       { label: "AEC", href: "/agents/aec", desc: "Preconstruction agents for construction teams" },
     ],
   },
@@ -194,7 +194,7 @@ function PlatformMegaMenu() {
                     {CATALOG_AGENTS.map((agent) => (
                       <Link
                         key={agent.label}
-                        href="/agents/ecommerce"
+                        href="/catalog-agents"
                         onClick={() => setOpen(false)}
                         className="group flex items-center justify-between rounded-lg px-3 py-2 transition hover:bg-slate-50"
                       >
@@ -337,7 +337,7 @@ function MobilePlatform({ onClose }: { onClose: () => void }) {
                         {CATALOG_AGENTS.map((a) => (
                           <Link
                             key={a.label}
-                            href="/agents/ecommerce"
+                            href="/catalog-agents"
                             onClick={onClose}
                             className="rounded-lg px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50 hover:text-blue-700"
                           >
