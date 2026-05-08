@@ -9,6 +9,14 @@ import Link from "next/link";
 
 const ARTICLES_DIR = path.join(process.cwd(), "content/articles");
 
+function stripMd(text: string) {
+  return text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1");
+}
+
+function boldToHtml(text: string) {
+  return text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");
+}
+
 export async function generateStaticParams() {
   const files = fs.readdirSync(ARTICLES_DIR).filter((f) => f.endsWith(".md"));
   return files.map((f) => ({ slug: f.replace(/\.md$/, "") }));
@@ -94,7 +102,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                               <div key={j} className="flex gap-3">
                                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
                                 <p className="leading-relaxed text-slate-600"
-                                  dangerouslySetInnerHTML={{ __html: line.replace(/^[-*]\s*/, "").replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") }}
+                                  dangerouslySetInnerHTML={{ __html: boldToHtml(line.replace(/^[-*]\s*/, "")) }}
                                 />
                               </div>
                             );
@@ -108,7 +116,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                           }
                           return (
                             <p key={j} className="leading-relaxed"
-                              dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>") }}
+                              dangerouslySetInnerHTML={{ __html: boldToHtml(line) }}
                             />
                           );
                         })}
@@ -146,7 +154,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       <PageBottomCta
         title={data.title}
-        description={data.description?.slice(0, 160) || "See how catalog agents improve your product data quality continuously."}
+        description={stripMd(data.description || "").slice(0, 160) || "See how catalog agents improve your product data quality continuously."}
         primary={{ href: "/about#contact", label: "Book a pilot" }}
         secondary={{ href: "/resources/articles/catalog-agents-demo-before-after-sku", label: "View demo" }}
       />

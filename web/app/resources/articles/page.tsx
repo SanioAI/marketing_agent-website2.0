@@ -7,6 +7,10 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import Link from "next/link";
 
+function stripMd(text: string) {
+  return text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1").replace(/__(.+?)__/g, "$1").replace(/_(.+?)_/g, "$1");
+}
+
 export const metadata = {
   title: "Articles · Paladio Resources",
   description: "In-depth reads on AI agents, catalog operations, and product data strategy.",
@@ -56,7 +60,7 @@ function getMarkdownArticles() {
       const { data } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
       return {
         title: data.title as string,
-        description: (data.description as string)?.slice(0, 180) || "",
+        description: stripMd((data.description as string) || "").slice(0, 180),
         tag: (data.tag as string) || "Deep Dive",
         href: `/resources/articles/${f.replace(/\.md$/, "")}`,
         readTime: (data.readTime as string) || "8 min read",
