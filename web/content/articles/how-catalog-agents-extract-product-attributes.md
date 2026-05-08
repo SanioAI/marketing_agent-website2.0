@@ -29,30 +29,32 @@ relatedArticles:
     href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
-## How [Catalog Agents](/catalog-agents) Extract Product Attributes at SKU Scale
+## Why your catalog drifts after every supplier update
 
-In the fast-paced world of ecommerce and distribution, accurate and efficient product data management is a critical component for success. Yet, many businesses still struggle to extract and normalize product attributes at scale, leading to costly inefficiencies and errors. The challenge is not just about moving data from PDFs to Product Information Management (PIM) systems—it's about doing so with a level of precision and scale that traditional methods simply cannot achieve. This is where **AI catalog agents** come into play, offering a powerful solution to this complex problem.
+Most teams blame their catalog chaos on unreliable suppliers or outdated tools. The truth is, it's a **volume problem**, not a tooling one. Each supplier update injects new product data. The sheer scale—**1M+ SKUs**—overwhelms your manual processes, causing a drift that compounds with every update. 
 
-## From Inventory to Candidate Generation
+The assumption is that once you've cleaned up the data, you're set. But when new supplier files hit your system, your catalog is at risk of decay. This is a problem that **JCPenney** faced: supplier PDFs had to align to **Mirakl**-compatible attributes. If not managed correctly, these updates lead to incorrect browse attributes, not just missing hero images. Without a robust system in place, it's a matter of time before you're chasing errors instead of sales.
 
-The journey begins with the source inventory, where raw product data is often locked away in various formats, such as supplier PDFs. Unlike simplistic methods that rely on calling large language models (LLMs) on these documents, Paladio's approach involves grounded extraction that prepares this data for further processing. This process involves the generation of candidate attributes, which are the raw inputs that will later be refined and structured.
+## The real problem isn’t missing images. It’s erroneous attributes.
 
-AI catalog agents play a crucial role in this stage by identifying potential attributes from unstructured data. However, the real magic happens as these candidate attributes are subjected to **normalization and schema binding**. At this point, Paladio's Attribute Agent ensures that the extracted attributes are aligned with the target schema, which is essential for maintaining consistency and accuracy across platforms. This careful alignment is what enables businesses to manage **1M+ SKUs** efficiently, ensuring they can be matched against a staggering **200M+ ASINs** without manual intervention. 
+Catalog errors are not just about missing images. They are about **misleading attributes** that confuse customers and hurt sales. A **multipack mismatch**, for instance, is a ticking time bomb. Extracting text that contradicts the **pack count** leads to downstream errors, damaging your reputation and eroding customer trust.
 
-## Schema Binding and Validation
+Your team might think it's all about getting the images right. But the real stakes lie in the accuracy of every **extracted attribute**. The data must bind to a schema, ensuring that every SKU aligns with the right **ASIN** candidate—just like **Voomi Supply**. Their success in handling over **200M+ ASINs** is precisely due to such rigorous extraction and normalization. This is not a task for a simple rule-based system or a virtual assistant. It requires a sophisticated AI agent that learns and adapts over time.
 
-Once candidate attributes are generated, they must be bound to a predefined schema, which involves mapping them to specific product categories and attribute types. This is a critical step where many extraction systems falter. Inaccurate schema binding can lead to significant downstream issues, such as multipack mismatches or incorrect categorization, which can disrupt operations across **1500+ marketplaces** and in **80+ languages**.
+## How grounded extraction solves your catalog woes
 
-Paladio's system addresses these challenges by integrating taxonomy and compliance constraints directly into the extraction pipeline. This ensures that the extracted facts are both **channel- and agent-safe**, meeting the rigorous standards of **Voomi Supply** and **Profitero**-style programs. The system's robust validation process ensures that extracted attributes achieve **>95% precision/recall**, a crucial metric for maintaining data integrity at scale.
+The solution to your catalog woes isn’t a generic LLM call on a PDF. It’s a **grounded extraction** process that ensures every piece of data is precise and actionable. This involves a pipeline that integrates inventory sourcing, candidate generation, schema binding, validation, and conflict resolution, all leading to a smooth publish.
 
-## Conflict Resolution and Publish
+Your process should emulate the **Profitero** model, achieving **>95% precision/recall**. This level of accuracy is not just desired; it's essential. Your **Attribute Agent** needs to operate within stringent taxonomy and compliance constraints, ensuring that the extracted facts are channel- and agent-safe. The evaluation and rollback mechanisms are crucial, allowing you to adapt and correct as new data flows in.
 
-The extraction process doesn't end with validation. Conflict resolution is another critical stage where the system identifies and resolves discrepancies in the extracted data. For instance, if extracted text contradicts known values like pack count, the system automatically flags these inconsistencies for review. This human-in-the-loop approach is vital for handling edge cases that automated systems alone cannot resolve.
+## Why weak supervision is your secret weapon
 
-Once conflicts are resolved, the attributes are ready for publication. Here, the system's ability to roll back changes if necessary is a crucial safety net, ensuring that businesses can maintain data integrity without fear of irreversible errors. This capability is particularly important for companies like **JCPenney**, where supplier PDFs must translate into **taxonomy-aligned** attributes for platforms like **Mirakl**. The failure to do so correctly can result in broken browse experiences, impacting customer satisfaction and sales.
+Teams often overlook the power of weak supervision in managing catalogs at scale. You might be skeptical, thinking that high accuracy requires painstaking manual oversight. But with the right AI, weak supervision can drive precision to astonishing levels, as seen with **Profitero**'s success across **1500+ marketplaces** and **80+ languages**.
 
-## Practical Implications for Your Catalog
+Incorporating weak supervision means you're not starting from scratch with every update. Instead, you're building on a foundation that gets stronger with each iteration. This is how you maintain control over **1M+ SKUs** and keep your data aligned across vast taxonomies. Each cycle not only corrects the errors of the past but also fortifies your system against future discrepancies.
 
-For ecommerce and distribution companies, the implications of deploying AI catalog agents are profound. By reducing publish-time by **~85%** and cutting labeling hours from **140 to 20**, businesses can achieve unprecedented levels of efficiency and accuracy. This not only streamlines operations but also enhances the customer experience by ensuring that product data is consistently accurate and up-to-date across all channels.
+## Compound effects: More than just error correction
 
-By leveraging Paladio's AI-driven approach to product attribute extraction, companies can effectively scale their operations, manage vast inventories, and ensure compliance with complex marketplace requirements. As the demand for accurate and dynamic product data continues to grow, AI catalog agents represent a vital tool for staying competitive in the digital marketplace.
+Every successful catalog update compounds over time. The benefits aren't just immediate; they build exponentially. Each cycle of your **Attribute Agent** not only cleans up current data but also enhances future operations. With **Voomi Supply**, the reduction in publish time—by **~85%**—is a testament to the compound effect of a system that improves with each cycle.
+
+You might think catalog management is a never-ending chore. But the right AI systems remove friction, ensuring errors are caught before they go live. As your catalog becomes more accurate, your team can focus on what truly matters—strategic growth, not firefighting data issues. This is the compound effect of a robust, adaptive system that evolves alongside your business needs.

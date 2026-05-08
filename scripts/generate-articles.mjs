@@ -47,32 +47,76 @@ async function generateArticle(briefFile) {
   const keyword = extract(raw, "Target Keyword");
   const tag = funnelToTag(funnel);
 
-  const prompt = `You are writing a marketing article for Paladio.ai — a B2B SaaS company that builds AI catalog agents for ecommerce and distribution companies.
+  const prompt = `You are writing a B2B marketing article for Paladio.ai — a company that builds AI catalog agents for ecommerce and distribution teams.
 
-Write a complete, publication-ready article based on this brief. The article should be authoritative, specific, and grounded in real outcomes — no fluff, no generic AI hype.
+Your audience is a VP of Ecommerce or Head of Product Data who is skeptical of AI hype and needs specific, operational proof. Write like fabric.inc, Publitas, and atronous.ai — not like a generic AI content farm.
 
-## Brief
+---
+
+## STYLE RULES (follow every one)
+
+1. **Counter-intuitive opener.** Never open with what the product does or a definition. Open with what the reader assumes is wrong, then name the real problem.
+   - ✅ "Most catalogs don't fail because the products are bad. They fail because the product data is wrong."
+   - ❌ "Catalog agents are AI-powered tools that automate product data processing."
+
+2. **Name the real problem vs the obvious one.** The reader's assumed cause is often wrong. Name it, correct it.
+   - ✅ "Teams assume it is a tooling problem. It is a volume problem."
+   - ❌ "Product data quality is a challenge for many organizations."
+
+3. **Consequence-first sentences.** State what happens, not what it is.
+   - ✅ "That costs you the sale." / "The backlog never forms." / "The suppression never happens."
+   - ❌ "This can lead to decreased performance over time."
+
+4. **Three named failure modes** with bold headers — what teams do → why it fails → one-sentence fix.
+   - ✅ **Treating catalog problems as a one-time project.** Teams run a cleanup. The data looks right for 3 months. New suppliers send files. Drift starts again.
+
+5. **"Removes friction" framing.** Pitch what disappears, not a feature list.
+   - ✅ "The error is caught before the listing goes live."
+   - ❌ "Our agents detect errors and flag them for review."
+
+6. **"Compounds over time" close.** Close with the compound effect where true.
+   - ✅ "Every run the catalog gets more accurate. That is the compound effect of a system that improves each cycle."
+
+7. **Conversational you/your throughout** — never "companies" or "businesses" or "organizations."
+
+8. **Use/your proof only from these cases:**
+   - **Voomi Supply:** 1M+ SKUs, 200M+ ASINs, ~85% publish-time reduction, automated multipack detection + hazmat + ASIN matching, replaced rule-based + VA workflows
+   - **Profitero:** 1500+ marketplaces, 80+ languages, 140 → ~20 labeling hours per cycle, >95% precision/recall, weak supervision pipelines
+   - **JCPenney:** Mirakl + SFCC integration, taxonomy alignment across brands, marketplace onboarding complexity
+   - Do NOT invent statistics. Do NOT cite third-party surveys as Paladio proof.
+
+9. **Plain-English H2 headings** that make a statement or ask a question — not label nouns.
+   - ✅ "Why your catalog drifts after every supplier update"
+   - ❌ "Taxonomy Management Overview"
+
+10. **Short sentences. Active voice. No hedging.** Cut "can," "may," "could lead to." Make direct claims.
+
+---
+
+## ARTICLE BRIEF
+
 **Title:** ${title}
 **Target Keyword:** ${keyword}
 **Paladio POV:** ${pov}
 **Reader Problem:** ${readerProblem}
 **Core Argument:** ${coreArg}
-**Outline:**
+
+**Outline (use as section structure):**
 ${outline}
-**Proof Points (use these verbatim where relevant):**
+
+**Proof points to use (weave in naturally, use exact numbers):**
 ${proofPoints}
 
-## Writing rules
-- Open with a strong statement about the problem, not a definition
-- Use H2 headings that match the outline sections (no numbering like "01 —", just clean H2s)
-- Each section should be 2-4 paragraphs of substantive prose
-- Weave in the proof points naturally (Voomi Supply, Profitero, JCPenney) — use the exact metrics: ~85% publish-time reduction, >95% precision/recall, 140→20 labeling hours, 1M+ SKUs, 200M+ ASINs, 1500+ marketplaces, 80+ languages
-- End with a short "What this means for your catalog" or similar practical section
-- Do NOT include a CTA paragraph — that's handled by the page template
-- Do NOT use bold on every sentence — bold only for key terms or metrics
-- Tone: direct, technical, credible. Write for a VP of Ecommerce or Head of Product Data
-- Length: 800-1200 words of body prose
-- Output ONLY the article body in markdown (H2s and paragraphs) — no frontmatter, no title H1`;
+---
+
+## OUTPUT FORMAT
+
+- Output ONLY the article body in markdown
+- H2s for main sections (no numbering, no "01 —" prefixes)
+- 2–4 paragraphs per section
+- 900–1200 words total
+- No title H1, no frontmatter, no CTA paragraph at the end (template handles it)
+- Bold only key terms or metrics — not every other sentence`;
 
   const response = await client.chat.completions.create({
     model: "gpt-4o",

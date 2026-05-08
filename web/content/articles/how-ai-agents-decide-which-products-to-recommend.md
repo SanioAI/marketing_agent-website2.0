@@ -34,32 +34,42 @@ relatedArticles:
 
 ## Agents Don’t “Browse”; They Execute Tasks
 
-In the bustling world of ecommerce, the assumption that AI agents mimic human browsing habits is not just outdated, but detrimental. These agents are task-driven, executing precise actions based on structured data rather than subjective judgment. The journey from product recommendation to transaction is a methodical process of constraint satisfaction and retrieval, demanding more than just an intuitive merchandise display.
+You might think AI agents act like a savvy merchandiser, browsing through your catalog with a keen eye for trends. Wrong. Agents don’t “browse”; they execute specific tasks with surgical precision. They don’t appreciate your curated product descriptions or fancy visuals. They need structured data to operate, focusing on what they can verify and act upon. Their purpose is not to marvel at your catalog's aesthetic, but to retrieve, filter, and recommend products based on hard facts.
 
-## Retrieval: Identity and Embeddings over Structured Facets
+This reality shifts the burden onto you: your catalog needs to be ready for such meticulous scrutiny. It’s not about making your catalog visually appealing to a human. It’s about ensuring it’s operationally sound for an AI agent. It’s about providing the right data, in the right structure, so the agent can execute its tasks without stumbling over ambiguities or missing information.
 
-At the heart of an AI agent’s decision-making is the retrieval process. It’s not about leisurely browsing through options but identifying products through structured facets and embeddings. For instance, Profitero's classification stages demonstrate this rigor—transitioning from 140 hours of manual labeling to just 20 with more than 95% precision and recall. This highlights the importance of having well-defined attributes and embeddings that allow agents to efficiently sift through massive datasets.
+## Retrieval: Identity and Embeddings Over Structured Facets
+
+When an agent retrieves products, it doesn't scroll like a human might. It uses **identity** and **embeddings** to zero in on what matters. Identity ensures that each product is uniquely recognized, while embeddings represent these products within a structured space, allowing for efficient retrieval across a vast catalog.
+
+Consider the challenge faced by **Voomi Supply**. With over **1M+ SKUs**, the initial candidate pool is immense. Yet, their **200M+ ASIN** space can only be navigated effectively when each product’s identity is well-defined and its structured facets are accurate. Without this, retrieval collapses into chaos, overwhelmed by misidentifications and irrelevant matches.
 
 ## Filtering: Compliance, Compatibility, Channel Eligibility
 
-Once relevant products are retrieved, they face the stringent filtering stage. Agents assess compliance with regulatory standards, compatibility with existing systems, and eligibility for specific channels. This is where structured data's completeness becomes crucial. Voomi Supply's experience with a 200M+ ASIN candidate space collapsing to a manageable size illustrates the necessity for normalized specs and pack truth. A single multipack mismatch can lead to a complete filter failure, emphasizing how critical it is to maintain data integrity.
+Once retrieved, the agent filters products based on compliance, compatibility, and channel eligibility—criteria dictated by hard rules, not soft suggestions. This isn’t about personal preference; it’s about meeting non-negotiable requirements.
+
+Imagine the filtration process at **Profitero**. Here, the manual labeling hours dropped from **140 to ~20** because of high precision and recall in classification stages. The lesson? Autonomous filters outperform when data integrity is respected. If your catalog lacks the required compliance data or compatibility specs, you’re effectively barring products from consideration. Like Voomi Supply’s **multipack mismatch**, missing a specification can mean a hard stop, preventing the product from ever entering the recommendation pool.
 
 ## Comparison: Normalized Attributes and Substitutes
 
-After filtering, agents enter the comparison stage. Here, normalized attributes allow for a fair evaluation of substitutes, ensuring that products are accurately ranked according to consumer needs. A failure scenario is all too common: missing attributes on substitute SKUs force the agent to rank only the fully constrained SKU. This mirrors the collapse seen in Voomi's pipeline when essential specs are absent, and Profitero's classifiers lose accuracy when fields are treated as optional.
+In the comparison stage, agents rely on **normalized attributes** to weigh options. They calculate potential substitutes using hard data—dimensions, materials, certifications—not marketing fluff. Here, every inconsistency is a potential failure point.
+
+For **JCPenney**, operating a multi-brand marketplace requires that agent and browse functions align perfectly. This necessitates **taxonomy-aligned** facet keys. A misfiled node? The SKU never makes it into the comparison set. Likewise, if two substitute SKUs are missing attributes, the agent can only rank the fully constrained SKU, sidelining potential alternatives. This mirrors the **200M+ ASIN** filter collapse at Voomi Supply when specs are absent.
 
 ## Justification: Provenance-Friendly Facts (Not Marketing Claims)
 
-In the justification phase, agents rely on provenance-friendly facts rather than marketing claims to support their recommendations. This factual approach ensures transparency and builds consumer trust. JCPenney's experience in a multi-brand marketplace shows the necessity for taxonomy-aligned facet keys. Misfiled nodes can prevent SKUs from entering the comparison set, highlighting how crucial structured, factual data is for maintaining consistency across marketplaces.
+Agents demand facts they can trace, not marketing hyperbole. They justify recommendations through provenance-friendly data. They ask, "Can I verify this?" instead of "Does this sound appealing?"
+
+It’s a lesson **Profitero** learned well. Their classifiers maintain **>95% precision/recall** because they treat sparse fields as critical, not optional noise. This approach confirms that agents need verifiable data to justify actions. Marketing claims, however compelling, won’t pass the muster when agents need to defend their recommendations.
 
 ## What Breaks in Typical Enterprise Catalogs
 
-Despite the best intentions, many enterprise catalogs fall short in supporting AI-driven recommendations. Missing attributes, incompatible formats, and misaligned taxonomies lead to breakdowns across the decision pipeline. For instance, Voomi Supply's and Profitero's challenges underscore the importance of completeness and accuracy in structured data, where even sparse fields can lead to significant failures.
+So why do so many enterprise catalogs fall short? It’s not the AI models; it’s the data feeding them. **Missing attributes**, inconsistent taxonomies, and unverified claims are the usual suspects. They create gaps that agents can’t leap over, leading to missed opportunities and failed recommendations.
+
+Your catalog might look robust on paper, but if your data isn’t structured for retrieval and comparison, it’s as useful as a beautifully wrapped empty box. Misalignment in taxonomy or missing specs means your products never even enter the conversation, let alone get recommended.
 
 ## Bridge to [Catalog Agents](/catalog-agents) + Readiness Scorecard
 
-To overcome these challenges, ecommerce companies must embrace catalog agents and readiness scorecards. These tools continuously update and validate catalog data, ensuring that all attributes are complete, accurate, and aligned with marketplace requirements. A readiness scorecard can help identify gaps in catalog data, providing a clear path to improvement and ensuring that AI agents can make informed, precise recommendations without the risk of hand-waving or data omission.
+This is where **catalog agents** step in, keeping the underlying intelligence current and precise. They ensure that your catalog doesn’t just look the part but is genuinely ready for AI-driven operations. By continuously updating and verifying data, they remove friction points and improve each cycle’s accuracy.
 
-## What This Means for Your Catalog
-
-For businesses aiming to leverage AI agents effectively, the focus must shift to ensuring [catalog readiness](/catalog-readiness). This involves a thorough audit of existing data, aligning it with structured facets, and continuously updating it to adapt to marketplace changes. By addressing these readiness gaps, companies can unlock the full potential of AI agents, transforming their ecommerce strategy from guesswork to precision-driven success.
+Consider the compound effect: each time an agent processes your catalog, it gets a little smarter, a little more precise. The result? Over time, every run makes your catalog more accurate. That’s the magic of a system that compounds improvements with each cycle. With a readiness scorecard, you can measure and enhance your catalog’s preparedness, ensuring that it meets the rigorous demands of modern AI agents.

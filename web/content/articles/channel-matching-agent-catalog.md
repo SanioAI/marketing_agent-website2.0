@@ -29,22 +29,38 @@ relatedArticles:
     href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
-## Matching as Commerce Entity Resolution
+## Why your catalog drifts after every supplier update
 
-In the realm of ecommerce, one of the most persistent challenges is the misalignment of product identifiers across various platforms. Errors such as attaching the wrong ASINs to SKUs can lead to significant operational inefficiencies and lost sales opportunities. Weekly occurrences of these mismatches not only erode trust but also complicate the auditing process—especially when there's no clear rationale for why a particular pack count was overlooked in favor of a less relevant match. This is where Paladio.ai’s **Channel Matching Agent** steps in, transcending traditional spreadsheet voting methods. By leveraging an advanced AI-driven approach, it scores SKU-to-channel identity decisions with evidence objects and confidence levels, ensuring precise catalog matching.
+Most teams think their catalog issues stem from poor initial data. The truth? It's the constant churn of updates and the sheer volume of data that leads to drift. You might run an initial cleanup, but as new suppliers flood in with their files, the **drift starts again**. Your catalog isn't failing because it's broken—it's because it's constantly evolving, and without the right tools, it slips out of alignment.
 
-## Signals
+**Treating catalog problems as a one-time project.** Teams often treat catalog updates as standalone projects. They perform a cleanup, and for a few months, everything appears perfect. Then, new suppliers send files, new SKUs get added, and the drift reappears. The fix? Implement a continuous resolution system that evolves with your catalog.
 
-The power of the **Channel Matching Agent** lies in its sophisticated use of disambiguation signals to generate candidates and resolve entity identities. This includes normalizing brands, understanding MPN families, and recognizing pack and variation lineage. These signals enable the system to discern subtle differences between products that might otherwise appear identical. For instance, in a situation where a multipack mismatch could lead to selecting the wrong ASIN, the **Channel Matching Agent** provides the necessary context to avoid such errors. This meticulous attention to detail is critical for businesses like **Voomi Supply**, which manages an extensive program of over **200M+ ASINs**.
+## Matching as commerce entity resolution
 
-## Evidence + Audit Trail
+Catalog management isn't just about listing products. It's about resolving each item into a commerce entity that can be sold across channels. Most teams assume this is a simple matching exercise. The reality? It's a complex **entity resolution** challenge, where every SKU must be correctly mapped to its ASIN, GTIN, or other identifiers.
 
-A critical advantage of the **Channel Matching Agent** is its ability to create a comprehensive audit trail. This allows businesses to backtrack and understand the decision-making process behind SKU matches. With evidence objects forming the backbone of every decision, the system not only enhances transparency but also boosts confidence in the accuracy of outcomes. For companies like **Profitero**, which require precision on identity-like labels across **1,500+ marketplaces**, this capability is invaluable. The agent delivers results with **>95% precision/recall**, reducing the need for manual intervention from **140 hours to just 20**.
+**Ignoring the complexity of multi-channel identities.** Teams often overlook the intricacies involved in aligning SKUs with channel identities like ASINs. They assume a SKU-Channel ID mismatch is a minor hiccup. But when a multipack mismatch picks the wrong ASIN, it costs you the sale. The fix? Embrace a solution that scores SKU-to-channel decisions with evidence, removing the guesswork.
 
-## Voomi / Profitero / JCPenney
+## Signals (brand normalize, MPN family, pack, variation lineage)
 
-The real-world impact of the **Channel Matching Agent** is evident in its deployment across various industry leaders. **Voomi Supply** witnessed a dramatic **~85% reduction in publish-time** after implementing the agent, allowing them to efficiently manage **1M+ SKUs**. Meanwhile, **Profitero** benefits from its ability to maintain high precision across a broad array of marketplaces and languages. **JCPenney**, with its diverse Mirakl supplier mix, relies on the agent to ensure consistent and accurate product representation. These examples underscore the agent’s capacity to handle complex catalog challenges with ease and reliability.
+Signals are the lifeblood of accurate catalog matching. It's not about checking boxes; it's about understanding relationships. Brand normalization, MPN family identification, pack details, and variation lineages are crucial for building a comprehensive picture of each product.
 
-## What This Means for Your Catalog
+**Relying on spreadsheet voting for decisions.** Relying on rows of data in a spreadsheet to make matching decisions is outdated. This approach doesn't account for the nuanced signals that inform accurate matches. The fix? Use a system that interprets these signals, enhancing the precision of your matches.
 
-For ecommerce and distribution companies, the implications of adopting the **Channel Matching Agent** are profound. By automating and refining the SKU-to-channel identity matching process, businesses can significantly cut down on errors and inefficiencies. The agent’s robust infrastructure and evidence-backed decision-making not only facilitate accurate product representation but also enhance operational transparency. As the ecommerce landscape continues to evolve, leveraging such sophisticated AI solutions is becoming increasingly essential for staying competitive and ensuring a seamless shopping experience across platforms.
+## Evidence + audit trail
+
+Without evidence and an audit trail, you're flying blind. When the wrong ASIN attaches to your product weekly, you can't just shrug it off. You need to know why pack count lost the tie-breaker.
+
+**Neglecting the importance of an audit trail.** Teams assume that once a match is made, the job is done. But without an audit trail, you can't go back and understand what went wrong. The fix? Implement a system that provides evidence-backed decisions, so you can trace and correct errors.
+
+## Voomi, Profitero, JCPenney
+
+**Voomi Supply** faced the monumental task of matching over **1M SKUs** to **200M+ Amazon ASINs**. They needed more than manual checks. By implementing a channel matching agent, they reduced publish time by **~85%** and automated complex scenarios like multipack detection and hazmat matching.
+
+**Profitero** uses precision identity-like labels to manage over **1500 marketplaces** in more than **80 languages**. They reduced labeling hours from **140 to ~20** per cycle while achieving over **95% precision/recall**, thanks to their weak supervision pipelines.
+
+**JCPenney** tackled marketplace onboarding complexity with its Mirakl integration. Aligning taxonomies across brands was no small feat, but by employing a robust entity resolution system, they streamlined their supplier mix and reduced errors.
+
+## Why accuracy compounds over time
+
+Every time your catalog matches correctly, you build a stronger, more resilient system. Accuracy compounds over time. Each cycle of matching and resolution makes the next one smoother. The backlog never forms. The drift never happens. This is the compound effect of a system that improves with every run, ensuring your catalog stays as accurate as the day it was first cleaned.

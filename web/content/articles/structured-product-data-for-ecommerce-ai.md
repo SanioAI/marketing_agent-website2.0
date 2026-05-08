@@ -31,32 +31,28 @@ relatedArticles:
     href: /resources/articles/product-attributes-as-ranking-signals
 ---
 
-## Structured Data vs Agent-Decidable Data
+## Why your AI can't decide on your product data
 
-In the realm of ecommerce, structured product data has become a cornerstone of digital strategy. Yet, too often, teams default to implementing schema.org annotations, believing these will make their products universally discoverable and comparable. The harsh reality is that this approach leaves agents and algorithms struggling to make informed decisions. Structure without evaluation is mere theater. This problem is starkly evident when agents cannot safely compare two SKUs due to inadequate data precision. An example of this failure is when a valid JSON-LD is provided, yet the wrong pack count results in the agent excluding the SKU entirely.
+Most ecommerce teams assume structured data is enough. You’ve got JSON-LD in place, so your product data should be ready for AI, right? Wrong. The real problem isn’t the lack of structure—it’s the absence of **agent-decidable data**. Your structured data is like a beautifully formatted book with blank pages: it looks the part but says nothing. Without the ability to compare and evaluate, your AI is as good as a dictionary without definitions.
 
-The distinction between structured data and agent-decidable data is critical. While structured data might adhere to standardized formats, agent-decidable data requires normalization, channel alignment, and constraint-safe facts that agents and marketplaces can readily evaluate. This is not just about ticking boxes for SEO; it's about creating a robust, evaluative framework that supports the nuanced requirements of ecommerce platforms. The key is to provide a minimum machine vocabulary that includes identity, specs, pack details, hazmat flags, taxonomy nodes, and graph hooks, ensuring agents can make reliable decisions at scale.
+## The minimum field set you actually need
 
-## Minimum Field Set with Examples
+Your catalog doesn’t fail because it lacks data; it fails because it lacks **the right data**. Start with what makes a product uniquely identifiable and actionable: identity, specifications, pack info, hazmat flags, taxonomy nodes, and graph hooks. This is your **minimum viable machine vocabulary**. At Voomi Supply, that means **10–15+ attributes per product** for over **1M SKUs**, allowing AI to connect the dots across **200M ASINs**. This isn’t about adding more fields; it’s about adding the **right ones**.
 
-To achieve this level of agent-decidable data, a minimum field set is essential. This encompasses not only basic product identity and specifications but also complex attributes like multipack configurations, electrical specifications, and safety flags such as hazmat status. For instance, Voomi Supply has demonstrated the effectiveness of this approach by implementing 10–15+ attributes per product. This includes multipack and hazmat information, which has resulted in a remarkable ~85% reduction in publish time. With over 1M+ SKUs and 200M+ ASINs managed, the importance of a comprehensive attribute set becomes clear.
+Imagine a catalog listing that includes every necessary attribute but misses the pack count. Your AI agent sees a valid JSON-LD but excludes the SKU because it can’t evaluate the product correctly. The consequence? That costs you the sale. Your field set should never leave room for doubt, ensuring that every product detail is evaluated and validated by your agents.
 
-Consider the scenario where an ecommerce platform is integrating products from multiple suppliers. Without detailed attributes like pack count or electrical specifications, the risk of misclassification or exclusion rises significantly. This can lead to lost sales and frustrated customers. Therefore, by ensuring these minimum attributes are part of the product data, businesses can maintain high precision and recall rates, akin to Profitero's impressive >95% metrics across 1500+ marketplaces and 80+ languages.
+## Why multipack, electrical, and taxonomy are non-optional
 
-## Multipack, Electrical, and Taxonomy as Non-Optional “Structure”
+Treating certain product attributes as optional is a fast track to catalog chaos. Multipack counts, electrical specifications, and taxonomy alignment are not just nice-to-haves; they’re essential. At Voomi, automated multipack detection and hazmat flags aren’t just features—they eliminate friction points that prevent errors from making it to the listing. Profitero leverages **>95% precision/recall** across **1500+ marketplaces** and **80+ languages** to ensure that these attributes align and function seamlessly.
 
-Multipack configurations, electrical specifications, and taxonomy alignment are not optional extras; they are foundational elements of structured product data. Multipack details ensure that products are correctly represented in inventory and pricing calculations. Electrical specifications are critical for ensuring compatibility and safety, particularly in global markets with varying standards. Taxonomy alignment, as emphasized by JCPenney, is a structural prerequisite that ensures products are correctly categorized, facilitating easier discovery and comparison.
+In the case of JCPenney, taxonomy alignment across brands isn’t a project—it’s a structural prerequisite. Without it, marketplace onboarding becomes a tangle of mismatched categories and missed opportunities. The suppression never happens, and your AI agents are left without the tools they need to function.
 
-These elements are integral to creating a data structure that is not only comprehensive but also actionable. When products are aligned with precise taxonomies, it becomes easier for agents to navigate complex product landscapes, ensuring that consumers find exactly what they are looking for.
+## Why a one-time feed project is a recipe for drift
 
-## Continuous Maintenance vs One-Time Feed Project
+Many teams treat catalog data as a one-time project: clean it up once and move on. This approach guarantees drift. New suppliers send files, and before you know it, the data that looked perfect last quarter is now out of alignment. **Continuous maintenance** is the only way forward. This isn’t about periodic audits; it’s about a system that checks and corrects itself in real time.
 
-The journey toward effective structured product data is not a one-time project but a continuous process. Feeding product data into a system once and assuming it's done is a common pitfall. Instead, businesses must focus on continuous maintenance and refinement of data processes. This involves regular audits, updates, and alignment with evolving market requirements and technologies.
+The reality is that every feed, every update compounds over time. At Voomi, the shift to a system that reduces publish time by **~85%** didn’t happen overnight. It was the compound effect of a solution that continuously improves with each cycle. The backlog never forms, and the errors are caught before they become listings.
 
-Continuous data maintenance ensures that the product catalog remains relevant and accurate, facilitating better decision-making by AI [catalog agents](/catalog-agents). As seen with Voomi Supply and Profitero, ongoing data refinement leads to significant efficiencies and higher accuracy, enabling businesses to maintain a competitive edge in the fast-paced ecommerce environment.
+## How mature is your product data?
 
-## What This Means for Your Catalog
-
-For ecommerce and distribution companies, the path to harnessing the full potential of AI catalog agents lies in embracing structured product data that is comprehensive and agent-decidable. By focusing on a minimum machine vocabulary and emphasizing continuous data maintenance, businesses can ensure that their product catalogs are not just visible but also actionable and competitive.
-
-Implementing these strategies will not only reduce publish times and improve precision but also enhance the overall consumer experience, leading to increased sales and brand loyalty. The time to transition from static data feeds to dynamic, evaluative data structures is now, setting the stage for a more intelligent and efficient ecommerce ecosystem.
+The path to AI-ready product data isn’t paved with one-off projects or superficial structure. It’s about building a vocabulary that your agents can actually use to make decisions. Examine your own catalog: is it structured for SEO, or is it ready for AI? Only when you embrace this minimum viable machine vocabulary can your team stop playing catch-up and start leading the way in ecommerce AI.

@@ -27,42 +27,38 @@ relatedArticles:
     href: /resources/articles/catalog-readiness-assessment
 ---
 
-## Why “Clean Data” Stopped Being a Useful North Star
+## Why “clean data” stopped being a useful north star
 
-In the fast-paced world of ecommerce, maintaining "clean data" in your Product Information Management (PIM) system is no longer a sufficient benchmark for success. While traditionally seen as a hallmark of operational efficiency, clean data often fails to address the complexities introduced by scale and automation. This becomes painfully evident when your PIM dashboard shows green rows, yet your operational teams are still embroiled in manual exceptions for ASIN, multipack, and hazmat issues.
+You might think that “clean data” is the silver bullet for your catalog woes. Your PIM dashboard shows a satisfying row of green check marks, suggesting everything is in place. But when Voomi Supply scaled to 1M+ SKUs matched to 200M+ Amazon ASINs, they realized that clean data wasn't enough. The real problem? The data wasn't ready for agent-driven decisions. This isn't just about avoiding errors; it's about enabling AI agents to make decisions without a human safety net. If your catalog isn't ready for that, you're not ready. 
 
-Consider **Voomi Supply**, which manages over **1 million SKUs** matched to **200 million Amazon ASINs**. Despite having a seemingly clean PIM, Voomi faced challenges with publish times until it embraced automation for matching, multipack detection, and hazmat compliance, resulting in an **~85% reduction in publish time**. The problem was never about dirty data; it was about readiness—whether those decisions could run autonomously without manual interventions.
+Clean data is a human-centric view. It focuses on making sure the information is complete for human review, but it doesn't ensure that your catalog is **agent-decidable**. And that’s where you start losing efficiency, as you still need to manually intervene in processes that should be automated. **[Catalog readiness](/catalog-readiness)** is what you actually need.
 
-## [Catalog Readiness](/catalog-readiness) in One Sentence
+## Catalog readiness in one sentence
 
-So, what is catalog readiness? In simple terms, it's the degree to which a catalog can be **decided on by AI agents**. This involves structured attributes, compatibility edges, compliance signals, channel identity, and substitution logic. Unlike traditional data hygiene that focuses on human readability and feed compliance, catalog readiness optimizes for **agentic discovery, reasoning, and transaction readiness**.
+Catalog readiness means your catalog can be **decided on by AI agents**. It’s not just about having every field filled out or every description polished. It’s about ensuring that your catalog is structured in a way that AI can process, derive insights, and make decisions like matching, substituting, and setting compliance flags. **Agentic discovery** and **transaction readiness** are the new standards.
 
-Catalog readiness is not just about having information but about ensuring that this information can be effectively processed and acted upon by AI agents. This shift from human-centric data validation to agent-decidable catalog states transforms how businesses approach data management at scale.
+Catalog readiness is the difference between a PIM that shows everything as complete and one that actually performs at scale. It is the benchmark for whether your systems can handle the **volume** and **complexity** of operations at a Voomi or Profitero scale.
 
-## Dimensions: Structure, Identity, Compatibility, Compliance, Channel Fit
+## Dimensions: structure, identity, compatibility, compliance, channel fit
 
-Catalog readiness encompasses several dimensions that go beyond mere data completeness. First is **structure**, which involves having data that is organized in a way that AI agents can easily parse and utilize. Next is **identity**, ensuring that each product is uniquely and accurately represented across platforms.
+Your catalog needs to stand up to a new set of dimensions: structure, identity, compatibility, compliance, and channel fit. Structure is about having the right attributes in place—not just for display but for decision-making. Identity ensures that each SKU is uniquely defined and can be matched across channels, just like Voomi Supply’s 1M+ SKUs that seamlessly connect to 200M ASINs.
 
-Compatibility and compliance are also critical. Compatibility involves ensuring that products can be appropriately matched and substituted based on customer needs and system requirements. Compliance focuses on meeting regulatory and platform-specific guidelines, which is crucial for avoiding costly errors.
+Compatibility is crucial for guiding substitutions and avoiding incorrect matches. Compliance deals with regulatory requirements and operational constraints, such as hazmat considerations, that must be built into your catalog from the start. Channel fit is about knowing the specific requirements and nuances of each platform you operate on, ensuring your listings are not suppressed or misaligned.
 
-Finally, **channel fit** ensures that the catalog is optimized for various sales channels. This involves aligning product data with channel-specific requirements, a task that becomes increasingly complex as businesses scale. **Profitero**, for instance, operates across **1000+ brands**, **1500+ marketplaces**, and **80+ languages**. Their labeling effort decreased from **140 to ~20 FTE-equivalent** with **>95% precision/recall**, showcasing how readiness can facilitate seamless multi-channel operations.
+## What breaks first at scale
 
-## What Breaks First at Scale
+At scale, it’s not the obvious that breaks first. You might be set up perfectly for a single channel, but as soon as new data comes in, optional attributes start to reveal gaps. Fitment errors creep in when your catalog doesn’t account for compatibility edges. When multipacks are not correctly identified, your ASIN family can end up mismatched, leading to suppressed listings. 
 
-As businesses scale, certain issues tend to arise first. Optional attributes, fitment, multipacks, and hazmat classifications often become pain points. These elements are not just optional features; they are critical to maintaining operational efficiency and compliance.
+Hazmat issues can surface unexpectedly if your catalog isn’t equipped to automatically flag these attributes. Voomi Supply saw an **~85% reduction in publish time** by automating these decisions, and that’s what readiness looks like. If your system is still reliant on a rule-based or VA workflow to catch these, you're not truly ready.
 
-For example, a SKU might be marked as "complete" in a PIM system but still lack important details like pack quantity. This can result in the wrong ASIN family being assigned, leading to suppressed listings—a clear channel identity failure. **JCPenney** encountered similar issues when onboarding brands onto their **Mirakl + SFCC** marketplace, where readiness gaps manifested as taxonomy misalignments rather than missing product descriptions.
+## How readiness differs from enrichment-only workflows
 
-## How Readiness Differs from Enrichment-Only Workflows
+Traditional enrichment workflows try to make your data more complete, but they don't make it more actionable. You can polish your PDPs all you want, but if they don’t help an AI agent make a decision, they’re not adding value. Profitero reduced labeling effort from 140 to 20 FTE-equivalent per cycle by focusing on classifier quality, not just enrichment.
 
-Enrichment workflows focus on adding more data—better descriptions, more images, etc. However, this approach falls short in creating a catalog that is agent-decidable. The focus should shift towards creating a decision surface for AI agents, where structured data allows for seamless inferences, matching, substitutions, and transactions.
+Readiness is about creating a decision surface where agents can operate autonomously. It’s the difference between needing to intervene in every step and having a system that learns and improves with each cycle. JCPenney’s taxonomy alignment issues across brands are a readiness gap, not an enrichment gap.
 
-Readiness is about enabling the AI to make decisions autonomously, reducing the need for human intervention. This is not just about data quality; it's about creating a system where data can be utilized effectively by AI to drive operational outcomes.
+## What to measure next
 
-## What to Measure Next
+So, what should you measure next? Focus on **agent-decidable states**: how well your catalog supports AI-driven decisions. This involves evaluating whether your attributes are structured for machine comprehension, your identity logic is robust, and your compliance flags are automated. 
 
-Now that we've established what catalog readiness entails, the next step is to measure it effectively. Consider implementing a scorecard or assessment that evaluates your catalog's readiness across the identified dimensions: structure, identity, compatibility, compliance, and channel fit. This will help pinpoint areas that require improvement and guide your strategy towards achieving true catalog readiness.
-
-### What This Means for Your Catalog
-
-For ecommerce and distribution companies, achieving catalog readiness is not just a goal; it's a necessity. It transforms your catalog from a static repository of data into a dynamic, decision-ready system that can drive efficiency and scalability. As you evaluate your own catalog, focus on creating a decision surface for AI agents, ensuring that your data is not just clean, but ready for the demands of modern commerce.
+Measure the effectiveness of these dimensions in real-world scenarios. Can your system match SKUs to ASINs like Voomi or handle the complexity of 1500+ marketplaces like Profitero? The goal is to see reductions in manual interventions and increases in efficiency and accuracy. This is what catalog readiness truly entails, and it compounds over time. With each run, your catalog becomes more precise and operationally effective, setting the stage for sustainable growth.
