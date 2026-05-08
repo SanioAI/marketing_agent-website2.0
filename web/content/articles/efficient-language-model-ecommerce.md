@@ -1,10 +1,13 @@
 ---
-title: "How Paladio Trains Efficient Language Models for Ecommerce"
-description: "General-purpose LLMs hit a ceiling fast on product data. Learn how domain-specific training — weak supervision, task-scoped models, and real catalog data — gets to >95% precision at Profitero's scale."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "efficient language model for ecommerce"
+title: How Paladio Trains Efficient Language Models for Ecommerce
+description: >-
+  General-purpose LLMs hit a ceiling fast on product data. Learn how
+  domain-specific training — weak supervision, task-scoped models, and real
+  catalog data — gets to >95% precision at Profitero's scale.
+tag: Awareness
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: efficient language model for ecommerce
 ---
 
 ## What "Efficient Language Model for Ecommerce" Actually Means
@@ -29,7 +32,7 @@ An efficient ecommerce language model is characterized by three primary properti
 
 ## When to Build vs. Buy a Domain-Specific Model
 
-Deciding whether to build or buy a domain-specific model hinges on your unique needs. If your catalog has a proprietary taxonomy or custom compliance classes requiring significant fine-tuning, building a tailored model might be necessary. However, if speed is of the essence and maintaining training pipelines is undesirable, purchasing a pre-trained model could be more beneficial. Paladio offers a hybrid solution with catalog agents that provide domain-specific models trained on ecommerce data, complete with configurable quality gates to fit your catalog's requirements.
+Deciding whether to build or buy a domain-specific model hinges on your unique needs. If your catalog has a proprietary taxonomy or custom compliance classes requiring significant fine-tuning, building a tailored model might be necessary. However, if speed is of the essence and maintaining training pipelines is undesirable, purchasing a pre-trained model could be more beneficial. Paladio offers a hybrid solution with [catalog agents](/catalog-agents) that provide domain-specific models trained on ecommerce data, complete with configurable quality gates to fit your catalog's requirements.
 
 ## What This Means for Your Catalog Today
 

@@ -1,10 +1,33 @@
 ---
-title: "Preparing Ecommerce Catalogs for AI Shopping Agents: A Practical Roadmap"
-description: "Phase like production systems: **Voomi** sequenced **1M+ SKU** identity, **200M+ ASIN** matching, **multipack/hazmat** before scaling (**~85% faster publish**); **Profitero** sequences labeling economics (**140 → ~20**, **>95% P/R**); **JCPenney** sequences **Mirakl/SFCC** taxonomy alignment—then ad"
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "prepare ecommerce catalog for AI shopping agents"
+title: 'Preparing Ecommerce Catalogs for AI Shopping Agents: A Practical Roadmap'
+description: >-
+  Phase like production systems: **Voomi** sequenced **1M+ SKU** identity,
+  **200M+ ASIN** matching, **multipack/hazmat** before scaling (**~85% faster
+  publish**); **Profitero** sequences labeling economics (**140 → ~20**, **>95%
+  P/R**); **JCPenney** sequences **Mirakl/SFCC** taxonomy alignment—then ad
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: prepare ecommerce catalog for AI shopping agents
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: Agentic Commerce Readiness Checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
+  - title: What Are Catalog Agents?
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Marketplace Catalog Readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Why Ai Agents Need Structured Product Intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
 ---
 
 ## Preparing Ecommerce Catalogs for AI Shopping Agents: A Practical Roadmap
@@ -19,7 +42,7 @@ For AI shopping agents, "ready" is more than just having data organized—it's a
 
 The first phase in preparing your ecommerce catalog for AI shopping agents is establishing robust product identity and deduplication processes. This involves creating a single, authoritative version of each product entry. Companies like **Voomi Supply** demonstrate the efficacy of this approach, achieving an **~85% reduction in publish-time** for **1M+ SKUs** by focusing on identity, matching, and addressing multipack and hazmat readiness before scaling new categories. This phase's success is measured by the elimination of redundant entries and the establishment of a clear, unique identifier for each product.
 
-## Normalized Product Intelligence
+## Normalized [Product Intelligence](/product-intelligence)
 
 Once identity is established, the next phase involves normalizing product intelligence. This means standardizing product attributes, taxonomy, and brand information to ensure consistency across all listings. Without this standardization, AI agents face hurdles in accurately interpreting product data, which can lead to misclassifications and poor consumer interactions. **Profitero's** rollout across **1000+ brands and 1500+ marketplaces** illustrates the importance of classifier evaluation, achieving **>95% precision and recall**—an essential benchmark for ensuring the reliability of product data.
 
@@ -31,7 +54,7 @@ The third phase is about building graph intelligence to handle compatibility and
 
 In the fourth phase, focus shifts to channel matching and listing readiness. This involves tailoring the catalog to meet the specific requirements of various sales channels, ensuring that each product listing is optimized for the platform it appears on. This is where proper alignment with channel-specific taxonomies becomes critical. As seen in **JCPenney's** implementation of **Mirakl + SFCC**, failing to lock down taxonomy alignment early results in duplicated efforts and inherited data debt. Streamlining this process ensures that your catalog is agile and responsive to platform-specific demands.
 
-## Continuous Evaluation with Catalog Agents
+## Continuous Evaluation with [Catalog Agents](/catalog-agents)
 
 The final phase involves establishing a continuous evaluation process using catalog agents and scorecards. This ongoing assessment ensures that as your catalog evolves, it remains optimized for AI interaction. By continually measuring performance against set metrics, companies can swiftly adapt to changes in product assortment, market demands, and technological advancements. This phase is where the value of the **catalog agent layer** becomes apparent, as it enables seamless transitions and updates without the need for repeated manual interventions.
 

@@ -1,15 +1,39 @@
 ---
-title: "How Catalog Agents Detect Compliance Issues (Hazmat, Multipack, Restricted—Before Listings Burn)"
-description: "Compliance Agent pipeline: **Voomi** **hazmat + multipack** at **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** marketplace paths—evidence-backed detection, not alerts."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents (cross-links Compliance pillar)"
-keyword: "catalog agents compliance detection"
+title: >-
+  How Catalog Agents Detect Compliance Issues (Hazmat, Multipack,
+  Restricted—Before Listings Burn)
+description: >-
+  Compliance Agent pipeline: **Voomi** **hazmat + multipack** at **1M+ SKUs**;
+  **Profitero** **>95% P/R**; **JCPenney** marketplace paths—evidence-backed
+  detection, not alerts.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents (cross-links Compliance pillar)
+keyword: catalog agents compliance detection
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: What are catalog agents
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
 ---
 
 ## Blocking vs. Warning: The Core of Detection
 
-In the high-stakes world of ecommerce, compliance detection isn't just about identifying potential issues—it's about preventing costly marketplace delistings and penalties. The challenge lies in distinguishing between a mere alert and actionable insights that preemptively resolve compliance issues. For ecommerce operators, the difference between a blocked listing and a warning can mean the difference between maintaining marketplace standing and facing significant revenue losses. Paladio.ai's **Compliance Agent**, a robust component of their AI catalog agents, specializes in SKU-scoped checks that not only detect issues but facilitate immediate resolution. The agent's precision in detecting and addressing compliance concerns mirrors the operational excellence seen in **Voomi Supply**'s automation, which achieves **~85% faster publish times** across **1M+ SKUs** and **200M+ ASINs**.
+In the high-stakes world of ecommerce, compliance detection isn't just about identifying potential issues—it's about preventing costly marketplace delistings and penalties. The challenge lies in distinguishing between a mere alert and actionable insights that preemptively resolve compliance issues. For ecommerce operators, the difference between a blocked listing and a warning can mean the difference between maintaining marketplace standing and facing significant revenue losses. Paladio.ai's **Compliance Agent**, a robust component of their AI [catalog agents](/catalog-agents), specializes in SKU-scoped checks that not only detect issues but facilitate immediate resolution. The agent's precision in detecting and addressing compliance concerns mirrors the operational excellence seen in **Voomi Supply**'s automation, which achieves **~85% faster publish times** across **1M+ SKUs** and **200M+ ASINs**.
 
 ## Detecting Multipack, Hazmat, and Restricted Signals
 

@@ -1,10 +1,31 @@
 ---
-title: "Compliance Risk Scanner (Conversion Asset): What It Evaluates on Your SKU Sample"
-description: "Score catalog compliance like ops: **Voomi** **multipack + hazmat** gates at **1M+ SKUs**; **Profitero** **>95% P/R** discipline; **JCPenney** marketplace alignment—scanner outputs, not checklists."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "compliance risk scanner ecommerce"
+title: >-
+  Compliance Risk Scanner (Conversion Asset): What It Evaluates on Your SKU
+  Sample
+description: >-
+  Score catalog compliance like ops: **Voomi** **multipack + hazmat** gates at
+  **1M+ SKUs**; **Profitero** **>95% P/R** discipline; **JCPenney** marketplace
+  alignment—scanner outputs, not checklists.
+tag: Decision
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: compliance risk scanner ecommerce
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: How catalog agents detect compliance issues
+    slug: how-catalog-agents-detect-compliance-issues
+    href: /resources/articles/how-catalog-agents-detect-compliance-issues
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Understanding the Compliance Risk Scanner for E-commerce

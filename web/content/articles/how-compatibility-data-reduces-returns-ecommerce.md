@@ -1,10 +1,35 @@
 ---
-title: "How Compatibility Data Reduces Returns in Parts, Accessories, and Technical Ecommerce"
-description: "Wrong-fit returns = missing graph constraints: **Voomi**-scale HVAC (**1M+ SKUs**, **200M+ ASINs**, **~85% publish** gains tied to pre-flight checks), **Profitero** **>95% P/R** label discipline, **JCPenney** Mirakl family truth—**Compatibility/Product Graph agents**, not PDP polish."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Product Graph / Compatibility / Substitutions"
-keyword: "compatibility data reduce returns ecommerce"
+title: >-
+  How Compatibility Data Reduces Returns in Parts, Accessories, and Technical
+  Ecommerce
+description: >-
+  Wrong-fit returns = missing graph constraints: **Voomi**-scale HVAC (**1M+
+  SKUs**, **200M+ ASINs**, **~85% publish** gains tied to pre-flight checks),
+  **Profitero** **>95% P/R** label discipline, **JCPenney** Mirakl family
+  truth—**Compatibility/Product Graph agents**, not PDP polish.
+tag: Consideration
+readTime: 6 min read
+pillar: Product Graph / Compatibility / Substitutions
+keyword: compatibility data reduce returns ecommerce
+hub:
+  label: Product Graph
+  href: /product-graph
+relatedArticles:
+  - title: What Is a Product Graph?
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Marketplace Catalog Readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Product Compatibility Fitment Explained
+    slug: product-compatibility-fitment-explained
+    href: /resources/articles/product-compatibility-fitment-explained
+  - title: Product Graph Blueprint
+    slug: product-graph-blueprint-parts-accessories
+    href: /resources/articles/product-graph-blueprint-parts-accessories
+  - title: Product Graph Vs Taxonomy Vs Knowledge Graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
 ---
 
 ## Classify Return Drivers Linked to Fitment vs Other

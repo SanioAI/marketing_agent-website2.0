@@ -1,10 +1,32 @@
 ---
-title: "Compatibility Agent: Fitment-Grade Constraints for Agents and Marketplaces"
-description: "Fitment-grade constraints: **Voomi** HVAC **1M+ SKUs / 200M+ ASINs**; **Profitero** **>95% P/R** on structured labels; **JCPenney** variants—**Compatibility Agent**."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "compatibility agent catalog"
+title: 'Compatibility Agent: Fitment-Grade Constraints for Agents and Marketplaces'
+description: >-
+  Fitment-grade constraints: **Voomi** HVAC **1M+ SKUs / 200M+ ASINs**;
+  **Profitero** **>95% P/R** on structured labels; **JCPenney**
+  variants—**Compatibility Agent**.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: compatibility agent catalog
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: Product compatibility and fitment explained
+    slug: product-compatibility-fitment-explained
+    href: /resources/articles/product-compatibility-fitment-explained
+  - title: How compatibility data reduces returns
+    slug: how-compatibility-data-reduces-returns-ecommerce
+    href: /resources/articles/how-compatibility-data-reduces-returns-ecommerce
+  - title: What is a product graph
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Compatibility vs Marketing Claims

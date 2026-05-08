@@ -1,10 +1,33 @@
 ---
-title: "Hazmat Product Classification for Ecommerce Catalogs (Agents, Not Guesswork)"
-description: "Hazmat = structured SKU signals: **Voomi** automated **hazmat** with **multipack** at **1M+ SKUs**; **Profitero**-grade **>95% P/R** for classification; **JCPenney** marketplace restrictions—**Compliance Agent** + evidence."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "hazmat product classification ecommerce"
+title: 'Hazmat Product Classification for Ecommerce Catalogs (Agents, Not Guesswork)'
+description: >-
+  Hazmat = structured SKU signals: **Voomi** automated **hazmat** with
+  **multipack** at **1M+ SKUs**; **Profitero**-grade **>95% P/R** for
+  classification; **JCPenney** marketplace restrictions—**Compliance Agent** +
+  evidence.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: hazmat product classification ecommerce
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Hazmat classification for marketplaces
+    slug: hazmat-classification-for-marketplaces
+    href: /resources/articles/hazmat-classification-for-marketplaces
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: How catalog agents detect compliance issues
+    slug: how-catalog-agents-detect-compliance-issues
+    href: /resources/articles/how-catalog-agents-detect-compliance-issues
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## What “Hazmat in Catalog” Means: Signals, Not Prose

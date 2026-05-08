@@ -1,17 +1,41 @@
 ---
-title: "Product Intelligence vs Product Information Management: Same SKUs, Different Objective Function"
-description: "Different KPIs: PIM completeness vs **Voomi** intelligence (**1M+ SKUs**, **200M+ ASINs**, **~85% publish**), **Profitero** **>95% P/R** across **1500+ marketplaces**, **JCPenney** Mirakl taxonomy—**catalog agents** close the gap."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "product intelligence vs PIM"
+title: >-
+  Product Intelligence vs Product Information Management: Same SKUs, Different
+  Objective Function
+description: >-
+  Different KPIs: PIM completeness vs **Voomi** intelligence (**1M+ SKUs**,
+  **200M+ ASINs**, **~85% publish**), **Profitero** **>95% P/R** across **1500+
+  marketplaces**, **JCPenney** Mirakl taxonomy—**catalog agents** close the gap.
+tag: Consideration
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: product intelligence vs PIM
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: What Is Product Intelligence?
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Catalog Agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Structured product data for ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: Product Intelligence Maturity Model
+    slug: product-intelligence-maturity-model
+    href: /resources/articles/product-intelligence-maturity-model
+  - title: Product Attributes As Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
 ---
 
 ## The Limitations of Product Information Management
 
 In the fast-paced world of ecommerce, having a robust Product Information Management (PIM) system is indispensable. PIM systems excel at managing workflows, assigning roles, and packaging product data for syndication across various platforms. They serve as the backbone for maintaining governance and publication of product records, ensuring that the right information reaches the right places at the right times. However, the efficacy of PIM systems often ends at the point of data dissemination. They are not designed to measure or optimize the machine decision-making processes that occur once the data has left the proverbial building.
 
-PIMs are particularly adept at handling structured tasks like workflow approvals and syndication packaging, but they fall short when it comes to addressing the implicit knowledge and data drift challenges that modern ecommerce platforms present. PIM systems do not inherently manage issues like normalization, graph databases, or product matching, leaving a significant gap in the realm of product intelligence. This gap can lead to SKU rejection or mis-ranking by channel bots like those of Amazon, Mirakl, or Google, despite having complete and accurate product information.
+PIMs are particularly adept at handling structured tasks like workflow approvals and syndication packaging, but they fall short when it comes to addressing the implicit knowledge and data drift challenges that modern ecommerce platforms present. PIM systems do not inherently manage issues like normalization, graph databases, or product matching, leaving a significant gap in the realm of [product intelligence](/product-intelligence). This gap can lead to SKU rejection or mis-ranking by channel bots like those of Amazon, Mirakl, or Google, despite having complete and accurate product information.
 
 ## Where PIM Stops Short for AI Agents
 
@@ -33,7 +57,7 @@ The readiness scorecard becomes a dynamic tool that evolves with the ecommerce l
 
 ## Integration: Agents on Top of PIM Records
 
-To fully harness the power of product intelligence, it's crucial to integrate AI catalog agents on top of existing PIM records. These agents act as an intelligence layer, working in tandem with PIM systems to fill the gaps they leave behind. They provide the necessary normalization, graph, matching, and compliance checks at SKU scale, ensuring that the data is not only complete but also correctly interpreted by channel algorithms.
+To fully harness the power of product intelligence, it's crucial to integrate AI [catalog agents](/catalog-agents) on top of existing PIM records. These agents act as an intelligence layer, working in tandem with PIM systems to fill the gaps they leave behind. They provide the necessary normalization, graph, matching, and compliance checks at SKU scale, ensuring that the data is not only complete but also correctly interpreted by channel algorithms.
 
 This integration allows companies to respect their existing PIM budgets while adding the missing intelligence layer that is crucial for success in today's competitive ecommerce environment. By leveraging catalog agents, companies can achieve a more holistic approach to product data management, optimizing both governance and decision-making processes.
 

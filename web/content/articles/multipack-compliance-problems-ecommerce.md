@@ -1,10 +1,29 @@
 ---
-title: "Multipack Compliance Problems in Ecommerce (and Why Agents Catch Them)"
-description: "Multipack = compliance + channel + tax: **Voomi** **multipack detection** at **1M+ SKUs**; **Profitero** **>95% P/R** on structured truth; **JCPenney** variant families—agents, not hero images."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "multipack compliance ecommerce"
+title: Multipack Compliance Problems in Ecommerce (and Why Agents Catch Them)
+description: >-
+  Multipack = compliance + channel + tax: **Voomi** **multipack detection** at
+  **1M+ SKUs**; **Profitero** **>95% P/R** on structured truth; **JCPenney**
+  variant families—agents, not hero images.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: multipack compliance ecommerce
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Amazon product matching guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: How catalog errors create tax and compliance risk
+    slug: how-catalog-errors-create-tax-compliance-risk
+    href: /resources/articles/how-catalog-errors-create-tax-compliance-risk
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## Multipack Compliance Problems in Ecommerce (and Why Agents Catch Them)
@@ -17,7 +36,7 @@ A typical scenario illustrates the problem well: a product intended to be listed
 
 ## The Role of Detection Signals
 
-Addressing these issues requires more than just routine catalog checks; it demands sophisticated detection signals that can preemptively identify misconfigurations. This is where Paladio's AI catalog agents come into play. By treating multipack status as a first-class signal rather than a merchandising afterthought, Paladio ensures that potential errors are flagged and corrected before they can cause disruptions. This proactive approach is crucial for maintaining compliance across diverse marketplaces and languages.
+Addressing these issues requires more than just routine catalog checks; it demands sophisticated detection signals that can preemptively identify misconfigurations. This is where Paladio's AI [catalog agents](/catalog-agents) come into play. By treating multipack status as a first-class signal rather than a merchandising afterthought, Paladio ensures that potential errors are flagged and corrected before they can cause disruptions. This proactive approach is crucial for maintaining compliance across diverse marketplaces and languages.
 
 ## Compliance and Channel Agents in Action
 

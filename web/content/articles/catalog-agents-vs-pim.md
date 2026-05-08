@@ -1,15 +1,38 @@
 ---
-title: "Catalog Agents vs PIM: Complementary, Not Interchangeable"
-description: "PIM ≠ agent ops: **Voomi** used agents for **1M+ SKUs / 200M+ ASINs** + **~85% faster publish**; **Profitero** for **>95% P/R** across **1500+ marketplaces**; **JCPenney** for **Mirakl/SFCC** taxonomy—continuous **catalog agents**, not more workflow seats."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "catalog agents vs PIM"
+title: 'Catalog Agents vs PIM: Complementary, Not Interchangeable'
+description: >-
+  PIM ≠ agent ops: **Voomi** used agents for **1M+ SKUs / 200M+ ASINs** + **~85%
+  faster publish**; **Profitero** for **>95% P/R** across **1500+
+  marketplaces**; **JCPenney** for **Mirakl/SFCC** taxonomy—continuous **catalog
+  agents**, not more workflow seats.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: catalog agents vs PIM
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: What Are Catalog Agents?
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Product Intelligence vs Product Information Management
+    slug: product-intelligence-vs-product-information-management
+    href: /resources/articles/product-intelligence-vs-product-information-management
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: How Catalog Agents Extract Product Attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## The Limitations of PIM in Modern E-commerce
 
-In the fast-paced world of e-commerce, companies often face a bottleneck when it comes to managing extensive product catalogs. A common misconception is that having a Product Information Management (PIM) system solves all catalog management issues. However, this belief is a simplification that overlooks the critical role that **catalog agents** play in optimizing product data. While PIM systems are excellent at handling human workflows and serving as syndication containers, they fall short when it comes to enabling machine reasoning and continuous data repair—a domain where catalog agents excel.
+In the fast-paced world of e-commerce, companies often face a bottleneck when it comes to managing extensive product catalogs. A common misconception is that having a Product Information Management (PIM) system solves all catalog management issues. However, this belief is a simplification that overlooks the critical role that **[catalog agents](/catalog-agents)** play in optimizing product data. While PIM systems are excellent at handling human workflows and serving as syndication containers, they fall short when it comes to enabling machine reasoning and continuous data repair—a domain where catalog agents excel.
 
 ## What PIM is Optimized For
 

@@ -1,10 +1,32 @@
 ---
-title: "Compliance Agent: Hazmat, Multipack, and Restricted-Class Catalog Enforcement"
-description: "Compliance Agent = hazmat + multipack + restricted gates: **Voomi** **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** marketplace—evidence, not checkboxes."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "compliance agent product data"
+title: 'Compliance Agent: Hazmat, Multipack, and Restricted-Class Catalog Enforcement'
+description: >-
+  Compliance Agent = hazmat + multipack + restricted gates: **Voomi** **1M+
+  SKUs**; **Profitero** **>95% P/R**; **JCPenney** marketplace—evidence, not
+  checkboxes.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: compliance agent product data
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: How catalog agents detect compliance issues
+    slug: how-catalog-agents-detect-compliance-issues
+    href: /resources/articles/how-catalog-agents-detect-compliance-issues
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Compliance risk scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Compliance Agent vs Generic Rules Engine

@@ -1,10 +1,35 @@
 ---
-title: "How Catalog Agents Normalize Messy Product Data (Brands, Units, Variants, and Typos)"
-description: "Rules died at **Profitero** scale (**1000+ brands**, **140→20** labeling, **>95% P/R**) and **Voomi** scale (**1M+ SKUs → 200M+ ASINs**)—**Brand/Taxonomy agents** create stable keys **JCPenney Mirakl** can browse on."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "catalog agents normalize product data"
+title: >-
+  How Catalog Agents Normalize Messy Product Data (Brands, Units, Variants, and
+  Typos)
+description: >-
+  Rules died at **Profitero** scale (**1000+ brands**, **140→20** labeling,
+  **>95% P/R**) and **Voomi** scale (**1M+ SKUs → 200M+
+  ASINs**)—**Brand/Taxonomy agents** create stable keys **JCPenney Mirakl** can
+  browse on.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: catalog agents normalize product data
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: How Catalog Agents Extract Product Attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: Catalog Agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: What Is Product Intelligence?
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: What Is Catalog Readiness
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Why Rules Alone Fail at Long-Tail Messiness
@@ -39,4 +64,4 @@ For instance, **Profitero’s** reduction in labeling hours by 85% reflects not 
 
 ## What This Means for Your Catalog
 
-For companies grappling with messy product data, adopting AI-driven normalization is not just an option; it's a necessity. By leveraging advanced catalog agents, businesses can transform chaotic strings into canonical representations, ensuring stable keys and comparable numerics. This shift moves beyond mere data management into creating a reliable decision infrastructure that enhances operational efficiency and competitive advantage in the ecommerce landscape.
+For companies grappling with messy product data, adopting AI-driven normalization is not just an option; it's a necessity. By leveraging advanced [catalog agents](/catalog-agents), businesses can transform chaotic strings into canonical representations, ensuring stable keys and comparable numerics. This shift moves beyond mere data management into creating a reliable decision infrastructure that enhances operational efficiency and competitive advantage in the ecommerce landscape.

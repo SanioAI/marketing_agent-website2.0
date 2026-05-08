@@ -1,10 +1,32 @@
 ---
-title: "Taxonomy Agent: Browse Nodes, Facets, and Channel Taxonomy Alignment"
-description: "Taxonomy Agent = channel-safe keys: **Profitero** **1500+ marketplaces**; **JCPenney** **Mirakl/SFCC**; **Voomi** scale **1M+ SKUs**—drift detection, not manual remaps."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "taxonomy agent ecommerce"
+title: 'Taxonomy Agent: Browse Nodes, Facets, and Channel Taxonomy Alignment'
+description: >-
+  Taxonomy Agent = channel-safe keys: **Profitero** **1500+ marketplaces**;
+  **JCPenney** **Mirakl/SFCC**; **Voomi** scale **1M+ SKUs**—drift detection,
+  not manual remaps.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: taxonomy agent ecommerce
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: How catalog agents normalize messy product data
+    slug: how-catalog-agents-normalize-messy-product-data
+    href: /resources/articles/how-catalog-agents-normalize-messy-product-data
+  - title: Product graph vs taxonomy vs knowledge graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Taxonomy vs Product Graph

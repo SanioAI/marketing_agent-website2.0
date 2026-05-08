@@ -1,13 +1,35 @@
 ---
-title: "How Catalog Agents Extract Product Attributes at SKU Scale"
-description: "Attribute Agent extraction = **Voomi** density (**10–15+ attrs**, **1M+ SKUs / 200M+ ASINs**), **Profitero** scoring (**>95% P/R**, **80+ langs**), **JCPenney** Mirakl-safe binds—not PDF toys."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "AI catalog agents extract product attributes"
+title: How Catalog Agents Extract Product Attributes at SKU Scale
+description: >-
+  Attribute Agent extraction = **Voomi** density (**10–15+ attrs**, **1M+ SKUs /
+  200M+ ASINs**), **Profitero** scoring (**>95% P/R**, **80+ langs**),
+  **JCPenney** Mirakl-safe binds—not PDF toys.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: AI catalog agents extract product attributes
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: What Are Catalog Agents?
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Product Attributes as Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
+  - title: What Is Product Intelligence?
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
-## How Catalog Agents Extract Product Attributes at SKU Scale
+## How [Catalog Agents](/catalog-agents) Extract Product Attributes at SKU Scale
 
 In the fast-paced world of ecommerce and distribution, accurate and efficient product data management is a critical component for success. Yet, many businesses still struggle to extract and normalize product attributes at scale, leading to costly inefficiencies and errors. The challenge is not just about moving data from PDFs to Product Information Management (PIM) systems—it's about doing so with a level of precision and scale that traditional methods simply cannot achieve. This is where **AI catalog agents** come into play, offering a powerful solution to this complex problem.
 

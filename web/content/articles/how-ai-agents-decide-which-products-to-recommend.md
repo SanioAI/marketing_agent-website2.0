@@ -1,10 +1,35 @@
 ---
-title: "How AI Agents Decide Which Products to Recommend (and What Your Catalog Must Provide)"
-description: "Retrieve/filter/compare like **Voomi** at **1M+ SKUs / 200M+ ASINs** (where **multipack** + specs collapse candidates), **Profitero** at **>95% P/R** (where sparse fields are model inputs), **JCPenney** Mirakl facets (where taxonomy sets the consideration set)—or agents silently drop SKUs."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "how AI agents choose products to recommend"
+title: >-
+  How AI Agents Decide Which Products to Recommend (and What Your Catalog Must
+  Provide)
+description: >-
+  Retrieve/filter/compare like **Voomi** at **1M+ SKUs / 200M+ ASINs** (where
+  **multipack** + specs collapse candidates), **Profitero** at **>95% P/R**
+  (where sparse fields are model inputs), **JCPenney** Mirakl facets (where
+  taxonomy sets the consideration set)—or agents silently drop SKUs.
+tag: Awareness
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: how AI agents choose products to recommend
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: Why AI Agents Need Structured Product Intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Optional Attributes Revenue-Critical Agentic Commerce
+    slug: optional-attributes-revenue-critical-agentic-commerce
+    href: /resources/articles/optional-attributes-revenue-critical-agentic-commerce
+  - title: What Are Catalog Agents?
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Agentic Commerce Readiness Checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
 ---
 
 ## Agents Don’t “Browse”; They Execute Tasks
@@ -31,10 +56,10 @@ In the justification phase, agents rely on provenance-friendly facts rather than
 
 Despite the best intentions, many enterprise catalogs fall short in supporting AI-driven recommendations. Missing attributes, incompatible formats, and misaligned taxonomies lead to breakdowns across the decision pipeline. For instance, Voomi Supply's and Profitero's challenges underscore the importance of completeness and accuracy in structured data, where even sparse fields can lead to significant failures.
 
-## Bridge to Catalog Agents + Readiness Scorecard
+## Bridge to [Catalog Agents](/catalog-agents) + Readiness Scorecard
 
 To overcome these challenges, ecommerce companies must embrace catalog agents and readiness scorecards. These tools continuously update and validate catalog data, ensuring that all attributes are complete, accurate, and aligned with marketplace requirements. A readiness scorecard can help identify gaps in catalog data, providing a clear path to improvement and ensuring that AI agents can make informed, precise recommendations without the risk of hand-waving or data omission.
 
 ## What This Means for Your Catalog
 
-For businesses aiming to leverage AI agents effectively, the focus must shift to ensuring catalog readiness. This involves a thorough audit of existing data, aligning it with structured facets, and continuously updating it to adapt to marketplace changes. By addressing these readiness gaps, companies can unlock the full potential of AI agents, transforming their ecommerce strategy from guesswork to precision-driven success.
+For businesses aiming to leverage AI agents effectively, the focus must shift to ensuring [catalog readiness](/catalog-readiness). This involves a thorough audit of existing data, aligning it with structured facets, and continuously updating it to adapt to marketplace changes. By addressing these readiness gaps, companies can unlock the full potential of AI agents, transforming their ecommerce strategy from guesswork to precision-driven success.

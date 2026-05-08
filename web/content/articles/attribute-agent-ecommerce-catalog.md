@@ -1,10 +1,32 @@
 ---
-title: "Attribute Agent: Grounded Extraction and Schema-Safe Attributes at SKU Scale"
-description: "Attribute Agent = grounded extraction at scale: **Voomi** **10–15+ attrs**, **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** Mirakl-safe binds—evaluation, not chat."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "attribute agent product catalog"
+title: 'Attribute Agent: Grounded Extraction and Schema-Safe Attributes at SKU Scale'
+description: >-
+  Attribute Agent = grounded extraction at scale: **Voomi** **10–15+ attrs**,
+  **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** Mirakl-safe
+  binds—evaluation, not chat.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: attribute agent product catalog
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: How catalog agents extract product attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: Structured product data for ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: Product attributes as ranking signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## What Attribute Agent Owns (and Does Not)

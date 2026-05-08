@@ -1,10 +1,32 @@
 ---
-title: "Brand Normalization Agent: Collapsing Alias Chaos for Matching and Browse"
-description: "Canonical brands for matching: **Profitero** **1000+ brands**, **140→20** labeling; **Voomi** **200M+ ASIN** tie-breaks; **JCPenney** multi-brand **Mirakl**—**Brand Normalization Agent**."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "brand normalization catalog agent"
+title: 'Brand Normalization Agent: Collapsing Alias Chaos for Matching and Browse'
+description: >-
+  Canonical brands for matching: **Profitero** **1000+ brands**, **140→20**
+  labeling; **Voomi** **200M+ ASIN** tie-breaks; **JCPenney** multi-brand
+  **Mirakl**—**Brand Normalization Agent**.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: brand normalization catalog agent
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: How catalog agents normalize messy product data
+    slug: how-catalog-agents-normalize-messy-product-data
+    href: /resources/articles/how-catalog-agents-normalize-messy-product-data
+  - title: Amazon product matching guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: Catalog agents vs rule-based data quality
+    slug: catalog-agents-vs-rule-based-data-quality-platforms
+    href: /resources/articles/catalog-agents-vs-rule-based-data-quality-platforms
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Why Brand is an Entity-Resolution Problem

@@ -1,10 +1,32 @@
 ---
-title: "TaxGraph for Ecommerce: Product-Driven Taxability, Not Spreadsheet Overrides"
-description: "**TaxGraph** = taxability subgraph tied to catalog truth: **Voomi** **multipack** + **1M+ SKUs**; **Profitero**-grade structured labels; **JCPenney** channel taxonomy—not manual overrides."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "TaxGraph ecommerce"
+title: 'TaxGraph for Ecommerce: Product-Driven Taxability, Not Spreadsheet Overrides'
+description: >-
+  **TaxGraph** = taxability subgraph tied to catalog truth: **Voomi**
+  **multipack** + **1M+ SKUs**; **Profitero**-grade structured labels;
+  **JCPenney** channel taxonomy—not manual overrides.
+tag: Awareness
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: TaxGraph ecommerce
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Product taxability automation
+    slug: product-taxability-automation
+    href: /resources/articles/product-taxability-automation
+  - title: How catalog errors create tax and compliance risk
+    slug: how-catalog-errors-create-tax-compliance-risk
+    href: /resources/articles/how-catalog-errors-create-tax-compliance-risk
+  - title: What is a product graph
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Ecommerce Product Compliance Automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## Why Tax Engines Are Not Oracles

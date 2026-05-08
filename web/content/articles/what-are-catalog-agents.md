@@ -1,15 +1,38 @@
 ---
-title: "What Are Catalog Agents? Specialized AI for Product Data Operations"
-description: "Catalog agents = production operators like **Voomi** (**1M+ SKUs**, **200M+ ASINs**, **~85% faster publish**), **Profitero** (**1000+ brands**, **>95% P/R**, **140→20** labeling), **JCPenney** (**Mirakl/SFCC** taxonomy)—not “PIM with a chatbot.”"
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "what are catalog agents"
+title: What Are Catalog Agents? Specialized AI for Product Data Operations
+description: >-
+  Catalog agents = production operators like **Voomi** (**1M+ SKUs**, **200M+
+  ASINs**, **~85% faster publish**), **Profitero** (**1000+ brands**, **>95%
+  P/R**, **140→20** labeling), **JCPenney** (**Mirakl/SFCC** taxonomy)—not “PIM
+  with a chatbot.”
+tag: Awareness
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: what are catalog agents
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: Catalog Agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents vs Enrichment Tools
+    slug: catalog-agents-vs-enrichment-tools
+    href: /resources/articles/catalog-agents-vs-enrichment-tools
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: How Catalog Agents Extract Product Attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## The Gap: Humans Can't Keep Millions of SKUs Agent-Ready
 
-In the fast-paced world of ecommerce, the challenge of maintaining millions of SKUs is a relentless one. The traditional manual processes simply cannot scale to meet the demands of modern catalog operations. While many companies attempt to address this with generic AI enrichment tools, these often fall short, failing to resolve fundamental issues like taxonomy misalignment or compliance requirements. The stakes are high: delayed time-to-market, increased operational costs, and missed sales opportunities. This is where catalog agents come into play, offering a revolutionary approach to product data management that goes beyond mere enrichment.
+In the fast-paced world of ecommerce, the challenge of maintaining millions of SKUs is a relentless one. The traditional manual processes simply cannot scale to meet the demands of modern catalog operations. While many companies attempt to address this with generic AI enrichment tools, these often fall short, failing to resolve fundamental issues like taxonomy misalignment or compliance requirements. The stakes are high: delayed time-to-market, increased operational costs, and missed sales opportunities. This is where [catalog agents](/catalog-agents) come into play, offering a revolutionary approach to product data management that goes beyond mere enrichment.
 
 ## Definition: Autonomous, Scoped, Measurable Catalog Operators
 
@@ -34,7 +57,7 @@ Catalog agents work collaboratively to transform chaotic product data into a str
 
 ## Catalog Agents vs PIM / Enrichment
 
-Unlike traditional Product Information Management (PIM) systems or simple AI enrichment tools, catalog agents are designed for comprehensive and seamless integration into the catalog readiness process. They are not limited to enhancing data but are integral to the operation itself, ensuring that every product is fully optimized and compliant before it reaches the market. This contrasts sharply with enrichment-only bots, which might fill text fields but leave critical issues like channel taxonomy misalignment unresolved, preventing safe listing or matching.
+Unlike traditional Product Information Management (PIM) systems or simple AI enrichment tools, catalog agents are designed for comprehensive and seamless integration into the [catalog readiness](/catalog-readiness) process. They are not limited to enhancing data but are integral to the operation itself, ensuring that every product is fully optimized and compliant before it reaches the market. This contrasts sharply with enrichment-only bots, which might fill text fields but leave critical issues like channel taxonomy misalignment unresolved, preventing safe listing or matching.
 
 ## What This Means for Your Catalog
 

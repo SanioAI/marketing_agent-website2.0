@@ -1,10 +1,29 @@
 ---
-title: "Product Graph vs Taxonomy vs Knowledge Graph: A Clear Taxonomy for “Graph” Confusion"
-description: "Taxonomy ≠ product graph: **Voomi** needed subgraph edges for **1M+ SKUs**, **~85% publish**; **Profitero** needs constrained subgraphs for **>95% P/R** across **1500+ marketplaces**; **JCPenney** Mirakl vs MDM trees—commerce graph first."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Product Graph / Compatibility / Substitutions"
-keyword: "product graph vs taxonomy"
+title: >-
+  Product Graph vs Taxonomy vs Knowledge Graph: A Clear Taxonomy for “Graph”
+  Confusion
+description: >-
+  Taxonomy ≠ product graph: **Voomi** needed subgraph edges for **1M+ SKUs**,
+  **~85% publish**; **Profitero** needs constrained subgraphs for **>95% P/R**
+  across **1500+ marketplaces**; **JCPenney** Mirakl vs MDM trees—commerce graph
+  first.
+tag: Consideration
+readTime: 6 min read
+pillar: Product Graph / Compatibility / Substitutions
+keyword: product graph vs taxonomy
+hub:
+  label: Product Graph
+  href: /product-graph
+relatedArticles:
+  - title: What Is a Product Graph?
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Product Compatibility Fitment Explained
+    slug: product-compatibility-fitment-explained
+    href: /resources/articles/product-compatibility-fitment-explained
+  - title: Product Graph Blueprint
+    slug: product-graph-blueprint-parts-accessories
+    href: /resources/articles/product-graph-blueprint-parts-accessories
 ---
 
 ## Why the Terminology Collision Hurts Buying Decisions

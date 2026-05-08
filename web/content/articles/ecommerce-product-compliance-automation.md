@@ -1,10 +1,34 @@
 ---
-title: "Ecommerce Product Compliance Automation: From Policy Docs to SKU-Decideable Signals"
-description: "Automate compliance on SKUs: **Voomi** **hazmat + multipack** at **1M+ SKUs**; **Profitero** **>95% P/R** classification; **JCPenney** marketplace restrictions—**Compliance Agent**, not policy PDFs."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "ecommerce product compliance automation"
+title: >-
+  Ecommerce Product Compliance Automation: From Policy Docs to SKU-Decideable
+  Signals
+description: >-
+  Automate compliance on SKUs: **Voomi** **hazmat + multipack** at **1M+ SKUs**;
+  **Profitero** **>95% P/R** classification; **JCPenney** marketplace
+  restrictions—**Compliance Agent**, not policy PDFs.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: ecommerce product compliance automation
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Hazmat product classification
+    slug: hazmat-product-classification-ecommerce
+    href: /resources/articles/hazmat-product-classification-ecommerce
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: How catalog agents detect compliance issues
+    slug: how-catalog-agents-detect-compliance-issues
+    href: /resources/articles/how-catalog-agents-detect-compliance-issues
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## Compliance as Catalog State, Not Policy Storage

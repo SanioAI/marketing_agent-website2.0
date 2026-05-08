@@ -1,10 +1,31 @@
 ---
-title: "Channel Readiness Audit (Conversion Asset): Amazon, Google, Walmart, Mirakl—One Scorecard"
-description: "One audit across channels: **Voomi** **1M+ SKUs / 200M+ ASINs** + **multipack/hazmat**; **Profitero** **>95% P/R**; **JCPenney** **Mirakl/SFCC**—tiered backlog, not feed green."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Marketplace & Channel Readiness"
-keyword: "channel readiness audit"
+title: >-
+  Channel Readiness Audit (Conversion Asset): Amazon, Google, Walmart,
+  Mirakl—One Scorecard
+description: >-
+  One audit across channels: **Voomi** **1M+ SKUs / 200M+ ASINs** +
+  **multipack/hazmat**; **Profitero** **>95% P/R**; **JCPenney**
+  **Mirakl/SFCC**—tiered backlog, not feed green.
+tag: Decision
+readTime: 6 min read
+pillar: Marketplace & Channel Readiness
+keyword: channel readiness audit
+hub:
+  label: Marketplace Readiness
+  href: /marketplace-readiness
+relatedArticles:
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Amazon product matching guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: What Is Catalog Readiness
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
 ---
 
 ## Channel Readiness Audit: Navigating the Complexities of Ecommerce Channels
@@ -19,7 +40,7 @@ Incorporating channels like Amazon and Google is crucial due to their vast custo
 
 ## Modules: Identity, Taxonomy, Multipack, Hazmat, Match Quality
 
-The core of a channel readiness audit lies in its modular approach. Each module addresses a specific aspect of catalog readiness:
+The core of a channel readiness audit lies in its modular approach. Each module addresses a specific aspect of [catalog readiness](/catalog-readiness):
 
 - **Identity**: Ensures ASIN/GTIN consistency, crucial for product recognition across platforms. This is where tools like **Voomi Supply** have demonstrated their value, handling over 1M SKUs and 200M ASINs with impressive efficiency.
   

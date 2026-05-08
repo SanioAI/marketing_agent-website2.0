@@ -1,15 +1,39 @@
 ---
-title: "Catalog Readiness Assessment (Conversion Asset): Score Agent-Decidable State, Not PIM Completeness"
-description: "Score catalogs like ops: **Voomi** **1M+ SKUs / 200M+ ASINs** + **~85%** publish path; **Profitero** **>95% P/R**; **JCPenney** taxonomy—readiness tiers, not PIM green checks."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "catalog readiness assessment"
+title: >-
+  Catalog Readiness Assessment (Conversion Asset): Score Agent-Decidable State,
+  Not PIM Completeness
+description: >-
+  Score catalogs like ops: **Voomi** **1M+ SKUs / 200M+ ASINs** + **~85%**
+  publish path; **Profitero** **>95% P/R**; **JCPenney** taxonomy—readiness
+  tiers, not PIM green checks.
+tag: Decision
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: catalog readiness assessment
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: What is catalog readiness
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Agentic commerce readiness checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
+  - title: What are catalog agents
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Why Ai Agents Need Structured Product Intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
-## Catalog Readiness Assessment: Score Agent-Decidable State, Not PIM Completeness
+## [Catalog Readiness](/catalog-readiness) Assessment: Score Agent-Decidable State, Not PIM Completeness
 
-In the complex world of ecommerce, the readiness of your catalog is not just about having complete data. It's about knowing whether your systems are truly prepared to handle the demands of marketplace integrations and automation. Executives seeking to fund catalog agents need a reliable metric beyond vague "data quality" scores. That's where our **catalog readiness assessment** comes into play, offering a comprehensive evaluation that goes beyond traditional PIM audits to truly measure ecommerce readiness.
+In the complex world of ecommerce, the readiness of your catalog is not just about having complete data. It's about knowing whether your systems are truly prepared to handle the demands of marketplace integrations and automation. Executives seeking to fund [catalog agents](/catalog-agents) need a reliable metric beyond vague "data quality" scores. That's where our **catalog readiness assessment** comes into play, offering a comprehensive evaluation that goes beyond traditional PIM audits to truly measure ecommerce readiness.
 
 ## What the Assessment Measures
 

@@ -1,10 +1,34 @@
 ---
-title: "Why AI Catalog Compliance Still Needs Human-in-the-Loop (and Where to Put Humans)"
-description: "HITL where liability spikes: **Profitero** **140→20** + **>95% P/R**; **Voomi** **hazmat/multipack** at **1M+ SKUs**; **JCPenney** marketplace governance—**Compliance Agent** + review queues."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "AI catalog compliance human in the loop"
+title: >-
+  Why AI Catalog Compliance Still Needs Human-in-the-Loop (and Where to Put
+  Humans)
+description: >-
+  HITL where liability spikes: **Profitero** **140→20** + **>95% P/R**;
+  **Voomi** **hazmat/multipack** at **1M+ SKUs**; **JCPenney** marketplace
+  governance—**Compliance Agent** + review queues.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: AI catalog compliance human in the loop
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Ecommerce product compliance automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Hazmat product classification
+    slug: hazmat-product-classification-ecommerce
+    href: /resources/articles/hazmat-product-classification-ecommerce
+  - title: What are catalog agents
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Why AI Catalog Compliance Still Needs Human-in-the-Loop (and Where to Put Humans)

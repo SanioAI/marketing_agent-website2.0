@@ -1,10 +1,33 @@
 ---
-title: "Product Taxability Automation: Why Tax Follows Catalog Structure (TaxGraph)"
-description: "Tax follows catalog truth: **Voomi** **multipack** + category gates at **1M+ SKUs**; **Profitero** **>95% P/R** label discipline; **JCPenney** **Mirakl/SFCC** taxonomy—**TaxGraph** + **Compliance Agent**, not “tax code text fields.”"
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "product taxability automation"
+title: 'Product Taxability Automation: Why Tax Follows Catalog Structure (TaxGraph)'
+description: >-
+  Tax follows catalog truth: **Voomi** **multipack** + category gates at **1M+
+  SKUs**; **Profitero** **>95% P/R** label discipline; **JCPenney**
+  **Mirakl/SFCC** taxonomy—**TaxGraph** + **Compliance Agent**, not “tax code
+  text fields.”
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: product taxability automation
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: TaxGraph for ecommerce
+    slug: taxgraph-for-ecommerce
+    href: /resources/articles/taxgraph-for-ecommerce
+  - title: How catalog errors create tax and compliance risk
+    slug: how-catalog-errors-create-tax-compliance-risk
+    href: /resources/articles/how-catalog-errors-create-tax-compliance-risk
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: Product intelligence vs PIM
+    slug: product-intelligence-vs-product-information-management
+    href: /resources/articles/product-intelligence-vs-product-information-management
+  - title: Ecommerce Product Compliance Automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
 ---
 
 ## Tax Incidents as Downstream Catalog Defects

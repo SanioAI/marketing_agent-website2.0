@@ -1,15 +1,39 @@
 ---
-title: "Product Attributes as Ranking Signals: What Search, Marketplaces, and AI Agents Agree On"
-description: "Attributes = ranking/filter signals: **Profitero** **>95% P/R** across **1500+ marketplaces**, **Voomi** hard filters on **1M+ SKUs / 200M+ ASINs**, **JCPenney** Mirakl enums—**Attribute + Taxonomy agents** restore integrity."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "product attributes as ranking signals"
+title: >-
+  Product Attributes as Ranking Signals: What Search, Marketplaces, and AI
+  Agents Agree On
+description: >-
+  Attributes = ranking/filter signals: **Profitero** **>95% P/R** across **1500+
+  marketplaces**, **Voomi** hard filters on **1M+ SKUs / 200M+ ASINs**,
+  **JCPenney** Mirakl enums—**Attribute + Taxonomy agents** restore integrity.
+tag: Awareness
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: product attributes as ranking signals
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: Optional Attributes Revenue-Critical Agentic Commerce
+    slug: optional-attributes-revenue-critical-agentic-commerce
+    href: /resources/articles/optional-attributes-revenue-critical-agentic-commerce
+  - title: How Catalog Agents Extract Product Attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: What Is Product Intelligence
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Product Intelligence Maturity Model
+    slug: product-intelligence-maturity-model
+    href: /resources/articles/product-intelligence-maturity-model
+  - title: Structured Product Data For Ecommerce Ai
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
 ---
 
 ## Ranking vs Filtering: Two Sides of the Same Attribute Coin
 
-In the competitive world of ecommerce, understanding how product attributes function as signals in ranking and filtering systems is not optional; it's essential. Attributes are not mere metadata. They are active components that influence how products are ranked and filtered across search engines, marketplaces, and AI-driven ecosystems. This is where catalog readiness becomes crucial. The integrity of your attribute model must be preserved across all channels to ensure seamless interaction with these systems. Without this, ecommerce entities face a dilemma where attributes sit in "PIM admin" while SEO and marketplace teams battle suppressions.
+In the competitive world of ecommerce, understanding how product attributes function as signals in ranking and filtering systems is not optional; it's essential. Attributes are not mere metadata. They are active components that influence how products are ranked and filtered across search engines, marketplaces, and AI-driven ecosystems. This is where [catalog readiness](/catalog-readiness) becomes crucial. The integrity of your attribute model must be preserved across all channels to ensure seamless interaction with these systems. Without this, ecommerce entities face a dilemma where attributes sit in "PIM admin" while SEO and marketplace teams battle suppressions.
 
 Consider Profitero, which treats attributes as model inputs across **1500+ marketplaces**. The normalization quality they maintain is tied to **>95% precision/recall**, demonstrating the critical role that attributes play in the ranking mechanics of marketplaces. Without precise and standardized attributes, products may not appear in relevant search results or may be incorrectly filtered out.
 

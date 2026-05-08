@@ -1,10 +1,34 @@
 ---
-title: "Structured Product Data for Ecommerce AI: The Minimum Viable Machine Vocabulary"
-description: "Agent-ready structure: **Voomi** **10–15+ attrs**, **1M+ SKUs / 200M+ ASINs**; **Profitero** **>95% P/R**, **80+ langs**; **JCPenney** **Mirakl** facets—not schema-only theater."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "structured product data ecommerce AI"
+title: >-
+  Structured Product Data for Ecommerce AI: The Minimum Viable Machine
+  Vocabulary
+description: >-
+  Agent-ready structure: **Voomi** **10–15+ attrs**, **1M+ SKUs / 200M+ ASINs**;
+  **Profitero** **>95% P/R**, **80+ langs**; **JCPenney** **Mirakl** facets—not
+  schema-only theater.
+tag: Consideration
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: structured product data ecommerce AI
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: Why AI agents need structured product intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: What is product intelligence
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: How catalog agents extract product attributes
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Product Attributes As Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
 ---
 
 ## Structured Data vs Agent-Decidable Data
@@ -29,7 +53,7 @@ These elements are integral to creating a data structure that is not only compre
 
 The journey toward effective structured product data is not a one-time project but a continuous process. Feeding product data into a system once and assuming it's done is a common pitfall. Instead, businesses must focus on continuous maintenance and refinement of data processes. This involves regular audits, updates, and alignment with evolving market requirements and technologies.
 
-Continuous data maintenance ensures that the product catalog remains relevant and accurate, facilitating better decision-making by AI catalog agents. As seen with Voomi Supply and Profitero, ongoing data refinement leads to significant efficiencies and higher accuracy, enabling businesses to maintain a competitive edge in the fast-paced ecommerce environment.
+Continuous data maintenance ensures that the product catalog remains relevant and accurate, facilitating better decision-making by AI [catalog agents](/catalog-agents). As seen with Voomi Supply and Profitero, ongoing data refinement leads to significant efficiencies and higher accuracy, enabling businesses to maintain a competitive edge in the fast-paced ecommerce environment.
 
 ## What This Means for Your Catalog
 

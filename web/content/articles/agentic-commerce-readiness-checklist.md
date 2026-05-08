@@ -1,15 +1,41 @@
 ---
-title: "Agentic Commerce Readiness Checklist: From PIM Hygiene to Agent-Decidable Catalogs"
-description: "Agent readiness checklist: what **Voomi** automated before **~85% publish-time** wins (**multipack**, **hazmat**, **ASIN** at **1M+ SKUs**), what **Profitero** gates at **>95% P/R** across **1500+ marketplaces**, and what **JCPenney Mirakl/SFCC** programs need per-brand taxonomy “done” definitions—n"
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "agentic commerce readiness checklist"
+title: >-
+  Agentic Commerce Readiness Checklist: From PIM Hygiene to Agent-Decidable
+  Catalogs
+description: >-
+  Agent readiness checklist: what **Voomi** automated before **~85%
+  publish-time** wins (**multipack**, **hazmat**, **ASIN** at **1M+ SKUs**),
+  what **Profitero** gates at **>95% P/R** across **1500+ marketplaces**, and
+  what **JCPenney Mirakl/SFCC** programs need per-brand taxonomy “done”
+  definitions—n
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: agentic commerce readiness checklist
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Marketplace Catalog Readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Why Ai Agents Need Structured Product Intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
+  - title: What Are Catalog Agents
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
 ---
 
 ## Who This Checklist is For
 
-In the complex landscape of ecommerce, mid-market and enterprise-level businesses managing SKU scales in the millions face unique challenges. When navigating the intricate web of sales channels, data quality can be the make-or-break factor for catalog success. This checklist is designed for those who are past the point of simple spreadsheet solutions and require a robust system that can scale with their catalog needs. These businesses need to ensure that their catalog agents can autonomously handle tasks such as identity deduplication, attribute completeness, and compliance without constant human oversight.
+In the complex landscape of ecommerce, mid-market and enterprise-level businesses managing SKU scales in the millions face unique challenges. When navigating the intricate web of sales channels, data quality can be the make-or-break factor for catalog success. This checklist is designed for those who are past the point of simple spreadsheet solutions and require a robust system that can scale with their catalog needs. These businesses need to ensure that their [catalog agents](/catalog-agents) can autonomously handle tasks such as identity deduplication, attribute completeness, and compliance without constant human oversight.
 
 ## Identity & Deduplication
 

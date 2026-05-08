@@ -1,10 +1,30 @@
 ---
-title: "What Is Catalog Readiness? (And Why It Is Not the Same as “Clean PIM Data”)"
-description: "Catalog readiness = agent-decidable SKUs: what **Voomi** proved at **1M+ SKUs / 200M+ ASINs** with **~85% faster publish**, what **Profitero** enforces at **>95% precision/recall** across **1500+ marketplaces**, and what **JCPenney** needs for **Mirakl + SFCC** taxonomy—not “clean PIM” theater."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "what is catalog readiness"
+title: What Is Catalog Readiness? (And Why It Is Not the Same as “Clean PIM Data”)
+description: >-
+  Catalog readiness = agent-decidable SKUs: what **Voomi** proved at **1M+ SKUs
+  / 200M+ ASINs** with **~85% faster publish**, what **Profitero** enforces at
+  **>95% precision/recall** across **1500+ marketplaces**, and what **JCPenney**
+  needs for **Mirakl + SFCC** taxonomy—not “clean PIM” theater.
+tag: Awareness
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: what is catalog readiness
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: Why AI Agents Need Structured Product Intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Agentic Commerce Readiness Checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
+  - title: What Are Catalog Agents?
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
 ---
 
 ## Why “Clean Data” Stopped Being a Useful North Star
@@ -13,7 +33,7 @@ In the fast-paced world of ecommerce, maintaining "clean data" in your Product I
 
 Consider **Voomi Supply**, which manages over **1 million SKUs** matched to **200 million Amazon ASINs**. Despite having a seemingly clean PIM, Voomi faced challenges with publish times until it embraced automation for matching, multipack detection, and hazmat compliance, resulting in an **~85% reduction in publish time**. The problem was never about dirty data; it was about readiness—whether those decisions could run autonomously without manual interventions.
 
-## Catalog Readiness in One Sentence
+## [Catalog Readiness](/catalog-readiness) in One Sentence
 
 So, what is catalog readiness? In simple terms, it's the degree to which a catalog can be **decided on by AI agents**. This involves structured attributes, compatibility edges, compliance signals, channel identity, and substitution logic. Unlike traditional data hygiene that focuses on human readability and feed compliance, catalog readiness optimizes for **agentic discovery, reasoning, and transaction readiness**.
 

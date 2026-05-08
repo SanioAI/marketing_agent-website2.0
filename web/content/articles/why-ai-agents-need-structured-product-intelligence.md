@@ -1,17 +1,42 @@
 ---
-title: "Why AI Agents Need Structured Product Intelligence (Not Just Better Descriptions)"
-description: "Agents filter like marketplaces: **Voomi** needed structured specs for **1M+ SKUs → 200M+ ASINs**; **Profitero** trains on normalized signals at **>95% P/R** across **1500+ marketplaces**; **JCPenney** needs **taxonomy-aligned** facets—not “better descriptions.”"
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "structured product intelligence for AI agents"
+title: >-
+  Why AI Agents Need Structured Product Intelligence (Not Just Better
+  Descriptions)
+description: >-
+  Agents filter like marketplaces: **Voomi** needed structured specs for **1M+
+  SKUs → 200M+ ASINs**; **Profitero** trains on normalized signals at **>95%
+  P/R** across **1500+ marketplaces**; **JCPenney** needs **taxonomy-aligned**
+  facets—not “better descriptions.”
+tag: Awareness
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: structured product intelligence for AI agents
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: What Is Product Intelligence?
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Agentic Commerce Readiness Checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
+  - title: What Are Catalog Agents
+    slug: what-are-catalog-agents
+    href: /resources/articles/what-are-catalog-agents
 ---
 
 ## How Agents Use Catalogs Differently Than Humans or Classic Search Crawlers
 
-In the realm of ecommerce, AI catalog agents are transforming how product data is utilized. Unlike humans or classic search crawlers that rely on contextual understanding and keyword matching, AI agents operate on structured data to perform specific tasks like ranking, filtering, and explaining product options. These agents need more than just polished prose; they require machine-readable signals embedded within the product catalog.
+In the realm of ecommerce, AI [catalog agents](/catalog-agents) are transforming how product data is utilized. Unlike humans or classic search crawlers that rely on contextual understanding and keyword matching, AI agents operate on structured data to perform specific tasks like ranking, filtering, and explaining product options. These agents need more than just polished prose; they require machine-readable signals embedded within the product catalog.
 
-The distinction becomes clear when considering the vast scale at which AI agents operate. Programs like Voomi Supply manage 200M+ ASINs and over 1M+ SKUs, relying heavily on 10–15+ normalized attributes per product. Without these structured fields, maintaining accuracy at this scale would be impossible, and agents would inherit the same constraints. This shift underscores the essential need for structured product intelligence, where every SKU is enriched with machine-usable data points that facilitate precise and scalable decision-making.
+The distinction becomes clear when considering the vast scale at which AI agents operate. Programs like Voomi Supply manage 200M+ ASINs and over 1M+ SKUs, relying heavily on 10–15+ normalized attributes per product. Without these structured fields, maintaining accuracy at this scale would be impossible, and agents would inherit the same constraints. This shift underscores the essential need for structured [product intelligence](/product-intelligence), where every SKU is enriched with machine-usable data points that facilitate precise and scalable decision-making.
 
 ## Minimum Structured Signals Agents Need
 

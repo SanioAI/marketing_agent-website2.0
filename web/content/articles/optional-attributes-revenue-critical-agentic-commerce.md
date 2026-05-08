@@ -1,10 +1,32 @@
 ---
-title: "Why Optional Attributes Become Revenue-Critical in Agentic Commerce"
-description: "“Optional” PIM fields = **Voomi** hard filters on **1M+ SKUs / 200M+ ASINs**, **Profitero** sparse inputs for **>95% P/R**, **JCPenney** Mirakl browse keys—**Attribute Agent** rubric, not backlog grooming."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Catalog Readiness for Agentic Commerce"
-keyword: "optional product attributes agentic commerce"
+title: Why Optional Attributes Become Revenue-Critical in Agentic Commerce
+description: >-
+  “Optional” PIM fields = **Voomi** hard filters on **1M+ SKUs / 200M+ ASINs**,
+  **Profitero** sparse inputs for **>95% P/R**, **JCPenney** Mirakl browse
+  keys—**Attribute Agent** rubric, not backlog grooming.
+tag: Awareness
+readTime: 6 min read
+pillar: Catalog Readiness for Agentic Commerce
+keyword: optional product attributes agentic commerce
+hub:
+  label: Catalog Readiness
+  href: /catalog-readiness
+relatedArticles:
+  - title: Product Attributes as Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
+  - title: How AI Agents Decide Which Products to Recommend
+    slug: how-ai-agents-decide-which-products-to-recommend
+    href: /resources/articles/how-ai-agents-decide-which-products-to-recommend
+  - title: Why AI agents need structured product intelligence
+    slug: why-ai-agents-need-structured-product-intelligence
+    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
+  - title: Catalog Readiness Assessment
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
+  - title: Agentic Commerce Readiness Checklist
+    slug: agentic-commerce-readiness-checklist
+    href: /resources/articles/agentic-commerce-readiness-checklist
 ---
 
 ## The PIM “Optional” Trap

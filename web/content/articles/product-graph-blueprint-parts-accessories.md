@@ -1,10 +1,29 @@
 ---
-title: "Product Graph Blueprint for Parts & Accessories (Conversion Asset)"
-description: "Graph plan with receipts: **Voomi** HVAC scale **1M+ SKUs / 200M+ ASINs**; **Profitero** **>95% P/R** discipline; **JCPenney** variant truth—blueprint + pilot, not empty diagrams."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Product Graph / Compatibility / Substitutions"
-keyword: "product graph blueprint parts accessories"
+title: Product Graph Blueprint for Parts & Accessories (Conversion Asset)
+description: >-
+  Graph plan with receipts: **Voomi** HVAC scale **1M+ SKUs / 200M+ ASINs**;
+  **Profitero** **>95% P/R** discipline; **JCPenney** variant truth—blueprint +
+  pilot, not empty diagrams.
+tag: Decision
+readTime: 6 min read
+pillar: Product Graph / Compatibility / Substitutions
+keyword: product graph blueprint parts accessories
+hub:
+  label: Product Graph
+  href: /product-graph
+relatedArticles:
+  - title: What is a product graph
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Product compatibility and fitment explained
+    slug: product-compatibility-fitment-explained
+    href: /resources/articles/product-compatibility-fitment-explained
+  - title: How compatibility data reduces returns
+    slug: how-compatibility-data-reduces-returns-ecommerce
+    href: /resources/articles/how-compatibility-data-reduces-returns-ecommerce
+  - title: Product Graph Vs Taxonomy Vs Knowledge Graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
 ---
 
 ## What the Blueprint Contains (and Excludes)

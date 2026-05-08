@@ -1,19 +1,42 @@
 ---
-title: "What Is Product Intelligence? Beyond Static “Product Information”"
-description: "Product intelligence = **Voomi** truth bundle (**multipack**, **hazmat**, **ASIN** at **1M+ SKUs**, **~85% faster publish**), **Profitero** signal quality (**>95% P/R**, **1500+ marketplaces**), **JCPenney** facet truth—not “more PIM fields.”"
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "what is product intelligence"
+title: What Is Product Intelligence? Beyond Static “Product Information”
+description: >-
+  Product intelligence = **Voomi** truth bundle (**multipack**, **hazmat**,
+  **ASIN** at **1M+ SKUs**, **~85% faster publish**), **Profitero** signal
+  quality (**>95% P/R**, **1500+ marketplaces**), **JCPenney** facet truth—not
+  “more PIM fields.”
+tag: Awareness
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: what is product intelligence
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: Product Intelligence vs Product Information Management
+    slug: product-intelligence-vs-product-information-management
+    href: /resources/articles/product-intelligence-vs-product-information-management
+  - title: Structured Product Data for Ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Product Attributes As Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
+  - title: Product Intelligence Maturity Model
+    slug: product-intelligence-maturity-model
+    href: /resources/articles/product-intelligence-maturity-model
 ---
 
 ## Why “Information” is Insufficient for Agents
 
-In the fast-paced world of ecommerce, having a rich dataset about your products is no longer a competitive advantage—it's a baseline necessity. Yet, the gap between mere “information” and actionable product intelligence is both wide and deep. Imagine your operations team is equipped with beautifully designed dashboards filled with data points, but when it comes time to make critical decisions—like ranking safe substitutes for a product or ensuring compliance with marketplace requirements—those data points fall short. This is because they lack the machine-decidable facts that drive decision correctness. The failure scenario is real: you may have a comprehensive information record, but if it’s missing crucial attributes like voltage, an agent can't rank safe substitutes, leaving you with a costly gap in your supply chain operations.
+In the fast-paced world of ecommerce, having a rich dataset about your products is no longer a competitive advantage—it's a baseline necessity. Yet, the gap between mere “information” and actionable [product intelligence](/product-intelligence) is both wide and deep. Imagine your operations team is equipped with beautifully designed dashboards filled with data points, but when it comes time to make critical decisions—like ranking safe substitutes for a product or ensuring compliance with marketplace requirements—those data points fall short. This is because they lack the machine-decidable facts that drive decision correctness. The failure scenario is real: you may have a comprehensive information record, but if it’s missing crucial attributes like voltage, an agent can't rank safe substitutes, leaving you with a costly gap in your supply chain operations.
 
 ## Product Intelligence Defined
 
-So, what is product intelligence? It's far more than a rebranding of "more fields in the PIM." Product intelligence is the machine-actionable truth about SKUs: a combination of normalized attributes, stable identities, graph relationships, compliance and taxability facts, and channel alignment—maintained even as conditions change. In essence, it’s the substrate for catalog readiness and the fuel for catalog agents.
+So, what is product intelligence? It's far more than a rebranding of "more fields in the PIM." Product intelligence is the machine-actionable truth about SKUs: a combination of normalized attributes, stable identities, graph relationships, compliance and taxability facts, and channel alignment—maintained even as conditions change. In essence, it’s the substrate for [catalog readiness](/catalog-readiness) and the fuel for [catalog agents](/catalog-agents).
 
 This isn't a theoretical concept; it's a proven model. Take **Profitero**, for example, which uses product intelligence to normalize signals across **1500+ marketplaces** with measurable **>95% precision/recall**. This is not about adding more data fields—it's about making the existing data work harder and smarter.
 

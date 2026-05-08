@@ -1,15 +1,34 @@
 ---
-title: "Marketplace Catalog Readiness: What Amazon, Walmart, and Google Actually Require"
-description: "Feed green ≠ ready: **Voomi** matched **1M+ SKUs** to **200M+ ASINs** with **multipack + hazmat** gates (**~85% faster publish**); **Profitero** holds **>95% P/R** across **1500+ marketplaces**; **JCPenney** needs **Mirakl/SFCC** taxonomy truth—**Channel Matching Agent** KPIs, not validators."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Marketplace & Channel Readiness"
-keyword: "marketplace catalog readiness"
+title: >-
+  Marketplace Catalog Readiness: What Amazon, Walmart, and Google Actually
+  Require
+description: >-
+  Feed green ≠ ready: **Voomi** matched **1M+ SKUs** to **200M+ ASINs** with
+  **multipack + hazmat** gates (**~85% faster publish**); **Profitero** holds
+  **>95% P/R** across **1500+ marketplaces**; **JCPenney** needs **Mirakl/SFCC**
+  taxonomy truth—**Channel Matching Agent** KPIs, not validators.
+tag: Consideration
+readTime: 6 min read
+pillar: Marketplace & Channel Readiness
+keyword: marketplace catalog readiness
+hub:
+  label: Marketplace Readiness
+  href: /marketplace-readiness
+relatedArticles:
+  - title: Amazon Product Matching Guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: What Is Catalog Readiness?
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Channel Readiness Audit
+    slug: channel-readiness-audit
+    href: /resources/articles/channel-readiness-audit
 ---
 
 ## Validation vs Readiness: Why Green Checks Lie
 
-In the intricate world of ecommerce, passing a validation check is only a small piece of the puzzle. Many businesses experience the frustration of seeing their product feeds pass validation, only to discover that their listings are suppressed, matched to incorrect ASINs, or flagged for compliance issues. This disconnect arises because validation checks are not synonymous with true marketplace catalog readiness. The real challenge lies in achieving a **channel-decidable catalog state** where readiness is defined by proper identity mapping, taxonomy alignment, and maintaining stable matches across platforms such as Amazon, Walmart, and Google.
+In the intricate world of ecommerce, passing a validation check is only a small piece of the puzzle. Many businesses experience the frustration of seeing their product feeds pass validation, only to discover that their listings are suppressed, matched to incorrect ASINs, or flagged for compliance issues. This disconnect arises because validation checks are not synonymous with true marketplace [catalog readiness](/catalog-readiness). The real challenge lies in achieving a **channel-decidable catalog state** where readiness is defined by proper identity mapping, taxonomy alignment, and maintaining stable matches across platforms such as Amazon, Walmart, and Google.
 
 While validation may give the appearance of readiness, the reality is that these green checks often mask underlying issues. For example, Voomi Supply showcases how true readiness, achieved through automated **product matching** and **multipack detection**, can facilitate faster publishing—up to **85% quicker**—across a massive scale of **1M+ SKUs** and **200M+ ASINs**. This illustrates the importance of moving beyond surface-level validation to ensure robust catalog readiness.
 

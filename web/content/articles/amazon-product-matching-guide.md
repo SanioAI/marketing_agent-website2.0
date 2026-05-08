@@ -1,10 +1,32 @@
 ---
-title: "Amazon Product Matching: How to Match Your SKUs to the Right ASINs (Without Guessing)"
-description: "ASIN matching at **Voomi** scale (**1M+ SKUs**, **200M+ ASINs**, **~85% faster publish**) + **Profitero** precision discipline (**>95% P/R**, **1000+ brands**) + **JCPenney** multi-supplier ambiguity—evidence-backed **Channel Matching Agent**, not spreadsheets."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Marketplace & Channel Readiness"
-keyword: "Amazon product matching"
+title: >-
+  Amazon Product Matching: How to Match Your SKUs to the Right ASINs (Without
+  Guessing)
+description: >-
+  ASIN matching at **Voomi** scale (**1M+ SKUs**, **200M+ ASINs**, **~85% faster
+  publish**) + **Profitero** precision discipline (**>95% P/R**, **1000+
+  brands**) + **JCPenney** multi-supplier ambiguity—evidence-backed **Channel
+  Matching Agent**, not spreadsheets.
+tag: Consideration
+readTime: 6 min read
+pillar: Marketplace & Channel Readiness
+keyword: Amazon product matching
+hub:
+  label: Marketplace Readiness
+  href: /marketplace-readiness
+relatedArticles:
+  - title: Marketplace Catalog Readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: How Catalog Agents Normalize Messy Product Data
+    slug: how-catalog-agents-normalize-messy-product-data
+    href: /resources/articles/how-catalog-agents-normalize-messy-product-data
+  - title: What Is Catalog Readiness
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: Channel Readiness Audit
+    slug: channel-readiness-audit
+    href: /resources/articles/channel-readiness-audit
 ---
 
 ## Why “Close Enough” Matching Fails on Amazon
@@ -43,4 +65,4 @@ These agents leverage real-time data to identify shifts in product listings, ens
 
 For ecommerce and distribution companies, the implications of effective Amazon product matching are profound. By adopting a scored, auditable matching process, businesses can significantly reduce the time and resources spent on manual corrections, freeing up valuable personnel to focus on strategic tasks. The result is not just a reduction in publish-time but also a measurable improvement in listing accuracy and marketplace performance.
 
-By leveraging advanced AI catalog agents like those offered by Paladio.ai, companies can transform their approach to ASIN matching, moving beyond spreadsheet limitations to a future-proof solution that scales with their ambitions. This shift not only safeguards against costly errors but also positions businesses to thrive in an increasingly competitive ecommerce landscape.
+By leveraging advanced AI [catalog agents](/catalog-agents) like those offered by Paladio.ai, companies can transform their approach to ASIN matching, moving beyond spreadsheet limitations to a future-proof solution that scales with their ambitions. This shift not only safeguards against costly errors but also positions businesses to thrive in an increasingly competitive ecommerce landscape.

@@ -1,10 +1,32 @@
 ---
-title: "Product Data Quality Audit (Conversion Asset): KPIs Beyond “% Complete”"
-description: "Audit decision KPIs: **Voomi** **multipack/match/hazmat** at **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** taxonomy defects—backlog, not % complete."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "product data quality audit"
+title: 'Product Data Quality Audit (Conversion Asset): KPIs Beyond “% Complete”'
+description: >-
+  Audit decision KPIs: **Voomi** **multipack/match/hazmat** at **1M+ SKUs**;
+  **Profitero** **>95% P/R**; **JCPenney** taxonomy defects—backlog, not %
+  complete.
+tag: Decision
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: product data quality audit
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: Product data quality framework ecommerce
+    slug: product-data-quality-framework-ecommerce
+    href: /resources/articles/product-data-quality-framework-ecommerce
+  - title: Structured product data for ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: What Is Product Intelligence
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Product Intelligence Maturity Model
+    slug: product-intelligence-maturity-model
+    href: /resources/articles/product-intelligence-maturity-model
 ---
 
 ## Audit vs PIM Validation

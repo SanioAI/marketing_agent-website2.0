@@ -1,10 +1,30 @@
 ---
-title: "Product Compatibility and Fitment Explained for Large Catalogs"
-description: "Fitment = structured constraints agents can evaluate—**Voomi** HVAC scale (**1M+ SKUs**, **200M+ ASIN** adjacency), **Profitero**-grade label rigor (**>95% P/R** on constrained classes), **JCPenney Mirakl** variant truth—not “universal fit” copy."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Product Graph / Compatibility / Substitutions"
-keyword: "product compatibility and fitment"
+title: Product Compatibility and Fitment Explained for Large Catalogs
+description: >-
+  Fitment = structured constraints agents can evaluate—**Voomi** HVAC scale
+  (**1M+ SKUs**, **200M+ ASIN** adjacency), **Profitero**-grade label rigor
+  (**>95% P/R** on constrained classes), **JCPenney Mirakl** variant truth—not
+  “universal fit” copy.
+tag: Awareness
+readTime: 6 min read
+pillar: Product Graph / Compatibility / Substitutions
+keyword: product compatibility and fitment
+hub:
+  label: Product Graph
+  href: /product-graph
+relatedArticles:
+  - title: What Is a Product Graph?
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Marketplace Catalog Readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Product Graph Vs Taxonomy Vs Knowledge Graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
+  - title: Product Graph Blueprint
+    slug: product-graph-blueprint-parts-accessories
+    href: /resources/articles/product-graph-blueprint-parts-accessories
 ---
 
 ## Product Compatibility and Fitment Explained for Large Catalogs

@@ -1,10 +1,34 @@
 ---
-title: "Product Graph Agent: Maintaining Substitutes, OEM, and Compatibility Edges Under Change"
-description: "Keep commerce edges current: **Voomi** **substitutes/compatibility/OEM** at scale; **Profitero** **>95% P/R** rigor; **JCPenney** bundle truth—**Product Graph Agent**."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "product graph agent"
+title: >-
+  Product Graph Agent: Maintaining Substitutes, OEM, and Compatibility Edges
+  Under Change
+description: >-
+  Keep commerce edges current: **Voomi** **substitutes/compatibility/OEM** at
+  scale; **Profitero** **>95% P/R** rigor; **JCPenney** bundle truth—**Product
+  Graph Agent**.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: product graph agent
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: What is a product graph
+    slug: what-is-a-product-graph
+    href: /resources/articles/what-is-a-product-graph
+  - title: Product graph vs taxonomy vs knowledge graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
+  - title: Compatibility agent
+    slug: compatibility-agent-product-catalog
+    href: /resources/articles/compatibility-agent-product-catalog
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## The Problem with Stale Graphs in Ecommerce

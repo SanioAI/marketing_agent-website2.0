@@ -1,17 +1,41 @@
 ---
-title: "A Product Data Quality Framework for Ecommerce AI (KPIs That Aren’t “% Complete”)"
-description: "DQ for agents ≠ % complete: **Voomi** match + **multipack** + **hazmat** KPIs at **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** taxonomy defects—framework + audits."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "product data quality framework ecommerce"
+title: >-
+  A Product Data Quality Framework for Ecommerce AI (KPIs That Aren’t “%
+  Complete”)
+description: >-
+  DQ for agents ≠ % complete: **Voomi** match + **multipack** + **hazmat** KPIs
+  at **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** taxonomy
+  defects—framework + audits.
+tag: Consideration
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: product data quality framework ecommerce
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: Product intelligence vs PIM
+    slug: product-intelligence-vs-product-information-management
+    href: /resources/articles/product-intelligence-vs-product-information-management
+  - title: Structured product data for ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: How catalog agents normalize messy product data
+    slug: how-catalog-agents-normalize-messy-product-data
+    href: /resources/articles/how-catalog-agents-normalize-messy-product-data
+  - title: What Is Product Intelligence
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
 ---
 
 ## Why PIM Completeness Fails
 
 In the dynamic world of ecommerce, the traditional Product Information Management (PIM) approach to data quality often misses the mark. While many organizations rely on PIM systems to ensure a high percentage of data completeness, this metric alone can be misleading. The reality is that a DQ scorecard showing 99% field completion offers little consolation when revenue leaks occur due to unseen errors such as a 3% multipack misclassification. This is where Paladio.ai presents a paradigm shift: focusing on decision correctness over field coverage.
 
-The typical PIM completeness metric is a lagging vanity metric for AI. It might indicate that a product's information fields are filled, but it doesn't guarantee the accuracy or relevance of the data. In fact, many ecommerce executives find themselves puzzled when marketplace revenues drop despite 'green' scorecards, leading to a loss of trust in the data organization. The key lies in leveraging a product data quality framework that prioritizes the correctness of decisions made by AI catalog agents.
+The typical PIM completeness metric is a lagging vanity metric for AI. It might indicate that a product's information fields are filled, but it doesn't guarantee the accuracy or relevance of the data. In fact, many ecommerce executives find themselves puzzled when marketplace revenues drop despite 'green' scorecards, leading to a loss of trust in the data organization. The key lies in leveraging a product data quality framework that prioritizes the correctness of decisions made by AI [catalog agents](/catalog-agents).
 
 ## KPI Dictionary with Honest Definitions
 

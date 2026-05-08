@@ -1,10 +1,32 @@
 ---
-title: "Channel Matching Agent: ASIN, GTIN, and Evidence-Backed Entity Resolution"
-description: "Evidence-backed ASIN/GTIN matching: **Voomi** **1M+ / 200M+**, **~85%** faster publish; **Profitero** **>95% P/R** mindset; **JCPenney** multi-supplier ambiguity—**Channel Matching Agent**."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "channel matching agent catalog"
+title: 'Channel Matching Agent: ASIN, GTIN, and Evidence-Backed Entity Resolution'
+description: >-
+  Evidence-backed ASIN/GTIN matching: **Voomi** **1M+ / 200M+**, **~85%** faster
+  publish; **Profitero** **>95% P/R** mindset; **JCPenney** multi-supplier
+  ambiguity—**Channel Matching Agent**.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: channel matching agent catalog
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: Amazon product matching guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: Brand normalization agent
+    slug: brand-normalization-agent-catalog
+    href: /resources/articles/brand-normalization-agent-catalog
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Matching as Commerce Entity Resolution

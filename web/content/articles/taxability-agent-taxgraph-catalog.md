@@ -1,10 +1,32 @@
 ---
-title: "Taxability Agent & TaxGraph: Keeping Tax-Relevant Catalog Facts Current"
-description: "TaxGraph inputs stay current: **Voomi** **multipack** at **1M+ SKUs**; **Profitero** structured labels **>95% P/R**; **JCPenney** taxonomy—**Taxability Agent**, not overrides."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Catalog Agents"
-keyword: "taxability agent ecommerce TaxGraph"
+title: 'Taxability Agent & TaxGraph: Keeping Tax-Relevant Catalog Facts Current'
+description: >-
+  TaxGraph inputs stay current: **Voomi** **multipack** at **1M+ SKUs**;
+  **Profitero** structured labels **>95% P/R**; **JCPenney**
+  taxonomy—**Taxability Agent**, not overrides.
+tag: Consideration
+readTime: 6 min read
+pillar: Catalog Agents
+keyword: taxability agent ecommerce TaxGraph
+hub:
+  label: Catalog Agents
+  href: /catalog-agents
+relatedArticles:
+  - title: TaxGraph for ecommerce
+    slug: taxgraph-for-ecommerce
+    href: /resources/articles/taxgraph-for-ecommerce
+  - title: Product taxability automation
+    slug: product-taxability-automation
+    href: /resources/articles/product-taxability-automation
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: Catalog agents vs PIM
+    slug: catalog-agents-vs-pim
+    href: /resources/articles/catalog-agents-vs-pim
+  - title: Catalog Agents demo
+    slug: catalog-agents-demo-before-after-sku
+    href: /resources/articles/catalog-agents-demo-before-after-sku
 ---
 
 ## Taxability as Catalog Maintenance, Not Tax Engine Configuration

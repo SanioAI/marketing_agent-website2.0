@@ -1,10 +1,27 @@
 ---
-title: "What Is a Product Graph? Relationships, Not Just Rows"
-description: "Product graph = transaction edges (fitment, substitutes, OEM)—what **Voomi** needed at **1M+ SKUs / 200M+ ASINs**, what **Profitero**’s normalized identities enable at **>95% P/R** scale, and what **JCPenney Mirakl** families need beyond category trees."
-tag: "Awareness"
-readTime: "6 min read"
-pillar: "Product Graph / Compatibility / Substitutions"
-keyword: "what is a product graph"
+title: 'What Is a Product Graph? Relationships, Not Just Rows'
+description: >-
+  Product graph = transaction edges (fitment, substitutes, OEM)—what **Voomi**
+  needed at **1M+ SKUs / 200M+ ASINs**, what **Profitero**’s normalized
+  identities enable at **>95% P/R** scale, and what **JCPenney Mirakl** families
+  need beyond category trees.
+tag: Awareness
+readTime: 6 min read
+pillar: Product Graph / Compatibility / Substitutions
+keyword: what is a product graph
+hub:
+  label: Product Graph
+  href: /product-graph
+relatedArticles:
+  - title: Product Graph vs Taxonomy vs Knowledge Graph
+    slug: product-graph-vs-taxonomy-vs-knowledge-graph
+    href: /resources/articles/product-graph-vs-taxonomy-vs-knowledge-graph
+  - title: Product Compatibility Fitment Explained
+    slug: product-compatibility-fitment-explained
+    href: /resources/articles/product-compatibility-fitment-explained
+  - title: Product Graph Blueprint
+    slug: product-graph-blueprint-parts-accessories
+    href: /resources/articles/product-graph-blueprint-parts-accessories
 ---
 
 ## Understanding the Complexity of Product Data

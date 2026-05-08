@@ -1,10 +1,34 @@
 ---
-title: "Product Intelligence Maturity Model (Conversion Asset): Stages from Records to Agent-Decidable Intelligence"
-description: "Maturity = agent decisions: **Voomi** attrs + **multipack/hazmat** + **1M+/200M+** scale; **Profitero** **>95% P/R**; **JCPenney** taxonomy—model stages, not PIM levels."
-tag: "Decision"
-readTime: "6 min read"
-pillar: "Product Intelligence"
-keyword: "product intelligence maturity model"
+title: >-
+  Product Intelligence Maturity Model (Conversion Asset): Stages from Records to
+  Agent-Decidable Intelligence
+description: >-
+  Maturity = agent decisions: **Voomi** attrs + **multipack/hazmat** +
+  **1M+/200M+** scale; **Profitero** **>95% P/R**; **JCPenney** taxonomy—model
+  stages, not PIM levels.
+tag: Decision
+readTime: 6 min read
+pillar: Product Intelligence
+keyword: product intelligence maturity model
+hub:
+  label: Product Intelligence
+  href: /product-intelligence
+relatedArticles:
+  - title: What is product intelligence
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: Product intelligence vs PIM
+    slug: product-intelligence-vs-product-information-management
+    href: /resources/articles/product-intelligence-vs-product-information-management
+  - title: Structured product data for ecommerce AI
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: Product Attributes As Ranking Signals
+    slug: product-attributes-as-ranking-signals
+    href: /resources/articles/product-attributes-as-ranking-signals
+  - title: Product Data Quality Audit
+    slug: product-data-quality-audit
+    href: /resources/articles/product-data-quality-audit
 ---
 
 ## Why Legacy Maturity Models Fail AI Commerce
@@ -15,7 +39,7 @@ Legacy models overlook the complexities of modern ecommerce—such as multipack 
 
 ## Stage Definitions and Exit KPIs
 
-The path to AI-driven product intelligence is not a linear journey but rather a progression through distinct stages, each with specific exit KPIs. The first stage moves beyond static records to normalized intelligence, where data fields are harmonized to reduce redundancy and enhance usability. Here, the exit KPI focuses on data consistency and foundational integrity.
+The path to AI-driven [product intelligence](/product-intelligence) is not a linear journey but rather a progression through distinct stages, each with specific exit KPIs. The first stage moves beyond static records to normalized intelligence, where data fields are harmonized to reduce redundancy and enhance usability. Here, the exit KPI focuses on data consistency and foundational integrity.
 
 The second stage involves the transition to a graph-based model, where relationships between data points are mapped to reveal deeper insights. At this juncture, decision correctness becomes crucial, as evidenced by Profitero's precision and recall metrics. The exit KPI for this stage is the ability to maintain >95% precision across 1500+ marketplaces, ensuring that data is not only accurate but also relevant across diverse platforms.
 
@@ -25,7 +49,7 @@ Finally, the continuous agents stage represents the pinnacle of maturity, where 
 
 ## Mapping Paladio Agents Per Stage
 
-Paladio.ai's suite of AI catalog agents is tailored to guide businesses through each stage of the maturity model. In the initial stages, Paladio focuses on data normalization and graph construction, leveraging advanced algorithms to cleanse and organize product data. As businesses progress, Paladio's agents ensure compliance through robust taxonomy alignment and regulatory adherence.
+Paladio.ai's suite of AI [catalog agents](/catalog-agents) is tailored to guide businesses through each stage of the maturity model. In the initial stages, Paladio focuses on data normalization and graph construction, leveraging advanced algorithms to cleanse and organize product data. As businesses progress, Paladio's agents ensure compliance through robust taxonomy alignment and regulatory adherence.
 
 In the final stages, Paladio agents transition to continuous optimization, employing machine learning to adapt and refine product listings in real-time. This dynamic approach not only enhances decision accuracy but also accelerates publishing times, as seen in Voomi Supply's success. By integrating these agents, companies can achieve unparalleled efficiency and precision in managing their product catalogs.
 

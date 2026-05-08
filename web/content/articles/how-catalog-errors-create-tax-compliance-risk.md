@@ -1,10 +1,32 @@
 ---
-title: "How Catalog Errors Create Tax and Compliance Risk (SKU-Level, Not “Bad Luck”)"
-description: "Trace risk to SKUs: **Voomi** **multipack** truth at **1M+ SKUs**; **Profitero** **>95% P/R** label discipline; **JCPenney** taxonomy drift—**Compliance Agent** + **TaxGraph**."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "catalog errors tax compliance risk"
+title: 'How Catalog Errors Create Tax and Compliance Risk (SKU-Level, Not “Bad Luck”)'
+description: >-
+  Trace risk to SKUs: **Voomi** **multipack** truth at **1M+ SKUs**;
+  **Profitero** **>95% P/R** label discipline; **JCPenney** taxonomy
+  drift—**Compliance Agent** + **TaxGraph**.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: catalog errors tax compliance risk
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Product taxability automation
+    slug: product-taxability-automation
+    href: /resources/articles/product-taxability-automation
+  - title: Multipack compliance problems
+    slug: multipack-compliance-problems-ecommerce
+    href: /resources/articles/multipack-compliance-problems-ecommerce
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Ecommerce Product Compliance Automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## How Catalog Errors Create Tax and Compliance Risk

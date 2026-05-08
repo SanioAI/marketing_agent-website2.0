@@ -1,10 +1,32 @@
 ---
-title: "Hazmat Classification for Marketplaces: Channel Rules Meet SKU Evidence"
-description: "Marketplace hazmat = SKU evidence + channel rules: **Voomi** **hazmat** at **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** **Mirakl** paths—**Compliance Agent** + channel alignment."
-tag: "Consideration"
-readTime: "6 min read"
-pillar: "Compliance & Taxability"
-keyword: "hazmat classification marketplace"
+title: 'Hazmat Classification for Marketplaces: Channel Rules Meet SKU Evidence'
+description: >-
+  Marketplace hazmat = SKU evidence + channel rules: **Voomi** **hazmat** at
+  **1M+ SKUs**; **Profitero** **>95% P/R**; **JCPenney** **Mirakl**
+  paths—**Compliance Agent** + channel alignment.
+tag: Consideration
+readTime: 6 min read
+pillar: Compliance & Taxability
+keyword: hazmat classification marketplace
+hub:
+  label: Compliance & Taxability
+  href: /compliance
+relatedArticles:
+  - title: Hazmat product classification
+    slug: hazmat-product-classification-ecommerce
+    href: /resources/articles/hazmat-product-classification-ecommerce
+  - title: Amazon product matching guide
+    slug: amazon-product-matching-guide
+    href: /resources/articles/amazon-product-matching-guide
+  - title: Marketplace catalog readiness
+    slug: marketplace-catalog-readiness
+    href: /resources/articles/marketplace-catalog-readiness
+  - title: Ecommerce Product Compliance Automation
+    slug: ecommerce-product-compliance-automation
+    href: /resources/articles/ecommerce-product-compliance-automation
+  - title: Compliance Risk Scanner
+    slug: compliance-risk-scanner
+    href: /resources/articles/compliance-risk-scanner
 ---
 
 ## Hazmat Classification for Marketplaces: Channel Rules Meet SKU Evidence
