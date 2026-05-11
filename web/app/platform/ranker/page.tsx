@@ -42,12 +42,13 @@ const signals = [
 ];
 
 const agents = [
-  { name: "ChatGPT Shopping", detail: "Plugin and browsing mode product discovery" },
-  { name: "Perplexity", detail: "Answer-engine product recommendations" },
-  { name: "Google AI Overview", detail: "Generative search with product cards" },
-  { name: "Google Shopping AI", detail: "AI-powered comparison and filtering" },
-  { name: "Amazon Rufus", detail: "Conversational product discovery on Amazon" },
-  { name: "Microsoft Bing Copilot", detail: "Shopping copilot in Edge and Bing" },
+  { name: "Gemini", detail: "Google Gemini AI product discovery", live: true },
+  { name: "ChatGPT Shopping", detail: "Plugin and browsing mode product discovery", live: false },
+  { name: "Perplexity", detail: "Answer-engine product recommendations", live: false },
+  { name: "Google AI Overview", detail: "Generative search with product cards", live: false },
+  { name: "Google Shopping AI", detail: "AI-powered comparison and filtering", live: false },
+  { name: "Amazon Rufus", detail: "Conversational product discovery on Amazon", live: false },
+  { name: "Microsoft Bing Copilot", detail: "Shopping copilot in Edge and Bing", live: false },
 ];
 
 export default function RankerPage() {
@@ -135,8 +136,13 @@ export default function RankerPage() {
           <div className="mx-auto max-w-3xl grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {agents.map((a) => (
               <Reveal key={a.name}>
-                <div className="rounded-xl border border-slate-200/80 bg-white p-4">
-                  <p className="text-sm font-semibold text-slate-900">{a.name}</p>
+                <div className="relative rounded-xl border bg-white p-4 border-slate-200/80">
+                  {!a.live && (
+                    <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold text-amber-600">
+                      ★ Coming Soon
+                    </span>
+                  )}
+                  <p className="text-sm font-semibold text-slate-900 pr-20">{a.name}</p>
                   <p className="mt-1 text-xs text-slate-500">{a.detail}</p>
                 </div>
               </Reveal>
