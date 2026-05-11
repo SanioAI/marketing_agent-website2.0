@@ -73,6 +73,16 @@ const PLATFORM_ITEMS = [
       </svg>
     ),
   },
+  {
+    label: "Ranker",
+    href: "/ranker",
+    desc: "Score your catalog in AI shopping agents",
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
+        <path d="M9 2L11 7H16L12 10.5L13.5 16L9 13L4.5 16L6 10.5L2 7H7L9 2Z" fill="#2563eb" opacity="0.7" />
+      </svg>
+    ),
+  },
 ];
 
 const SIMPLE_NAV: NavItem[] = [

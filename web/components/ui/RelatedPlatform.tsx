@@ -37,6 +37,16 @@ const platformLinks = [
       </svg>
     ),
   },
+  {
+    label: "Ranker",
+    desc: "Score your catalog in AI shopping agents",
+    href: "/ranker",
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden>
+        <path d="M9 2L11 7H16L12 10.5L13.5 16L9 13L4.5 16L6 10.5L2 7H7L9 2Z" fill="#2563eb" opacity="0.7" />
+      </svg>
+    ),
+  },
 ];
 
 export function RelatedPlatform() {

@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
       { source: "/agents/ecommerce", destination: "/catalog-agents", permanent: true },
       { source: "/platform/catalog-readiness", destination: "/catalog-readiness", permanent: true },
       { source: "/platform/product-intelligence", destination: "/product-intelligence", permanent: true },
+      { source: "/platform/ranker", destination: "/ranker", permanent: true },
     ];
   },
   async headers() {
