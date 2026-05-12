@@ -1,55 +1,84 @@
 ---
-title: What Are Catalog Agents? Specialized AI for Product Data Operations
-description: >-
-  Catalog agents = production operators like **Voomi** (**1M+ SKUs**, **200M+
-  ASINs**, **~85% faster publish**), **Profitero** (**1000+ brands**, **>95%
-  P/R**, **140→20** labeling), **JCPenney** (**Mirakl/SFCC** taxonomy)—not “PIM
-  with a chatbot.”
-tag: Awareness
-readTime: 6 min read
-pillar: Catalog Agents
-keyword: what are catalog agents
+title: "What Are Catalog Agents? (And Why a PIM Can't Do What They Do)"
+description: "Catalog agents are purpose-built AI systems that extract, classify, verify, and connect product data at scale. Here's exactly what each one does and why the category exists."
+tag: "Awareness"
+readTime: "8 min read"
+pillar: "Catalog Agents"
+keyword: "what are catalog agents"
 hub:
-  label: Catalog Agents
-  href: /catalog-agents
+  label: "Catalog Agents"
+  href: "/catalog-agents"
 relatedArticles:
-  - title: Catalog Agents vs PIM
-    slug: catalog-agents-vs-pim
-    href: /resources/articles/catalog-agents-vs-pim
-  - title: Catalog Agents vs Enrichment Tools
-    slug: catalog-agents-vs-enrichment-tools
-    href: /resources/articles/catalog-agents-vs-enrichment-tools
-  - title: What Is Catalog Readiness?
-    slug: what-is-catalog-readiness
-    href: /resources/articles/what-is-catalog-readiness
-  - title: How Catalog Agents Extract Product Attributes
-    slug: how-catalog-agents-extract-product-attributes
-    href: /resources/articles/how-catalog-agents-extract-product-attributes
-  - title: Catalog Agents demo
-    slug: catalog-agents-demo-before-after-sku
-    href: /resources/articles/catalog-agents-demo-before-after-sku
+  - title: "Catalog Agents vs PIM: Same SKUs, Different Jobs"
+    slug: "catalog-agents-vs-pim"
+    href: "/resources/articles/catalog-agents-vs-pim"
+  - title: "How Catalog Agents Extract Product Attributes"
+    slug: "how-catalog-agents-extract-product-attributes"
+    href: "/resources/articles/how-catalog-agents-extract-product-attributes"
+  - title: "What Is Catalog Readiness?"
+    slug: "what-is-catalog-readiness"
+    href: "/resources/articles/what-is-catalog-readiness"
 ---
 
-## Why your catalog drifts after every supplier update
+Your PIM has 94% field completeness. Your Amazon suppression rate is 18%. Both numbers are true at the same time — and that gap is exactly what catalog agents exist to close.
 
-It's easy to blame supplier data for catalog inconsistencies. But the real issue isn't the data quality itself. It's the massive volume that overwhelms your team. You think it's a tooling problem. It’s actually a volume problem. Each supplier update introduces new SKUs that need immediate normalization and alignment. The backlog never forms. Instead, your team is caught in a perpetual cycle of catch-up, leading to drifting alignment and missing opportunities.
+A PIM stores what you tell it. A catalog agent figures out what your data should say, checks whether it's correct, and fixes it — continuously, at the scale of millions of SKUs.
 
-## What are autonomous, scoped, measurable catalog operators?
+## What a catalog agent actually does
 
-[Catalog agents](/catalog-agents) are not generic chatbots. They are specialized **operators** designed to handle the intricate workflows of your product data at scale. Think of them as autonomous employees with a singular focus: making your SKUs ready for market. They work within defined scopes, ensuring that every task—whether attribute extraction or taxonomy alignment—is done precisely and efficiently. Their performance is measurable, providing tangible metrics that show real-world improvements in your catalog operations.
+A catalog agent is a purpose-built AI system that performs one specific operation on product data. Not a general-purpose AI. Not a rules engine. A system trained to do one thing — extract attributes, or map taxonomy, or detect compliance flags — and do it with the precision your downstream channels require.
 
-## The catalog agent family: different tasks, unified goals
+The key word is *purpose-built*. An attribute agent is not the same system as a compliance agent. Each one is trained on different data, evaluated against different ground truth, and optimized for different failure modes. Running one doesn't substitute for running the others.
 
-The secret to effective catalog operations lies not in a one-size-fits-all solution, but in a family of specialized agents. **Attribute agents** extract and normalize product data, ensuring consistency across millions of SKUs. **Taxonomy agents** align product categories, even as suppliers change their taxonomy standards. **Brand agents** ensure every product aligns with your brand guidelines. **Channel agents** match your product data to appropriate sales channels, while **compliance agents** ensure that your listings meet regulatory requirements. **Compatibility agents** reason over product compatibility, and **graph agents** maintain the relationships between products. Lastly, **taxability agents** keep track of tax compliance, ensuring no surprises during audits.
+Catalog agents run continuously. When a new supplier sends a feed at 2am, the agents process it. When Amazon updates its browse node taxonomy, the taxonomy agent re-maps affected SKUs. When a product description changes, the attribute agent re-extracts. No ticket, no sprint, no manual review queue.
 
-## How agents compose into readiness outcomes
+## The six agents in the Paladio stack
 
-Catalog agents work like a well-orchestrated symphony, each playing a part in achieving a harmonious [catalog readiness](/catalog-readiness). They remove friction points—errors are caught before listings go live, and adjustments happen in real-time without human intervention. They don’t just solve issues—they prevent them. With each cycle, your catalog becomes more accurate. The compound effect is a system that improves continually, ensuring your product data is always ready for market.
+| Agent | What it does | What breaks without it |
+|---|---|---|
+| **Attribute Agent** | Extracts 10–15+ structured attributes per SKU from unstructured text and raw feeds | AI shopping agents skip your product — no structured data to match against buyer queries |
+| **Taxonomy Agent** | Maps every SKU to the correct category across Amazon, Google, Walmart, Mirakl | Wrong browse node = listing suppressed or buried in the wrong category |
+| **Brand Normalization Agent** | Resolves brand name variants, manufacturer aliases, and duplicates across your catalog | ASIN matching fails, duplicate listings appear, brand filters don't work |
+| **Channel Matching Agent** | Matches your SKUs to ASINs, UPCs, and internal channel identifiers | Syndication breaks, channel-specific compliance checks can't run |
+| **Compliance Agent** | Detects hazmat classifications, multipack mismatches, and regulatory flags | Post-listing rejections, channel suspensions, tax liability |
+| **Product Graph Agent** | Builds substitutes, accessories, OEM parts, and fitment relationships | AI agents can't make safe substitution recommendations, compatibility data is missing |
 
-## Why catalog agents are not PIM or enrichment tools
+## Before and after: what the data looks like
 
-PIM systems and enrichment tools have their place, but they aren't designed to operate at the scale and complexity that catalog agents manage. They fill text fields and enrich product descriptions, but they don’t address the underlying alignment and readiness issues. Enrichment-only bots can fill in details, yet **channel taxonomy misalignment** persists. Catalog agents, on the other hand, ensure that every SKU is aligned, classified, and compliant before it ever reaches the market.
+Here's what the Attribute Agent does to a raw supplier record.
 
-Catalog agents are the production system for catalog readiness. They operate with workflows and guardrails tailored to your needs, providing the structured and measurable improvements you require. Unlike undifferentiated LLM wrappers, these agents are purpose-built, with proven results from **Voomi Supply** and **Profitero** to back them up.
+**Before — raw supplier feed:**
 
-Incorporating catalog agents means transforming your approach. It’s a shift from reactive adjustments to proactive readiness. And as you integrate these agents into your operations, you’ll find that the benefits compound over time. Each run brings more accuracy and efficiency, ensuring your catalog is not just ready, but optimized for success.
+> *"Heavy duty industrial degreaser, 1 gallon, works on metals and plastics, fast acting"*
+
+**After — Attribute Agent output:**
+
+| Attribute | Value |
+|---|---|
+| Product type | Industrial degreaser |
+| Net volume | 1 gallon (3.785L) |
+| Compatible surfaces | Metal, plastic |
+| Form factor | Liquid |
+| Hazmat flag | Yes — GHS labeling required |
+| Multipack | No |
+| Pack geometry | Single unit |
+
+That structured output is what a marketplace needs to validate the listing. It's what an AI shopping agent needs to match the product to a buyer query like "degreaser safe for aluminum parts." Without it, the product either gets rejected at submission or silently skipped at recommendation time.
+
+## Why this is different from enrichment tools
+
+Traditional enrichment tools apply rules. If field X is empty, copy from field Y. If brand = "ACME Corp.", normalize to "Acme". These rules work until a new supplier sends data that doesn't match any existing pattern — which happens every week at scale.
+
+Catalog agents reason about the data. The Compliance Agent doesn't check a list of known hazmat product names. It reads the product description, identifies chemical indicators, cross-references regulatory databases, and assigns the correct classification. At Voomi Supply, this replaced a manual VA workflow that was taking longer than the actual product publishing.
+
+> **Voomi Supply processed 1M+ SKUs against 200M+ Amazon ASINs. The attribute, compliance, and channel matching agents ran 24/7. Publish time dropped ~85%.**
+
+## What catalog agents don't replace
+
+Catalog agents run above your existing PIM or ERP. They don't replace your system of record — they make the data in it agent-ready.
+
+Your PIM tracks which products exist and what you know about them. Catalog agents determine whether what you know is correct, complete, and structured for the channels and AI systems that need to act on it.
+
+Most catalog teams use both. The PIM holds the master record. The agents continuously validate and enrich it. The output feeds your channels, your AI shopping surfaces, and your downstream compliance systems.
+
+See how the full agent stack works → [Catalog Agents](/catalog-agents)

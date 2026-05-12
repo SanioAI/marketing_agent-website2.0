@@ -1,75 +1,111 @@
 ---
-title: >-
-  The Agentic Commerce Readiness Checklist: What Your Catalog Must Prove Before
-  AI Agents Decide
-description: >-
-  Six dimensions PIM completeness misses: identity, taxonomy, compliance,
-  compatibility, taxability, pack geometry — operationalized by Voomi at 1M+
-  SKUs, Profitero at >95% P/R, JCPenney Mirakl. Run the assessment.
-tag: Consideration
-readTime: 6 min read
-pillar: Catalog Readiness for Agentic Commerce
-keyword: agentic commerce readiness checklist
+title: "The Agentic Commerce Readiness Checklist: 5 Dimensions, 25 Checks"
+description: "A practical checklist for assessing whether your catalog can be acted on by AI shopping agents. Each check maps to a specific failure mode at retrieval, filter, comparison, or transaction time."
+tag: "Consideration"
+readTime: "9 min read"
+pillar: "Catalog Readiness"
+keyword: "agentic commerce readiness checklist"
+hub:
+  label: "Catalog Readiness"
+  href: "/catalog-readiness"
 relatedArticles:
-  - title: what-is-catalog-readiness.md
-    slug: what-is-catalog-readiness
-    href: /resources/articles/what-is-catalog-readiness
-  - title: why-ai-agents-need-structured-product-intelligence.md
-    slug: why-ai-agents-need-structured-product-intelligence
-    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
-  - title: catalog-readiness-assessment.md
-    slug: catalog-readiness-assessment
-    href: /resources/articles/catalog-readiness-assessment
-  - title: preparing-ecommerce-catalogs-ai-shopping-agents.md
-    slug: preparing-ecommerce-catalogs-ai-shopping-agents
-    href: /resources/articles/preparing-ecommerce-catalogs-ai-shopping-agents
+  - title: "What Is Catalog Readiness?"
+    slug: "what-is-catalog-readiness"
+    href: "/resources/articles/what-is-catalog-readiness"
+  - title: "How AI Agents Decide Which Products to Recommend"
+    slug: "how-ai-agents-decide-which-products-to-recommend"
+    href: "/resources/articles/how-ai-agents-decide-which-products-to-recommend"
+  - title: "Catalog Readiness Assessment"
+    slug: "catalog-readiness-assessment"
+    href: "/resources/articles/catalog-readiness-assessment"
 ---
 
-## Why your PIM score and your agent readiness score are different numbers
+AI shopping agents don't rank your products. They filter them. A product that fails a filter disappears from the consideration set — silently, with no error message, no ranking penalty, no suppression notice.
 
-Your team likely believes that a high **PIM completeness score** equates to being ready for AI-driven commerce. It's a comforting assumption. But when you take your catalog live on a new channel, and 30% of your SKUs fail ingestion, the reality hits. It's not because fields were blank; it's because the data was wrong. Your **product data** was stale, your taxonomy mismatched, and your pack data failed variant inheritance. The suppressions weren't visible in your PIM; they showed up only in post-launch reports. **Agent readiness** is not about how full your rows are—it's about whether your AI agents can make informed, evidence-backed decisions.
+This checklist maps each failure mode to the specific check that catches it before the agent does.
 
-## The six dimensions agents evaluate
+## How to use this checklist
 
-AI agents evaluate [catalog readiness](/catalog-readiness) across six critical dimensions. Each one is a potential failure mode if ignored.
+Run it at the SKU level, not the catalog level. A catalog that's 95% ready still has 50,000 products failing if you have 1M SKUs. The goal is to identify which specific SKUs fail which specific checks — and route them to the right agent for remediation.
 
-**Structured Identity:** Most teams simply fill a name field. But when a PIM shows a 100% complete row and ASIN matching returns the wrong parent, it's often because the **brand field** contains incorrect data like "Mfr: Acme" instead of the canonical "Acme." This identity drift results in incorrect matches.
+Each check below lists the **failure mode** (what breaks) and the **agent that fixes it** if you're using [Catalog Agents](/catalog-agents).
 
-**Channel Taxonomy Alignment:** You might believe you're aligned if your taxonomy is internally consistent. However, JCPenney discovered that even with a flawless PIM, their SKUs were rejected during Mirakl marketplace launches due to misalignment with channel taxonomies. Without exact matches, ingestion fails.
+---
 
-**Compliance Signal Integrity:** You could have all compliance data filled in, yet still fail. If your hazmat codes or labeling don't match the marketplace requirements, your products face suppression. Compliance is a go/no-go gate, not a checkbox.
+## Dimension 1: Structured identity
 
-**Compatibility/Fitment Coverage:** Incorrect fitment data can lead to a customer purchasing the wrong product, resulting in returns and negative reviews. AI agents need precise compatibility signals to prevent this.
+These checks determine whether an AI agent can *find and identify* your product.
 
-**Taxability Accuracy:** Missteps here could cost your company through fines or customer dissatisfaction. Your AI needs to accurately assess taxability to ensure smooth transactions.
+| # | Check | Failure mode | Agent |
+|---|---|---|---|
+| 1.1 | Brand name is canonical (not "Manufacturer", "OEM", "N/A") | ASIN matching fails, brand filter returns no results | Brand Normalization Agent |
+| 1.2 | GTIN / UPC / EAN is present and valid | Channel matching breaks, duplicate listings appear | Channel Matching Agent |
+| 1.3 | Pack size and geometry are explicit (not "assorted" or "varies") | Multipack compliance check can't run, pricing per unit is wrong | Attribute Agent |
+| 1.4 | Model number matches manufacturer's canonical format | Compatibility filter fails for exact-match queries | Attribute Agent |
+| 1.5 | Product title contains key identifiers (brand, type, size) | Retrieval step misses keyword-match queries | Attribute Agent |
 
-**Pack Geometry Correctness:** When pack data doesn't survive variant inheritance, you risk misrepresenting what you're selling. Your agents need to verify geometry before the product goes live to avoid customer confusion.
+---
 
-## Checklist: what "done" looks like for each dimension
+## Dimension 2: Channel taxonomy alignment
 
-For AI agents, checklist completion isn't about documentation—it's about action.
+These checks determine whether an AI agent can *place your product in the right category*.
 
-- **Structured Identity:** Ensure brand fields are consistently canonical. Use a brand normalization check to catch errors before launch.
-- **Channel Taxonomy Alignment:** Align your taxonomy with every channel's specific requirements. This is non-negotiable for successful ingestion.
-- **Compliance Signal Integrity:** Check compliance fields like hazmat codes for accuracy. Each must align with marketplace specifications.
-- **Compatibility/Fitment Coverage:** Implement a fitment coverage check to ensure every product has accurate compatibility details.
-- **Taxability Accuracy:** Verify taxability fields are complete and correct. This ensures you're meeting legal requirements and customer expectations.
-- **Pack Geometry Correctness:** Perform geometry checks to confirm accurate pack data across all variants.
+| # | Check | Failure mode | Agent |
+|---|---|---|---|
+| 2.1 | Product is in the correct Amazon browse node | Listing suppressed or buried in wrong category | Taxonomy Agent |
+| 2.2 | Product is in the correct Google Shopping category | Google AI Overview skips product for category queries | Taxonomy Agent |
+| 2.3 | Product passes Walmart or Mirakl node validation | Channel-specific rejection at submission | Taxonomy Agent |
+| 2.4 | Taxonomy is up to date (channel taxonomies change quarterly) | Category that was correct 6 months ago is now wrong | Taxonomy Agent |
+| 2.5 | Sub-category and product type are filled, not just top-level category | Filter navigation fails, product buried below top results | Taxonomy Agent |
 
-## How Voomi sequenced these checks to get ~85% faster publish across 1M+ SKUs
+---
 
-Voomi Supply faced the daunting task of scaling 1M+ SKUs to match 200M+ ASINs. They didn't start by filling out forms. They sequenced identity checks first, followed by ASIN matching, and then multipack/hazmat gates. Each was a checklist item, not a documentation exercise. The result? A publish time reduced by **~85%**.
+## Dimension 3: Compliance signals
 
-Their approach wasn't about overwhelming the system with data; it was about ensuring each piece of data carried actionable, structured signals. This precision allowed them to scale without the typical delays of manual verification or rule-based workflows.
+These checks determine whether your product can be *published and sold without triggering a rejection*.
 
-## What to measure once you've run the checklist
+| # | Check | Failure mode | Agent |
+|---|---|---|---|
+| 3.1 | Hazardous materials are correctly flagged (GHS, DOT, OSHA) | Post-listing rejection, channel suspension, liability | Compliance Agent |
+| 3.2 | Multipack configuration is explicit and consistent with GTIN | Multipack listing rejected or priced incorrectly | Compliance Agent |
+| 3.3 | Age restrictions and safety warnings are present where required | Regulatory non-compliance, listing removal | Compliance Agent |
+| 3.4 | Restricted or controlled products are flagged before submission | Channel suspension if caught post-publication | Compliance Agent |
+| 3.5 | Tax category (Taxability code) is correct per jurisdiction | Pricing errors, tax liability exposure | Compliance Agent |
 
-Once your checklist is in place, measuring outcomes becomes straightforward. Focus on suppression report reductions, SKU ingestion success rates, and time-to-publish metrics. Each successful run compounds accuracy. Every cycle your catalog becomes more aligned, more precise, reducing not just errors, but the time spent fixing them.
+---
 
-Profitero's experience shows the power of this compounding effect. Their shift to **weak supervision pipelines** cut manual labeling from 140 to about 20 FTE-equivalent hours per cycle while maintaining over **95% precision/recall** across 1500+ marketplaces. The agents improved each run, reducing human workload significantly.
+## Dimension 4: Attribute completeness for AI agents
 
-## Run the assessment — stop guessing which dimension is the blocker
+These checks go beyond channel validation — they determine whether an AI shopping agent has enough data to *recommend* your product.
 
-You're not just filling fields; you're building a foundation for agentic commerce. By running a structured assessment, you eliminate the guesswork and identify exactly which dimension is blocking your readiness. This isn't about achieving a perfect PIM score; it's about ensuring your catalog is truly agent-ready.
+| # | Check | Failure mode | Agent |
+|---|---|---|---|
+| 4.1 | Material / composition is structured (not buried in description) | Fails material-based filter queries ("stainless steel bolts") | Attribute Agent |
+| 4.2 | Dimensions are explicit and in standard units | Fails size-based filter queries ("fits 6-inch duct") | Attribute Agent |
+| 4.3 | Compatible products / fitment data is present where applicable | Fails compatibility filter — product excluded from shortlist | Product Graph Agent |
+| 4.4 | Key specifications for the category are filled (voltage, pressure, load rating, etc.) | AI agent can't compare against alternatives — skips product | Attribute Agent |
+| 4.5 | Attributes are consistent across title, description, and structured fields | Conflicting signals lower agent confidence — product gets deprioritized | Attribute Agent |
 
-Your task isn't done until your data supports every dimension of AI evaluation. When every SKU can pass through those gates without issue, you'll know your catalog is ready. This is the compound effect of a checklist-driven, agentic approach—an ecommerce catalog that doesn't just hold data, but holds the right data, ready to perform.
+---
+
+## Dimension 5: Content quality for AI reasoning
+
+These checks affect whether an AI agent can *reason about* your product and represent it accurately.
+
+| # | Check | Failure mode | Agent |
+|---|---|---|---|
+| 5.1 | Product description is specific, not generic ("quality product" ≠ useful) | AI agent can't generate a confident recommendation | Attribute Agent |
+| 5.2 | Key use cases or applications are stated | Fails use-case-based queries ("degreaser for food processing equipment") | Attribute Agent |
+| 5.3 | Comparative signals are present (what this product does vs alternatives) | AI comparison fails — agent picks product with more data | Attribute Agent |
+| 5.4 | No placeholder values in required fields ("TBD", "See description", "N/A") | Channel validation fails, agent confidence drops | Attribute Agent |
+| 5.5 | Language and units are channel-appropriate (metric vs imperial, language per market) | Filter fails for region-specific queries | Attribute Agent |
+
+---
+
+## What to do with your results
+
+A product that fails any check in Dimensions 1–3 is likely already costing you in suppressed listings or compliance flags. Fix those first — they have an immediate revenue impact.
+
+A product that passes 1–3 but fails Dimensions 4–5 is published but not winning in AI-mediated discovery. Those gaps determine whether you show up in ChatGPT, Perplexity, or Google AI recommendations.
+
+Score your catalog across all five dimensions → [Catalog Readiness](/catalog-readiness)

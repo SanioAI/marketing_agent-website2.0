@@ -1,71 +1,82 @@
 ---
-title: 'Catalog Agents vs PIM: Complementary, Not Interchangeable'
-description: >-
-  PIM ≠ agent ops: **Voomi** used agents for **1M+ SKUs / 200M+ ASINs** + **~85%
-  faster publish**; **Profitero** for **>95% P/R** across **1500+
-  marketplaces**; **JCPenney** for **Mirakl/SFCC** taxonomy—continuous **catalog
-  agents**, not more workflow seats.
-tag: Consideration
-readTime: 6 min read
-pillar: Catalog Agents
-keyword: catalog agents vs PIM
+title: "Catalog Agents vs PIM: Same SKUs, Different Jobs"
+description: "Your PIM tracks what exists. Catalog agents decide whether it's correct. Here's the exact line between them — and why most teams need both."
+tag: "Consideration"
+readTime: "7 min read"
+pillar: "Catalog Agents"
+keyword: "catalog agents vs PIM"
 hub:
-  label: Catalog Agents
-  href: /catalog-agents
+  label: "Catalog Agents"
+  href: "/catalog-agents"
 relatedArticles:
-  - title: What Are Catalog Agents?
-    slug: what-are-catalog-agents
-    href: /resources/articles/what-are-catalog-agents
-  - title: Product Intelligence vs Product Information Management
-    slug: product-intelligence-vs-product-information-management
-    href: /resources/articles/product-intelligence-vs-product-information-management
-  - title: What Is Catalog Readiness?
-    slug: what-is-catalog-readiness
-    href: /resources/articles/what-is-catalog-readiness
-  - title: How Catalog Agents Extract Product Attributes
-    slug: how-catalog-agents-extract-product-attributes
-    href: /resources/articles/how-catalog-agents-extract-product-attributes
-  - title: Catalog Agents demo
-    slug: catalog-agents-demo-before-after-sku
-    href: /resources/articles/catalog-agents-demo-before-after-sku
+  - title: "What Are Catalog Agents?"
+    slug: "what-are-catalog-agents"
+    href: "/resources/articles/what-are-catalog-agents"
+  - title: "What Is Catalog Readiness?"
+    slug: "what-is-catalog-readiness"
+    href: "/resources/articles/what-is-catalog-readiness"
+  - title: "How Catalog Agents Extract Product Attributes"
+    slug: "how-catalog-agents-extract-product-attributes"
+    href: "/resources/articles/how-catalog-agents-extract-product-attributes"
 ---
 
-## Most PIM Projects Fail When Assumed Complete
+The question isn't which one to pick. They solve different problems. Your PIM is a system of record — it tracks what products exist and what you know about them. Catalog agents are a system of intelligence — they determine whether what you know is correct, complete, and structured for the channels that need to act on it.
 
-Many teams trust that their Product Information Management (PIM) systems are the ultimate solution for catalog management. But what happens when your product data needs exceed the static capabilities of a PIM? You assume it's a tooling issue. In reality, the **real problem** is the lack of continuous data optimization and intelligence that traditional PIMs weren't designed to handle.
+Most teams that struggle with catalog quality aren't missing a PIM. They have a PIM. What they're missing is the layer that continuously validates the data inside it.
 
-### Why PIM Systems Fall Short
+## What each system is actually built to do
 
-PIMs are optimized for **human workflows** and syndication containers. They excel at being a central repository for product information, serving as a single source of truth for your team. They're built for organizing, storing, and distributing product content to various channels. However, their architecture is fundamentally about managing static records. When it comes to navigating dynamic market landscapes or handling massive data volumes, like **Voomi Supply's** 1M+ SKUs linked to 200M+ ASINs, a PIM alone can't keep up. The PIM's role is to store and distribute, but not to enhance or correct.
+| Capability | PIM | Catalog Agents |
+|---|---|---|
+| Store product records | ✅ Core function | — |
+| Track field completeness | ✅ | — |
+| Extract attributes from unstructured text | — | ✅ |
+| Classify products into marketplace taxonomies | Basic rules only | ✅ Trained per channel |
+| Detect hazmat / compliance flags | — | ✅ |
+| Match SKUs to Amazon ASINs / UPCs | — | ✅ |
+| Normalize brand names across supplier feeds | Manual or rules | ✅ Continuous |
+| Build product relationships (substitutes, fitment) | — | ✅ |
+| Run continuously on new supplier data | — | ✅ |
+| Flag for human review when confidence is low | Workflow tools | ✅ Built-in HITL |
 
-**Treating catalog problems as a one-time project.** Teams often launch a PIM thinking it will solve all catalog woes. But without continuous data enrichment and validation, new errors creep in with every supplier update, and the catalog drifts again.
+## Where PIM breaks down
 
-### What [Catalog Agents](/catalog-agents) Optimize For
+A PIM is only as good as what gets put into it. Most catalog quality failures aren't PIM failures — they're input failures. Supplier feeds arrive with missing attributes, inconsistent brand names, wrong categories, and no hazmat flags. The PIM faithfully stores all of it, exactly as received.
 
-Catalog agents specialize in **machine reasoning** and continuous repair. They work as the intelligence layer over your existing PIM, filling in the gaps by normalizing data, aligning taxonomy, and ensuring compliance. Unlike PIMs, which are static, catalog agents are dynamic, continuously learning and adapting to new data inconsistencies and market requirements. For instance, **Profitero** shows that while PIM completeness is crucial, it doesn't guarantee **>95% precision/recall** across 1500+ marketplaces. Catalog agents close this gap, ensuring data accuracy and relevance in real time.
+**The completeness trap.** A field marked "complete" in your PIM might contain "N/A", "TBD", or a raw supplier description. The PIM counts it as filled. Your marketplace channel rejects it. Your AI shopping agent skips it.
 
-**Assuming PIMs handle data precision.** Believing your PIM can deliver perfect data across all channels is an illusion. Precision and recall fall short when PIMs don't have the intelligence layer to adapt and correct continuously.
+**The taxonomy problem.** Most PIMs let you store a category. They don't validate whether that category is correct for Amazon, Walmart, and Mirakl simultaneously — or re-validate when those taxonomies change. Profitero managed 1,500+ marketplaces. A static taxonomy mapping in a PIM would have been outdated within weeks.
 
-### The Integration Pattern That Works
+**The compliance blind spot.** PIMs don't read product descriptions and flag hazardous materials. Voomi Supply was doing this manually — reviewing each SKU for hazmat, multipack, and taxability signals before publishing. It was taking longer than the actual publishing step.
 
-Your PIM should remain the source of product content. But to achieve a truly **unified catalog intelligence layer**, you need catalog agents to enrich and validate this data. This complementary relationship means that while your PIM serves as the repository, catalog agents act as the guardians that ensure every piece of product data is accurate and actionable. **JCPenney's** integration with Mirakl and SFCC showcases the necessity of catalog agents for effective taxonomy alignment across brands.
+## Where catalog agents break down (without a PIM)
 
-**Ignoring the need for continual enrichment.** Teams that solely rely on their PIM for catalog accuracy miss out on the ongoing validation and enrichment that agents provide, leading to misalignments and errors.
+Catalog agents generate enriched, validated product data. That data needs to live somewhere. If you don't have a PIM or equivalent system of record, you don't have a source of truth to write back to — and you have no audit trail for what changed and why.
 
-### Where Overlap Marketing Confuses Buyers
+Catalog agents also don't manage product lifecycle, approval workflows, or go-to-market processes. Those are PIM functions. Trying to use catalog agents as a PIM replacement creates a mess.
 
-The lines between PIM and catalog agents can blur, especially when vendors use overlap marketing to entice buyers. It's tempting to believe that a single tool can handle every aspect of catalog management. However, the truth is that each has distinct roles. PIMs are not equipped to perform the continuous, complex reasoning required for real-time data optimization. When **Voomi Supply** achieved an **~85% faster publish time**, it wasn't because of more roles within the PIM but due to the intelligent automation provided by catalog agents.
+## The stack that actually works
 
-**Confusing PIM with a complete solution.** Vendors often market PIMs as a one-stop solution, leading teams to overlook the need for an intelligent layer that continuously manages and enhances their data.
+```
+Supplier feeds / raw data
+        ↓
+  Catalog Agents          ← attribute extraction, taxonomy, compliance, matching
+        ↓
+      PIM / ERP           ← master record, enriched and validated
+        ↓
+  Channels / AI agents    ← Amazon, Walmart, Google, ChatGPT Shopping
+```
 
-### When PIM-Only Projects Stall
+Paladio sits above your PIM. The agents process incoming data, enrich and validate it, flag exceptions for human review, and write clean records back. Your PIM stays as the system of record — it just receives better data than it did before.
 
-Teams often hit a wall when expecting their PIM to handle everything from data storage to real-time optimization. Projects stall when data anomalies go unchecked, or when the PIM fails to adapt to changing market demands. In such cases, your project is not failing because your PIM is bad, but because it lacks the **agentic readiness** needed for continuous improvement. This is where catalog agents shine, providing the missing layer that ensures your catalog is always market-ready.
+> **At JCPenney, the challenge wasn't missing PIM functionality. It was taxonomy alignment across hundreds of brands before the Mirakl marketplace launch. Catalog agents handled the classification. The PIM held the records.**
 
-**Thinking PIM stalling is a system flaw.** It's not about replacing your PIM; it's about augmenting it with catalog agents that provide the continuous data validation and correction that a static system cannot.
+## The decision framework
 
-### The Compound Effect of Agentic Readiness
+If your primary problem is **"we don't know what products we have or who owns them"** — that's a PIM problem.
 
-Every interaction with your catalog agents compounds over time. With each cycle, your catalog becomes more accurate, your data more reliable, and your time to market drastically reduced. The system doesn't just maintain; it improves. As seen with **Profitero**, the gap in precision and recall is bridged, not by more manual work, but by a system that evolves with each new data point.
+If your primary problem is **"our product data is wrong, incomplete, or not structured for the channels we're publishing to"** — that's a catalog agent problem.
 
-Incorporating catalog agents into your ecommerce strategy is about removing friction, not adding complexity. It's about ensuring that every product listing is accurate before it goes live, aligning your catalogs across platforms, and ultimately, boosting your bottom line through smarter, more efficient catalog management.
+If you have both problems — and most teams with 50K+ SKUs do — you need both. Start with agents to fix the data quality. The PIM benefits immediately because the data flowing into it gets cleaner with every cycle.
+
+Explore the full catalog agent stack → [Catalog Agents](/catalog-agents)

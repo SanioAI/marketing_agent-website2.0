@@ -1,72 +1,102 @@
 ---
-title: >-
-  Catalog Readiness Assessment: Score Agent-Decidable State, Not PIM
-  Completeness
-description: >-
-  Not a PIM audit. We score six agent-decidable dimensions — identity, taxonomy,
-  compliance, compatibility, taxability, pack geometry — and produce a
-  prioritized backlog. Voomi used this framework at 1M+ SKUs.
-tag: Decision
-readTime: 6 min read
-pillar: Catalog Readiness for Agentic Commerce
-keyword: catalog readiness assessment
+title: "How to Run a Catalog Readiness Assessment (Before Your Channel Does)"
+description: "A step-by-step framework for scoring your catalog across the five readiness dimensions — structured identity, taxonomy, compliance, attribute completeness, and content quality — at the SKU level."
+tag: "Decision"
+readTime: "8 min read"
+pillar: "Catalog Readiness"
+keyword: "catalog readiness assessment"
+hub:
+  label: "Catalog Readiness"
+  href: "/catalog-readiness"
 relatedArticles:
-  - title: what-is-catalog-readiness.md
-    slug: what-is-catalog-readiness
-    href: /resources/articles/what-is-catalog-readiness
-  - title: agentic-commerce-readiness-checklist.md
-    slug: agentic-commerce-readiness-checklist
-    href: /resources/articles/agentic-commerce-readiness-checklist
-  - title: product-data-quality-audit.md
-    slug: product-data-quality-audit
-    href: /resources/articles/product-data-quality-audit
-  - title: preparing-ecommerce-catalogs-ai-shopping-agents.md
-    slug: preparing-ecommerce-catalogs-ai-shopping-agents
-    href: /resources/articles/preparing-ecommerce-catalogs-ai-shopping-agents
+  - title: "What Is Catalog Readiness?"
+    slug: "what-is-catalog-readiness"
+    href: "/resources/articles/what-is-catalog-readiness"
+  - title: "The Agentic Commerce Readiness Checklist"
+    slug: "agentic-commerce-readiness-checklist"
+    href: "/resources/articles/agentic-commerce-readiness-checklist"
+  - title: "What Are Catalog Agents?"
+    slug: "what-are-catalog-agents"
+    href: "/resources/articles/what-are-catalog-agents"
 ---
 
-## [Catalog Readiness](/catalog-readiness) Assessment: Score Agent-Decidable State, Not PIM Completeness
+Amazon runs a catalog assessment every time you submit a listing. Walmart runs one. Your AI shopping agent runs one every time a buyer asks a question. None of them tell you the results in advance.
 
-### Why your completeness report isn't solving your Amazon ingestion issues
+A catalog readiness assessment gives you those results before the channel does — so you're fixing gaps, not recovering from rejections.
 
-You've run multiple enrichment projects, yet 22% of your SKUs still fail first-pass ingestion on Amazon. Completeness audits assure you the fields are filled, but they don't tell you the values are wrong, the taxonomy has drifted, or the pack geometry is inconsistent across variants. You need a diagnostic that maps to the real suppression causes, not just field presence. Most "catalog audits" produce a completeness score and a field-gap report. That's not readiness.
+## What a readiness assessment is not
 
-### What a readiness assessment is not
+It's not a PIM audit. A PIM audit tells you which fields are filled. A readiness assessment tells you whether the values in those fields are *correct*, *channel-appropriate*, and *sufficient for AI agent decision-making*.
 
-A readiness assessment isn't a PIM audit or a completeness report. Those traditional methods might show you how many fields are filled. But they miss the mark when it comes to the real operational challenges. Completeness doesn't mean your data is usable or accurate in the eyes of an AI. While a PIM audit gives a comfortingly high percentage, it doesn't address why your SKUs falter at the first hurdle on Amazon. The real question is whether your SKUs carry enough structured signal to be matched, classified, and transacted by AI without human intervention.
+It's not a one-time project. Your catalog changes constantly — new suppliers, product updates, taxonomy revisions. A single assessment gives you a snapshot. What you want is continuous scoring, so gaps surface before they become rejections.
 
-### What it does score — the six dimensions with example failure patterns per dimension
+## Step 1: Define your scoring dimensions
 
-The Catalog Readiness Assessment scores six **agent-decidable dimensions**:
+Score every SKU across these five dimensions. Each one maps to a specific failure mode.
 
-1. **Structured Identity:** Are all product identifiers consistent and matchable?
-   - **Failure Pattern:** SKUs have duplicate identifiers, leading to mismatches.
-   
-2. **Channel Taxonomy Alignment:** How well do your SKUs fit into the channel’s category structures?
-   - **Failure Pattern:** Taxonomy drift results in misclassified products, as seen in JCPenney's misalignment across Mirakl and SFCC.
+| Dimension | What it catches | Priority |
+|---|---|---|
+| Structured identity | ASIN matching failures, brand filter misses, GTIN errors | Critical — fix first |
+| Channel taxonomy alignment | Browse node rejections, wrong category placement | Critical — fix first |
+| Compliance signals | Hazmat flags, multipack errors, restricted product issues | Critical — fix first |
+| Attribute completeness | AI agent filter failures, missing specs for category | High |
+| Content quality | Thin descriptions, placeholder values, missing use cases | Medium |
 
-3. **Compliance Signal Integrity:** Are compliance attributes correctly labeled for each SKU?
-   - **Failure Pattern:** Incorrect hazmat labeling leads to suppressed listings.
+Fix Dimensions 1–3 before investing in 4–5. A product with perfect attribute completeness still gets suppressed if its GTIN is wrong.
 
-4. **Compatibility/Fitment Coverage:** Do your products have the necessary fitment data for channels that require it?
-   - **Failure Pattern:** Missing compatibility data causes consumer confusion and returns.
+## Step 2: Sample your catalog strategically
 
-5. **Taxability Accuracy:** Is tax information accurate and aligned across channels?
-   - **Failure Pattern:** Incorrect tax flags lead to compliance issues.
+Don't start with a random 1% sample. Start with the SKUs that are most likely to have readiness gaps:
 
-6. **Pack Geometry:** Are the dimensions and weight attributes consistent across variants?
-   - **Failure Pattern:** Inconsistent pack geometry results in shipping errors and customer dissatisfaction.
+- **New supplier additions** — new suppliers bring new formatting inconsistencies
+- **High-velocity SKUs** — failures here cost more revenue
+- **Recently suppressed listings** — the rejection notice tells you which dimension failed
+- **Cross-border or multi-channel products** — taxonomy and compliance requirements differ by market
 
-### What the output looks like
+For Voomi Supply, the highest-gap SKUs were in the HVAC category — products with complex compatibility requirements, multipack configurations, and frequent hazmat flags. Prioritizing those first meant the biggest improvement in publish rate came within the first few weeks.
 
-Forget the traffic-light dashboard. The readiness assessment produces a **tiered backlog** by dimension rather than a single completeness percentage. This backlog prioritizes action items based on the severity of SKU suppression risks. Imagine receiving a prioritized list of issues, each mapped to one of the six dimensions. This means no more guessing which fields to tackle first. Instead, you have a clear roadmap that guides you to fix the core issues affecting your SKUs' performance.
+## Step 3: Score at the SKU level
 
-### What Voomi measured before scaling to 1M+ SKUs
+Aggregate scores hide the problem. A catalog that's "92% ready" means 80,000 failing SKUs if your catalog has 1M products.
 
-Voomi Supply ran readiness gates before scaling their ASIN matching to over 200 million ASINs. Each gate—identity, matching, multipack, hazmat, taxability—corresponded directly to a readiness dimension. This approach wasn't about checking off boxes on a completeness scorecard. It was about eliminating bottlenecks. The result? An **85% improvement in publish-time** post-assessment-and-fix. Profitero operationalized readiness as precision/recall on classification holdout, not field-fill percentage. Their >95% precision/recall was the "done" definition, not a completeness score.
+Score every SKU individually across each dimension. Output a prioritized list sorted by:
 
-### How to request yours
+1. **Severity** — compliance and identity failures are blocking; content gaps are not
+2. **Revenue impact** — a failing SKU on a high-velocity product costs more than a failing SKU on a slow mover
+3. **Fix complexity** — some gaps take 10 seconds (wrong GTIN format), some take structured enrichment (extract 15 attributes from an unstructured description)
 
-You might think you're "80% ready," but without assessing the correct dimensions, you could be missing the real issues. A team self-assessed as "80% ready" found their taxonomy dimension at only **34% alignment** on Amazon browse nodes. This misalignment was their primary suppression cause, a fact that a mere completeness score never exposed. By focusing on agent-decidable dimensions, the Catalog Readiness Assessment provides you with actionable insights, setting you on the path to real readiness.
+### What a SKU-level readiness score looks like
 
-Every cycle improves your catalog's accuracy. That's the compound effect of a system that doesn't just diagnose but also prioritizes solutions. Your catalog's readiness isn't a static number; it's a dynamic capability that evolves with every assessment.
+| SKU | Identity | Taxonomy | Compliance | Attributes | Content | Overall | Action |
+|---|---|---|---|---|---|---|---|
+| HVAC-4421 | ✅ | ✅ | ⚠️ Hazmat unflagged | ✅ | ✅ | 80% | Compliance Agent |
+| BOLT-7892 | ⚠️ Brand = "OEM" | ✅ | ✅ | ⚠️ Missing dimensions | ✅ | 60% | Brand + Attribute Agent |
+| FILT-0034 | ✅ | ⚠️ Wrong browse node | ✅ | ✅ | ⚠️ Placeholder desc | 60% | Taxonomy + Content |
+| CHEM-1102 | ✅ | ✅ | ❌ No hazmat flag | ⚠️ Missing safety data | ❌ | 30% | Compliance Agent — urgent |
+
+## Step 4: Route defects to the right agent
+
+Once you have the scored list, route each defect type to the agent that fixes it.
+
+| Defect type | Routed to |
+|---|---|
+| Missing or wrong attributes | Attribute Agent |
+| Wrong or missing taxonomy | Taxonomy Agent |
+| Brand name variants / duplicates | Brand Normalization Agent |
+| Missing GTIN / ASIN match failure | Channel Matching Agent |
+| Hazmat, multipack, compliance flags | Compliance Agent |
+| Missing fitment / compatibility data | Product Graph Agent |
+
+This is where [Catalog Agents](/catalog-agents) come in. Instead of manually fixing each defect, you route the scored output directly into the enrichment pipeline. The agents process the flagged SKUs, return enriched records, and you review and approve the changes before they go live.
+
+> **Profitero reduced manual labeling effort from 140 hours to ~20 per cycle by combining automated scoring with targeted agent remediation. The agents handled 95%+ of cases; humans reviewed the edge cases.**
+
+## Step 5: Establish continuous monitoring
+
+A readiness assessment is most valuable when it runs continuously — not on a quarterly schedule.
+
+Set thresholds for each dimension. When a SKU drops below the threshold (because a supplier updated the record, or a taxonomy changed, or a new compliance rule went into effect), it surfaces automatically for remediation.
+
+The output isn't a report. It's a queue — a prioritized list of specific SKUs with specific defects that specific agents can fix. That's the difference between a readiness audit and a readiness system.
+
+Run a free assessment → [Catalog Readiness](/catalog-readiness)
