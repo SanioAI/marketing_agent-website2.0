@@ -1,78 +1,75 @@
 ---
 title: >-
-  Agentic Commerce Readiness Checklist: From PIM Hygiene to Agent-Decidable
-  Catalogs
+  The Agentic Commerce Readiness Checklist: What Your Catalog Must Prove Before
+  AI Agents Decide
 description: >-
-  Agent readiness checklist: what **Voomi** automated before **~85%
-  publish-time** wins (**multipack**, **hazmat**, **ASIN** at **1M+ SKUs**),
-  what **Profitero** gates at **>95% P/R** across **1500+ marketplaces**, and
-  what **JCPenney Mirakl/SFCC** programs need per-brand taxonomy “done”
-  definitions—n
+  Six dimensions PIM completeness misses: identity, taxonomy, compliance,
+  compatibility, taxability, pack geometry — operationalized by Voomi at 1M+
+  SKUs, Profitero at >95% P/R, JCPenney Mirakl. Run the assessment.
 tag: Consideration
 readTime: 6 min read
 pillar: Catalog Readiness for Agentic Commerce
 keyword: agentic commerce readiness checklist
-hub:
-  label: Catalog Readiness
-  href: /catalog-readiness
 relatedArticles:
-  - title: What Is Catalog Readiness?
+  - title: what-is-catalog-readiness.md
     slug: what-is-catalog-readiness
     href: /resources/articles/what-is-catalog-readiness
-  - title: Marketplace Catalog Readiness
-    slug: marketplace-catalog-readiness
-    href: /resources/articles/marketplace-catalog-readiness
-  - title: Why Ai Agents Need Structured Product Intelligence
+  - title: why-ai-agents-need-structured-product-intelligence.md
     slug: why-ai-agents-need-structured-product-intelligence
     href: /resources/articles/why-ai-agents-need-structured-product-intelligence
-  - title: Catalog Readiness Assessment
+  - title: catalog-readiness-assessment.md
     slug: catalog-readiness-assessment
     href: /resources/articles/catalog-readiness-assessment
-  - title: What Are Catalog Agents
-    slug: what-are-catalog-agents
-    href: /resources/articles/what-are-catalog-agents
+  - title: preparing-ecommerce-catalogs-ai-shopping-agents.md
+    slug: preparing-ecommerce-catalogs-ai-shopping-agents
+    href: /resources/articles/preparing-ecommerce-catalogs-ai-shopping-agents
 ---
 
-## Who this checklist is for
+## Why your PIM score and your agent readiness score are different numbers
 
-You might believe that scaling your SKU catalog is simply a matter of more hands or better tools. But at mid-market and higher SKU volumes, the real problem isn't manpower or software—it's your data's ability to self-manage. When you're dealing with 1M+ SKUs, the complexity isn't just in the numbers; it's in ensuring your data can autonomously correct, align, and decide. This checklist isn't for the incremental updater. It's for those ready to enable their catalogs to act as decision-makers, allowing you to focus on strategic growth rather than operational headaches.
+Your team likely believes that a high **PIM completeness score** equates to being ready for AI-driven commerce. It's a comforting assumption. But when you take your catalog live on a new channel, and 30% of your SKUs fail ingestion, the reality hits. It's not because fields were blank; it's because the data was wrong. Your **product data** was stale, your taxonomy mismatched, and your pack data failed variant inheritance. The suppressions weren't visible in your PIM; they showed up only in post-launch reports. **Agent readiness** is not about how full your rows are—it's about whether your AI agents can make informed, evidence-backed decisions.
 
-**Voomi Supply** found that by shifting from rule-based workflows to agent-decided models, they slashed publish times by about **85%**. The difference? Their [catalog agents](/catalog-agents) autonomously tackled **multipack detection**, **hazmat**, and **ASIN matching**—tasks that would otherwise bog down your team.
+## The six dimensions agents evaluate
 
-## Identity & deduplication
+AI agents evaluate [catalog readiness](/catalog-readiness) across six critical dimensions. Each one is a potential failure mode if ignored.
 
-Catalog identity issues don't just cost you time; they erode trust with your customers. Most teams assume a robust SKU or GTIN will suffice, but the real problem lies in channel-specific identifiers like ASINs. Without proper deduplication, your products compete against themselves, leading to inefficient promotions and inventory mismanagement.
+**Structured Identity:** Most teams simply fill a name field. But when a PIM shows a 100% complete row and ASIN matching returns the wrong parent, it's often because the **brand field** contains incorrect data like "Mfr: Acme" instead of the canonical "Acme." This identity drift results in incorrect matches.
 
-Your checklist should prioritize **ASIN/GTIN/channel keys** alignment. This isn't just about avoiding duplicate listings; it's about ensuring every product is uniquely and accurately represented across every channel. The moment a product is misidentified, the sale is lost, and your brand's credibility takes a hit. With catalog agents, deduplication becomes an autonomous, ongoing process, ensuring your products maintain their unique identity across platforms.
+**Channel Taxonomy Alignment:** You might believe you're aligned if your taxonomy is internally consistent. However, JCPenney discovered that even with a flawless PIM, their SKUs were rejected during Mirakl marketplace launches due to misalignment with channel taxonomies. Without exact matches, ingestion fails.
 
-## Attribute completeness vs decision-critical optional fields
+**Compliance Signal Integrity:** You could have all compliance data filled in, yet still fail. If your hazmat codes or labeling don't match the marketplace requirements, your products face suppression. Compliance is a go/no-go gate, not a checkbox.
 
-It's tempting to think that filling out every product attribute is the solution. The reality? It's not about quantity but quality and relevance. In your catalog, some fields are noise; others are decision-critical. The challenge is knowing which is which.
+**Compatibility/Fitment Coverage:** Incorrect fitment data can lead to a customer purchasing the wrong product, resulting in returns and negative reviews. AI agents need precise compatibility signals to prevent this.
 
-Your focus should be on **decision-critical** attributes—those that directly influence consumer choices and platform algorithms. For instance, a detailed material description may be optional, but compatibility specifications are essential for parts-aware consumers. Catalog agents can autonomously assess and fill these critical fields, allowing your team to concentrate on strategic enhancements rather than mundane data entry.
+**Taxability Accuracy:** Missteps here could cost your company through fines or customer dissatisfaction. Your AI needs to accurately assess taxability to ensure smooth transactions.
 
-## Compatibility / substitution coverage
+**Pack Geometry Correctness:** When pack data doesn't survive variant inheritance, you risk misrepresenting what you're selling. Your agents need to verify geometry before the product goes live to avoid customer confusion.
 
-Assuming your customers understand product compatibility is a costly mistake. When parts-aware readers can't find reliable substitution data, your catalog fails them. This isn't just about losing a sale; it's about eroding customer trust and brand loyalty.
+## Checklist: what "done" looks like for each dimension
 
-Your checklist must ensure comprehensive **compatibility and substitution coverage**. Catalog agents excel here by autonomously cross-referencing and flagging potential substitutions, ensuring your catalog is not only accurate but also rich in decision-making information. This proactive approach keeps your customers satisfied and your returns low.
+For AI agents, checklist completion isn't about documentation—it's about action.
 
-## Compliance & taxability signals
+- **Structured Identity:** Ensure brand fields are consistently canonical. Use a brand normalization check to catch errors before launch.
+- **Channel Taxonomy Alignment:** Align your taxonomy with every channel's specific requirements. This is non-negotiable for successful ingestion.
+- **Compliance Signal Integrity:** Check compliance fields like hazmat codes for accuracy. Each must align with marketplace specifications.
+- **Compatibility/Fitment Coverage:** Implement a fitment coverage check to ensure every product has accurate compatibility details.
+- **Taxability Accuracy:** Verify taxability fields are complete and correct. This ensures you're meeting legal requirements and customer expectations.
+- **Pack Geometry Correctness:** Perform geometry checks to confirm accurate pack data across all variants.
 
-Ignoring compliance and taxability signals is a fast track to regulatory headaches and financial penalties. Many teams focus on the obvious: product descriptions and pricing. But the real risk lies in overlooked categories like **hazmat** and restricted items.
+## How Voomi sequenced these checks to get ~85% faster publish across 1M+ SKUs
 
-Your checklist must include clear **compliance & taxability signals**. Catalog agents can autonomously identify and flag these issues before they become costly errors. For example, **Voomi Supply** automated their hazmat detection and saw a significant reduction in publish times by preventing these errors from reaching the customer.
+Voomi Supply faced the daunting task of scaling 1M+ SKUs to match 200M+ ASINs. They didn't start by filling out forms. They sequenced identity checks first, followed by ASIN matching, and then multipack/hazmat gates. Each was a checklist item, not a documentation exercise. The result? A publish time reduced by **~85%**.
 
-## Channel mapping readiness
+Their approach wasn't about overwhelming the system with data; it was about ensuring each piece of data carried actionable, structured signals. This precision allowed them to scale without the typical delays of manual verification or rule-based workflows.
 
-It's easy to assume that if a product description is approved, it's ready for all channels. The truth? Misalignment in **channel taxonomy** leads to listing rejections and poor search visibility. Each platform has its own hierarchy and rules, and failing to comply means missed sales opportunities.
+## What to measure once you've run the checklist
 
-Your checklist should evaluate **channel mapping readiness**. This means ensuring every product fits the taxonomy requirements of each channel. **JCPenney's** integration with Mirakl and SFCC demonstrates how crucial this alignment is—without it, products end up in the wrong browse nodes, causing confusion and loss of sales. Catalog agents streamline this process, autonomously adapting your listings to fit each platform's unique requirements.
+Once your checklist is in place, measuring outcomes becomes straightforward. Focus on suppression report reductions, SKU ingestion success rates, and time-to-publish metrics. Each successful run compounds accuracy. Every cycle your catalog becomes more aligned, more precise, reducing not just errors, but the time spent fixing them.
 
-## How to operationalize with agents + assessment
+Profitero's experience shows the power of this compounding effect. Their shift to **weak supervision pipelines** cut manual labeling from 140 to about 20 FTE-equivalent hours per cycle while maintaining over **95% precision/recall** across 1500+ marketplaces. The agents improved each run, reducing human workload significantly.
 
-You know the checklist items. The challenge now is operationalizing them in a way that frees your team and compounds benefits over time. The answer lies in agentic commerce readiness—empowering catalog agents to not just detect and flag issues, but to autonomously resolve them.
+## Run the assessment — stop guessing which dimension is the blocker
 
-With catalog agents, each run improves your data's precision and recall, much like **Profitero's** achievement of **>95%** accuracy in labeling pipelines. This is not a one-time fix; it's a system that evolves, learns, and enhances your catalog continuously. By the time you've checked off the last item on your checklist, your agents have already made your catalog more robust and ready for the next cycle.
+You're not just filling fields; you're building a foundation for agentic commerce. By running a structured assessment, you eliminate the guesswork and identify exactly which dimension is blocking your readiness. This isn't about achieving a perfect PIM score; it's about ensuring your catalog is truly agent-ready.
 
-In essence, every step you take towards agentic commerce readiness compounds over time. Each improvement builds on the last, creating a catalog that's not just accurate, but strategically aligned with your business goals.
+Your task isn't done until your data supports every dimension of AI evaluation. When every SKU can pass through those gates without issue, you'll know your catalog is ready. This is the compound effect of a checklist-driven, agentic approach—an ecommerce catalog that doesn't just hold data, but holds the right data, ready to perform.

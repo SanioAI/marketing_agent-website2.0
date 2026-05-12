@@ -1,57 +1,53 @@
 ---
-title: How Paladio Trains Efficient Language Models for Ecommerce
+title: >-
+  Why General-Purpose LLMs Fail Ecommerce Catalogs — and How Domain-Specific
+  Models Don't
 description: >-
-  General-purpose LLMs hit a ceiling fast on product data. Learn how
-  domain-specific training — weak supervision, task-scoped models, and real
-  catalog data — gets to >95% precision at Profitero's scale.
+  General-purpose LLMs hit a ceiling on product data. Weak supervision,
+  task-scoped training, and calibrated confidence are how Profitero's
+  classification reached >95% P/R at 1000+ brand scale.
 tag: Awareness
 readTime: 6 min read
 pillar: Product Intelligence
 keyword: efficient language model for ecommerce
+relatedArticles:
+  - title: what-is-product-intelligence.md
+    slug: what-is-product-intelligence
+    href: /resources/articles/what-is-product-intelligence
+  - title: structured-product-data-for-ecommerce-ai.md
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: ai-catalog-compliance-human-in-the-loop.md
+    slug: ai-catalog-compliance-human-in-the-loop
+    href: /resources/articles/ai-catalog-compliance-human-in-the-loop
+  - title: product-data-quality-framework-ecommerce.md
+    slug: product-data-quality-framework-ecommerce
+    href: /resources/articles/product-data-quality-framework-ecommerce
+  - title: catalog-readiness-assessment.md
+    slug: catalog-readiness-assessment
+    href: /resources/articles/catalog-readiness-assessment
 ---
 
-## What "efficient language model for ecommerce" actually means
+## When GPT-4 works fine on 10 SKUs and fails on 10,000 — the scaling problem
 
-You think efficiency is about GPU usage or model size. It's not. Efficiency in ecommerce means **accuracy per dollar** on tasks like classification, extraction, and matching. General-purpose language models hit a ceiling fast on structured product data because they're not trained for these tasks. They waste resources and return inconsistent results because they lack the specificity that your catalog requires.
+It's tempting to think a prototype that works on a small scale will naturally scale up. But that's not how it plays out with **general-purpose LLMs**. You prototype with **GPT-4** on a 100-SKU sample and it shows 85% accuracy. You think you're onto something. But when you scale it to 50,000 SKUs, the accuracy plummets to 71%. Suddenly, you're dealing with hallucinated attributes in 8% of your outputs, and there's no way to trace which classifications are reliable. The reality is, these models are not designed for the kind of **precision and traceability** your catalog demands. They're black boxes, lacking auditability and confidence scores, leaving you guessing rather than deciding.
 
-The real efficiency comes from a model trained on **millions of real product records, supplier PDFs, and marketplace taxonomy trees**. Paladio's approach—using weak supervision on domain-specific data—means smaller models that are faster and more accurate. This isn't about cramming more parameters into a model; it's about using the right data to train specialized models that excel at ecommerce-specific tasks.
+## Why general-purpose LLMs hallucinate product attributes — the architectural mismatch
 
-## Why general-purpose LLMs struggle with ecommerce catalogs
+General-purpose LLMs are like Swiss Army knives — versatile but not specialized. They operate on vast corpora of generalized data, which makes them excellent at generating human-like text but poor at **domain-specific tasks**. That’s why they hallucinate attributes. They’re trying to fill in blanks with what they think should be there, rather than what is actually needed. Your catalog isn't a creative writing exercise; it needs precision, not plausible fiction. Without task-specific training, these models lack the architectural framework to understand and classify product attributes accurately. They simply aren’t built to handle the **nuanced requirements** of ecommerce catalogs.
 
-General-purpose LLMs know language, not your **unique taxonomy**. Google's 6,000+ product category nodes look similar without domain-specific training. They don't understand the nuances between different supplier PDFs, spec sheets, and attribute tables. Extraction patterns in ecommerce are absent in generic training data.
+## What weak supervision is and why it works for catalog data
 
-Take "multipack," for example. It means different things on Amazon, Walmart, and in a supplier file. General-purpose models can't disambiguate these without grounding in domain-specific context. Your catalog requires models that grasp these nuances—models trained on real ecommerce data, not just web text.
+Enter **weak supervision** — the technique that turns your existing labeled catalog data into a training powerhouse for domain-specific models. Instead of relying on general language models, you use your domain knowledge to guide the model. This means training with data that understands your catalog’s unique language and flow. Weak supervision allows your models to learn from imperfect but plentiful data, making them **smarter and more reliable** over time. It’s about scoping the task precisely and using the data you already have to refine it into a model that knows your catalog as well as you do.
 
-## What domain-specific training looks like for product data
+## How Profitero's classification pipeline reaches >95% P/R with domain-specific models
 
-Domain-specific training isn't about labeling everything manually. It's about **weak supervision**: label a representative sample, train on patterns, and validate against real catalog outcomes. This is how you create a model that knows your product data.
+Profitero's success underscores the power of domain-specific models. By implementing **task-scoped training** and weak supervision, they achieved over 95% precision and recall in label classification. This wasn’t achieved through sheer model size but through clever engineering — using weak supervision to train on **domain data** and employing a confidence threshold that routes low-confidence decisions to human-in-the-loop (HITL) oversight. The result? A dramatic reduction in manual labeling hours, from 140 to about 20 FTE-equivalent. This approach ensures that your model doesn’t just guess — it knows when to ask for help.
 
-Instead of one-size-fits-all models, task-scoped models tackle specific jobs like classification, extraction, or matching. For each task, **quality gates** measure precision and recall. It's not about whether the output looks right but how often it's right. This approach ensures that your model consistently delivers the accuracy you need.
+## The three model properties your catalog AI stack needs — scope, supervision, calibration
 
-## How Paladio trained for scale — the Profitero example
+For an efficient **catalog language model**, you need three key properties: **scope**, **supervision**, and **calibration**. Scope means designing a model for a specific task rather than a catch-all solution. Supervision involves training from your labeled domain data rather than generic sources. Calibration is about ensuring every output has a confidence score, so low-confidence decisions are reviewed rather than blindly accepted. This is not theoretical; Voomi Supply’s implementation at 1M+ SKUs with 200M+ ASINs shows that calibrated confidence is non-negotiable. It’s about making sure every match is right, every time.
 
-Publicis Groupe faced the challenge of labeling products across 1000+ brands, 1500+ retail sites, and 80+ languages. The old method relied on a **140-person manual review team**. With Paladio's approach, weak supervision and classification on domain-specific examples replaced the need for generic web text training.
+## Evaluate your current catalog AI against this framework
 
-The result? **>95% precision and recall**, and the labeling team reduced to about 20 people. Training data came from real catalog data, not synthetic sources, and feedback was from domain experts, not crowdworkers. This is what made it efficient, allowing the system to scale while maintaining high accuracy.
-
-## The three properties of an efficient ecommerce language model
-
-An efficient ecommerce language model has three critical properties:
-
-- **Narrow scope:** It is trained for one task type, not expected to handle everything. This specialization leads to higher accuracy and efficiency.
-  
-- **Domain-specific data:** The model learns from real product records, supplier inputs, and marketplace taxonomies, ensuring it understands the specifics of ecommerce.
-
-- **Measurable quality gates:** Precision and recall are measured per task, providing clear metrics for performance, not just a general sense of accuracy.
-
-## When to build vs. buy a domain-specific model
-
-Deciding whether to build or buy a domain-specific model depends on your needs. If your catalog is unique with proprietary taxonomy or custom compliance classes, building might be necessary. Off-the-shelf models will require heavy fine-tuning.
-
-However, if you need speed and efficiency without the burden of maintaining training pipelines, buying might be your best option. Paladio's [catalog agents](/catalog-agents) provide pre-trained, domain-specific models with configurable quality gates, giving you the best of both worlds.
-
-## What this means for your catalog today
-
-Start with a **[catalog readiness](/catalog-readiness) assessment** to identify where your current AI or manual processes fall short. Focus on extraction and classification first. These offer the highest ROI because they unblock downstream tasks. 
-
-Measure **precision and recall**, not just completeness. A wrongly filled field is worse than an empty one. With each cycle, your catalog becomes more accurate. That's the compound effect of a system that improves continuously, setting you up for sustained success in the ecommerce landscape.
+Look at your current catalog AI. Does it scale like a prototype or a production system? Does it hallucinate attributes or provide precise classifications? Is it trained on your domain data or generic corpora? Evaluate it against the framework of scope, supervision, and calibration. Consider how it handles **task-specific training** and whether it offers a confidence score that drives HITL interventions. The compound effect of a well-calibrated, domain-specific model is clear: each cycle improves accuracy, ensuring that your catalog doesn’t just meet today's needs but evolves to meet tomorrow's challenges.

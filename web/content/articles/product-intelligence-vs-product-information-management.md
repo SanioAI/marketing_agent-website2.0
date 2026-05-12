@@ -1,54 +1,67 @@
 ---
-title: >-
-  Product Intelligence vs Product Information Management: Same SKUs, Different
-  Objective Function
+title: 'Product Intelligence vs PIM: Same SKUs, Different Objective Functions'
 description: >-
-  Different KPIs: PIM completeness vs **Voomi** intelligence (**1M+ SKUs**,
-  **200M+ ASINs**, **~85% publish**), **Profitero** **>95% P/R** across **1500+
-  marketplaces**, **JCPenney** Mirakl taxonomy—**catalog agents** close the gap.
+  PIM governs content. Product intelligence powers machine decisions. Voomi ran
+  both — 1M+ SKUs, ~85% faster publish. Profitero ran both — >95% P/R across
+  1500+ marketplaces. Here's the boundary.
 tag: Consideration
 readTime: 6 min read
 pillar: Product Intelligence
 keyword: product intelligence vs PIM
-hub:
-  label: Product Intelligence
-  href: /product-intelligence
 relatedArticles:
-  - title: What Is Product Intelligence?
+  - title: what-is-product-intelligence.md
     slug: what-is-product-intelligence
     href: /resources/articles/what-is-product-intelligence
-  - title: Catalog Agents vs PIM
+  - title: catalog-agents-vs-pim.md
     slug: catalog-agents-vs-pim
     href: /resources/articles/catalog-agents-vs-pim
-  - title: Structured product data for ecommerce AI
-    slug: structured-product-data-for-ecommerce-ai
-    href: /resources/articles/structured-product-data-for-ecommerce-ai
-  - title: Product Intelligence Maturity Model
+  - title: what-is-catalog-readiness.md
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: product-data-quality-framework-ecommerce.md
+    slug: product-data-quality-framework-ecommerce
+    href: /resources/articles/product-data-quality-framework-ecommerce
+  - title: product-intelligence-maturity-model.md
     slug: product-intelligence-maturity-model
     href: /resources/articles/product-intelligence-maturity-model
-  - title: Product Attributes As Ranking Signals
-    slug: product-attributes-as-ranking-signals
-    href: /resources/articles/product-attributes-as-ranking-signals
 ---
 
-## Why your PIM isn't enough
+## Do I Need to Replace My PIM?
 
-You're not alone if you think your Product Information Management (PIM) system should handle everything. But it won't stop **Amazon**, **Mirakl**, or **Google** bots from rejecting or mis-ranking your SKUs. The assumption that a complete PIM equates to successful publication is flawed. It's not just about governance and publication; it's about ensuring machine decisions are correct across channels and agents. Consider **Voomi Supply**, which discovered that having a "record complete" PIM wasn't enough to match **1M+ SKUs to 200M+ ASINs** without considering **multipack/hazmat intelligence**. The difference? An **~85% faster publish-time** from changing KPIs, not adding more PIM seats.
+If you're asking whether you need to replace your Product Information Management (PIM) system, you're really questioning its limitations. It's not that your PIM isn't working — it's that it's working on the wrong problem. You assume it's a tooling issue. It's a scope issue. PIMs are designed to optimize for governance, completeness, and human workflow. But they don't excel at decision-making. That's where [product intelligence](/product-intelligence) comes into play.
 
-## Where PIM stops short for agents
+## What PIM Optimizes For
 
-PIM systems excel at organizing workflows, assigning roles, and packaging data for syndication. Yet, the gap is evident when it comes to **implicit knowledge, drift, and graph complexities**. PIMs were not designed to measure the normalization, graph, and compliance at SKU scale. The real challenge arises when your SKUs face channel-specific intelligence requirements. Take **Profitero**: it’s not just about creating labels; it's about achieving **>95% precision/recall** across **80+ languages**. The real intelligence KPI is classifier quality, not just field coverage. Your PIM might say "complete," but agents need more than just completeness—they need correctness.
+Your PIM is all about **governance, completeness, and human workflow**. It exists to centralize product data and ensure consistency across your channels. It governs how product content is approved, how workflows are managed, and how syndication templates are applied. When your PIM is optimized, it maximizes time-to-market efficiency and ensures high approval SLA. It works great for what it is designed to do, but it stops short of making any machine-driven decisions. 
 
-## [Product intelligence](/product-intelligence) KPIs vs PIM completeness KPIs
+Your PIM is not built to evaluate and adapt product data on the fly. It's not designed to tackle the dynamic complexities of classification, matching, or compliance. It serves as a source of record — a necessary but insufficient condition for a truly agile catalog. Treating your PIM as a one-size-fits-all solution is a misstep. 
 
-There's a fundamental difference in KPIs that PIM and product intelligence systems aim to optimize. PIM focuses on field coverage and governance, while product intelligence targets decision errors and match precision. **Voomi** found that "feed valid" was not enough; they needed to focus on the **wrong ASIN/multipack rate**. Similarly, **JCPenney** needed to track **taxonomy alignment defects per brand-supplier slice** during **Mirakl + SFCC onboarding**, instead of just ticking off "100% required fields." These intelligence KPIs ensure that your products not only meet internal workflow standards but also align with channel-specific requirements.
+## What Product Intelligence Optimizes For
 
-## How intelligence feeds readiness scorecards
+Where your PIM leaves off, **product intelligence takes over**. This layer is optimized for decision quality, machine evaluation, and continuous maintenance. It doesn't just store data; it interprets it, refines it, and makes it actionable. This is where you see improvements in **match precision, classification accuracy, and filter eligibility**. 
 
-To truly measure readiness, you need scorecards that integrate intelligence KPIs. These scorecards should highlight where your data aligns with channel-specific requirements and where it falls short. By doing so, you create a system where every cycle compounds accuracy and reduces errors. Imagine a situation where the **taxonomy alignment defects** are tracked alongside listing readiness. **JCPenney** found that this approach, paired with **Voomi's ~85% faster publish-times** and **Profitero's >95% P/R**, provided a comprehensive view of their readiness, reducing the chances of listing suppression.
+Product intelligence continuously analyzes and enriches your data, learning from each cycle. It doesn’t stop at organizing; it evaluates and enhances, ensuring your data meets the ever-changing demands of the marketplace. Unlike a PIM, which waits for human input, product intelligence proactively optimizes your catalog. It turns your static records into a dynamic asset, ready to respond to real-world conditions.
 
-## Integration: agents on top of PIM records
+## How the Two Systems Interact
 
-Adding an intelligence layer on top of PIM records is not about replacing your existing system. It's about enhancing it. By integrating [catalog agents](/catalog-agents), you bridge the gap between PIM completeness and channel-specific intelligence requirements. This integration allows you to maintain your PIM's governance capabilities while ensuring that your products are accurately represented across platforms. The intelligence layer acts as a quality assurance step, catching errors before they affect your listings, ensuring that your product data is not only complete but also correct.
+Here's where things get interesting. **Product intelligence feeds back into your PIM**, enriching it without needing to replace it. The intelligence layer acts as a hyperactive assistant, continuously updating and refining PIM records. This symbiosis ensures your PIM remains the authoritative source, while the intelligence layer operates as its analytical engine.
 
-Understanding these distinctions and integrating product intelligence into your existing workflows can transform your catalog management. By focusing on the right KPIs and leveraging intelligence agents, you remove friction and compound accuracy over time, ensuring that your products are always ready for success.
+This relationship is not about redundancy but about augmentation. Your PIM continues to do what it does best — manage human-driven processes — while the intelligence layer enhances it with machine-driven insights. It's a seamless interaction that pushes your catalog beyond its current limits.
+
+## The Voomi and Profitero Evidence
+
+Let's look at the evidence. **Voomi Supply** held over 1 million SKUs and 200 million ASINs. Their PIM managed the product records, but the intelligence layer handled ASIN matching, multipack detection, and hazmat classification. The result? An **85% publish-time improvement** came from the intelligence layer, not from tweaking the PIM. 
+
+**Profitero** managed brand and label records across 1000+ brands within their PIM. However, the normalization and classification across 1500+ marketplaces were the intelligence layer’s doing, achieving **>95% precision/recall**. Their labeling hours dropped from 140 to 20 due to the intelligence work above the PIM. These are not isolated tweaks but significant improvements that reveal the power of an intelligence layer.
+
+## Decision Guide: Which Problems Are PIM Problems, Which Are Intelligence Problems
+
+Here's a simple guide: If you're dealing with **completeness, governance, or human-driven workflows**, that's a PIM problem. If you're tackling **classification, matching, or real-time compliance**, that's a product intelligence issue. 
+
+Avoid the common pitfall of thinking a more sophisticated PIM with AI features will solve intelligence problems. It won't. Teams often buy a "better" PIM hoping for improved ASIN match rates, only to find those rates unchanged. Why? Because they chose the wrong tool for the job. Use your PIM for what it was designed for, and let product intelligence handle the rest.
+
+## See the Intelligence Layer in Action
+
+Picture your typical SKU before and after the intelligence layer. Before, it's just a record in your PIM, waiting for human touchpoints to push it through the workflow. After, it's a dynamic entity, continuously evaluated and optimized by the intelligence layer. The **taxonomies align automatically**, compliance signals adjust per channel, and SKUs are ready for immediate deployment. 
+
+This transformation is not theoretical. It's the real-world impact Voomi and Profitero have seen by adding an intelligence layer above their PIM. Every cycle, the catalog becomes more accurate, more responsive, and more valuable. That’s the compound effect of a system that improves each cycle — a smarter catalog that learns and evolves with your business.

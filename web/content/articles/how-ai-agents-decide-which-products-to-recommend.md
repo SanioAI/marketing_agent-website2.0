@@ -1,75 +1,87 @@
 ---
 title: >-
-  How AI Agents Decide Which Products to Recommend (and What Your Catalog Must
-  Provide)
+  How AI Agents Decide Which Products to Recommend — and What Your Catalog Must
+  Provide
 description: >-
-  Retrieve/filter/compare like **Voomi** at **1M+ SKUs / 200M+ ASINs** (where
-  **multipack** + specs collapse candidates), **Profitero** at **>95% P/R**
-  (where sparse fields are model inputs), **JCPenney** Mirakl facets (where
-  taxonomy sets the consideration set)—or agents silently drop SKUs.
+  AI agents filter, not rank. At Voomi's 1M+ SKUs and Profitero's 1500+
+  marketplaces, missing attributes mean silent exclusion — not lower rankings.
+  Here's what each step evaluates.
 tag: Awareness
 readTime: 6 min read
 pillar: Catalog Readiness for Agentic Commerce
 keyword: how AI agents choose products to recommend
-hub:
-  label: Catalog Readiness
-  href: /catalog-readiness
 relatedArticles:
-  - title: Why AI Agents Need Structured Product Intelligence
+  - title: why-ai-agents-need-structured-product-intelligence.md
     slug: why-ai-agents-need-structured-product-intelligence
     href: /resources/articles/why-ai-agents-need-structured-product-intelligence
-  - title: Optional Attributes Revenue-Critical Agentic Commerce
+  - title: what-is-catalog-readiness.md
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: optional-attributes-revenue-critical-agentic-commerce.md
     slug: optional-attributes-revenue-critical-agentic-commerce
     href: /resources/articles/optional-attributes-revenue-critical-agentic-commerce
-  - title: What Are Catalog Agents?
-    slug: what-are-catalog-agents
-    href: /resources/articles/what-are-catalog-agents
-  - title: Agentic Commerce Readiness Checklist
-    slug: agentic-commerce-readiness-checklist
-    href: /resources/articles/agentic-commerce-readiness-checklist
-  - title: Catalog Readiness Assessment
+  - title: structured-product-data-for-ecommerce-ai.md
+    slug: structured-product-data-for-ecommerce-ai
+    href: /resources/articles/structured-product-data-for-ecommerce-ai
+  - title: catalog-readiness-assessment.md
     slug: catalog-readiness-assessment
     href: /resources/articles/catalog-readiness-assessment
 ---
 
-## Agents Don’t “Browse”; They Execute Tasks
+## Why "AI is changing search" misses what actually changes
 
-You might think AI agents act like a savvy merchandiser, browsing through your catalog with a keen eye for trends. Wrong. Agents don’t “browse”; they execute specific tasks with surgical precision. They don’t appreciate your curated product descriptions or fancy visuals. They need structured data to operate, focusing on what they can verify and act upon. Their purpose is not to marvel at your catalog's aesthetic, but to retrieve, filter, and recommend products based on hard facts.
+Most conversations about AI in eCommerce fixate on search, as if better search alone can boost sales. But the real revolution is subtler. It's in the **filter step**. AI agents aren't just improved search engines; they are sophisticated decision-makers. They don't merely retrieve a list of potential matches. They filter, compare, and transact in ways that traditional search never could. 
 
-This reality shifts the burden onto you: your catalog needs to be ready for such meticulous scrutiny. It’s not about making your catalog visually appealing to a human. It’s about ensuring it’s operationally sound for an AI agent. It’s about providing the right data, in the right structure, so the agent can execute its tasks without stumbling over ambiguities or missing information.
+When your product disappears from consideration, it's not because the AI failed to find it. It's because it got filtered out. You might assume the algorithm needs tweaking. The truth is, it's your catalog. A critical attribute wasn't there, or a compliance rule wasn't met. This isn't a ranking issue. The product didn't make it through the filter. You can't optimize for "position 12" if your product is never in the running.
 
-## Retrieval: Identity and Embeddings Over Structured Facets
+## The four-step agent decision sequence with failure examples at each step
 
-When an agent retrieves products, it doesn't scroll like a human might. It uses **identity** and **embeddings** to zero in on what matters. Identity ensures that each product is uniquely recognized, while embeddings represent these products within a structured space, allowing for efficient retrieval across a vast catalog.
+AI agents follow a **four-step decision sequence**: retrieve, filter, compare, transact. Each step has its own pitfalls, and each can silently exclude your products.
 
-Consider the challenge faced by **Voomi Supply**. With over **1M+ SKUs**, the initial candidate pool is immense. Yet, their **200M+ ASIN** space can only be navigated effectively when each product’s identity is well-defined and its structured facets are accurate. Without this, retrieval collapses into chaos, overwhelmed by misidentifications and irrelevant matches.
+**Retrieve:** The agent begins by generating a candidate set based on keywords or semantic matches. But this is just the first sieve. A HVAC product might seem relevant for "air conditioner parts," yet if the next steps aren't right, relevance won't matter.
 
-## Filtering: Compliance, Compatibility, Channel Eligibility
+**Filter:** Here lies the real gatekeeper. The agent applies structured constraints like compatibility or compliance. That HVAC part? It might pass retrieval but fail the compatibility filter if fitment data only covers 2020+ models. A buyer looking for a 2018-compatible part won't ever see it.
 
-Once retrieved, the agent filters products based on compliance, compatibility, and channel eligibility—criteria dictated by hard rules, not soft suggestions. This isn’t about personal preference; it’s about meeting non-negotiable requirements.
+**Compare:** Next, the agent evaluates normalized attributes to weigh one product against another. If your catalog lacks standardized attribute data, your product could lose out to a competitor's, even if it's the better fit.
 
-Imagine the filtration process at **Profitero**. Here, the manual labeling hours dropped from **140 to ~20** because of high precision and recall in classification stages. The lesson? Autonomous filters outperform when data integrity is respected. If your catalog lacks the required compliance data or compatibility specs, you’re effectively barring products from consideration. Like Voomi Supply’s **multipack mismatch**, missing a specification can mean a hard stop, preventing the product from ever entering the recommendation pool.
+**Transact:** Finally, the agent checks for confidence and completeness. If any data is missing or inconsistent, the product is out. There's no room for error here.
 
-## Comparison: Normalized Attributes and Substitutes
+## What catalog attributes each step evaluates
 
-In the comparison stage, agents rely on **normalized attributes** to weigh options. They calculate potential substitutes using hard data—dimensions, materials, certifications—not marketing fluff. Here, every inconsistency is a potential failure point.
+Understanding what AI agents evaluate at each step is crucial for keeping your products in the game.
 
-For **JCPenney**, operating a multi-brand marketplace requires that agent and browse functions align perfectly. This necessitates **taxonomy-aligned** facet keys. A misfiled node? The SKU never makes it into the comparison set. Likewise, if two substitute SKUs are missing attributes, the agent can only rank the fully constrained SKU, sidelining potential alternatives. This mirrors the **200M+ ASIN** filter collapse at Voomi Supply when specs are absent.
+**Compatibility:** This is more than just keyword matching. It's about ensuring every product detail fits the buyer's needs. If your HVAC part lacks comprehensive fitment data, it won't pass the compatibility check.
 
-## Justification: Provenance-Friendly Facts (Not Marketing Claims)
+**Taxonomy:** Proper categorization is essential. Misalignment here means your product never reaches the right filter. JCPenney saw this with Mirakl: wrong browse paths meant instant exclusion, regardless of how well attributes were filled.
 
-Agents demand facts they can trace, not marketing hyperbole. They justify recommendations through provenance-friendly data. They ask, "Can I verify this?" instead of "Does this sound appealing?"
+**Compliance:** Regulations and standards are non-negotiable. Miss a compliance attribute, and your product is filtered out before it even enters the comparison phase.
 
-It’s a lesson **Profitero** learned well. Their classifiers maintain **>95% precision/recall** because they treat sparse fields as critical, not optional noise. This approach confirms that agents need verifiable data to justify actions. Marketing claims, however compelling, won’t pass the muster when agents need to defend their recommendations.
+**Identity:** Unique product identifiers like ASINs must be correct. Voomi Supply's ASIN matching at 200M+ ASINs highlights this. SKUs that failed the identity filter never made it into the match pool.
 
-## What Breaks in Typical Enterprise Catalogs
+## What Voomi and Profitero show about catalog requirements at scale
 
-So why do so many enterprise catalogs fall short? It’s not the AI models; it’s the data feeding them. **Missing attributes**, inconsistent taxonomies, and unverified claims are the usual suspects. They create gaps that agents can’t leap over, leading to missed opportunities and failed recommendations.
+Voomi Supply and Profitero offer real-world lessons on handling catalog requirements at scale.
 
-Your catalog might look robust on paper, but if your data isn’t structured for retrieval and comparison, it’s as useful as a beautifully wrapped empty box. Misalignment in taxonomy or missing specs means your products never even enter the conversation, let alone get recommended.
+**Voomi Supply:** By closing gaps in identity signals, they achieved an ~85% faster publish time. Their experience underscores the importance of structured identity signals in the filter step. Fail here, and your product never even enters consideration.
 
-## Bridge to [Catalog Agents](/catalog-agents) + Readiness Scorecard
+**Profitero:** With a >95% precision/recall on classification, Profitero demonstrates the necessity of high accuracy in labeling. When label signals are off, the wrong products enter the consideration set, skewing results and wasting opportunities.
 
-This is where **catalog agents** step in, keeping the underlying intelligence current and precise. They ensure that your catalog doesn’t just look the part but is genuinely ready for AI-driven operations. By continuously updating and verifying data, they remove friction points and improve each cycle’s accuracy.
+## How to audit whether your catalog passes each step
 
-Consider the compound effect: each time an agent processes your catalog, it gets a little smarter, a little more precise. The result? Over time, every run makes your catalog more accurate. That’s the magic of a system that compounds improvements with each cycle. With a readiness scorecard, you can measure and enhance your catalog’s preparedness, ensuring that it meets the rigorous demands of modern AI agents.
+So, how can you ensure your catalog is up to the task? Start by auditing each step of the AI agent decision sequence.
+
+**Retrieve:** Ensure keyword and semantic data are rich and accurate. But remember, this is the least significant step in terms of exclusion risk.
+
+**Filter:** Dive deep into compatibility and compliance data. Are there gaps in your fitment or regulatory data? Fix these first.
+
+**Compare:** Standardized attributes are your friend. Normalize data across your catalog to ensure fair comparisons.
+
+**Transact:** Confidence and completeness checks are final but crucial. Missing data here is a deal-breaker.
+
+## Assess your catalog's filter-step readiness
+
+It's time to ask the hard questions: Is your catalog ready to pass the filter step consistently? This is where the true challenge lies. 
+
+Evaluate your compatibility data—does it cover all potential scenarios? Look at your compliance attributes—are they comprehensive and up-to-date? Check your taxonomy alignment—are products correctly categorized from the start? 
+
+Address these, and you remove friction from the process. The error is caught before the listing goes live. Every time an agent runs, your catalog becomes more accurate. That's the compound effect of a system that improves each cycle. You're not just staying competitive; you're setting a new standard.

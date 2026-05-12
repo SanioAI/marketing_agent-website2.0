@@ -1,6 +1,7 @@
 import { Hero } from "@/components/landing/Hero";
 import { SocialProof } from "@/components/landing/SocialProof";
 import { ProblemSection } from "@/components/landing/ProblemSection";
+import { CatalogAgentsGrid } from "@/components/landing/CatalogAgentsGrid";
 import { ProductsSection } from "@/components/landing/ProductsSection";
 import { TrustSection } from "@/components/landing/TrustSection";
 import { UseCases } from "@/components/landing/UseCases";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <ProblemSection />
+      <CatalogAgentsGrid />
       <ProductsSection />
       <TrustSection />
       <UseCases />

@@ -7,9 +7,9 @@ import { RocketVisual } from "@/components/landing/RocketVisual";
 import { HeroBackground } from "@/components/landing/HeroBackground";
 
 const stats = [
-  { v: "2+", l: "domains in production" },
-  { v: "94%", l: "eval pass rate" },
-  { v: "40K+", l: "records processed / hr" },
+  { v: "1M+", l: "SKUs processed for Voomi Supply" },
+  { v: "~85%", l: "faster product publishing" },
+  { v: ">95%", l: "precision on attribute extraction" },
 ] as const;
 
 const container = {
@@ -44,16 +44,16 @@ export function Hero() {
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-white/70 px-3 py-1 text-xs font-medium text-blue-900 shadow-sm shadow-blue-900/5"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]" />
-              Get Ready For Agentic Commerce
+              Catalog Intelligence for Agentic Commerce
             </motion.p>
 
             <motion.h1
               variants={reduce ? undefined : item}
               className="font-display text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem]"
             >
-              Enrich, Trust &amp; Syndicate{" "}
+              Your catalog decides what AI agents{" "}
               <span className="bg-gradient-to-r from-[#2563eb] via-[#0284c7] to-[#0ea5e9] bg-clip-text text-transparent">
-                Your Catalog.
+                recommend.
               </span>
             </motion.h1>
 
@@ -61,9 +61,7 @@ export function Hero() {
               variants={reduce ? undefined : item}
               className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-slate-600 sm:text-[17px]"
             >
-              AI agents that continuously evaluate, correct, and enhance your
-              product catalog using structured reasoning — not one-time
-              enrichment. Products go live in hours, not weeks.
+              Most catalogs weren&apos;t built for this. Paladio makes yours ready — with purpose-built agents that extract, normalise, map, and verify every product record at scale.
             </motion.p>
 
             <motion.div
@@ -71,8 +69,8 @@ export function Hero() {
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
               id="book"
             >
-              <ButtonLink href="/try-it" variant="primaryLg">
-                See a live agent
+              <ButtonLink href="/catalog-readiness" variant="primaryLg">
+                Assess catalog readiness
               </ButtonLink>
               <ButtonLink href="#contact" variant="secondaryLg">
                 Book a pilot

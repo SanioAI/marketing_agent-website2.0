@@ -1,66 +1,63 @@
 ---
-title: Why Optional Attributes Become Revenue-Critical in Agentic Commerce
+title: Why 'Optional' Product Attributes Become Revenue-Critical in Agentic Commerce
 description: >-
-  “Optional” PIM fields = **Voomi** hard filters on **1M+ SKUs / 200M+ ASINs**,
-  **Profitero** sparse inputs for **>95% P/R**, **JCPenney** Mirakl browse
-  keys—**Attribute Agent** rubric, not backlog grooming.
+  'Optional' in PIM = filter input for AI agents. At Voomi's 1M+ SKU scale, thin
+  records fail ASIN matching. At Profitero, missing categoricals push SKUs to
+  HITL. Which fields matter — and which to fix first.
 tag: Awareness
 readTime: 6 min read
 pillar: Catalog Readiness for Agentic Commerce
 keyword: optional product attributes agentic commerce
-hub:
-  label: Catalog Readiness
-  href: /catalog-readiness
 relatedArticles:
-  - title: Product Attributes as Ranking Signals
-    slug: product-attributes-as-ranking-signals
-    href: /resources/articles/product-attributes-as-ranking-signals
-  - title: How AI Agents Decide Which Products to Recommend
-    slug: how-ai-agents-decide-which-products-to-recommend
-    href: /resources/articles/how-ai-agents-decide-which-products-to-recommend
-  - title: Why AI agents need structured product intelligence
-    slug: why-ai-agents-need-structured-product-intelligence
-    href: /resources/articles/why-ai-agents-need-structured-product-intelligence
-  - title: Catalog Readiness Assessment
+  - title: what-is-catalog-readiness.md
+    slug: what-is-catalog-readiness
+    href: /resources/articles/what-is-catalog-readiness
+  - title: attribute-agent-ecommerce-catalog.md
+    slug: attribute-agent-ecommerce-catalog
+    href: /resources/articles/attribute-agent-ecommerce-catalog
+  - title: how-catalog-agents-extract-product-attributes.md
+    slug: how-catalog-agents-extract-product-attributes
+    href: /resources/articles/how-catalog-agents-extract-product-attributes
+  - title: product-data-quality-framework-ecommerce.md
+    slug: product-data-quality-framework-ecommerce
+    href: /resources/articles/product-data-quality-framework-ecommerce
+  - title: catalog-readiness-assessment.md
     slug: catalog-readiness-assessment
     href: /resources/articles/catalog-readiness-assessment
-  - title: Agentic Commerce Readiness Checklist
-    slug: agentic-commerce-readiness-checklist
-    href: /resources/articles/agentic-commerce-readiness-checklist
 ---
 
-## The PIM “Optional” Trap
+## When Optional Means Excluded — How Agents Treat Missing Fields Differently Than Humans Do
 
-Your product information management (PIM) system tells you certain attributes are optional. You take it at face value, thinking these fields are just nice-to-haves. Big mistake. In agentic commerce, these so-called optional attributes can be the silent killers of your catalog's effectiveness. Why? Because agents treat missing data as a hard no, not a maybe. Your PIM setting whispers "optional," but the reality shouts "revenue-critical."
+You might think that "optional" product attributes in your PIM are just that—optional. But in the world of agentic commerce, these fields become anything but. When an AI agent evaluates a SKU, missing attributes can lead to exclusion from the consideration set altogether. Imagine losing out on a sale simply because a voltage rating was marked as optional, and your product was never even considered for systems requiring compatibility with 220V. Unlike humans, who can infer and compensate, **AI agents need explicit data**. Missing fields are not overlooked; they become hard stops.
 
-Assuming optional means non-essential is a pitfall. Take Voomi Supply, for example. With over **1M SKUs** and **200M+ ASINs**, a missing HVAC attribute like electrical specifications is more than a gap—it's a gate that slams shut on your product’s chance to be seen. The absence of this "optional" detail can exclude a product from publish batches entirely. What you think is a minor oversight is actually the root of the exclusion problem that cost you the sale.
+This assumption gap is the real issue. While your team might focus on enhancing product descriptions or images, the agents are quietly ignoring products with sparse data. It's a silent revenue leak, and it stems from a fundamental misunderstanding of how AI processes information. The attributes you deem non-essential might just be the ones causing your products to go unseen.
 
-## How Agents Interpret Missing Data
+## Which Attribute Families Become Hard Filters in Which Pipelines
 
-In the world of AI agents, absence isn't neutral. It's a decision point. When your catalog lacks data, agents must choose exclusion over inference, treating these gaps as disqualifications. This is where the risk magnifies. It's not just about what data you have, but what you don't. Missing a BTU range on similar HVAC units? That means only the fully-specified SKU makes it through the filter, while the rest are left in the dust. 
+Not all attributes are created equal. Some families of attributes serve as hard filters in various AI pipelines. For compliance, fitment, taxability, and taxonomy, missing attributes can mean outright exclusion. Consider the Mirakl integration at JCPenney: browse facets require specific attribute bindings per category. If a required attribute is missing, the product is rejected outright. It’s not a matter of low ranking; it’s a matter of not being in the running at all.
 
-Profitero’s pipelines operate across **1500+ marketplaces** in **80+ languages**, and missing vendor fields are more than an oversight—they're a roadblock. Sparse fields disrupt the model’s ability to achieve **>95% precision/recall**, necessitating their inclusion as primary inputs, not afterthoughts. This is the exclusion risk. Your catalog data isn’t just incomplete; it’s invisible.
+When it comes to fitment, a missing dimension or compatibility attribute could exclude your product from search results entirely. In compliance scenarios, missing safety certifications or material disclosures can prevent a product from being listed. These aren’t theoretical issues—they’re operational realities that impact your bottom line. Understanding which attributes act as hard filters can transform your approach to data management.
 
-## Revenue-Sensitive Categories
+## How Voomi's ASIN Matching Uses Attribute Density as a Signal — And What Thin Records Cost
 
-Some categories bear the brunt of missing attributes more than others. Fitment, voltage, size, and pack count are not mere details—they're make-or-break attributes. For instance, in JCPenney's multi-brand onboarding, aligning taxonomies exposed the fact that "optional" attributes become mandatory for Mirakl browse paths. These aren't just data points; they are the keys to visibility and ranking in agentic commerce.
+Voomi Supply's experience with attribute density offers a compelling case study. Their AI agents evaluate SKUs against a massive corpus of over 200 million ASINs. Here, attribute density becomes a **confidence signal**. SKUs with fewer than 10 structured attributes showed materially lower match confidence, often requiring human-in-the-loop (HITL) disambiguation. This not only slows down the process but also reduces the overall efficiency of the catalog.
 
-Consider Voomi Supply’s scenario again. In a publish batch, a missing fitment detail for a high-demand HVAC component doesn't just get ignored—it gets excluded. The same pattern echoes in Profitero’s operations, where sparse fields can derail the entire ranking and filtering process unless treated as critical. These attributes are revenue-sensitive because their absence removes SKUs from the consideration set.
+The real cost of thin records is time and opportunity. Voomi saw an ~85% improvement in publish-time when attribute enrichment preceded ASIN matching. Every attribute added to a product record increases the likelihood of a successful match and reduces the need for manual intervention. The compound effect is significant: faster listings and higher visibility in crucial marketplaces.
 
-## Rubric: Agent-Critical vs Human-Only Optional
+## How Profitero's Classification Model Fails Gracefully When Categorical Attributes Are Missing
 
-So, how do you classify optional attributes? The answer lies in understanding agent sensitivity. Is it a filter, a display, or a compliance requirement? For agent-critical fields, omission is not an option. These are the attributes that determine whether your product gets seen or sidelined. Human-only optional attributes, on the other hand, can afford some leniency.
+Profitero's classification model operates at over 95% precision and recall on high-confidence records. But when it encounters sparse data, the model's performance degrades. Missing categorical attributes such as brand canonical, product type, and size class increase the routing rate to HITL. While the system is designed to fail gracefully, the throughput is inevitably reduced, impacting overall efficiency.
 
-The key is to develop a prioritization rubric. Consider the role each attribute plays in the agent’s decision-making process. If it's a filter, it’s agent-critical. If it’s purely for visual enhancement or additional context, then it might be human-only. By understanding this distinction, you can prioritize the right attributes for completeness and accuracy, ensuring your products remain in the running.
+The hidden cost of optional attributes is clear: a higher HITL rate means more manual labor and slower processes. By ensuring that these attributes are complete, you can maintain high throughput and reduce the burden on human operators. This is not just about maintaining accuracy; it’s about optimizing your entire product data pipeline for the demands of AI-driven commerce.
 
-## How Attribute Agent + Readiness Scorecard Change Prioritization
+## How to Audit Which "Optional" Fields in Your PIM Are Actually Required by the Agents Downstream
 
-Enter Paladio’s Attribute Agent and readiness scorecard. They don't just highlight what's missing; they redefine your priority list by surfacing readiness defects. This isn't about enrichment backlog; it's about ensuring your catalog is agent-ready from the get-go. The error is caught before the listing goes live, and the compound effect is undeniable.
+Understanding which fields are truly optional versus those that are required by your downstream AI agents is essential. Start by auditing your PIM system. Identify attributes that frequently correlate with HITL escalations and low match confidence. Look for patterns in your data that indicate which fields are being used as hard filters in your pipelines.
 
-With each cycle, your catalog becomes more accurate. Profitero’s success in reducing labeling hours from **140 to ~20 per cycle** is a testament to this approach. By treating sparse fields as integral inputs, not optional extras, you keep your products in the consideration set. The readiness scorecard continuously refines your catalog, ensuring that every run compounds your accuracy and completeness.
+Engage with stakeholders across your eCommerce ecosystem to understand where these gaps are most impactful. By doing so, you can prioritize attribute enrichment in areas that will have the most significant downstream impact. The goal is to make your product data as robust and comprehensive as possible, removing the friction that missing attributes create.
 
-## Next Steps: Assessment + Agent Rollout
+## Start with the Attribute Agent — See Which Fields Your Agents Need
 
-You're aware of the trap, the risk, and the categories that demand your attention. What's next? Start with a comprehensive assessment of your current attribute landscape. Identify which fields are mistakenly marked as optional and reclassify them based on agent sensitivity.
+To effectively address the issue of optional attributes, start with the **Attribute Agent**. This tool can help you identify which fields are necessary for your AI agents to function optimally. By understanding the data requirements for each pipeline, you can ensure that your records are complete and ready for AI evaluation.
 
-Then, consider rolling out Paladio’s Attribute Agent. This isn't just a tool; it's a strategy to eliminate friction and drive revenue. By aligning your optional attributes with agent requirements, you ensure that your products are never left out of consideration. Every agent rollout compounds your catalog’s readiness, turning the optional into the essential.
+When you enrich these "optional" fields, you enhance the decision-making quality of your agents. This leads to higher match rates, lower HITL rates, and greater inclusion in AI-driven recommendations. The compound effect is a more efficient, more accurate eCommerce operation that continuously improves with each cycle. So while some fields may seem optional in your PIM, in the realm of agentic commerce, they're anything but.

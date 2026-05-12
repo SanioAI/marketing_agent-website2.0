@@ -4,111 +4,94 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 
-const before = [
-  "Manual cleanup that repeats every cycle",
-  "Reactive fixes after feed rejections",
-  "Taxonomy errors caught downstream",
-  "Brand duplicates causing catalog bloat",
-  "Missing attributes discovered at publish",
-];
-
-const after = [
-  "Continuously evaluate product correctness and completeness",
-  "Fix taxonomy, attributes, and structure automatically",
-  "Flag ambiguity and escalate only when needed",
-  "Normalize brands and resolve duplicates",
-  "Enhance raw inputs into human-readable product understanding",
+const failures = [
+  {
+    icon: "⚠",
+    title: "Incomplete attributes",
+    body: "AI agents need structured, machine-readable data — dimensions, materials, compatibility, voltage. A product description is not a substitute. Voomi was manually filling gaps one SKU at a time.",
+    accent: "border-t-[#00D4FF]",
+  },
+  {
+    icon: "🔀",
+    title: "Wrong or inconsistent taxonomy",
+    body: "A mis-categorised product fails validation, gets buried, or never appears in agent search results. JCPenney needed taxonomy alignment across every brand before Mirakl could go live.",
+    accent: "border-t-[#A3FF3C]",
+  },
+  {
+    icon: "🚫",
+    title: "Undetected compliance issues",
+    body: "Hazmat flags, multipack mismatches, taxability errors — discovered post-listing. Voomi was catching these manually. It took longer than publishing the products themselves.",
+    accent: "border-t-[#9B59FF]",
+  },
 ];
 
 export function ProblemSection() {
   const reduce = useReducedMotion();
   return (
-    <section id="problem" className="gradient-surface py-20 sm:py-24">
+    <section id="problem" className="bg-[#050C17] py-20 sm:py-24">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <p className="section-kicker mx-auto mb-4">
-              <span className="dot" aria-hidden />
-              How Catalog Operations Change
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-500">
+              The real problem
             </p>
-            <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              From reactive cleanup to continuous evaluation
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              AI agents are already choosing what products to recommend.
             </h2>
-            <p className="mt-3 text-slate-600">
-              This is production infrastructure, not experimental AI. Catalog
-              Agents run continuously — so your team ships faster instead of
-              cleaning up the same problems on repeat.
+            <p className="mt-4 text-slate-400 leading-relaxed">
+              ChatGPT. Perplexity. Google Shopping AI. They pull from structured product data
+              and skip anything they can&apos;t confidently parse. If your catalog has incomplete
+              attributes, wrong taxonomy, or unresolved compliance flags — your products don&apos;t
+              get recommended. They get passed over.
             </p>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-2">
-          {/* Before */}
-          <motion.div
-            initial={reduce ? false : { opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="rounded-2xl border border-red-100 bg-red-50/40 p-7"
-          >
-            <div className="mb-5 flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-600">
-                ✕
-              </span>
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-red-600">
-                Manual Cleanup &amp; Reactive Fixes
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              {before.map((b, i) => (
-                <motion.li
-                  key={b}
-                  className="flex items-start gap-3 text-sm text-slate-600"
-                  initial={reduce ? false : { opacity: 0, x: -8 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.07 }}
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-300" aria-hidden />
-                  {b}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* After */}
-          <motion.div
-            initial={reduce ? false : { opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="rounded-2xl border border-emerald-100 bg-emerald-50/40 p-7"
-          >
-            <div className="mb-5 flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-600">
-                ✓
-              </span>
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-emerald-700">
-                Continuous Evaluation with Catalog Agents
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              {after.map((a, i) => (
-                <motion.li
-                  key={a}
-                  className="flex items-start gap-3 text-sm text-slate-700"
-                  initial={reduce ? false : { opacity: 0, x: 8 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.07 + 0.1 }}
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" aria-hidden />
-                  {a}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+        <div className="mt-12 grid gap-4 lg:grid-cols-3">
+          {failures.map((f, i) => (
+            <motion.div
+              key={f.title}
+              initial={reduce ? false : { opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              className={`rounded-xl border border-white/[0.07] bg-[#0A1628] p-6 border-t-2 ${f.accent}`}
+            >
+              <div className="mb-4 text-2xl">{f.icon}</div>
+              <h3 className="text-base font-semibold text-white mb-2">{f.title}</h3>
+              <p className="text-sm leading-relaxed text-slate-400">{f.body}</p>
+            </motion.div>
+          ))}
         </div>
+
+        <Reveal delay={0.3}>
+          <div className="mt-12 rounded-2xl border border-white/[0.07] bg-[#0A1628] p-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-lg font-semibold text-white sm:text-xl">
+                The problem isn&apos;t that your catalog is wrong.
+              </p>
+              <p className="mt-2 text-slate-400">
+                It&apos;s that it wasn&apos;t built for a world where AI systems make purchase decisions.
+                Paladio makes it ready — with agents that extract, normalise, map, and verify
+                every product record continuously.
+              </p>
+              <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                <a
+                  href="/catalog-agents"
+                  className="inline-flex h-11 items-center justify-center rounded-2xl bg-[#00D4FF] px-6 text-sm font-semibold text-[#050C17] shadow-sm transition hover:bg-[#1ADEFF]"
+                >
+                  See catalog agents →
+                </a>
+                <a
+                  href="/catalog-readiness"
+                  className="inline-flex h-11 items-center justify-center rounded-2xl border border-white/20 bg-transparent px-6 text-sm font-medium text-slate-300 transition hover:border-white/40 hover:text-white"
+                >
+                  Assess your readiness
+                </a>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
