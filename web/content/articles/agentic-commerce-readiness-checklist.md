@@ -15,7 +15,7 @@ relatedArticles:
   - title: "How AI Agents Decide Which Products to Recommend"
     slug: "how-ai-agents-decide-which-products-to-recommend"
     href: "/resources/articles/how-ai-agents-decide-which-products-to-recommend"
-  - title: "Catalog Readiness Assessment"
+  - title: "How to Run a Catalog Readiness Assessment"
     slug: "catalog-readiness-assessment"
     href: "/resources/articles/catalog-readiness-assessment"
 ---
@@ -38,7 +38,7 @@ These checks determine whether an AI agent can *find and identify* your product.
 
 | # | Check | Failure mode | Agent |
 |---|---|---|---|
-| 1.1 | Brand name is canonical (not "Manufacturer", "OEM", "N/A") | ASIN matching fails, brand filter returns no results | Brand Normalization Agent |
+| 1.1 | Brand name is canonical (not "Manufacturer", "OEM", "N/A") | ASIN matching fails, brand filter returns incomplete results | Brand Normalization Agent |
 | 1.2 | GTIN / UPC / EAN is present and valid | Channel matching breaks, duplicate listings appear | Channel Matching Agent |
 | 1.3 | Pack size and geometry are explicit (not "assorted" or "varies") | Multipack compliance check can't run, pricing per unit is wrong | Attribute Agent |
 | 1.4 | Model number matches manufacturer's canonical format | Compatibility filter fails for exact-match queries | Attribute Agent |
@@ -55,7 +55,7 @@ These checks determine whether an AI agent can *place your product in the right 
 | 2.1 | Product is in the correct Amazon browse node | Listing suppressed or buried in wrong category | Taxonomy Agent |
 | 2.2 | Product is in the correct Google Shopping category | Google AI Overview skips product for category queries | Taxonomy Agent |
 | 2.3 | Product passes Walmart or Mirakl node validation | Channel-specific rejection at submission | Taxonomy Agent |
-| 2.4 | Taxonomy is up to date (channel taxonomies change quarterly) | Category that was correct 6 months ago is now wrong | Taxonomy Agent |
+| 2.4 | Taxonomy is current (channel taxonomies change quarterly) | Category that was correct 6 months ago is now wrong | Taxonomy Agent |
 | 2.5 | Sub-category and product type are filled, not just top-level category | Filter navigation fails, product buried below top results | Taxonomy Agent |
 
 ---
@@ -70,7 +70,7 @@ These checks determine whether your product can be *published and sold without t
 | 3.2 | Multipack configuration is explicit and consistent with GTIN | Multipack listing rejected or priced incorrectly | Compliance Agent |
 | 3.3 | Age restrictions and safety warnings are present where required | Regulatory non-compliance, listing removal | Compliance Agent |
 | 3.4 | Restricted or controlled products are flagged before submission | Channel suspension if caught post-publication | Compliance Agent |
-| 3.5 | Tax category (Taxability code) is correct per jurisdiction | Pricing errors, tax liability exposure | Compliance Agent |
+| 3.5 | Tax category is correct per jurisdiction | Pricing errors, tax liability exposure | Compliance Agent |
 
 ---
 
@@ -104,8 +104,8 @@ These checks affect whether an AI agent can *reason about* your product and repr
 
 ## What to do with your results
 
-A product that fails any check in Dimensions 1–3 is likely already costing you in suppressed listings or compliance flags. Fix those first — they have an immediate revenue impact.
+A product that fails any check in Dimensions 1–3 is likely already costing you in suppressed listings or compliance flags. Fix those first — they have an immediate, measurable impact on publish rate.
 
-A product that passes 1–3 but fails Dimensions 4–5 is published but not winning in AI-mediated discovery. Those gaps determine whether you show up in ChatGPT, Perplexity, or Google AI recommendations.
+A product that passes 1–3 but fails Dimensions 4–5 is published but not winning in AI-mediated discovery. Those gaps determine whether you show up in ChatGPT, Perplexity, or Google AI recommendations. The fix is structured enrichment — not copy polish.
 
 Score your catalog across all five dimensions → [Catalog Readiness](/catalog-readiness)

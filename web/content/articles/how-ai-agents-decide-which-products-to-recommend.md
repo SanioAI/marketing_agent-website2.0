@@ -1,6 +1,6 @@
 ---
 title: "Your Products Are Being Filtered Out. Not Ranked Down — Filtered Out."
-description: "AI shopping agents don't rank results. They eliminate candidates that fail structured constraints. A product that disappears from ChatGPT or Perplexity isn't ranking at position 12 — it was excluded before the shortlist formed. Here's why, and what catalog data each step requires."
+description: "AI shopping agents don't rank results. They eliminate candidates that fail structured constraints. A product that disappears from ChatGPT or Perplexity isn't at position 12 — it was excluded before the shortlist formed."
 tag: "Awareness"
 readTime: "8 min read"
 pillar: "Catalog Readiness"
@@ -22,73 +22,64 @@ relatedArticles:
 
 Your conversion rate on AI-mediated surfaces dropped. Your team looked at title optimization, review count, maybe ad spend. Nothing moved the needle.
 
-Here's the thing: if your product was filtered out before the shortlist formed, there is no ranking to optimize. You're not at position 12. You're not in the results at all.
+Here's what might be happening: your product was filtered out before the shortlist formed. There's no ranking to optimize. You're not at position 12. You're not in the results at all.
 
 AI shopping agents — Amazon Rufus, ChatGPT Shopping, Perplexity, Google AI Overview — don't produce a ranked list of everything that matches a keyword. They evaluate a candidate set against structured constraints and drop anything that fails. The output is a shortlist of products the agent is confident enough to recommend. A product that fails a constraint check isn't demoted. It's gone.
 
 ## Why this is so hard to diagnose
 
-Traditional search gives you a signal when you're losing. You see position 12. You see impression share. You see the gap between you and whoever's at position 1.
+Traditional search gives you a signal when you're losing. Position 12. Impression share. The gap between you and whoever's at position 1. You can see it. You can optimize toward it.
 
-AI-mediated discovery gives you nothing. The agent retrieved your product, evaluated it against the buyer's constraints, and excluded it — all without any notification to you. Your analytics show zero impressions for that query. Your team assumes the channel just doesn't surface your category. Meanwhile, a competitor whose compatibility data covers the right model range is in the recommendation every time.
+AI-mediated discovery gives you nothing. The agent retrieved your product, evaluated it, and excluded it — all without any notification. Your analytics show zero impressions for that query. Your team assumes the channel just doesn't surface your category. The product might be in every relevant recommendation if two fields were different.
 
-The reason teams misdiagnose this as an algorithm problem is that the failure is invisible. No suppression notice. No ranking penalty to diagnose. No "here's what you're missing" feedback. The product is simply not there.
+That's what makes this failure mode so expensive. It's invisible. No suppression notice. No ranking penalty to diagnose. No feedback that tells you the missing attribute. The product is simply not there.
 
-## What the four-step decision sequence actually means
+## What agents don't do (and what that means for your catalog)
 
-Every AI shopping agent runs some version of this sequence when a buyer asks a product question.
+Agents don't scroll. They compute.
 
-**Retrieve.** The agent builds a candidate set from products that match the query. This is closest to traditional search — keyword matching, semantic similarity, category lookup. Most catalog investment goes here: title optimization, description completeness, keyword coverage.
+When a buyer asks a shopping agent for "HVAC fittings compatible with 2018 systems under $40," the agent isn't browsing a product grid and picking the ones that look right. It's evaluating structured fields against those constraints. Compatible with 2018 systems? Checks the fitment data. Under $40? Checks price. The products that can't satisfy the constraint check are dropped — instantly, silently, before a single recommendation is formed.
 
-**Filter.** The agent applies the buyer's constraints to the candidate set and drops everything that doesn't satisfy them. This is where most silent exclusions happen.
+Most product data was built for human browsing: descriptive copy, lifestyle narrative, keyword-dense titles. That approach optimizes the retrieve step. It does nothing for the filter step — and the filter step is where AI-mediated discovery is won or lost.
 
-Some constraints are explicit — a buyer asks for "HVAC fittings compatible with 2018 Trane systems" and the agent filters for products with that fitment data. Some are implicit — the agent infers that a buyer in a regulated industry needs products with complete compliance flags. Either way, it evaluates structured attributes against those constraints. If the attribute is missing, the product fails the check.
+## The four steps, and where most catalogs break
 
-**Compare.** The products that survived filtering get compared against each other. The agent normalizes attributes to a common basis — converting units, aligning specifications, identifying what differentiates each option. A product with complete, structured specs gives the agent something to work with. A product with specs buried in an unstructured description forces the agent to extract them. If it can't extract them confidently, it favors the product where the comparison is unambiguous.
+Every AI shopping agent runs some version of this sequence.
 
-**Transact.** The agent checks whether it can confidently recommend the product — availability, shipping eligibility, pricing completeness, any regional restrictions. This is the final gate before the product appears in the recommendation.
+**Retrieve.** Build a candidate set from products matching the query — keywords, semantic similarity, category. Most catalog investment targets this step. It matters, but it's not the hard part.
 
-## Where most catalog investment misses the mark
+**Filter.** Apply the buyer's constraints and drop everything that fails. This is where most silent exclusions happen. Constraints can be explicit (the buyer stated them) or implicit (the agent infers them from context — a buyer asking for industrial solvents probably needs products with correct hazmat classification). If the required attribute is missing, the product fails. No partial credit.
 
-The retrieve step is well-understood. Teams have been optimizing for it for years. The filter and compare steps are where AI-mediated discovery is actually won or lost — and where almost no catalog investment goes.
+What fails at the filter step:
+- Products missing compatibility or fitment data for the queried application
+- Products with wrong taxonomy that land outside the category filter
+- Products with missing or incorrect compliance flags in regulated categories
+- Products with placeholder values (`"TBD"`, `"N/A"`) in structured fields the filter evaluates
 
-A product that retrieves well but fails the compatibility filter never shows up in the recommendation. A product with complete attributes in the description but not in structured fields passes the filter but loses at the compare step to a product whose specs are already structured and ready to evaluate.
+**Compare.** The products that survived filtering get compared against each other. The agent normalizes attributes — converting units, aligning specs, identifying differentiators. A product with complete structured specs gives the agent something to evaluate. A product with specs buried in an unstructured description gets deprioritized in favor of one where the comparison is unambiguous. You don't lose this step on product quality. You lose it on data quality.
 
-The attributes that determine AI recommendations aren't the same as the attributes that drive traditional search ranking. Structured specs, fitment data, compliance signals, normalized units — these are filter-step and compare-step requirements. They don't show up in keyword rankings. They don't have a "fix your title" feedback loop. They either pass the constraint check or they don't.
+**Transact.** Final check — availability, shipping eligibility, pricing completeness, regional restrictions. Products that can't be transacted on with confidence drop out.
 
-> **At Voomi Supply, ASIN matching is a filter-step operation. The Channel Matching Agent evaluates structured identity signals — canonical brand, valid GTIN, correct model format. SKUs that failed the identity check never entered the match pool. Closing those gaps across 1M+ SKUs cut publish time by ~85%.**
+## Where most catalog investment misses
 
-## How catalog gaps show up at each step
+The retrieve step is well-understood. Teams have been optimizing for it for years. Title optimization, keyword coverage, description completeness — all of it targets retrieval.
 
-At the retrieve step, your product is invisible if your description is too thin to surface for the query. Generic copy ("quality product, many uses") doesn't give an AI agent anything to match against a specific buyer question.
+The filter and compare steps are where AI discovery is actually won, and where almost no investment goes. The attributes that keep your products in the consideration set aren't the attributes that drive traditional search ranking. They're fitment data, compliance flags, correct taxonomy, normalized units — none of which have a keyword optimization analog.
 
-At the filter step, your product is excluded if:
-
-- Compatibility or fitment data doesn't cover the buyer's model or application
-- Your taxonomy is wrong and the product lands outside the category filter
-- Compliance flags are missing for a category where they're required
-- Required fields contain placeholders (`"TBD"`, `"N/A"`, `"See description"`) instead of real values
-
-At the compare step, your product loses if:
-
-- Key specifications exist in the description but not in structured fields
-- Units are inconsistent (some products in metric, others imperial)
-- The agent can't extract a confident value and deprioritizes your product in favor of one where the data is unambiguous
-
-> **Profitero maintained >95% precision/recall on classification across 1,500+ marketplaces — because agents downstream of classification use label signals as filter inputs. Low classification precision means the wrong products pass the filter. Products that should have been excluded show up; products that should have appeared don't.**
+A product with perfect titles but missing compatibility data beats a product with thin titles but complete fitment data every time the buyer's query includes a compatibility constraint. And there's no signal telling you which one it was.
 
 ## What changes when your catalog passes each filter
 
-**You stop losing to products with worse attributes.** A competitor with a thinner product line but cleaner structured data beats your catalog in AI recommendations every time the comparison step can't resolve a tie in your favor. Fix the structured data and that advantage disappears.
+Discovery footprint expands without changing the products. When compatibility data covers the right model ranges, your products appear in queries they were always relevant for. The products didn't change. The catalog did.
 
-**Discovery footprint expands without changing the products.** When compatibility data covers the right model ranges, your HVAC fittings show up in queries they were always relevant for. The product didn't change. The catalog data did.
+Competitors with worse products but better structured data stop beating you in recommendations. The agent doesn't have a preference between your product and theirs — it has a preference between the one it can evaluate and the one it can't.
 
-**JCPenney's Mirakl onboarding showed how taxonomy functions as a filter gate, not a ranking factor.** Products assigned to the wrong browse path failed the category filter regardless of how well their attributes were filled. The issue wasn't content quality. It was classification. One change — correct taxonomy — determined whether the product appeared or didn't.
+And the work compounds. Every attribute you add to a structured field makes it available for every future query that includes that constraint. You add fitment data once. Every buyer who asks about compatibility benefits from it, every time.
 
 ## Your catalog is either in the shortlist or it isn't
 
-There is no partial credit in AI-mediated discovery. A product that fails the filter step doesn't get a lower rank. It gets no impressions, no clicks, no conversions — and no signal to tell you why.
+There is no partial credit in AI-mediated discovery. A product that fails the filter step doesn't get fewer impressions — it gets none. No clicks, no conversions, and no signal to tell you why.
 
-The work that keeps your products in the consideration set isn't title optimization. It's the structured attributes at the filter step: compatibility data, compliance flags, correct taxonomy, normalized units. The catalog that passes every constraint check is the catalog that shows up when a buyer asks.
+The work that keeps your products in the consideration set is structured attributes at the filter step: compatibility data, compliance flags, correct taxonomy, normalized units. The catalog that passes every constraint check is the catalog that shows up when a buyer asks.
 
 Assess your catalog's filter-step readiness → [Catalog Readiness](/catalog-readiness)

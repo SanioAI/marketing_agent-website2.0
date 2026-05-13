@@ -46,14 +46,14 @@ Fix Dimensions 1–3 before investing in 4–5. A product with perfect attribute
 
 ## Step 2: Sample your catalog strategically
 
-Don't start with a random 1% sample. Start with the SKUs that are most likely to have readiness gaps:
+Don't start with a random 1% sample. Start with the SKUs most likely to have readiness gaps:
 
 - **New supplier additions** — new suppliers bring new formatting inconsistencies
 - **High-velocity SKUs** — failures here cost more revenue
 - **Recently suppressed listings** — the rejection notice tells you which dimension failed
 - **Cross-border or multi-channel products** — taxonomy and compliance requirements differ by market
 
-For Voomi Supply, the highest-gap SKUs were in the HVAC category — products with complex compatibility requirements, multipack configurations, and frequent hazmat flags. Prioritizing those first meant the biggest improvement in publish rate came within the first few weeks.
+For industrial and HVAC catalogs, the highest-gap SKUs are typically products with complex compatibility requirements, multipack configurations, and regulated materials. Prioritizing those first concentrates improvement where the revenue impact is largest.
 
 ## Step 3: Score at the SKU level
 
@@ -63,7 +63,7 @@ Score every SKU individually across each dimension. Output a prioritized list so
 
 1. **Severity** — compliance and identity failures are blocking; content gaps are not
 2. **Revenue impact** — a failing SKU on a high-velocity product costs more than a failing SKU on a slow mover
-3. **Fix complexity** — some gaps take 10 seconds (wrong GTIN format), some take structured enrichment (extract 15 attributes from an unstructured description)
+3. **Fix complexity** — some gaps take seconds (wrong GTIN format), some require structured enrichment (extract 15 attributes from an unstructured description)
 
 ### What a SKU-level readiness score looks like
 
@@ -87,16 +87,14 @@ Once you have the scored list, route each defect type to the agent that fixes it
 | Hazmat, multipack, compliance flags | Compliance Agent |
 | Missing fitment / compatibility data | Product Graph Agent |
 
-This is where [Catalog Agents](/catalog-agents) come in. Instead of manually fixing each defect, you route the scored output directly into the enrichment pipeline. The agents process the flagged SKUs, return enriched records, and you review and approve the changes before they go live.
-
-> **Profitero reduced manual labeling effort from 140 hours to ~20 per cycle by combining automated scoring with targeted agent remediation. The agents handled 95%+ of cases; humans reviewed the edge cases.**
+Instead of manually fixing each defect, you route the scored output into the enrichment pipeline. The agents process the flagged SKUs, return enriched records, and your team reviews and approves the changes before they go live. The review queue contains the edge cases — not the routine work.
 
 ## Step 5: Establish continuous monitoring
 
 A readiness assessment is most valuable when it runs continuously — not on a quarterly schedule.
 
-Set thresholds for each dimension. When a SKU drops below the threshold (because a supplier updated the record, or a taxonomy changed, or a new compliance rule went into effect), it surfaces automatically for remediation.
+Set thresholds for each dimension. When a SKU drops below the threshold — because a supplier updated the record, a taxonomy changed, or a new compliance rule went into effect — it surfaces automatically for remediation.
 
-The output isn't a report. It's a queue — a prioritized list of specific SKUs with specific defects that specific agents can fix. That's the difference between a readiness audit and a readiness system.
+The output isn't a report. It's a queue. A prioritized list of specific SKUs with specific defects that specific agents can fix. That's the difference between a readiness audit and a readiness system.
 
 Run a free assessment → [Catalog Readiness](/catalog-readiness)

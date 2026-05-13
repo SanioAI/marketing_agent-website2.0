@@ -22,15 +22,27 @@ relatedArticles:
 
 Your PIM dashboard shows 94% field completeness. Your channel suppression rate is 22%. Both are accurate. The gap between those two numbers is what catalog readiness measures.
 
-Completeness counts whether a field has a value. Readiness asks whether that value is *correct*, *structured*, and *sufficient for the system that needs to act on it* — whether that system is an Amazon validation check or a ChatGPT shopping recommendation.
+Completeness counts whether a field has a value. Readiness asks whether that value is *correct*, *structured*, and *sufficient for the system that needs to act on it* — whether that system is an Amazon validation check, a Walmart submission gateway, or a ChatGPT shopping recommendation.
+
+## Why "clean data" stopped being a useful north star
+
+Three years ago, "clean" meant field fill rate above 90%. That was enough for manual review workflows and basic feed validation. Today it isn't.
+
+Two things changed — and they changed at the same time.
+
+**Marketplaces raised the bar.** Amazon's listing quality requirements are more specific than they were in 2021. A product description that passed in 2022 fails today. Walmart's GDSN standards are stricter. Mirakl marketplace operators layer their own taxonomy requirements on top. The channels you're already publishing to are evaluating your data against tighter standards than before.
+
+**AI agents introduced a new filter layer.** ChatGPT Shopping, Perplexity, Google AI Overview, and Amazon Rufus all work the same way: retrieve a candidate set, filter it against structured constraints, compare what's left, recommend the best match. A product with missing compatibility data fails the filter. A product with an incorrect hazmat flag fails the filter. There's no ranking penalty to diagnose — the product simply isn't in the consideration set.
+
+Visibility = structure. Not copy quality. Not keyword density. Structure.
 
 ## The definition that matters now
 
 **Catalog readiness** is the degree to which each SKU can be decided on by an automated system — matched, classified, filtered, and transacted — without routing to a human exception queue.
 
-That definition changed when AI shopping agents became a real buying surface. The old bar was passing Amazon and Walmart validation. The new bar is whether an AI agent can retrieve your product, filter it against a buyer's constraints, compare it to alternatives, and recommend it with confidence.
+A product that passes retrieval but fails the compatibility filter isn't ranked lower. It disappears. A product with a valid GTIN but wrong taxonomy lands in the wrong browse category regardless of how well its attributes are filled. A product with placeholder values in required fields passes your completeness check and fails channel submission.
 
-A product that fails the filter step doesn't get a lower ranking. It doesn't show up at all.
+These aren't the same problem. They fail at different points in the pipeline and require different fixes.
 
 ## The five dimensions of catalog readiness
 
@@ -42,34 +54,24 @@ A product that fails the filter step doesn't get a lower ranking. It doesn't sho
 | **Compatibility / fitment** | Compatible models, OEM part numbers | Structured fitment data for applicable products | Missing fitment = fails compatibility filter |
 | **Taxability accuracy** | Tax code, product category for tax | Correct tax category per jurisdiction | Miscoded = liability or pricing errors |
 
-PIM completeness scores **none** of these correctly. It measures field presence — not value correctness, not channel alignment, not compliance signal accuracy.
+PIM completeness scores none of these correctly. It measures field presence — not value correctness, not channel alignment, not compliance signal accuracy.
 
-## Why "clean data" stopped being a useful north star
-
-Three years ago, "clean" meant field fill rate above 90%. That was enough for manual review workflows and basic feed validation.
-
-Two things changed:
-
-**Marketplaces raised their validation bar.** Amazon's listing quality requirements are more specific than they were in 2021. A product description that passed in 2022 fails now. Walmart's GDSN standards are stricter. Mirakl marketplace operators have their own taxonomy requirements on top.
-
-**AI agents introduced a new filter layer.** ChatGPT Shopping, Perplexity, Google AI Overview, and Amazon Rufus all operate by retrieving a candidate set and filtering it against structured constraints. A product with missing compatibility data fails the filter. A product with an incorrect hazmat flag fails the filter. There's no ranking penalty to diagnose — the product simply isn't in the consideration set.
-
-> **Voomi Supply defined readiness as passing five publish gates: identity, matching, multipack, hazmat, and taxability — without human exception. After closing those gaps across 1M+ SKUs, publish time dropped ~85%.**
-
-## Readiness vs enrichment: the continuous maintenance requirement
+## Readiness is a continuous state, not a project outcome
 
 Enrichment is a project. You run it once, fix the gaps, and your catalog looks right for a few months. Then new suppliers join. Products get updated. Taxonomies change. Compliance rules shift. The drift starts again.
 
-Readiness is a continuous state. Maintaining it means running the checks every time something changes — not on a quarterly schedule.
+Readiness is different. Maintaining it means running the checks every time something changes — not on a quarterly schedule. When a supplier sends a new file, the identity checks run. When Amazon updates its browse taxonomy, affected SKUs get re-evaluated. When a product description changes, compliance signals get re-assessed.
 
-> **Profitero maintained >95% precision/recall on attribute extraction and classification across 1,500+ marketplaces. That standard required continuous validation, not a one-time enrichment run.**
+A catalog that was ready last quarter may not be ready today. Not because anything was done wrong — because the channels it publishes to kept moving.
 
-## How to assess your readiness today
+## How to assess where you stand today
 
-The fastest way to understand your current readiness is to score each SKU across the five dimensions above. The gaps that matter most are usually:
+The fastest way to understand your current readiness is to score each SKU across the five dimensions. The gaps that matter most are usually:
 
 1. **Identity gaps** — brand normalization failures, missing GTINs, wrong pack geometry
-2. **Taxonomy misalignment** — products in wrong categories across one or more channels
-3. **Compliance blind spots** — products that should have hazmat flags but don't
+2. **Taxonomy misalignment** — products in wrong categories on one or more channels
+3. **Compliance blind spots** — products with regulated characteristics but no compliance flags
+
+Fix those three before investing in fitment data and taxability refinement. A product with perfect compatibility data still gets suppressed if its taxonomy is wrong.
 
 [Catalog Readiness](/catalog-readiness) scores all five dimensions at the SKU level — so you know exactly what to fix before it costs you a listing or a recommendation.

@@ -1,6 +1,6 @@
 ---
 title: "What Are Catalog Agents? (And Why a PIM Can't Do What They Do)"
-description: "Catalog agents are purpose-built AI systems that extract, classify, verify, and connect product data at scale. Here's exactly what each one does and why the category exists."
+description: "Catalog agents are purpose-built AI systems that extract, classify, verify, and connect product data at scale. Here's what each one does — and why the category exists."
 tag: "Awareness"
 readTime: "8 min read"
 pillar: "Catalog Agents"
@@ -20,65 +20,69 @@ relatedArticles:
     href: "/resources/articles/what-is-catalog-readiness"
 ---
 
-Your PIM has 94% field completeness. Your Amazon suppression rate is 18%. Both numbers are true at the same time — and that gap is exactly what catalog agents exist to close.
+Your PIM shows 94% field completeness. Your Amazon suppression rate is 18%. Both numbers are accurate — and the gap between them is exactly what catalog agents exist to close.
 
-A PIM stores what you tell it. A catalog agent figures out what your data should say, checks whether it's correct, and fixes it — continuously, at the scale of millions of SKUs.
+A PIM stores what you tell it. A catalog agent figures out what the data *should* say, checks whether it's right, and fixes it — continuously, at any scale. Those are different jobs, and no amount of PIM configuration turns one into the other.
 
-## What a catalog agent actually does
+## Why the category exists
 
-A catalog agent is a purpose-built AI system that performs one specific operation on product data. Not a general-purpose AI. Not a rules engine. A system trained to do one thing — extract attributes, or map taxonomy, or detect compliance flags — and do it with the precision your downstream channels require.
+AI shopping agents don't browse. They compute.
 
-The key word is *purpose-built*. An attribute agent is not the same system as a compliance agent. Each one is trained on different data, evaluated against different ground truth, and optimized for different failure modes. Running one doesn't substitute for running the others.
+When a buyer asks an assistant for "1-gallon liquid degreaser safe for aluminum parts," the agent builds a candidate set and evaluates every product against structured constraints. No compatible surfaces attribute? Filtered out. No volume in a recognized unit? Filtered out. No hazmat flag for the chemical category? Filtered out before the listing ever gets reviewed.
 
-Catalog agents run continuously. When a new supplier sends a feed at 2am, the agents process it. When Amazon updates its browse node taxonomy, the taxonomy agent re-maps affected SKUs. When a product description changes, the attribute agent re-extracts. No ticket, no sprint, no manual review queue.
+The product didn't rank lower. It was excluded before the shortlist formed.
 
-## The six agents in the Paladio stack
+Most catalog problems aren't caused by bad products. They're caused by product data that was built for human browsing — descriptive, narrative, unstructured — when the systems buying today require structured, machine-computable fields. Catalog agents close that gap. They read unstructured descriptions, extract what the data actually means, and produce records that every downstream system can act on.
+
+## The six agents and what breaks without each one
 
 | Agent | What it does | What breaks without it |
 |---|---|---|
-| **Attribute Agent** | Extracts 10–15+ structured attributes per SKU from unstructured text and raw feeds | AI shopping agents skip your product — no structured data to match against buyer queries |
-| **Taxonomy Agent** | Maps every SKU to the correct category across Amazon, Google, Walmart, Mirakl | Wrong browse node = listing suppressed or buried in the wrong category |
-| **Brand Normalization Agent** | Resolves brand name variants, manufacturer aliases, and duplicates across your catalog | ASIN matching fails, duplicate listings appear, brand filters don't work |
-| **Channel Matching Agent** | Matches your SKUs to ASINs, UPCs, and internal channel identifiers | Syndication breaks, channel-specific compliance checks can't run |
-| **Compliance Agent** | Detects hazmat classifications, multipack mismatches, and regulatory flags | Post-listing rejections, channel suspensions, tax liability |
-| **Product Graph Agent** | Builds substitutes, accessories, OEM parts, and fitment relationships | AI agents can't make safe substitution recommendations, compatibility data is missing |
+| **Attribute Agent** | Extracts 10–15+ structured attributes per SKU from unstructured text and raw supplier feeds | AI shopping agents skip your product — no structured data to match against filter queries |
+| **Taxonomy Agent** | Maps every SKU to the correct category across Amazon, Google, Walmart, Mirakl | Wrong browse node = listing suppressed or buried outside the category a buyer is searching |
+| **Brand Normalization Agent** | Resolves brand name variants, manufacturer aliases, and supplier inconsistencies | ASIN matching fails, brand filters return incomplete results, duplicate listings appear |
+| **Channel Matching Agent** | Matches your SKUs to ASINs, UPCs, and channel-specific identifiers | Syndication breaks, channel compliance checks can't run, matching fails at submission |
+| **Compliance Agent** | Detects hazmat classifications, multipack mismatches, and regulatory flags before publishing | Post-listing rejections, channel suspensions, liability exposure on products already live |
+| **Product Graph Agent** | Builds substitutes, accessories, OEM part numbers, and fitment relationships | Compatibility filters fail, AI agents can't make safe substitution recommendations |
 
-## Before and after: what the data looks like
+Each agent is purpose-built. The attribute agent is not the compliance agent with different settings — it's a different system, trained on different data, evaluated against different ground truth, optimized for different failure modes. Running one doesn't substitute for running the others.
 
-Here's what the Attribute Agent does to a raw supplier record.
+## Before and after: what one SKU looks like
 
-**Before — raw supplier feed:**
+A raw supplier record arrives as free text. Here's what the Attribute Agent does with it.
+
+**Input — raw supplier feed:**
 
 > *"Heavy duty industrial degreaser, 1 gallon, works on metals and plastics, fast acting"*
 
-**After — Attribute Agent output:**
+**Output — structured attributes:**
 
 | Attribute | Value |
 |---|---|
 | Product type | Industrial degreaser |
-| Net volume | 1 gallon (3.785L) |
+| Net volume | 1 gallon (3.785 L) |
 | Compatible surfaces | Metal, plastic |
 | Form factor | Liquid |
 | Hazmat flag | Yes — GHS labeling required |
 | Multipack | No |
 | Pack geometry | Single unit |
 
-That structured output is what a marketplace needs to validate the listing. It's what an AI shopping agent needs to match the product to a buyer query like "degreaser safe for aluminum parts." Without it, the product either gets rejected at submission or silently skipped at recommendation time.
+That structured output is what a marketplace validation check needs. It's what an AI shopping agent needs to match this product to the buyer's query. Without it, the product either fails submission or disappears from recommendations — and there's no error message telling you why.
 
-## Why this is different from enrichment tools
+## What makes this different from enrichment tools
 
-Traditional enrichment tools apply rules. If field X is empty, copy from field Y. If brand = "ACME Corp.", normalize to "Acme". These rules work until a new supplier sends data that doesn't match any existing pattern — which happens every week at scale.
+Enrichment tools apply rules. If field X is empty, populate from field Y. If brand contains "Inc.", strip it. Rules work until a new supplier sends data in a format you've never seen — which happens every week when you're managing hundreds of supplier relationships.
 
-Catalog agents reason about the data. The Compliance Agent doesn't check a list of known hazmat product names. It reads the product description, identifies chemical indicators, cross-references regulatory databases, and assigns the correct classification. At Voomi Supply, this replaced a manual VA workflow that was taking longer than the actual product publishing.
+Catalog agents reason about the data. The Compliance Agent doesn't check a list of known hazardous product names. It reads the product description, identifies chemical indicators, applies regulatory logic, and assigns the correct classification. It handles the format it's never seen before the same way it handles the format it's seen a thousand times.
 
-> **Voomi Supply processed 1M+ SKUs against 200M+ Amazon ASINs. The attribute, compliance, and channel matching agents ran 24/7. Publish time dropped ~85%.**
+And unlike an enrichment project that runs once and delivers a cleaned snapshot, agents run continuously. When a new supplier sends a file at 2am, the agents process it. When a taxonomy changes, affected SKUs are re-classified. When a product description is updated, the attribute agent re-extracts. No ticket, no sprint, no backlog.
+
+The backlog never forms, because the work never stops.
 
 ## What catalog agents don't replace
 
-Catalog agents run above your existing PIM or ERP. They don't replace your system of record — they make the data in it agent-ready.
+Catalog agents run above your PIM or ERP. They don't replace your system of record — they make the data flowing into it agent-ready.
 
-Your PIM tracks which products exist and what you know about them. Catalog agents determine whether what you know is correct, complete, and structured for the channels and AI systems that need to act on it.
-
-Most catalog teams use both. The PIM holds the master record. The agents continuously validate and enrich it. The output feeds your channels, your AI shopping surfaces, and your downstream compliance systems.
+Your PIM tracks which products exist and what you know about them. Catalog agents determine whether what you know is correct, complete, and structured for the channels and AI systems that need to act on it. Most teams use both. The PIM holds the master record. The agents continuously validate and enrich it.
 
 See how the full agent stack works → [Catalog Agents](/catalog-agents)
