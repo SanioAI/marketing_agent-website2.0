@@ -128,7 +128,7 @@ export default function RankerPage() {
                 Every major AI shopping surface
               </h2>
               <p className="mt-3 text-slate-600">
-                Ranker tracks your catalog performance across all six AI discovery surfaces where buyers are going.
+                Ranker tracks your catalog performance across all seven AI discovery surfaces where buyers are going.
               </p>
             </div>
           </Reveal>
@@ -138,8 +138,8 @@ export default function RankerPage() {
               <Reveal key={a.name}>
                 <div className="relative rounded-xl border bg-white p-4 border-slate-200/80">
                   {!a.live && (
-                    <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold text-amber-600">
-                      ★ Coming Soon
+                    <span className="absolute right-3 top-3 inline-flex items-center justify-center rounded-full border border-amber-200 bg-amber-50 h-5 w-5 text-[11px] font-semibold text-amber-600">
+                      ★
                     </span>
                   )}
                   <p className="text-sm font-semibold text-slate-900 pr-20">{a.name}</p>
@@ -148,6 +148,7 @@ export default function RankerPage() {
               </Reveal>
             ))}
           </div>
+          <p className="mt-5 text-center text-xs text-slate-400">★ = Coming Soon</p>
         </Container>
       </section>
 
