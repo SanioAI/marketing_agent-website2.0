@@ -1,6 +1,6 @@
 ---
-title: "How Catalog Agents Normalize Messy Product Data from Hundreds of Suppliers"
-description: "Supplier feeds arrive in a hundred different formats. Catalog agents resolve naming collisions, unit inconsistencies, and structural mismatches without a rules library that breaks every time a supplier changes their template."
+title: "When Your Supplier Data Looks Complete, But Your Listings Still Fail"
+description: "Every supplier formats the same data differently. Rules break every time a format changes. Here's how catalog agents normalize product data by understanding meaning — not matching patterns — and what that difference produces at scale."
 tag: "Deep Dive"
 readTime: "7 min read"
 pillar: "Catalog Agents"
@@ -20,79 +20,80 @@ relatedArticles:
     href: "/resources/articles/catalog-agents-vs-pim"
 ---
 
-Every supplier formats product data differently. One sends an Excel spreadsheet with brand names in all caps. Another sends an XML feed where dimensions are embedded in the title field. A third sends a PDF spec sheet. A fourth uses "N/A" in required fields and "see description" everywhere else.
+Your PIM shows 94% field completeness. Your channel rejection rate is still climbing. The fields are filled — the values are just wrong, inconsistent, or unreadable by the systems that need to act on them.
 
-Your PIM stores all of it faithfully. That's the problem.
+Most teams assume this is a tooling problem. It isn't. It's a normalization problem. Every supplier in your network formats the same data differently, and no two supplier files look the same twice.
 
-Normalization is the job of making that data consistent enough that a channel can act on it and an AI agent can reason about it. It's not a cleanup pass you run once. It's a continuous process that runs every time a supplier feed arrives or a record changes.
+## When the data looks complete, but listings still break
 
-## What "messy" actually looks like at scale
+Does this sound familiar? Supplier A sends brand names in all caps. Supplier B uses "Manufacturer" in the brand field. Supplier C puts dimensions inside the product title. Supplier D uses "N/A" everywhere a field is optional.
 
-At Voomi Supply, products arrive from hundreds of suppliers in the HVAC, industrial, and maintenance categories. Each supplier has their own formatting conventions — some intentional, most not. The normalization problems that appear most frequently across large catalogs are not exotic edge cases. They're the same five failure modes, repeated at volume.
+Your PIM faithfully stores all of it — exactly as received. A field marked "complete" might contain `"TBD"`, `"various"`, or a raw supplier note that reads `"see spec sheet."` The PIM counts it as filled. Amazon rejects it. An AI shopping agent skips it entirely.
 
-**Brand name collisions.** The same manufacturer appears in supplier feeds as "3M", "3M Company", "3M Co.", "3M Industrial", and "Manufacturer". A channel filter for "3M" returns different subsets depending on which variant is in the record. An AI shopping agent querying for 3M products misses every record that doesn't use the canonical form.
+The three failure modes that cause the most quiet damage:
 
-**Unit inconsistencies.** "32 oz", "1 quart", "946 mL", "large", "2 lbs" — all describing the same volume range, none of them matchable against each other without conversion. A buyer filtering for products by volume gets incomplete results. A pricing-per-unit calculation returns wrong numbers.
+- **Brand name collisions.** The same manufacturer shows up as `"3M"`, `"3M Co."`, `"3M Company"`, and `"Manufacturer"` across different supplier files. A channel filter for 3M returns different results depending on which variant is in the record. An AI agent querying for 3M products misses every record that doesn't use the canonical form. You don't get an error — you just lose the match.
 
-**Pack geometry mismatches.** "Pack of 10", "Box/10", "10-count", "each (pack)", "10 units" — all potentially meaning the same multipack configuration. Compliance checks can't run correctly when pack quantity is ambiguous.
+- **Unit inconsistencies.** `"32 oz"`, `"1 quart"`, `"946 mL"`, `"large"`. All the same volume. None of them comparable against each other without conversion. A buyer filtering by size gets incomplete results. Pricing per unit is wrong. An AI comparison agent can't evaluate the two products side by side.
 
-**Placeholder values in required fields.** "TBD", "See description", "N/A", "Various", "Contact manufacturer" in fields that channels treat as structured data. These pass a completeness check (the field has a value) and fail every downstream validation.
+- **Placeholder values in required fields.** `"TBD"`, `"See description"`, `"N/A"`, `"Various"`. These pass a completeness check. They fail every validation after that. The listing goes live looking complete — and gets suppressed, flagged, or silently excluded from AI recommendations.
 
-**Structural inconsistencies across suppliers.** Supplier A puts dimensions in a dedicated field. Supplier B embeds them in the title. Supplier C puts them in a notes field. Supplier D doesn't include them at all. The same attribute is in a different place for every supplier — and the structure changes when the supplier updates their template.
+The pattern repeats across every new supplier you add. Same problems, new format.
 
-## Why rules-based normalization breaks
+## What normalization actually means today
 
-The traditional approach is to write supplier-specific parsing rules. "If supplier = SupplierA, extract dimensions from field 'notes'. If supplier = SupplierB, parse dimensions from title using regex pattern X."
+Normalization isn't spell-checking. It isn't filling in blanks. It's making your product data say the same thing in the same way regardless of who sent it — so that every system that needs to act on it can.
 
-This works until the supplier changes their template. Then it silently breaks — the rule still runs, but it now extracts nothing or extracts the wrong value. You find out when a listing fails validation.
+In practical terms, that means three things:
 
-At Voomi Supply's scale — 1M+ SKUs from hundreds of suppliers — maintaining a rules library that covers every supplier's format variants isn't operationally viable. New suppliers add new formats. Existing suppliers change their exports. A rules library that was complete six months ago has dozens of broken rules today.
+**Canonical identity.** Every brand resolves to one name. Every model number matches the manufacturer's canonical format. Every GTIN is present and valid. An AI shopping agent filtering for `"3M"` finds every 3M product in your catalog — not just the records where the supplier happened to use the right string.
 
-## What catalog agents do instead
+**Consistent units.** Volume, dimensions, weight, capacity — expressed in the same unit for every product in a category. `"32 oz"` becomes `946 mL`. `"1 quart"` becomes `946 mL`. `"large"` gets flagged — no conversion is possible without more context.
 
-Catalog agents don't parse by pattern. They understand what data means — which means they can handle format variants without needing a rule for each one.
+**No placeholders in required fields.** A required field either has a real value or it's in the remediation queue. Not both. Not depending on who submitted the product this week.
 
-### Brand normalization
+This sounds simple. It isn't. You have hundreds of suppliers, each with their own formatting conventions, each of those changing over time.
 
-The Brand Normalization Agent maintains a canonical brand registry. When a new record arrives with brand = "3M Co.", the agent looks up "3M Co." against the registry, finds the canonical form "3M", and outputs the corrected record. When a new supplier introduces a brand variant that isn't in the registry yet, the agent flags it for a one-time human confirmation — then adds it to the registry for all future records from that supplier.
+## How catalog agents handle what rules can't
 
-The result: your channels see canonical brand names. AI shopping agents filtering by brand get complete results. The registry improves over time instead of degrading.
+The traditional response is to write supplier-specific parsing rules. If supplier = SupplierA, extract dimensions from the `"notes"` field. If supplier = SupplierB, parse dimensions from the title using regex pattern X.
 
-### Unit resolution
+This works until the supplier changes their export template. Then the rule silently breaks. You find out when a listing fails validation — or when a buyer can't find a product that should be there.
 
-When the agent encounters "32 oz" in a volume field, it converts it to a standard unit for the product category — typically milliliters for liquid products in that category. "1 quart" → 946 mL. "Large" → flagged for human review (no conversion possible without more context). Every record in the catalog expresses volume in the same unit.
+At Voomi Supply's scale — 1M+ SKUs from hundreds of suppliers across HVAC, industrial, and maintenance categories — a rules library isn't operationally viable. You'd need thousands of supplier-specific rules. New suppliers add new formats. Existing suppliers change their templates. A rules library that was complete last quarter has dozens of broken rules this quarter.
 
-This makes filter queries accurate. It makes pricing-per-unit calculations correct. It makes AI agent comparisons possible — the agent can compare a 500 mL product against a 946 mL product because both express volume in the same unit.
+Catalog agents don't parse by pattern. They understand what data means.
 
-### Pack geometry standardization
+When the Brand Normalization Agent encounters `"3M Co."`, it looks up the canonical brand registry and outputs `"3M"`. When it sees a brand it hasn't encountered before, it flags it for one-time human confirmation, then adds the variant to the registry. Every future record from that supplier is handled automatically. The registry improves over time instead of degrading.
 
-The compliance check for multipack listings requires a single, unambiguous pack quantity integer. "Pack of 10", "Box/10", "10-count" all resolve to `pack_quantity: 10`. "Each (pack)" gets flagged — it implies a multipack but doesn't give a count. "10 units" resolves to 10 if the product type is an individual unit; it gets flagged if the product type suggests a multipack that could mean 10 packs.
+When the Attribute Agent sees `"32 oz"` in a volume field, it converts it to the standard unit for the product category. When it sees `"large"`, it flags it — no conversion is possible, and guessing would create a different kind of error.
 
-### Placeholder detection and routing
+The key difference: the agent handles new supplier formats without new rules. A supplier you've never worked with before sends a file. The agent reads it, understands the data, and produces a normalized record. The only time a human needs to intervene is when the source data is genuinely ambiguous — not when the format is unfamiliar.
 
-Placeholder values in required fields get caught at ingest. The agent checks for a list of known placeholder strings ("TBD", "N/A", "See description", "Various", "Contact manufacturer", "Please inquire") and flags any record where a required field contains one. Those records route to the enrichment queue — the Attribute Agent fills the field from the product description or spec sheet.
+## What changes when you get it right
 
-A placeholder that slips into a channel is a listing violation. Catching it at ingest means the violation never reaches the channel.
+**Rejections stop being surprises.** Voomi had a manual review process where every supplier file required someone to catch brand inconsistencies, unit mismatches, and placeholder values before publishing. After switching to agent-based normalization, that review layer compressed from a workflow bottleneck into a human checkpoint for genuine edge cases. Publish time dropped ~85%.
 
-### Cross-supplier structural alignment
+**AI recommendations include your products.** An AI shopping agent filtering for `"3M stainless fasteners"` can only match against records where both `"3M"` and `"stainless"` appear in their canonical, structured forms. Products where `"3M"` is stored as `"Manufacturer"` or where material is buried in an unstructured description are filtered out — silently, without any notification. Normalization is the work that keeps your products in the consideration set.
 
-When dimensions are embedded in a title ("6-Inch Round Galvanized Duct Fitting"), the agent extracts them and writes them to the appropriate structured field. The extraction doesn't depend on knowing which supplier sent the record — it depends on understanding what the value means.
+**Every agent downstream works correctly.** The Compliance Agent needs an unambiguous pack quantity to run a multipack check. The Taxonomy Agent needs a canonical brand name to place a product in the right manufacturer node. The Channel Matching Agent needs a valid GTIN to match against Amazon's catalog. Normalization isn't a standalone improvement — it's the layer that makes every other agent's output reliable.
 
-This is why the agent handles new supplier formats without new rules. A supplier you've never worked with before sends a feed. The agent reads the feed, understands the data, and produces a normalized record. The only time a human needs to intervene is when the source data is genuinely ambiguous — not when the format is unfamiliar.
+> **Profitero maintained >95% precision/recall on attribute extraction and classification across 1,500+ marketplaces. That standard required agent-based normalization running on every change — not a one-time cleanup that drifts back within months.**
 
-> **At Voomi Supply, the shift from manual supplier-specific review to agent-based normalization was the step that made 1M+ SKU scale operationally viable. The agents handled format variance; humans handled genuine ambiguity.**
+## Where most teams get stuck
 
-## What normalization enables downstream
+**Treating normalization as a one-time project.** A cleanup pass fixes the data as it stands today. Three months later, you've added new suppliers, existing suppliers have updated their templates, and the drift has started again. The backlog reforms. The rejections return. Catalog agents run normalization on every ingest — so the drift never accumulates.
 
-Clean, normalized data isn't valuable on its own. It's valuable because of what it allows downstream systems to do correctly.
+**Confusing completeness with correctness.** A field with a value isn't a field with the right value. Your PIM completion score doesn't distinguish between `"3M"` and `"Manufacturer"` in the brand field. The channel does. Build the checks around value quality, not field presence.
 
-- **Compliance Agent** can run multipack and hazmat checks accurately when pack geometry is unambiguous
-- **Taxonomy Agent** can classify products correctly when brand and product type are canonical
-- **Channel Matching Agent** can match to Amazon ASINs when brand, GTIN, and model number are consistent
-- **AI shopping agents** can filter and compare products when attributes are in standard units and structured fields
+**Writing rules for the supplier, not the data type.** A rule that says "extract volume from the notes field for SupplierA" breaks when SupplierA changes their format. A normalization layer that understands volume in any format handles the change automatically. Rules encode today's supplier quirks. Agents encode the meaning of the data.
 
-Normalization is the layer that makes every other agent's output reliable. A compliance check run on ambiguous pack data produces ambiguous results. A taxonomy classification run on an uncorrected brand name may land in the wrong manufacturer-specific node.
+## Your catalog says the same thing to every system — or it doesn't
 
-The agents are sequential. Normalization runs first — and the quality of everything after it depends on getting normalization right.
+Normalization is the work that makes your catalog legible to every system that needs to act on it: a marketplace validation check, a taxonomy classifier, a compliance scanner, an AI shopping agent running a filter query.
+
+If your brand names depend on which supplier submitted the product, your AI discovery footprint is smaller than it should be. If your units vary by supplier, your AI comparison story is incomplete. If your required fields contain placeholders, your listings are one validation run away from suppression.
+
+The catalog that passes every filter is the one where every record says the same thing in the same way — regardless of what came in.
 
 Explore the full catalog agent stack → [Catalog Agents](/catalog-agents)
