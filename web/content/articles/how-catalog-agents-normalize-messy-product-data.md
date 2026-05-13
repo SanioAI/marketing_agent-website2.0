@@ -56,7 +56,7 @@ The traditional response to this problem is to write supplier-specific parsing r
 
 This works until the supplier changes their export template. Then the rule silently breaks. You find out when a listing fails validation — or when a buyer searches for a product that should be there and gets zero results.
 
-At hundreds of suppliers, a rules library isn't operationally viable. You need rules for every supplier's format variants. New suppliers add new formats. Existing suppliers change their templates. A library that was complete last quarter has broken rules this quarter, and there's no alert when a rule stops working.
+At hundreds of suppliers, a rules library isn't operationally viable. Voomi Supply's catalog spans hundreds of HVAC and industrial suppliers — each with their own formatting conventions, each changing over time. A rules approach would have required thousands of supplier-specific parsing rules that broke silently whenever a template changed. You need rules for every supplier's format variants, and there's no alert when one stops working.
 
 Catalog agents don't parse by pattern. They understand what data means.
 

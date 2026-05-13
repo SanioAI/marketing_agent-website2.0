@@ -69,7 +69,7 @@ The agent extracts values for each expected attribute in the schema. For an HVAC
 
 Each extracted attribute gets a confidence score. High-confidence extractions go straight to output. Low-confidence ones — where the agent found ambiguous or conflicting signals — get flagged for human review.
 
-This is intentional. The agent handles the clear cases. Humans handle the edge cases. The review queue contains only the records where the agent's confidence is genuinely low — not every record, and not a random sample. Teams that implement this design typically find the review queue contains less than 5% of records, and the time-per-record drops significantly because reviewers are only seeing genuine ambiguity, not routine work.
+This is intentional. The agent handles the clear cases. Humans handle the edge cases. The review queue contains only the records where the agent's confidence is genuinely low — not every record, and not a random sample. Profitero implemented this across 1,500+ marketplaces and reduced manual labeling from 140 hours to around 20 per cycle — the agents handled the clear cases, humans handled the edge cases, and the review queue shrank every quarter as the agents improved.
 
 ### 5. Validate against channel requirements
 

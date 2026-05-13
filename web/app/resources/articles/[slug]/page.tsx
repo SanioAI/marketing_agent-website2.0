@@ -208,19 +208,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <aside className="hidden w-56 shrink-0 lg:block">
                 <div className="sticky top-24 space-y-4">
                   <RelatedPlatform />
-                  {hub && (
-                    <div className="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-4">
-                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
-                        Pillar
-                      </p>
-                      <Link
-                        href={hub.href}
-                        className="group flex items-center gap-2 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-800 transition hover:bg-white hover:text-blue-700"
-                      >
-                        <span>↑</span> {hub.label}
-                      </Link>
-                    </div>
-                  )}
                   <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-4">
                     <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-600">
                       Try it

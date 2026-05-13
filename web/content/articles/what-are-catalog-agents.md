@@ -77,6 +77,8 @@ Catalog agents reason about the data. The Compliance Agent doesn't check a list 
 
 And unlike an enrichment project that runs once and delivers a cleaned snapshot, agents run continuously. When a new supplier sends a file at 2am, the agents process it. When a taxonomy changes, affected SKUs are re-classified. When a product description is updated, the attribute agent re-extracts. No ticket, no sprint, no backlog.
 
+Voomi Supply replaced a manual VA review workflow with this model across 1M+ SKUs. Publish time dropped ~85% — not because the products changed, but because the agents ran continuously instead of on a sprint schedule.
+
 The backlog never forms, because the work never stops.
 
 ## What catalog agents don't replace
