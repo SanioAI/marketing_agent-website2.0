@@ -65,8 +65,8 @@ export default function ProductIntelligencePage() {
     <main className="pt-16">
       <PageHero
         kicker="Product Intelligence"
-        title="Turn your catalog into a decision engine"
-        description="Your enriched catalog data holds pricing signals, review sentiment, inventory patterns, and conversion indicators. Product Intelligence surfaces them — so you can act on what the data is already telling you."
+        title="Your catalog already knows which products to promote. Most teams never ask it."
+        description="Pricing gaps, review-driven attribute failures, inventory-weighted conversion signals — they're in your enriched catalog data. Product Intelligence surfaces them at the SKU level, so decisions are informed by what the data says, not what feels right."
       />
 
       {/* Capabilities */}
@@ -82,7 +82,7 @@ export default function ProductIntelligencePage() {
                 Pricing. Reviews. Inventory. Sales.
               </h2>
               <p className="mt-3 text-slate-600">
-                Four data streams most teams manage in separate tools. Product Intelligence pulls them into a single layer — connected to your actual SKUs.
+                Four data streams most teams manage in separate tools, on separate cycles, with separate owners. Product Intelligence pulls them into a single layer — connected to your actual SKUs, not aggregated away from them.
               </p>
             </div>
           </Reveal>
@@ -114,7 +114,7 @@ export default function ProductIntelligencePage() {
                 Not dashboards. Decisions.
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Most catalog analytics tools show you what happened. Product Intelligence tells you what to do next. The difference is that every signal is connected to an actionable SKU — not an aggregate metric buried in a BI tool.
+                Most catalog analytics tools show you what happened to the catalog. Product Intelligence tells you what to do next — and connects every signal back to a specific SKU your team can act on. A pricing gap isn&apos;t a chart. It&apos;s a list of products where you&apos;re priced above market without a meaningful attribute advantage.
               </p>
             </div>
           </Reveal>
@@ -146,10 +146,10 @@ export default function ProductIntelligencePage() {
                   Intelligence is only as good as the data underneath it
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  Product Intelligence is powered by the same enrichment pipeline as Catalog Agents. Every attribute, taxonomy classification, and content score feeds a unified data layer — so the insights reflect your actual catalog, not a sample or estimate.
+                  Product Intelligence is powered by the same enrichment pipeline as Catalog Agents. Every attribute, taxonomy classification, and content score feeds a unified data layer — so the insights reflect your actual catalog, not a sample or an estimate built from incomplete records.
                 </p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  The loop: Catalog Agents enriches your data. Product Intelligence surfaces the signals in that data. You act on them. The next enrichment cycle is better because you know which signals matter.
+                  The feedback loop runs in both directions: Catalog Agents enriches your product data. Product Intelligence surfaces which enrichment changes moved the needle on conversion. The next enrichment cycle is more targeted because you know which attributes actually matter for each category.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a

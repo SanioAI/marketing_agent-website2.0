@@ -42,10 +42,10 @@ const dimensions = [
 ];
 
 const steps = [
-  { step: "01", title: "Upload your catalog", desc: "Connect a feed or upload a CSV. Any size." },
-  { step: "02", title: "Run the diagnostic", desc: "Six dimensions scored at the SKU level in minutes." },
-  { step: "03", title: "Get your readiness report", desc: "Prioritized findings with specific SKUs, severity, and recommended fixes." },
-  { step: "04", title: "Fix with Catalog Agents", desc: "Route defects directly into the enrichment pipeline. Agents correct, you approve." },
+  { step: "01", title: "Upload your catalog", desc: "Connect a feed or upload a CSV. Any size. No pre-cleaning required." },
+  { step: "02", title: "Run the diagnostic", desc: "Six dimensions scored at the SKU level — attributes, compliance, content, taxonomy, channel readiness, and agentic readiness." },
+  { step: "03", title: "Get your readiness report", desc: "Prioritized findings by severity and SKU. Not a general score — specific products, specific fields, specific failures." },
+  { step: "04", title: "Fix with Catalog Agents", desc: "Route defects directly into the enrichment pipeline. Agents correct, you review, nothing ships without approval." },
 ];
 
 export default function CatalogReadinessPage() {
@@ -53,8 +53,8 @@ export default function CatalogReadinessPage() {
     <main className="pt-16">
       <PageHero
         kicker="Catalog Readiness"
-        title="Prepare your catalog for marketplaces, search, and agentic commerce"
-        description="Your catalog fails for three reasons: missing attributes, compliance gaps, and thin content. Catalog Readiness scores all three — at the SKU level — so you know exactly what to fix before it costs you."
+        title="Your PIM says 96% complete. Your channel rejection rate disagrees."
+        description="Completeness checks confirm field presence — not value quality. Catalog Readiness scores attributes, compliance, content, and agentic readiness at the SKU level, so you know exactly what's broken and what it's costing before it costs you."
       />
 
       {/* The three pillars */}
@@ -70,7 +70,7 @@ export default function CatalogReadinessPage() {
                 Attributes. Compliance. Content.
               </h2>
               <p className="mt-3 text-slate-600">
-                Most catalogs fail on all three at the same time. Fixing one without the others still gets your listings rejected or your products skipped by AI agents.
+                Most catalogs fail on all three simultaneously — and the failures compound. A correct attribute won't matter if the taxonomy is wrong. Complete content won't save a listing with an unresolved hazmat flag.
               </p>
             </div>
           </Reveal>
@@ -105,7 +105,7 @@ export default function CatalogReadinessPage() {
                 Amazon and Walmart have required complete attributes for years. That bar is table stakes. The new bar is whether an AI shopping agent — ChatGPT, Perplexity, Google AI Overview — can interpret your product, match it to a buyer&apos;s query, and recommend it with confidence. If your attributes are missing or your compliance flags are wrong, the agent skips your SKU entirely. There is no rejection notice. The product just doesn&apos;t show up.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Voomi Supply found this directly. Across 1M+ SKUs matched against 200M+ ASINs, the products that moved fastest were the ones with complete multipack signals, accurate hazmat classification, and clean channel matching — not the ones with the most marketing copy. Catalog Readiness scores all of that before the listing goes live.
+                The evidence shows up in the data. Across 1M+ SKUs matched against 200M+ Amazon ASINs, the products that moved fastest shared three things: complete multipack signals, accurate hazmat classification, and clean channel matching — not the most marketing copy. Catalog Readiness scores all of that before the listing goes live.
               </p>
             </div>
           </Reveal>

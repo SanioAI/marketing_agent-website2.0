@@ -8,19 +8,19 @@ const failures = [
   {
     icon: "⚠",
     title: "Incomplete attributes",
-    body: "AI agents need structured, machine-readable data — dimensions, materials, compatibility, voltage. A product description is not a substitute. Voomi was manually filling gaps one SKU at a time.",
+    body: "AI agents need structured, machine-readable data — dimensions, materials, compatibility, voltage. A product description is not a substitute. Missing a required field doesn't produce an error notice. The product just doesn't show up.",
     accent: "border-t-[#00D4FF]",
   },
   {
     icon: "🔀",
     title: "Wrong or inconsistent taxonomy",
-    body: "A mis-categorised product fails validation, gets buried, or never appears in agent search results. JCPenney needed taxonomy alignment across every brand before Mirakl could go live.",
+    body: "A miscategorized product fails validation, gets buried, or never appears in agent search results. Channel taxonomies update quarterly — a category that was correct at onboarding lands in the wrong place after a revision, with no alert.",
     accent: "border-t-[#A3FF3C]",
   },
   {
     icon: "🚫",
     title: "Undetected compliance issues",
-    body: "Hazmat flags, multipack mismatches, taxability errors — discovered post-listing. Voomi was catching these manually. It took longer than publishing the products themselves.",
+    body: "Hazmat flags, multipack mismatches, taxability errors — discovered post-listing. Each one requires a human to trace the failure back to the source field, fix it, and resubmit. At scale, this takes longer than publishing the products in the first place.",
     accent: "border-t-[#9B59FF]",
   },
 ];

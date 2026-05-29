@@ -13,23 +13,23 @@ export const metadata = {
 const problems = [
   {
     n: "01",
-    t: "Catalog data is always broken",
-    p: "Vendor feeds arrive with inconsistent taxonomy, missing attributes, duplicate SKUs, and brand name variations. Manual cleanup never catches up.",
+    t: "Supplier feeds never arrive in the format your channels need",
+    p: "Every vendor formats the same data differently. The same manufacturer appears as \"3M\", \"3M Co.\", \"3M Company\". Dimensions land in the title, the notes field, or not at all. The PIM stores whatever arrived — and the channel sees inconsistencies it can't act on.",
   },
   {
     n: "02",
-    t: "Enrichment tools don't hold",
-    p: "One-time enrichment fixes today's data. Tomorrow's feed drops it back. Cleanup tools treat symptoms, not the underlying data flow.",
+    t: "Enrichment fixes today. Tomorrow's feed breaks it.",
+    p: "One-time enrichment solves the catalog as it stands on Monday. Next week's supplier file reintroduces the same gaps in the same fields. The fix degrades the moment new data arrives — and the manual queue reforms, every time.",
   },
   {
     n: "03",
-    t: "Channel rejections pile up",
-    p: "Google Shopping, Amazon, and retail partners reject listings for missing fields, wrong taxonomy, or noncompliant copy—costing revenue and ops time.",
+    t: "Channel rejections don't tell you what's wrong",
+    p: "Amazon, Google Shopping, and Mirakl reject listings without specifying why. A team member traces the failure back to a missing field, a wrong taxonomy node, or a noncompliant value — then fixes it manually. At 50K+ SKUs, this is a permanent ops cost, not a one-time project.",
   },
   {
     n: "04",
-    t: "Edge cases eat your team",
-    p: "Missing images, ambiguous category mappings, conflicting brand names—each one gets escalated to a person who has to decide manually.",
+    t: "Rules break every time a supplier changes their template",
+    p: "A rule that extracts dimensions from SupplierA's notes field works until SupplierA updates their export. The rule fails silently. You find out when a listing is rejected — or when a buyer searches for a product that should exist and gets nothing.",
   },
 ] as const;
 
@@ -45,45 +45,47 @@ const capabilities = [
 ] as const;
 
 const kpis = [
-  { k: "85%", t: "Faster catalog enrichment", d: "Products go live in hours, not weeks." },
-  { k: "94%", t: "Reduction in manual cleanup", d: "Stop fixing the same issues repeatedly." },
-  { k: "75%", t: "Fewer downstream errors", d: "Fewer feed rejections, returns, and compliance issues." },
-  { k: "84%", t: "Edge cases resolved automatically", d: "Handles missing fields and noisy inputs at scale." },
+  { k: "~85%", t: "Faster time-to-publish", d: "Products that required manual VA review go live without it — agents handle the queue." },
+  { k: ">95%", t: "Precision on attribute extraction", d: "Across multi-supplier HVAC and industrial catalogs. Confidence scoring routes genuine edge cases to human review." },
+  { k: "140 → 20", t: "Manual labeling hours per cycle", d: "Agents handle the clear cases. Humans handle genuine ambiguity. The review queue gets smaller each run." },
+  { k: "200M+", t: "Amazon ASINs matched", d: "Via the Channel Matching Agent. Clean GTINs, canonical brands, valid taxonomy — all prerequisite to matching at that scale." },
 ] as const;
 
 const caseStudies = [
   {
     industry: "HVAC Distribution",
-    t: "Brand clustering and dedupe across a fragmented supplier network",
-    d: "Catalog Agents normalized brand names, collapsed duplicate SKUs, and mapped 40,000+ products to a consistent taxonomy—enabling clean channel syndication for the first time.",
+    customer: "Voomi Supply",
+    t: "1M+ SKUs. Hundreds of suppliers. No manual review loop.",
+    d: "Voomi Supply's catalog spans hundreds of HVAC and industrial suppliers — each with different export formats, each changing over time. Catalog Agents normalized brand names across every supplier variant, matched 200M+ Amazon ASINs, and mapped the full catalog to a consistent taxonomy. Publish time dropped ~85%. The manual VA review workflow that previously processed every incoming SKU was replaced entirely.",
   },
   {
-    industry: "Global E-commerce",
-    t: "Structured product data across 1,000+ categories in 80+ languages",
-    d: "Replaced a manual annotation pipeline with continuous agent evaluation, reducing time-to-live on new SKUs and cutting downstream errors across all regional channels.",
+    industry: "Commerce Intelligence",
+    customer: "Profitero / Publicis Groupe",
+    t: "1,500+ marketplaces, 80+ languages, labeling hours cut from 140 to 20.",
+    d: "Profitero runs catalog quality analysis across 1,500+ retailer sites globally. Catalog Agents handled attribute extraction at that scale — high-confidence extractions went straight to output; genuine ambiguities went to human review. Manual labeling dropped from 140 hours to around 20 per cycle, and the queue got smaller each run as the agents improved on familiar product types.",
   },
 ] as const;
 
 const faqs = [
   {
     q: "Is this just enrichment?",
-    a: "No. Catalog Agents continuously evaluate and correct catalogs over time—not a one-time pass.",
+    a: "No. One-time enrichment fixes your catalog as it stands today. Three months later, you've added new suppliers, existing suppliers have updated their templates, and the drift has started again. Catalog Agents run on every ingest — so when a new vendor feed arrives, normalization, taxonomy mapping, and attribute extraction run automatically. The catalog doesn't degrade back to its previous state because the agents are running continuously, not on a project schedule.",
   },
   {
     q: "Do you replace our PIM?",
-    a: "No. Catalog Agents sit upstream and improve the data flowing into your PIM and channels.",
+    a: "No — and that's intentional. Catalog Agents sit upstream of your PIM and improve the data flowing into it. Your PIM stays as the system of record; it just receives cleaner, more complete data than it did before. The stack is: supplier feeds → Catalog Agents (extraction, validation, normalization) → PIM (master record) → channels. Each layer does its own job.",
+  },
+  {
+    q: "How does human review work?",
+    a: "Every agent output includes a confidence score. High-confidence extractions — where the agent found clear, unambiguous signals — go directly to output. Low-confidence cases, where signals conflicted or the agent couldn't resolve the meaning, route to a review queue. The queue contains only genuinely uncertain records, not every new product. Over time, as the agents process more of your catalog, familiar product types require less and less human intervention.",
   },
   {
     q: "What data sources do you support?",
-    a: "Vendor feeds, PDFs, spreadsheets, images, and unstructured text.",
+    a: "Vendor EDI feeds, CSVs, PDFs, supplier spec sheets, product images, and unstructured text fields. The agents handle the actual formats suppliers send — not a normalized version of them. If your supplier embeds dimensions in a free-text title field, the agent reads the title.",
   },
   {
     q: "How long does deployment take?",
-    a: "Typically a few weeks, depending on data sources and scale.",
-  },
-  {
-    q: "Is this safe for production catalogs?",
-    a: "Yes. Every output is designed to be reviewed, audited, and shipped. Nothing changes without a traceable reason.",
+    a: "Typically two to four weeks, depending on the number of data sources and the complexity of your channel requirements. The first pass surfaces your biggest catalog defects immediately — so you're seeing actionable findings early, not at the end of a long integration cycle.",
   },
 ] as const;
 
@@ -92,8 +94,8 @@ export default function EcommerceAgentsPage() {
     <main className="pt-16">
       <PageHero
         kicker="Catalog Agents"
-        title="Enrich, trust, and syndicate your catalog."
-        description="AI agents that continuously evaluate, correct, and enhance product catalogs using structured reasoning—not one-time enrichment."
+        title="The catalog you have isn't the catalog AI agents need."
+        description="Most product data was written for human readers. AI shopping agents need structured attributes, canonical brand names, valid taxonomy, and zero placeholder values — across every SKU, continuously. Catalog Agents provide that layer."
       >
         <ButtonLink href="#contact" variant="primaryLg">
           Book a demo
@@ -204,10 +206,10 @@ export default function EcommerceAgentsPage() {
                 The problem
               </p>
               <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                Catalog cleanup is a treadmill
+                The fix you ran last quarter is already broken.
               </h2>
               <p className="mt-3 text-slate-600">
-                Every team runs it. Nobody gets off it. The data breaks faster than anyone can fix it manually.
+                New supplier feeds. Updated templates. Revised taxonomies. Catalog quality degrades continuously — the only way to keep up is a system that runs continuously too.
               </p>
             </div>
           </Reveal>
@@ -338,9 +340,12 @@ export default function EcommerceAgentsPage() {
             {caseStudies.map((c, i) => (
               <Reveal key={c.industry} delay={0.06 * i}>
                 <div className="card h-full p-7">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-blue-50/60 px-3 py-1 text-[11px] font-medium text-blue-700">
-                    {c.industry}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-blue-50/60 px-3 py-1 text-[11px] font-medium text-blue-700">
+                      {c.industry}
+                    </span>
+                    <span className="text-[11px] font-medium text-slate-500">{c.customer}</span>
+                  </div>
                   <p className="mt-4 text-base font-semibold text-slate-900">{c.t}</p>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{c.d}</p>
                 </div>
@@ -390,10 +395,10 @@ export default function EcommerceAgentsPage() {
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                If you want catalogs your team can trust, you need continuous evaluation.
+                Catalog quality isn't a project. It's a continuous output.
               </h2>
               <p className="mt-3 text-slate-600">
-                Not more cleanup tools.
+                Cleanup tools fix the past. Catalog Agents keep pace with what's coming in.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <ButtonLink href="/#contact" variant="primaryLg">
