@@ -22,7 +22,7 @@ const dimensions = [
   {
     n: "03",
     title: "Taxonomy Accuracy",
-    desc: "Validate category classifications against Amazon, Google, and distributor taxonomies. Wrong nodes mean wrong placements and suppressed listings.",
+    desc: "Validate category classifications against Amazon, Google, and distributor taxonomies. JCPenney's Mirakl marketplace launch required taxonomy alignment across hundreds of brands — a category correct at onboarding lands in the wrong place after a quarterly taxonomy revision, with no alert from the PIM.",
   },
   {
     n: "04",
@@ -105,7 +105,7 @@ export default function CatalogReadinessPage() {
                 Amazon and Walmart have required complete attributes for years. That bar is table stakes. The new bar is whether an AI shopping agent — ChatGPT, Perplexity, Google AI Overview — can interpret your product, match it to a buyer&apos;s query, and recommend it with confidence. If your attributes are missing or your compliance flags are wrong, the agent skips your SKU entirely. There is no rejection notice. The product just doesn&apos;t show up.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                The evidence shows up in the data. Across 1M+ SKUs matched against 200M+ Amazon ASINs, the products that moved fastest shared three things: complete multipack signals, accurate hazmat classification, and clean channel matching — not the most marketing copy. Catalog Readiness scores all of that before the listing goes live.
+                Voomi Supply saw this directly. Across 1M+ SKUs matched against 200M+ Amazon ASINs, the products that moved fastest shared three things: complete multipack signals, accurate hazmat classification, and clean channel matching — not the most marketing copy. Catalog Readiness scores all of that before the listing goes live.
               </p>
             </div>
           </Reveal>

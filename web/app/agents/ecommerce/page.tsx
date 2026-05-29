@@ -24,7 +24,7 @@ const problems = [
   {
     n: "03",
     t: "Channel rejections don't tell you what's wrong",
-    p: "Amazon, Google Shopping, and Mirakl reject listings without specifying why. A team member traces the failure back to a missing field, a wrong taxonomy node, or a noncompliant value — then fixes it manually. At 50K+ SKUs, this is a permanent ops cost, not a one-time project.",
+    p: "Amazon, Google Shopping, and Mirakl reject listings without specifying why. JCPenney's Mirakl marketplace launch required taxonomy alignment across hundreds of brands before a single listing could go live — each rejection traced back to a wrong node, a missing field, or a value the channel couldn't parse.",
   },
   {
     n: "04",

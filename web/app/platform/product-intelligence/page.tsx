@@ -151,6 +151,9 @@ export default function ProductIntelligencePage() {
                 <p className="mt-4 text-slate-600 leading-relaxed">
                   The feedback loop runs in both directions: Catalog Agents enriches your product data. Product Intelligence surfaces which enrichment changes moved the needle on conversion. The next enrichment cycle is more targeted because you know which attributes actually matter for each category.
                 </p>
+                <p className="mt-4 text-slate-600 leading-relaxed">
+                  Profitero uses this layer to run catalog quality analysis across 1,500+ retailer sites globally — the intelligence is only as useful as the enrichment underneath it. When the enrichment is accurate and current, the signals are too.
+                </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
                     href="/catalog-agents"
