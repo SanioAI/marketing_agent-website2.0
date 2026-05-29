@@ -70,7 +70,7 @@ export default function CatalogReadinessPage() {
                 Attributes. Compliance. Content.
               </h2>
               <p className="mt-3 text-slate-600">
-                Most catalogs fail on all three simultaneously — and the failures compound. A correct attribute won't matter if the taxonomy is wrong. Complete content won't save a listing with an unresolved hazmat flag.
+                Most catalogs fail on all three simultaneously — and the failures compound. A correct attribute won&apos;t matter if the taxonomy is wrong. Complete content won&apos;t save a listing with an unresolved hazmat flag.
               </p>
             </div>
           </Reveal>
