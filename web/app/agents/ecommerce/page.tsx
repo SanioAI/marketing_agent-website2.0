@@ -395,10 +395,10 @@ export default function EcommerceAgentsPage() {
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-                Catalog quality isn't a project. It's a continuous output.
+                Catalog quality isn&apos;t a project. It&apos;s a continuous output.
               </h2>
               <p className="mt-3 text-slate-600">
-                Cleanup tools fix the past. Catalog Agents keep pace with what's coming in.
+                Cleanup tools fix the past. Catalog Agents keep pace with what&apos;s coming in.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <ButtonLink href="/#contact" variant="primaryLg">
