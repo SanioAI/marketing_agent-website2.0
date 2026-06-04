@@ -1,5 +1,5 @@
 ---
-title: "The Agentic Commerce Readiness Checklist: 3 Buckets, 25 Checks"
+title: "The Agentic Commerce Readiness Checklist: 5 Dimensions, 25 Checks"
 description: "A practical checklist for assessing whether your catalog can be acted on by AI shopping agents. Each check maps to a specific failure mode at retrieval, filter, comparison, or transaction time."
 tag: "Consideration"
 readTime: "9 min read"
