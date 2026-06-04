@@ -28,16 +28,16 @@ That's not a PIM failure — that's a scope problem. A PIM is a system of record
 
 | Capability | PIM | Catalog Agents |
 |---|---|---|
-| Store product records | ✅ Core function | — |
-| Track field completeness | ✅ | — |
-| Extract attributes from unstructured text | — | ✅ |
-| Classify products into marketplace taxonomies | Basic rules only | ✅ Trained per channel |
-| Detect hazmat / compliance flags | — | ✅ |
-| Match SKUs to Amazon ASINs / UPCs | — | ✅ |
-| Normalize brand names across supplier feeds | Manual or rules | ✅ Continuous |
-| Build product relationships (substitutes, fitment) | — | ✅ |
-| Run continuously on new supplier data | — | ✅ |
-| Flag for human review when confidence is low | Workflow tools | ✅ Built-in |
+| Store product records | Yes — core function | — |
+| Track field completeness | Yes | — |
+| Extract attributes from unstructured text | — | Yes |
+| Classify products into channel taxonomies | Basic rules only | Yes — trained per channel |
+| Detect hazmat and compliance flags | — | Yes |
+| Match products to channel listings and global identifiers | — | Yes |
+| Normalize brand names across supplier feeds | Manual or rules | Yes — continuous |
+| Build product relationships (substitutes, fitment) | — | Yes |
+| Run continuously on new supplier data | — | Yes |
+| Flag for human review when confidence is low | Workflow tools | Yes — built-in |
 
 ## Where PIM breaks down
 

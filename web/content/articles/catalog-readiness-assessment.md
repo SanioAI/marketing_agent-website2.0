@@ -1,6 +1,6 @@
 ---
 title: "How to Run a Catalog Readiness Assessment (Before Your Channel Does)"
-description: "A step-by-step framework for scoring your catalog across the five readiness dimensions — structured identity, taxonomy, compliance, attribute completeness, and content quality — at the SKU level."
+description: "A step-by-step framework for scoring your catalog across three readiness buckets — Discovery, Compliance, and Content — at the product level, so you know what to fix before it costs you a listing or a recommendation."
 tag: "Decision"
 readTime: "8 min read"
 pillar: "Catalog Readiness"
@@ -20,59 +20,57 @@ relatedArticles:
     href: "/resources/articles/what-are-catalog-agents"
 ---
 
-Amazon runs a catalog assessment every time you submit a listing. Walmart runs one. Your AI shopping agent runs one every time a buyer asks a question. None of them tell you the results in advance.
+Every channel that receives your catalog data runs an assessment on it. Marketplaces validate taxonomy, attributes, and compliance signals before a listing goes live. AI shopping agents — ChatGPT, Gemini, Perplexity — filter products against structured constraints every time a buyer asks a question. None of them tell you the results in advance.
 
-A catalog readiness assessment gives you those results before the channel does — so you're fixing gaps, not recovering from rejections.
+A catalog readiness assessment gives you those results first — so you're fixing gaps, not recovering from rejections you didn't see coming.
 
 ## What a readiness assessment is not
 
 It's not a PIM audit. A PIM audit tells you which fields are filled. A readiness assessment tells you whether the values in those fields are *correct*, *channel-appropriate*, and *sufficient for AI agent decision-making*.
 
-It's not a one-time project. Your catalog changes constantly — new suppliers, product updates, taxonomy revisions. A single assessment gives you a snapshot. What you want is continuous scoring, so gaps surface before they become rejections.
+It's not a one-time project. Your catalog changes constantly — new suppliers, product updates, taxonomy revisions, new compliance rules. A single assessment gives you a snapshot. What you want is continuous scoring, so gaps surface before they become rejections.
 
-## Step 1: Define your scoring dimensions
+## Step 1: Define your scoring buckets
 
-Score every SKU across these five dimensions. Each one maps to a specific failure mode.
+Score every product across three buckets. Each maps to a specific failure mode.
 
-| Dimension | What it catches | Priority |
+| Bucket | What it catches | Priority |
 |---|---|---|
-| Structured identity | ASIN matching failures, brand filter misses, GTIN errors | Critical — fix first |
-| Channel taxonomy alignment | Browse node rejections, wrong category placement | Critical — fix first |
-| Compliance signals | Hazmat flags, multipack errors, restricted product issues | Critical — fix first |
-| Attribute completeness | AI agent filter failures, missing specs for category | High |
-| Content quality | Thin descriptions, placeholder values, missing use cases | Medium |
+| Discovery | Brand normalization failures, wrong taxonomy, missing identifiers, incomplete specs, missing compatibility data | Fix first — blocks publishing and AI discoverability |
+| Compliance | Hazmat flags, multipack errors, restricted product issues, missing certifications | Fix first — triggers post-listing rejections and suspensions |
+| Content | Thin descriptions, placeholder values, missing use cases, inconsistent specs | Fix after Discovery and Compliance — affects AI recommendation quality |
 
-Fix Dimensions 1–3 before investing in 4–5. A product with perfect attribute completeness still gets suppressed if its GTIN is wrong.
+Fix Discovery and Compliance before investing in Content. A product with a compelling, specific description still gets suppressed if its taxonomy is wrong or its hazmat status is unresolved.
 
 ## Step 2: Sample your catalog strategically
 
-Don't start with a random 1% sample. Start with the SKUs most likely to have readiness gaps:
+Don't start with a random 1% sample. Start with the products most likely to have readiness gaps:
 
 - **New supplier additions** — new suppliers bring new formatting inconsistencies
-- **High-velocity SKUs** — failures here cost more revenue
-- **Recently suppressed listings** — the rejection notice tells you which dimension failed
-- **Cross-border or multi-channel products** — taxonomy and compliance requirements differ by market
+- **High-velocity products** — failures here cost more revenue
+- **Recently suppressed listings** — the rejection notice tells you which bucket failed
+- **Products with regulated characteristics** — hazmat, age-restricted, or compliance-sensitive items are the highest-risk if missed
 
-For industrial and HVAC catalogs, the highest-gap SKUs are typically products with complex compatibility requirements, multipack configurations, and regulated materials. Prioritizing those first concentrates improvement where the revenue impact is largest.
+For industrial and HVAC catalogs, the highest-gap products are typically those with complex compatibility requirements (does this fitting work with 2-inch copper pipe?), multipack configurations, and regulated materials (flammables, corrosives, pressurized containers). Prioritizing those first concentrates improvement where the revenue and compliance impact is largest.
 
-## Step 3: Score at the SKU level
+## Step 3: Score at the product level
 
-Aggregate scores hide the problem. A catalog that's "92% ready" means 80,000 failing SKUs if your catalog has 1M products.
+Aggregate scores hide the problem. A catalog that's "92% ready" means 80,000 failing products if your catalog has 1 million SKUs.
 
-Score every SKU individually across each dimension. Output a prioritized list sorted by:
+Score every product individually across each bucket. Output a prioritized list sorted by:
 
-1. **Severity** — compliance and identity failures are blocking; content gaps are not
-2. **Revenue impact** — a failing SKU on a high-velocity product costs more than a failing SKU on a slow mover
-3. **Fix complexity** — some gaps take seconds (wrong GTIN format), some require structured enrichment (extract 15 attributes from an unstructured description)
+1. **Severity** — compliance and discovery failures are blocking; content gaps are not
+2. **Revenue impact** — a failing product on a high-velocity item costs more than a failing product on a slow mover
+3. **Fix complexity** — some gaps take seconds (wrong identifier format), some require structured enrichment (extract 15 attributes from an unstructured description)
 
-### What a SKU-level readiness score looks like
+### What a product-level readiness score looks like
 
-| SKU | Identity | Taxonomy | Compliance | Attributes | Content | Overall | Action |
-|---|---|---|---|---|---|---|---|
-| HVAC-4421 | ✅ | ✅ | ⚠️ Hazmat unflagged | ✅ | ✅ | 80% | Compliance Agent |
-| BOLT-7892 | ⚠️ Brand = "OEM" | ✅ | ✅ | ⚠️ Missing dimensions | ✅ | 60% | Brand + Attribute Agent |
-| FILT-0034 | ✅ | ⚠️ Wrong browse node | ✅ | ✅ | ⚠️ Placeholder desc | 60% | Taxonomy + Content |
-| CHEM-1102 | ✅ | ✅ | ❌ No hazmat flag | ⚠️ Missing safety data | ❌ | 30% | Compliance Agent — urgent |
+| Product | Discovery | Compliance | Content | Overall | Action |
+|---|---|---|---|---|---|
+| HVAC-4421 | Pass | Hazmat unflagged | Pass | 67% | Compliance Agent |
+| BOLT-7892 | Brand = "OEM", missing dimensions | Pass | Pass | 60% | Brand + Attribute Agent |
+| FILT-0034 | Wrong category | Pass | Placeholder description | 60% | Taxonomy + Content Agent |
+| CHEM-1102 | Pass | No hazmat flag, missing safety data | Pass | 33% | Compliance Agent — urgent |
 
 ## Step 4: Route defects to the right agent
 
@@ -82,19 +80,19 @@ Once you have the scored list, route each defect type to the agent that fixes it
 |---|---|
 | Missing or wrong attributes | Attribute Agent |
 | Wrong or missing taxonomy | Taxonomy Agent |
-| Brand name variants / duplicates | Brand Normalization Agent |
-| Missing GTIN / ASIN match failure | Channel Matching Agent |
+| Brand name variants or duplicates | Brand Normalization Agent |
+| Missing global identifier or channel listing match failure | Channel Matching Agent |
 | Hazmat, multipack, compliance flags | Compliance Agent |
-| Missing fitment / compatibility data | Product Graph Agent |
+| Missing compatibility or fitment data | Product Graph Agent |
 
-Instead of manually fixing each defect, you route the scored output into the enrichment pipeline. The agents process the flagged SKUs, return enriched records, and your team reviews and approves the changes before they go live. The review queue contains the edge cases — not the routine work.
+Instead of manually fixing each defect, you route the scored output into the enrichment pipeline. The agents process the flagged products, return enriched records, and your team reviews and approves the changes before anything goes live. The review queue contains the genuine edge cases — not the routine work.
 
 ## Step 5: Establish continuous monitoring
 
 A readiness assessment is most valuable when it runs continuously — not on a quarterly schedule.
 
-Set thresholds for each dimension. When a SKU drops below the threshold — because a supplier updated the record, a taxonomy changed, or a new compliance rule went into effect — it surfaces automatically for remediation.
+Set thresholds for each bucket. When a product drops below the threshold — because a supplier updated the record, a taxonomy changed, or a new compliance rule went into effect — it surfaces automatically for remediation.
 
-The output isn't a report. It's a queue. A prioritized list of specific SKUs with specific defects that specific agents can fix. That's the difference between a readiness audit and a readiness system.
+The output isn't a report. It's a queue. A prioritized list of specific products with specific defects that specific agents can fix. That's the difference between a readiness audit and a readiness system.
 
 Run a free assessment → [Catalog Readiness](/catalog-readiness)

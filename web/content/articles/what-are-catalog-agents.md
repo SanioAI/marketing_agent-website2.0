@@ -40,8 +40,8 @@ Most catalog problems aren't caused by bad products. They're caused by product d
 |---|---|---|
 | **Attribute Agent** | Extracts 10–15+ structured attributes per SKU from unstructured text and raw supplier feeds | AI shopping agents skip your product — no structured data to match against filter queries |
 | **Taxonomy Agent** | Maps every SKU to the correct category across Amazon, Google, Walmart, Mirakl | Wrong browse node = listing suppressed or buried outside the category a buyer is searching |
-| **Brand Normalization Agent** | Resolves brand name variants, manufacturer aliases, and supplier inconsistencies | ASIN matching fails, brand filters return incomplete results, duplicate listings appear |
-| **Channel Matching Agent** | Matches your SKUs to ASINs, UPCs, and channel-specific identifiers | Syndication breaks, channel compliance checks can't run, matching fails at submission |
+| **Brand Normalization Agent** | Resolves brand name variants, manufacturer aliases, and supplier inconsistencies | Channel listing match fails, brand filters return incomplete results, duplicate listings appear |
+| **Channel Matching Agent** | Matches your products to channel listings, global identifiers (UPC/EAN/GTIN), and marketplace records | Syndication breaks, channel compliance checks can't run, matching fails at submission |
 | **Compliance Agent** | Detects hazmat classifications, multipack mismatches, and regulatory flags before publishing | Post-listing rejections, channel suspensions, liability exposure on products already live |
 | **Product Graph Agent** | Builds substitutes, accessories, OEM part numbers, and fitment relationships | Compatibility filters fail, AI agents can't make safe substitution recommendations |
 
