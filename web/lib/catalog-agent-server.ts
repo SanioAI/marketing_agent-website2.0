@@ -21,13 +21,18 @@ export function expandPathTemplate(template: string, jobId: string): string {
 }
 
 export function backendHeaders(): HeadersInit {
+  const headers: Record<string, string> = {};
+  const apiKey = process.env.CATALOG_AGENT_API_KEY;
+  if (apiKey) {
+    headers["X-API-Key"] = apiKey;
+  }
   const user = process.env.CATALOG_AGENT_BASIC_AUTH_USER;
   const pass = process.env.CATALOG_AGENT_BASIC_AUTH_PASSWORD;
   if (user && pass) {
     const token = Buffer.from(`${user}:${pass}`, "utf8").toString("base64");
-    return { Authorization: `Basic ${token}` };
+    headers["Authorization"] = `Basic ${token}`;
   }
-  return {};
+  return headers;
 }
 
 export function getBackendUploadPath(): string {
