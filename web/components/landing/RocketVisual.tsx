@@ -111,7 +111,7 @@ export function RocketVisual() {
   }, [reduce]);
 
   return (
-    <div className="relative mx-auto w-full max-w-[480px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] via-[#040d1a] to-[#020810] shadow-2xl shadow-blue-950/60">
+    <div className="relative mx-auto w-full max-w-[480px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] via-[#040d1a] to-[#020810] shadow-2xl shadow-ink-deep/60">
       {/* Chrome */}
       <div className="flex items-center justify-between border-b border-white/8 px-5 py-3.5">
         <div className="flex items-center gap-2">
@@ -144,14 +144,14 @@ export function RocketVisual() {
           <defs>
             {/* Central beam glow */}
             <radialGradient id="beamGlow" cx="50%" cy="100%" r="80%">
-              <stop offset="0%" stopColor="#2563eb" stopOpacity="0.5" />
-              <stop offset="60%" stopColor="#0ea5e9" stopOpacity="0.1" />
-              <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
+              <stop offset="0%" stopColor="var(--lime)" stopOpacity="0.5" />
+              <stop offset="60%" stopColor="var(--lime-dim)" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="var(--lime-dim)" stopOpacity="0" />
             </radialGradient>
             <linearGradient id="beamLine" x1="0" y1="1" x2="0" y2="0">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.9" />
-              <stop offset="70%" stopColor="#2563eb" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#2563eb" stopOpacity="0" />
+              <stop offset="0%" stopColor="oklch(0.82 0.14 225)" stopOpacity="0.9" />
+              <stop offset="70%" stopColor="var(--lime)" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="var(--lime)" stopOpacity="0" />
             </linearGradient>
             <filter id="beamBlur">
               <feGaussianBlur stdDeviation="12" />
@@ -222,7 +222,7 @@ export function RocketVisual() {
               cy={CH - 20}
               r={20}
               fill="none"
-              stroke="#2563eb"
+              stroke="var(--lime)"
               strokeWidth="0.8"
               initial={{ r: 20, opacity: 0.5 }}
               animate={reduce ? {} : { r: [20, 160], opacity: [0.4, 0] }}
@@ -264,7 +264,7 @@ export function RocketVisual() {
       <div className="flex items-center justify-between border-t border-white/8 px-5 py-3.5">
         <div className="flex items-center gap-2">
           <motion.span
-            className="h-1.5 w-1.5 rounded-full bg-blue-400"
+            className="h-1.5 w-1.5 rounded-full bg-lime"
             animate={reduce ? {} : { opacity: [1, 0.3, 1] }}
             transition={{ duration: 0.9, repeat: Infinity }}
           />
@@ -273,7 +273,7 @@ export function RocketVisual() {
             <span className="font-semibold text-slate-300">40,312</span> records/hr
           </span>
         </div>
-        <span className="text-xs font-semibold text-blue-400">Paladio.ai</span>
+        <span className="text-xs font-semibold text-lime">Paladio.ai</span>
       </div>
     </div>
   );

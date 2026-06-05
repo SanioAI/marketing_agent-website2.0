@@ -70,7 +70,7 @@ export default function ProductIntelligencePage() {
       />
 
       {/* Capabilities */}
-      <section className="gradient-surface border-t border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-line/60 py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -78,7 +78,7 @@ export default function ProductIntelligencePage() {
                 <span className="dot" aria-hidden />
                 What it surfaces
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="font-display heading-section text-surface">
                 Pricing. Reviews. Inventory. Sales.
               </h2>
               <p className="mt-3 text-slate-600">
@@ -110,7 +110,7 @@ export default function ProductIntelligencePage() {
                 <span className="dot" aria-hidden />
                 Decisions it powers
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="font-display heading-section text-surface">
                 Not dashboards. Decisions.
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
@@ -133,7 +133,7 @@ export default function ProductIntelligencePage() {
       </section>
 
       {/* Built on enriched data */}
-      <section className="gradient-surface border-t border-b border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-b border-line/60 py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -142,7 +142,7 @@ export default function ProductIntelligencePage() {
                   <span className="dot" aria-hidden />
                   The feedback loop
                 </p>
-                <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                <h2 className="font-display heading-section text-surface">
                   Intelligence is only as good as the data underneath it
                 </h2>
                 <p className="mt-4 text-slate-600 leading-relaxed">
@@ -157,7 +157,7 @@ export default function ProductIntelligencePage() {
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
                     href="/catalog-agents"
-                    className="inline-flex h-11 items-center justify-center rounded-2xl bg-[#2563eb] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d4ed8]"
+                    className="inline-flex h-11 items-center justify-center rounded-2xl bg-[var(--lime)] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--lime-dim)]"
                   >
                     See Catalog Agents →
                   </a>
@@ -184,9 +184,9 @@ export default function ProductIntelligencePage() {
                     "Personalization tag export for rec engines",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-paper-dim">
                         <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden>
-                          <path d="M1 4L3.5 6.5L9 1" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M1 4L3.5 6.5L9 1" stroke="var(--lime)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
                       <span className="text-sm text-slate-700">{item}</span>

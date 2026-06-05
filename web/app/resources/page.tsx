@@ -43,7 +43,7 @@ export default function ResourcesPage() {
                 <span className="dot" aria-hidden />
                 Case studies
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Real workflows, measurable change
               </h2>
               <p className="mt-3 text-slate-600">
@@ -60,7 +60,7 @@ export default function ResourcesPage() {
                 >
                   <div className="flex items-start justify-between gap-3">
                     <p className="text-lg font-semibold text-slate-900">{x.t}</p>
-                    <span className="shrink-0 rounded-full border border-blue-200/80 bg-blue-50/80 px-2.5 py-0.5 text-[11px] font-medium text-blue-800">
+                    <span className="shrink-0 rounded-full border border-line/80 bg-paper-dim/80 px-2.5 py-0.5 text-[11px] font-medium text-ink-deep">
                       {x.status}
                     </span>
                   </div>
@@ -72,7 +72,7 @@ export default function ResourcesPage() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-4 text-sm font-medium text-blue-700 group-hover:gap-2">Read case study →</p>
+                  <p className="mt-4 text-sm font-medium text-ink group-hover:gap-2">Read case study →</p>
                 </Link>
               </Reveal>
             ))}
@@ -80,7 +80,7 @@ export default function ResourcesPage() {
         </Container>
       </section>
 
-      <section id="blog" className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section id="blog" className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
                 <span className="dot" aria-hidden />
                 Blog
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Notes from the field
               </h2>
               <p className="mt-3 text-slate-600">
@@ -109,12 +109,12 @@ export default function ResourcesPage() {
                       {!x.slug ? " · soon" : ""}
                     </span>
                   </div>
-                  <p className="mt-4 text-base font-semibold leading-snug text-slate-900 group-hover:text-blue-800">
+                  <p className="mt-4 text-base font-semibold leading-snug text-slate-900 group-hover:text-ink-deep">
                     {x.t}
                   </p>
                   <p className="mt-2 flex-1 text-sm text-slate-600">{x.p}</p>
                   {x.slug ? (
-                    <p className="mt-4 text-sm font-medium text-blue-700">Read post →</p>
+                    <p className="mt-4 text-sm font-medium text-ink">Read post →</p>
                   ) : null}
                 </>
               );
@@ -123,7 +123,7 @@ export default function ResourcesPage() {
                   {x.slug ? (
                     <Link
                       href={`/resources/blog/${x.slug}`}
-                      className="group card-soft flex h-full flex-col p-6 transition hover:border-blue-200/60"
+                      className="group card-soft flex h-full flex-col p-6 transition hover:border-line/60"
                     >
                       {inner}
                     </Link>

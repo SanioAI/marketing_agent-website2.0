@@ -15,7 +15,7 @@ export function ContactSection() {
   const canSend = status !== "sending" && email.trim().length > 3 && email.includes("@");
 
   return (
-    <section id="contact" className="border-t border-slate-200/60 gradient-surface py-20 sm:py-24">
+    <section id="contact" className="border-t border-line/60 gradient-surface py-20 sm:py-24">
       <Container>
         <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-start">
           <Reveal>
@@ -24,15 +24,15 @@ export function ContactSection() {
                 <span className="dot" aria-hidden />
                 Contact
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Talk to Paladio.ai
               </h2>
-              <p className="mt-3 text-pretty text-slate-600 sm:text-lg">
+              <p className="section-lede mt-6 text-pretty">
                 Share a few details and we’ll follow up to schedule a walkthrough.
               </p>
-              <p className="mt-5 text-sm text-slate-500">
+              <p className="mt-5 text-sm text-surface-muted">
                 Prefer email?{" "}
-                <a className="font-medium text-blue-700 hover:text-blue-900" href="mailto:demo@paladio.ai">
+                <a className="font-medium text-ink hover:text-ink-deep" href="mailto:demo@paladio.ai">
                   demo@paladio.ai
                 </a>
               </p>
@@ -67,27 +67,23 @@ export function ContactSection() {
               >
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                      Name
-                    </label>
+                    <label className="field-label">Name</label>
                     <input
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       disabled={status === "sending" || status === "sent"}
-                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      className="field-input"
                       placeholder="Your name"
                       autoComplete="name"
                     />
                   </div>
                   <div>
-                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                      Company
-                    </label>
+                    <label className="field-label">Company</label>
                     <input
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
                       disabled={status === "sending" || status === "sent"}
-                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      className="field-input"
                       placeholder="Your company"
                       autoComplete="organization"
                     />
@@ -95,14 +91,12 @@ export function ContactSection() {
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                      Email
-                    </label>
+                    <label className="field-label">Email</label>
                     <input
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       disabled={status === "sending" || status === "sent"}
-                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      className="field-input"
                       placeholder="you@company.com"
                       autoComplete="email"
                       inputMode="email"
@@ -110,14 +104,12 @@ export function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="text-xs font-medium uppercase tracking-widest text-slate-500">
-                      Phone (optional)
-                    </label>
+                    <label className="field-label">Phone (optional)</label>
                     <input
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       disabled={status === "sending" || status === "sent"}
-                      className="mt-2 h-11 w-full rounded-xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-inner shadow-slate-900/5 focus:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                      className="field-input"
                       placeholder="+1 (555) 000-0000"
                       autoComplete="tel"
                       inputMode="tel"
@@ -128,7 +120,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={!canSend}
-                    className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-gradient-to-r from-[#2563eb] via-[#0284c7] to-[#0ea5e9] px-6 text-sm font-medium text-white shadow-sm shadow-blue-900/15 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex h-12 w-full items-center justify-center rounded bg-lime px-6 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-px hover:shadow-[0_8px_24px_-8px_oklch(0.82_0.14_225/0.5)] disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     {status === "sending" ? "Sending…" : status === "sent" ? "Sent" : "Send"}
                   </button>
@@ -139,7 +131,7 @@ export function ContactSection() {
                   ) : status === "error" && errorMessage ? (
                     <p className="mt-2 text-xs text-rose-700">{errorMessage}</p>
                   ) : (
-                    <p className="mt-2 text-xs text-slate-500">
+                    <p className="mt-2 text-xs text-surface-muted">
                       We’ll use this only to respond to your request.
                     </p>
                   )}

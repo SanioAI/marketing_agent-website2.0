@@ -99,7 +99,7 @@ export function CatalogDashboard() {
   const p = PRODUCTS[active];
 
   return (
-    <div className="relative mx-auto w-full max-w-[780px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] to-[#040c18] shadow-2xl shadow-blue-950/60">
+    <div className="relative mx-auto w-full max-w-[780px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] to-[#040c18] shadow-2xl shadow-ink-deep/60">
       {/* Window chrome */}
       <div className="flex items-center justify-between border-b border-white/8 px-5 py-3">
         <div className="flex items-center gap-2">
@@ -142,7 +142,7 @@ export function CatalogDashboard() {
                     ? "bg-emerald-500/15 text-emerald-400"
                     : item.status === "review"
                     ? "bg-amber-500/15 text-amber-400"
-                    : "bg-blue-500/15 text-blue-400"
+                    : "bg-paper-dim0/15 text-lime"
                 }`}
               >
                 {item.status === "done" ? "✓" : item.status === "review" ? "!" : "⟳"}
@@ -201,7 +201,7 @@ export function CatalogDashboard() {
                 <p className="text-xs font-semibold text-slate-200 leading-snug">{p.clean}</p>
                 <p className="mt-1 text-[11px] text-slate-500">{p.cleanCat}</p>
                 <div className="mt-2.5 text-emerald-400">
-                  <ConfBar pct={p.cleanConf} color="bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]" />
+                  <ConfBar pct={p.cleanConf} color="bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]" />
                 </div>
                 <ul className="mt-3 space-y-1">
                   {p.fixes.map((x) => (
@@ -222,7 +222,7 @@ export function CatalogDashboard() {
                   onClick={() => setActive(i)}
                   className={`h-1 rounded-full transition-all duration-300 ${
                     i === active
-                      ? "w-6 bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
+                      ? "w-6 bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]"
                       : "w-1.5 bg-white/15"
                   }`}
                 />
@@ -248,7 +248,7 @@ export function CatalogDashboard() {
             <span className="font-semibold text-emerald-400">94.2%</span>
           </span>
         </div>
-        <span className="text-[11px] font-semibold text-blue-400">Paladio.ai</span>
+        <span className="text-[11px] font-semibold text-lime">Paladio.ai</span>
       </div>
     </div>
   );

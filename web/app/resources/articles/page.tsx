@@ -49,7 +49,7 @@ export default function ArticlesPage() {
         description="What it takes for your catalog to survive AI-mediated discovery — and the agents that get it there."
       />
 
-      <section className="gradient-surface border-t border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-line/60 py-16 sm:py-20">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {articles.map((a) => (
@@ -59,18 +59,18 @@ export default function ArticlesPage() {
                   className="card group flex h-full flex-col p-6 transition hover:-translate-y-1"
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center rounded-full border border-blue-200/70 bg-blue-50 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-blue-700">
+                    <span className="inline-flex items-center rounded-full border border-line/70 bg-paper-dim px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-ink">
                       {a.tag}
                     </span>
                     <span className="text-[10px] text-slate-400">{a.readTime}</span>
                   </div>
-                  <h2 className="mt-3 text-base font-semibold leading-snug text-slate-900 group-hover:text-blue-700 transition-colors">
+                  <h2 className="mt-3 text-base font-semibold leading-snug text-slate-900 group-hover:text-ink transition-colors">
                     {a.title}
                   </h2>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
                     {a.description}
                   </p>
-                  <p className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-blue-600 group-hover:gap-2 transition-all">
+                  <p className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-ink group-hover:gap-2 transition-all">
                     Read article <span aria-hidden>→</span>
                   </p>
                 </Link>

@@ -16,20 +16,20 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center bg-[#fafbfc] px-6 py-16">
+    <div className="flex min-h-dvh flex-col items-center justify-center bg-background px-6 py-16">
       <div className="max-w-md text-center">
-        <p className="text-sm font-medium text-slate-500">Something went wrong</p>
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
+        <p className="text-sm font-medium text-muted">Something went wrong</p>
+        <h1 className="heading-page mt-2 text-foreground">
           We couldn&apos;t load this page
         </h1>
-        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+        <p className="mt-3 text-sm leading-relaxed text-muted">
           Please try again. If the problem continues, refresh the page or come back in a few
           minutes.
         </p>
         <button
           type="button"
           onClick={() => reset()}
-          className="mt-8 inline-flex h-11 items-center justify-center rounded-xl bg-slate-900 px-6 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800"
+          className="mt-8 inline-flex h-11 items-center justify-center rounded bg-lime px-6 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-px"
         >
           Try again
         </button>

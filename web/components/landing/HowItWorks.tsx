@@ -21,7 +21,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="border-t border-slate-200/60 gradient-surface py-20 sm:py-24" id="how">
+    <section className="border-t border-line/60 gradient-surface py-20 sm:py-24" id="how">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -29,10 +29,10 @@ export function HowItWorks() {
               <span className="dot" aria-hidden />
               Workflow
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="heading-section text-surface">
               A straight line from data to revenue
             </h2>
-            <p className="mt-3 text-slate-600">
+            <p className="section-lede mx-auto mt-6">
               Three simple moves. No 40-slide transformation plan.
             </p>
           </div>
@@ -41,9 +41,9 @@ export function HowItWorks() {
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={0.04 * i}>
               <div className="card card-hover h-full p-6">
-                <p className="font-display text-xs font-semibold text-blue-700">{s.n}</p>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">{s.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.s}</p>
+                <p className="font-mono text-[11px] font-medium tracking-[0.18em] text-ink">{s.n}</p>
+                <h3 className="heading-card mt-2 text-surface">{s.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-surface-muted">{s.s}</p>
               </div>
             </Reveal>
           ))}

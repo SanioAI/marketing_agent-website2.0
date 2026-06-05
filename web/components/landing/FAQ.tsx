@@ -34,20 +34,20 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 
   return (
     <motion.div
-      initial={reduce ? false : { opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduce ? false : { y: 12 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4, delay: index * 0.07 }}
-      className="border-b border-slate-200/70 last:border-0"
+      className="border-b border-line/70 last:border-0"
     >
       <button
         className="flex w-full items-start justify-between gap-4 py-5 text-left"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
       >
-        <span className="text-base font-medium text-slate-900">{faq.q}</span>
+        <span className="text-base font-medium text-surface">{faq.q}</span>
         <motion.span
-          className="mt-0.5 shrink-0 text-slate-400"
+          className="mt-0.5 shrink-0 text-surface-muted"
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.2 }}
           aria-hidden
@@ -67,7 +67,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm leading-relaxed text-slate-600">{faq.a}</p>
+            <p className="pb-5 text-sm leading-relaxed text-surface-muted">{faq.a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -77,7 +77,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 
 export function FAQ() {
   return (
-    <section className="gradient-surface border-t border-slate-200/60 py-20 sm:py-24">
+    <section className="gradient-surface border-t border-line/60 py-20 sm:py-24">
       <Container>
         <div className="mx-auto max-w-2xl">
           <Reveal>
@@ -86,12 +86,12 @@ export function FAQ() {
                 <span className="dot" aria-hidden />
                 Frequently Asked Questions
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Your questions, answered
               </h2>
             </div>
           </Reveal>
-          <div className="rounded-2xl border border-slate-200/60 bg-white px-6 sm:px-8">
+          <div className="card rounded px-6 sm:px-8">
             {faqs.map((faq, i) => (
               <FAQItem key={faq.q} faq={faq} index={i} />
             ))}

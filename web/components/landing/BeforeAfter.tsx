@@ -10,9 +10,9 @@ const highlights = [
 
 function StatusPill({ label }: { label: string }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/80 px-3 py-1 text-xs font-medium text-slate-700 shadow-sm shadow-slate-900/5">
+    <span className="inline-flex items-center gap-2 rounded-full border border-line/70 bg-paper/80 px-3 py-1 text-xs font-medium text-surface shadow-sm">
       <span
-        className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
+        className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]"
         aria-hidden
       />
       {label}
@@ -30,18 +30,18 @@ export function BeforeAfter() {
               <span className="dot" aria-hidden />
               Before & After
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="heading-section text-surface">
               The shift teams feel on day one
             </h2>
-            <p className="mt-3 text-balance text-slate-600">
+            <p className="section-lede mx-auto mt-6 text-balance">
               Same inventory. Different catalog. Clearer, safer decisions.
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <figure className="mt-10 overflow-hidden rounded-3xl border border-slate-200/70 bg-white/70 shadow-2xl shadow-slate-900/10">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200/60 bg-white/60 px-5 py-4">
+          <figure className="surface-panel mt-10 overflow-hidden rounded-[4px] shadow-2xl shadow-ink/10">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line/60 bg-paper-dim/60 px-5 py-4">
               <div className="flex flex-wrap gap-2">
                 <StatusPill label="Before" />
                 <StatusPill label="Agent working…" />

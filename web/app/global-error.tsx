@@ -8,7 +8,7 @@ export default function GlobalError({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-dvh bg-white font-sans antialiased">
+      <body className="min-h-dvh bg-background font-sans antialiased text-foreground">
         <div className="flex min-h-dvh flex-col items-center justify-center px-6">
           <div className="max-w-md text-center">
             <h1 className="text-xl font-semibold text-slate-900">Application error</h1>

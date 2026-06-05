@@ -77,12 +77,12 @@ export function FileUploadBox({
           className={`group relative flex min-h-[200px] cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-200/90 bg-white/80 px-6 py-10 text-center transition ${
             disabled
               ? "cursor-not-allowed opacity-60"
-              : "hover:border-indigo-300 hover:bg-indigo-50/30"
+              : "hover:focus:border-lime hover:bg-paper-dim/30"
           }`}
           whileHover={disabled ? undefined : { scale: 1.005 }}
           transition={{ type: "spring", stiffness: 400, damping: 28 }}
         >
-          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-600 transition group-hover:bg-indigo-100 group-hover:text-indigo-700">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-600 transition group-hover:bg-paper-dim group-hover:text-ink">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
               <path
                 strokeLinecap="round"
@@ -120,7 +120,7 @@ export function FileUploadBox({
             type="button"
             onClick={onPick}
             disabled={disabled}
-            className="text-left text-xs font-medium text-indigo-600 transition hover:text-indigo-800 disabled:opacity-50"
+            className="text-left text-xs font-medium text-ink transition hover:text-ink-deep disabled:opacity-50"
           >
             Replace file
           </button>

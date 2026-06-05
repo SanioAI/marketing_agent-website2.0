@@ -4,10 +4,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/landing/buttons";
 import { CatalogDashboard } from "@/components/landing/CatalogDashboard";
+import { AppIcon } from "@/lib/icons";
 
 export function DemoSection() {
   return (
-    <section id="demo" className="border-t border-slate-200/60 bg-white py-20 sm:py-24">
+    <section id="demo" className="gradient-surface border-t border-line/60 py-20 sm:py-24">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
@@ -15,10 +16,10 @@ export function DemoSection() {
               <span className="dot" aria-hidden />
               See it in action
             </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="heading-section text-surface">
               Watch the agent work in real time
             </h2>
-            <p className="mt-3 text-balance text-slate-600">
+            <p className="section-lede mx-auto mt-6 text-balance">
               Every product evaluated, corrected, and scored — with full reasoning behind every change.
               This is what runs in production today.
             </p>
@@ -39,8 +40,9 @@ export function DemoSection() {
             >
               Book a live walkthrough
             </ButtonLink>
-            <ButtonLink href="/agents/ecommerce" variant="secondaryLg">
-              Explore Catalog Agents →
+            <ButtonLink href="/agents/ecommerce" variant="secondaryLg" className="gap-2">
+              Explore Catalog Agents
+              <AppIcon name="ArrowRight" size={16} />
             </ButtonLink>
           </div>
         </Reveal>

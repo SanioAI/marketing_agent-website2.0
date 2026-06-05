@@ -104,15 +104,15 @@ export default function VoomiCaseStudy() {
           <Reveal>
             <Link
               href="/resources"
-              className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition"
+              className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-ink-deep transition"
             >
               ← Back to Resources
             </Link>
             <div className="flex flex-wrap items-center gap-3 mb-5">
-              <span className="rounded-full border border-blue-200/70 bg-blue-50/60 px-3 py-1 text-[11px] font-medium text-blue-700 uppercase tracking-wider">
+              <span className="rounded-full border border-line/70 bg-paper-dim/60 px-3 py-1 text-[11px] font-medium text-ink uppercase tracking-wider">
                 Case Study
               </span>
-              <span className="rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-[11px] font-medium text-slate-600 uppercase tracking-wider">
+              <span className="rounded-full border border-line/70 bg-white/70 px-3 py-1 text-[11px] font-medium text-slate-600 uppercase tracking-wider">
                 HVAC Distribution
               </span>
             </div>
@@ -128,8 +128,8 @@ export default function VoomiCaseStudy() {
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {kpis.map((k, i) => (
               <Reveal key={k.k} delay={0.06 * i}>
-                <div className="rounded-2xl border border-slate-200/60 bg-white/80 px-6 py-5 text-center shadow-sm">
-                  <p className="font-display text-3xl font-semibold text-slate-900">{k.k}</p>
+                <div className="rounded-2xl border border-line/60 bg-white/80 px-6 py-5 text-center shadow-sm">
+                  <p className="stat-value text-3xl">{k.k}</p>
                   <p className="mt-1 text-sm text-slate-500">{k.l}</p>
                 </div>
               </Reveal>
@@ -139,7 +139,7 @@ export default function VoomiCaseStudy() {
       </section>
 
       {/* Background */}
-      <section className="border-t border-slate-200/60 bg-white py-14 sm:py-16">
+      <section className="border-t border-line/60 gradient-surface py-14 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -183,7 +183,7 @@ export default function VoomiCaseStudy() {
             </div>
 
             <Reveal delay={0.1}>
-              <blockquote className="mt-8 border-l-4 border-blue-300 pl-5">
+              <blockquote className="mt-8 border-l-4 border-lime pl-5">
                 <p className="text-lg font-medium text-slate-800 italic">
                   &ldquo;Marketplace performance is constrained not by supply, but by the structure of product data.&rdquo;
                 </p>
@@ -194,7 +194,7 @@ export default function VoomiCaseStudy() {
       </section>
 
       {/* Problem */}
-      <section className="border-t border-slate-200/60 gradient-surface py-14 sm:py-16">
+      <section className="border-t border-line/60 gradient-surface py-14 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -268,7 +268,7 @@ export default function VoomiCaseStudy() {
       </section>
 
       {/* Solution */}
-      <section className="border-t border-slate-200/60 bg-white py-14 sm:py-16">
+      <section className="border-t border-line/60 gradient-surface py-14 sm:py-16">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-3xl">
@@ -296,7 +296,7 @@ export default function VoomiCaseStudy() {
                   <ul className="mt-3 space-y-1.5 text-sm text-slate-600">
                     {s.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]" aria-hidden />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]" aria-hidden />
                         {b}
                       </li>
                     ))}
@@ -316,7 +316,7 @@ export default function VoomiCaseStudy() {
                 {architecture.map((a, i) => (
                   <div
                     key={a.t}
-                    className="relative rounded-xl border border-slate-200/70 bg-gradient-to-b from-slate-50 to-white p-4 text-center"
+                    className="relative rounded-xl border border-line/70 bg-gradient-to-b from-slate-50 to-white p-4 text-center"
                   >
                     {i < architecture.length - 1 && (
                       <span className="hidden sm:block absolute -right-1.5 top-1/2 -translate-y-1/2 text-slate-300 text-lg">›</span>
@@ -332,7 +332,7 @@ export default function VoomiCaseStudy() {
       </section>
 
       {/* Results */}
-      <section className="border-t border-slate-200/60 gradient-surface py-14 sm:py-16">
+      <section className="border-t border-line/60 gradient-surface py-14 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -353,7 +353,7 @@ export default function VoomiCaseStudy() {
               {kpis.map((k, i) => (
                 <Reveal key={k.k} delay={0.06 * i}>
                   <div className="card p-6 text-center">
-                    <p className="font-display text-3xl font-semibold text-slate-900">{k.k}</p>
+                    <p className="stat-value text-3xl">{k.k}</p>
                     <p className="mt-1 text-sm text-slate-600">{k.l}</p>
                   </div>
                 </Reveal>
@@ -395,7 +395,7 @@ export default function VoomiCaseStudy() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <blockquote className="mt-10 border-l-4 border-blue-300 pl-5">
+              <blockquote className="mt-10 border-l-4 border-lime pl-5">
                 <p className="text-lg font-medium text-slate-800 italic">
                   &ldquo;Marketplace performance is constrained not by supply, but by the structure of product data.&rdquo;
                 </p>
@@ -406,7 +406,7 @@ export default function VoomiCaseStudy() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-slate-200/60 bg-white py-14">
+      <section className="border-t border-line/60 gradient-surface py-14">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -419,13 +419,13 @@ export default function VoomiCaseStudy() {
               <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
                 <Link
                   href="/#contact"
-                  className="inline-flex h-11 items-center justify-center rounded-2xl bg-gradient-to-r from-[#2563eb] via-[#0284c7] to-[#0ea5e9] px-6 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
+                  className="inline-flex h-11 items-center justify-center rounded-2xl bg-gradient-to-r from-[var(--lime)] via-[var(--lime-dim)] to-[var(--lime-dim)] px-6 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
                 >
                   Book a demo
                 </Link>
                 <Link
                   href="/resources/case-studies/profitero"
-                  className="inline-flex h-11 items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 text-sm font-medium text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-700"
+                  className="inline-flex h-11 items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 text-sm font-medium text-slate-700 shadow-sm transition hover:border-line hover:text-ink"
                 >
                   Read Profitero case study →
                 </Link>

@@ -66,7 +66,7 @@ export default function SolutionsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <div className="grid gap-4 lg:grid-cols-2">
             {domains.map((d, i) => (
@@ -78,7 +78,7 @@ export default function SolutionsPage() {
                     {d.bullets.map((b) => (
                       <li key={b} className="flex gap-2">
                         <span
-                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
+                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]"
                           aria-hidden
                         />
                         <span>{b}</span>
@@ -92,7 +92,7 @@ export default function SolutionsPage() {
         </Container>
       </section>
 
-      <section id="industries" className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section id="industries" className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -100,7 +100,7 @@ export default function SolutionsPage() {
                 <span className="dot" aria-hidden />
                 Where we help
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Built for real-world complexity
               </h2>
               <p className="mt-3 text-slate-600">Messy inputs, governance, and speed in the same room.</p>
@@ -109,7 +109,7 @@ export default function SolutionsPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {industries.map((x, i) => (
               <Reveal key={x.t} delay={0.04 * i}>
-                <div className="card-soft p-6 transition hover:border-blue-200/60">
+                <div className="card-soft p-6 transition hover:border-line/60">
                   <p className="text-lg font-semibold text-slate-900">{x.t}</p>
                   <p className="mt-2 text-sm text-slate-600">{x.p}</p>
                 </div>

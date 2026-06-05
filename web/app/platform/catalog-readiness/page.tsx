@@ -58,7 +58,7 @@ export default function CatalogReadinessPage() {
       />
 
       {/* The three pillars */}
-      <section className="gradient-surface border-t border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-line/60 py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -66,7 +66,7 @@ export default function CatalogReadinessPage() {
                 <span className="dot" aria-hidden />
                 Three pillars, one score
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="font-display heading-section text-surface">
                 Attributes. Compliance. Content.
               </h2>
               <p className="mt-3 text-slate-600">
@@ -98,7 +98,7 @@ export default function CatalogReadinessPage() {
                 <span className="dot" aria-hidden />
                 Why the bar just changed
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="font-display heading-section text-surface">
                 Marketplace readiness was the old problem. Agentic readiness is the new one.
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
@@ -113,7 +113,7 @@ export default function CatalogReadinessPage() {
       </section>
 
       {/* How it works */}
-      <section className="gradient-surface border-t border-b border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-b border-line/60 py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center mb-12">
@@ -121,7 +121,7 @@ export default function CatalogReadinessPage() {
                 <span className="dot" aria-hidden />
                 How it works
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="font-display heading-section text-surface">
                 Upload. Score. Fix.
               </h2>
             </div>
@@ -130,7 +130,7 @@ export default function CatalogReadinessPage() {
             {steps.map((s) => (
               <Reveal key={s.step}>
                 <div className="card h-full p-6">
-                  <span className="font-display text-2xl font-semibold text-blue-200">{s.step}</span>
+                  <span className="font-display text-2xl font-semibold text-lime/60">{s.step}</span>
                   <h3 className="mt-2 text-sm font-semibold text-slate-900">{s.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-slate-600">{s.desc}</p>
                 </div>
@@ -139,7 +139,7 @@ export default function CatalogReadinessPage() {
           </div>
           <Reveal>
             <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <a href="/try-it" className="inline-flex h-11 items-center justify-center rounded-2xl bg-[#2563eb] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1d4ed8]">
+              <a href="/try-it" className="inline-flex h-11 items-center justify-center rounded-2xl bg-[var(--lime)] px-6 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--lime-dim)]">
                 Run a free diagnostic
               </a>
               <a href="/about#contact" className="inline-flex h-11 items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 text-sm font-medium text-slate-700 transition hover:bg-slate-50">

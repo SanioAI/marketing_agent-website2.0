@@ -23,9 +23,9 @@ function ellipseKeyframes(
 }
 
 const ORBITS = [
-  { a: 185, b: 62, tilt: -28, dur: 10,  size: 10, color: "#60a5fa", shadow: "0 0 12px 4px #3b82f690, 0 0 24px 8px #2563eb50" },
-  { a: 135, b: 48, tilt:  20, dur: 7,   size: 8,  color: "#38bdf8", shadow: "0 0 10px 3px #0ea5e980, 0 0 20px 6px #0284c740" },
-  { a:  88, b: 32, tilt: -14, dur: 5,   size: 6,  color: "#7dd3fc", shadow: "0 0 8px 3px #38bdf870, 0 0 16px 6px #0ea5e940" },
+  { a: 185, b: 62, tilt: -28, dur: 10,  size: 10, color: "oklch(0.82 0.14 225)", shadow: "0 0 12px 4px oklch(0.82 0.14 225 / 0.55), 0 0 24px 8px oklch(0.82 0.14 225 / 0.3)" },
+  { a: 135, b: 48, tilt:  20, dur: 7,   size: 8,  color: "oklch(0.78 0.12 225)", shadow: "0 0 10px 3px oklch(0.82 0.14 225 / 0.5), 0 0 20px 6px oklch(0.72 0.11 225 / 0.25)" },
+  { a:  88, b: 32, tilt: -14, dur: 5,   size: 6,  color: "oklch(0.75 0.10 225)", shadow: "0 0 8px 3px oklch(0.82 0.14 225 / 0.4), 0 0 16px 6px oklch(0.72 0.11 225 / 0.25)" },
 ] as const;
 
 const RING_STROKE_OPACITY = 0.18;
@@ -52,7 +52,7 @@ export function RocketAnimation() {
   );
 
   return (
-    <div className="relative mx-auto h-[480px] w-full max-w-[520px] overflow-hidden rounded-3xl shadow-2xl shadow-blue-950/40">
+    <div className="relative mx-auto h-[480px] w-full max-w-[520px] overflow-hidden rounded-3xl shadow-2xl shadow-ink-deep/40">
       {/* Dark space background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#060d1f] via-[#08112a] to-[#04091a]" />
 
@@ -178,26 +178,26 @@ export function RocketAnimation() {
         >
           <defs>
             <linearGradient id="rc-body" x1="0" y1="0" x2="84" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0"   stopColor="#bfdbfe" />
+              <stop offset="0"   stopColor="oklch(0.93 0.004 250)" />
               <stop offset="0.5" stopColor="#ffffff" />
-              <stop offset="1"   stopColor="#93c5fd" />
+              <stop offset="1"   stopColor="oklch(0.88 0.004 250)" />
             </linearGradient>
             <linearGradient id="rc-nose" x1="0" y1="0" x2="84" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="#2563eb" />
-              <stop offset="1" stopColor="#0ea5e9" />
+              <stop offset="0" stopColor="var(--lime)" />
+              <stop offset="1" stopColor="var(--lime-dim)" />
             </linearGradient>
             <linearGradient id="rc-fin" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stopColor="#1d4ed8" />
-              <stop offset="1" stopColor="#2563eb" />
+              <stop offset="0" stopColor="var(--lime-dim)" />
+              <stop offset="1" stopColor="var(--lime)" />
             </linearGradient>
             <linearGradient id="rc-fl1" x1="42" y1="108" x2="42" y2="148" gradientUnits="userSpaceOnUse">
-              <stop offset="0"   stopColor="#60a5fa"  stopOpacity="1"   />
-              <stop offset="0.5" stopColor="#38bdf8"  stopOpacity="0.8" />
-              <stop offset="1"   stopColor="white"    stopOpacity="0"   />
+              <stop offset="0"   stopColor="oklch(0.82 0.14 225)" stopOpacity="1" />
+              <stop offset="0.5" stopColor="oklch(0.78 0.12 225)" stopOpacity="0.8" />
+              <stop offset="1"   stopColor="white" stopOpacity="0" />
             </linearGradient>
             <linearGradient id="rc-fl2" x1="42" y1="108" x2="42" y2="138" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="white"   stopOpacity="0.95" />
-              <stop offset="1" stopColor="#93c5fd" stopOpacity="0"    />
+              <stop offset="0" stopColor="white" stopOpacity="0.95" />
+              <stop offset="1" stopColor="oklch(0.82 0.14 225)" stopOpacity="0" />
             </linearGradient>
             <filter id="rc-glow">
               <feGaussianBlur stdDeviation="3" result="blur"/>
@@ -220,16 +220,16 @@ export function RocketAnimation() {
           <path d="M26 20 Q28 8 42 4 Q36 16 26 20Z" fill="white" opacity="0.25" />
 
           {/* Porthole */}
-          <circle cx="42" cy="70" r="12" fill="#dbeafe" stroke="rgba(147,197,253,0.6)" strokeWidth="1.2" />
-          <circle cx="42" cy="70" r="7"  fill="#bfdbfe" />
+          <circle cx="42" cy="70" r="12" fill="oklch(0.93 0.004 250)" stroke="oklch(0.82 0.14 225 / 0.6)" strokeWidth="1.2" />
+          <circle cx="42" cy="70" r="7"  fill="oklch(0.88 0.004 250)" />
           <circle cx="38" cy="66" r="2.5" fill="white" opacity="0.8" />
 
           {/* Stripe */}
-          <rect x="16" y="88" width="52" height="5" rx="2" fill="#dbeafe" opacity="0.45" />
+          <rect x="16" y="88" width="52" height="5" rx="2" fill="oklch(0.93 0.004 250)" opacity="0.45" />
 
           {/* Nozzle */}
-          <path d="M26 108 L22 118 L62 118 L58 108Z" fill="#1e40af" />
-          <path d="M29 118 L27 124 L57 124 L55 118Z" fill="#1d4ed8" />
+          <path d="M26 108 L22 118 L62 118 L58 108Z" fill="oklch(0.16 0.012 250)" />
+          <path d="M29 118 L27 124 L57 124 L55 118Z" fill="var(--lime-dim)" />
         </svg>
 
         {/* Outer flame */}
@@ -262,7 +262,7 @@ export function RocketAnimation() {
         {/* Glow ring under rocket */}
         <motion.div
           className="pointer-events-none absolute -bottom-8 left-1/2 h-4 w-16 -translate-x-1/2 rounded-full"
-          style={{ background: "rgba(59,130,246,0.4)", filter: "blur(8px)" }}
+          style={{ background: "oklch(0.82 0.14 225 / 0.4)", filter: "blur(8px)" }}
           animate={reduce ? undefined : { opacity: [0.4, 0.8, 0.4], scaleX: [0.9, 1.1, 0.9] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -270,8 +270,8 @@ export function RocketAnimation() {
 
       {/* Bottom stat badge */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap">
-        <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-white/8 px-4 py-1.5 text-xs font-medium text-blue-200 shadow-sm backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#60a5fa] to-[#38bdf8]" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-lime/20 bg-white/8 px-4 py-1.5 text-xs font-medium text-lime/60 shadow-sm backdrop-blur-sm">
+          <span className="h-1.5 w-1.5 rounded-full bg-lime" />
           85% faster catalog enrichment
         </span>
       </div>

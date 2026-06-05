@@ -36,7 +36,7 @@ export function DeployVisual() {
   const progress = TOTAL_DAYS > 0 ? (visible / STEPS.length) * 100 : 100;
 
   return (
-    <div className="relative mx-auto w-full max-w-[480px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] to-[#04091a] shadow-2xl shadow-blue-950/50">
+    <div className="relative mx-auto w-full max-w-[480px] overflow-hidden rounded-2xl border border-white/8 bg-gradient-to-b from-[#07101f] to-[#04091a] shadow-2xl shadow-ink-deep/50">
       {/* Window chrome */}
       <div className="flex items-center justify-between border-b border-white/8 px-5 py-3.5">
         <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export function DeployVisual() {
         <div className="mt-3.5 flex items-center gap-3">
           <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/8">
             <motion.div
-              className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
+              className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]"
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             />
@@ -157,7 +157,7 @@ export function DeployVisual() {
                   <span className="font-semibold text-slate-300">40,312+</span> records/hr
                 </span>
               </div>
-              <span className="text-xs font-semibold text-blue-400">
+              <span className="text-xs font-semibold text-lime">
                 Agent deployed ✓
               </span>
             </motion.div>
@@ -170,7 +170,7 @@ export function DeployVisual() {
               className="flex items-center gap-2"
             >
               <motion.span
-                className="h-1.5 w-1.5 rounded-full bg-blue-400"
+                className="h-1.5 w-1.5 rounded-full bg-lime"
                 animate={{ opacity: [1, 0.3, 1] }}
                 transition={{ duration: 0.8, repeat: Infinity }}
               />

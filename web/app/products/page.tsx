@@ -69,7 +69,7 @@ export default function ProductsPage() {
       </PageHero>
       <ProductsSection showIntro={false} />
 
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -77,7 +77,7 @@ export default function ProductsPage() {
                 <span className="dot" aria-hidden />
                 Proof
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 What these deployments prove
               </h2>
               <p className="mt-3 text-slate-600">
@@ -99,7 +99,7 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="what-are-catalog-agents">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="what-are-catalog-agents">
         <Container>
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-start">
             <Reveal>
@@ -108,7 +108,7 @@ export default function ProductsPage() {
                   <span className="dot" aria-hidden />
                   Catalog Agents
                 </p>
-                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                <h2 className="heading-section text-surface">
                   What are Catalog Agents?
                 </h2>
                 <p className="mt-4 text-pretty text-slate-600 sm:text-lg">
@@ -135,7 +135,7 @@ export default function ProductsPage() {
                   ].map((b) => (
                     <li key={b} className="flex gap-2">
                       <span
-                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[#2563eb] to-[#0ea5e9]"
+                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[var(--lime)] to-[var(--lime-dim)]"
                         aria-hidden
                       />
                       <span>{b}</span>
@@ -148,7 +148,7 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="ops-change">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="ops-change">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -156,7 +156,7 @@ export default function ProductsPage() {
                 <span className="dot" aria-hidden />
                 Operating model
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 How catalog operations change
               </h2>
               <p className="mt-3 text-slate-600">
@@ -184,13 +184,13 @@ export default function ProductsPage() {
             </Reveal>
             <Reveal delay={0.06}>
               <div className="card card-hover p-7">
-                <p className="text-xs font-medium uppercase tracking-widest text-blue-800/80">
+                <p className="text-xs font-medium uppercase tracking-widest text-ink-deep/80">
                   Continuous evaluation with Catalog Agents
                 </p>
                 <ul className="mt-5 space-y-3 text-sm text-slate-700">
                   {opsAfter.map((t) => (
                     <li key={t} className="flex gap-2">
-                      <span className="mt-0.5 text-blue-600" aria-hidden>
+                      <span className="mt-0.5 text-ink" aria-hidden>
                         •
                       </span>
                       <span>{t}</span>
@@ -203,7 +203,7 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="trust">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="trust">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -211,7 +211,7 @@ export default function ProductsPage() {
                 <span className="dot" aria-hidden />
                 Trust, verification, safety
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Built for real catalogs, not sandbox demos
               </h2>
               <p className="mt-3 text-slate-600">
@@ -245,7 +245,7 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="faqs">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="faqs">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -253,7 +253,7 @@ export default function ProductsPage() {
                 <span className="dot" aria-hidden />
                 FAQs
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Frequently asked questions
               </h2>
             </div>

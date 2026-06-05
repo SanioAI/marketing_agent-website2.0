@@ -51,14 +51,14 @@ export function TryItYourselfSection({
       id="try-it"
       className={[
         "gradient-surface",
-        underPageHero ? "border-t-0 py-14 sm:py-16" : "border-t border-slate-200/60 py-20 sm:py-24",
+        underPageHero ? "border-t-0 py-14 sm:py-16" : "border-t border-line/60 py-20 sm:py-24",
       ].join(" ")}
     >
       <Container>
         {showPageTitle ? (
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Try It Yourself
               </h2>
               <p className="mt-3 text-pretty text-slate-600 sm:text-lg">
@@ -155,7 +155,7 @@ export function TryItYourselfSection({
                   placeholder={
                     "One URL per line, or comma-separated.\nExample: https://example.com/product/a"
                   }
-                  className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-inner shadow-slate-900/5 placeholder:text-slate-400 focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 disabled:opacity-50"
+                  className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-inner shadow-slate-900/5 placeholder:text-slate-400 focus:focus:border-lime focus:outline-none focus:ring-2 focus:ring-lime/20 disabled:opacity-50"
                 />
               </div>
             )}
@@ -170,7 +170,7 @@ export function TryItYourselfSection({
                   <a
                     href="/sample-catalog.csv"
                     download="paladio-sample-catalog.csv"
-                    className="font-medium text-indigo-600 transition hover:text-indigo-800"
+                    className="font-medium text-ink transition hover:text-ink-deep"
                   >
                     Download example CSV template
                   </a>

@@ -56,7 +56,7 @@ export default function AboutPage() {
                   <span className="dot" aria-hidden />
                   Company
                 </p>
-                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                <h2 className="heading-section text-surface">
                   Platform, methodology, and products
                 </h2>
                 <p className="mt-4 text-pretty text-slate-600 sm:text-lg">
@@ -71,19 +71,19 @@ export default function AboutPage() {
                 <p className="text-sm font-medium uppercase tracking-widest text-slate-500">What we believe</p>
                 <ul className="mt-4 space-y-3 text-sm text-slate-700">
                   <li className="flex gap-2">
-                    <span className="text-blue-600" aria-hidden>
+                    <span className="text-ink" aria-hidden>
                       →
                     </span>
                     Messy real-world inputs deserve structured outputs and clear review paths.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-blue-600" aria-hidden>
+                    <span className="text-ink" aria-hidden>
                       →
                     </span>
                     The best agent UX is honest progress, not fake confidence.
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-blue-600" aria-hidden>
+                    <span className="text-ink" aria-hidden>
                       →
                     </span>
                     Exports should match how teams work: spreadsheets, JSON, and evidence trails.
@@ -95,7 +95,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 gradient-surface py-14 sm:py-20">
+      <section className="border-t border-line/60 gradient-surface py-14 sm:py-20">
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
             {principles.map((p, i) => (
@@ -110,7 +110,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-4xl">
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <span className="dot" aria-hidden />
                 Leadership
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Team</h2>
+              <h2 className="heading-section text-surface">Team</h2>
               <p className="mt-3 max-w-2xl text-slate-600">
                 Experienced operators and researchers building production agent systems.
               </p>
@@ -126,10 +126,10 @@ export default function AboutPage() {
                 {leadership.map((p) => (
                   <div
                     key={p.name}
-                    className="card-soft flex items-start gap-4 p-6 transition hover:border-blue-200/50"
+                    className="card-soft flex items-start gap-4 p-6 transition hover:border-line/50"
                   >
                     <div
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2563eb] via-[#0284c7] to-[#0ea5e9] text-sm font-semibold text-white shadow-sm"
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--lime)] via-[var(--lime-dim)] to-[var(--lime-dim)] text-sm font-semibold text-white shadow-sm"
                       aria-hidden
                     >
                       {initials(p.name)}

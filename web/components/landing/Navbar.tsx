@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { getTheme, type Theme } from "@/lib/theme";
 import {
   motion,
   AnimatePresence,
@@ -8,6 +9,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { Container } from "@/components/ui/Container";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { ButtonLink } from "@/components/landing/buttons";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,10 +45,10 @@ const PLATFORM_ITEMS = [
     desc: "AI-powered product data enrichment",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
-        <rect x="2" y="2" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.9" />
-        <rect x="10" y="2" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.5" />
-        <rect x="2" y="10" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.5" />
-        <rect x="10" y="10" width="6" height="6" rx="1.5" fill="#2563eb" opacity="0.25" />
+        <rect x="2" y="2" width="6" height="6" rx="1.5" fill="var(--lime)" opacity="0.9" />
+        <rect x="10" y="2" width="6" height="6" rx="1.5" fill="var(--lime)" opacity="0.5" />
+        <rect x="2" y="10" width="6" height="6" rx="1.5" fill="var(--lime)" opacity="0.5" />
+        <rect x="10" y="10" width="6" height="6" rx="1.5" fill="var(--lime)" opacity="0.25" />
       </svg>
     ),
   },
@@ -56,8 +58,8 @@ const PLATFORM_ITEMS = [
     desc: "Score and improve your catalog health",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
-        <circle cx="9" cy="9" r="7" stroke="#2563eb" strokeWidth="1.5" opacity="0.4" />
-        <path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="9" cy="9" r="7" stroke="var(--lime)" strokeWidth="1.5" opacity="0.4" />
+        <path d="M5.5 9.5L7.5 11.5L12.5 6.5" stroke="var(--lime)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -67,9 +69,9 @@ const PLATFORM_ITEMS = [
     desc: "Deep insights across your product data",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
-        <rect x="2" y="10" width="3" height="6" rx="1" fill="#2563eb" opacity="0.4" />
-        <rect x="7.5" y="6" width="3" height="10" rx="1" fill="#2563eb" opacity="0.65" />
-        <rect x="13" y="2" width="3" height="14" rx="1" fill="#2563eb" />
+        <rect x="2" y="10" width="3" height="6" rx="1" fill="var(--lime)" opacity="0.4" />
+        <rect x="7.5" y="6" width="3" height="10" rx="1" fill="var(--lime)" opacity="0.65" />
+        <rect x="13" y="2" width="3" height="14" rx="1" fill="var(--lime)" />
       </svg>
     ),
   },
@@ -79,7 +81,7 @@ const PLATFORM_ITEMS = [
     desc: "Score your catalog in AI shopping agents",
     icon: (
       <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
-        <path d="M9 2L11 7H16L12 10.5L13.5 16L9 13L4.5 16L6 10.5L2 7H7L9 2Z" fill="#2563eb" opacity="0.7" />
+        <path d="M9 2L11 7H16L12 10.5L13.5 16L9 13L4.5 16L6 10.5L2 7H7L9 2Z" fill="var(--lime)" opacity="0.7" />
       </svg>
     ),
   },
@@ -138,8 +140,8 @@ function PlatformMegaMenu() {
   return (
     <div ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
-        className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm transition hover:bg-slate-100/80 hover:text-slate-900 ${
-          isActive ? "font-medium text-slate-900" : "text-slate-600"
+        className={`nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm ${
+          isActive ? "font-medium" : ""
         }`}
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
@@ -155,12 +157,12 @@ function PlatformMegaMenu() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.97 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute left-0 top-full z-50 mt-1.5 flex overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-2xl shadow-slate-900/12"
+            className="theme-popover absolute left-0 top-full z-50 mt-1.5 flex overflow-hidden rounded-[4px]"
             style={{ width: 560 }}
           >
             {/* Left: platform items */}
-            <div className="w-56 shrink-0 border-r border-slate-100 bg-slate-50/60 p-2">
-              <p className="px-3 pb-1.5 pt-2 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+            <div className="theme-popover-muted w-56 shrink-0 border-r border-border p-2">
+              <p className="theme-popover-kicker px-3 pb-1.5 pt-2">
                 Platform
               </p>
               {PLATFORM_ITEMS.map((item, i) => (
@@ -168,12 +170,12 @@ function PlatformMegaMenu() {
                   key={item.label}
                   onMouseEnter={() => setActiveIdx(i)}
                   onClick={() => setOpen(false)}
-                  className={`group flex w-full items-start gap-3 rounded-xl px-3 py-2.5 text-left transition ${
-                    activeIdx === i ? "bg-white shadow-sm" : "hover:bg-white/70"
+                  className={`group flex w-full items-start gap-3 rounded-[4px] px-3 py-2.5 text-left transition ${
+                    activeIdx === i ? "bg-background shadow-sm" : "theme-hover"
                   }`}
                 >
                   <div className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition ${
-                    activeIdx === i ? "border-blue-100 bg-blue-50" : "border-slate-200 bg-white"
+                    activeIdx === i ? "border-line bg-paper-dim" : "border-border bg-background"
                   }`}>
                     {item.icon}
                   </div>
@@ -181,13 +183,13 @@ function PlatformMegaMenu() {
                     <Link
                       href={item.href}
                       className={`block text-sm font-medium transition ${
-                        activeIdx === i ? "text-blue-700" : "text-slate-900"
+                        activeIdx === i ? "text-lime" : "text-foreground"
                       }`}
                       onClick={() => setOpen(false)}
                     >
                       {item.label}
                     </Link>
-                    <p className="mt-0.5 text-xs text-slate-500">{item.desc}</p>
+                    <p className="mt-0.5 text-xs text-muted">{item.desc}</p>
                   </div>
                 </button>
               ))}
@@ -197,7 +199,7 @@ function PlatformMegaMenu() {
             <div className="flex-1 p-4">
               {activeIdx === 0 ? (
                 <>
-                  <p className="mb-2 px-1 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+                  <p className="theme-popover-kicker mb-2 px-1">
                     Catalog Agent Suite
                   </p>
                   <div className="grid grid-cols-1 gap-0.5">
@@ -206,15 +208,15 @@ function PlatformMegaMenu() {
                         key={agent.label}
                         href="/catalog-agents"
                         onClick={() => setOpen(false)}
-                        className="group flex items-center justify-between rounded-lg px-3 py-2 transition hover:bg-slate-50"
+                        className="group flex items-center justify-between rounded-[4px] px-3 py-2 transition theme-hover"
                       >
                         <div>
-                          <span className="block text-sm font-medium text-slate-900 group-hover:text-blue-700 transition-colors">
+                          <span className="block text-sm font-medium text-foreground group-hover:text-lime transition-colors">
                             {agent.label}
                           </span>
-                          <span className="text-xs text-slate-500">{agent.desc}</span>
+                          <span className="text-xs text-muted">{agent.desc}</span>
                         </div>
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="shrink-0 text-slate-300 group-hover:text-blue-400 transition-colors" aria-hidden>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="shrink-0 text-slate-300 group-hover:text-lime transition-colors" aria-hidden>
                           <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </Link>
@@ -226,7 +228,7 @@ function PlatformMegaMenu() {
                   <Link
                     href={PLATFORM_ITEMS[activeIdx].href}
                     onClick={() => setOpen(false)}
-                    className="inline-flex items-center gap-2 rounded-xl bg-blue-50 px-5 py-3 text-sm font-medium text-blue-700 hover:bg-blue-100 transition"
+                    className="inline-flex items-center gap-2 rounded-xl bg-paper-dim px-5 py-3 text-sm font-medium text-ink hover:bg-paper-dim transition"
                   >
                     Go to {PLATFORM_ITEMS[activeIdx].label}
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
@@ -262,8 +264,8 @@ function DesktopDropdown({ item }: { item: DropdownItem }) {
   return (
     <div ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button
-        className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm transition hover:bg-slate-100/80 hover:text-slate-900 ${
-          active ? "font-medium text-slate-900" : "text-slate-600"
+        className={`nav-link flex items-center gap-1 rounded-lg px-3 py-2 text-sm ${
+          active ? "font-medium" : ""
         }`}
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
@@ -278,19 +280,19 @@ function DesktopDropdown({ item }: { item: DropdownItem }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.97 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="absolute left-0 top-full z-50 mt-1.5 w-60 overflow-hidden rounded-xl border border-slate-200/80 bg-white p-1.5 shadow-xl shadow-slate-900/10"
+            className="theme-popover absolute left-0 top-full z-50 mt-1.5 w-60 overflow-hidden rounded-[4px] p-1.5"
           >
             {item.children.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}
                 onClick={() => setOpen(false)}
-                className={`block rounded-lg px-3 py-2.5 transition hover:bg-slate-50 ${pathname === child.href ? "bg-blue-50/60" : ""}`}
+                className={`block rounded-[4px] px-3 py-2.5 transition theme-hover ${pathname === child.href ? "bg-paper-dim/60" : ""}`}
               >
-                <div className={`text-sm font-medium ${pathname === child.href ? "text-blue-700" : "text-slate-900"}`}>
+                <div className={`text-sm font-medium ${pathname === child.href ? "text-lime" : "text-foreground"}`}>
                   {child.label}
                 </div>
-                <div className="mt-0.5 text-xs text-slate-500">{child.desc}</div>
+                <div className="mt-0.5 text-xs text-muted">{child.desc}</div>
               </Link>
             ))}
           </motion.div>
@@ -309,7 +311,7 @@ function MobilePlatform({ onClose }: { onClose: () => void }) {
   return (
     <div>
       <button
-        className="flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-base text-slate-800 transition hover:bg-slate-100"
+        className="theme-menu-link flex w-full items-center justify-between rounded-[4px] px-3 py-2.5 text-base"
         onClick={() => setOpen((o) => !o)}
       >
         Platform
@@ -349,7 +351,7 @@ function MobilePlatform({ onClose }: { onClose: () => void }) {
                             key={a.label}
                             href="/catalog-agents"
                             onClick={onClose}
-                            className="rounded-lg px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50 hover:text-blue-700"
+                            className="rounded-lg px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50 hover:text-ink"
                           >
                             {a.label}
                           </Link>
@@ -364,7 +366,7 @@ function MobilePlatform({ onClose }: { onClose: () => void }) {
                   key={item.href}
                   href={item.href}
                   onClick={onClose}
-                  className="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-700"
+                  className="rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-ink"
                 >
                   {item.label}
                 </Link>
@@ -386,8 +388,8 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
       <Link
         href={item.href}
         onClick={onClose}
-        className={`rounded-xl px-3 py-2.5 text-base transition hover:bg-slate-100 ${
-          pathname === item.href ? "font-medium text-blue-700" : "text-slate-800"
+        className={`theme-menu-link rounded-[4px] px-3 py-2.5 text-base ${
+          pathname === item.href ? "font-medium text-lime" : ""
         }`}
       >
         {item.label}
@@ -398,7 +400,7 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
   return (
     <div>
       <button
-        className="flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-base text-slate-800 transition hover:bg-slate-100"
+        className="theme-menu-link flex w-full items-center justify-between rounded-[4px] px-3 py-2.5 text-base"
         onClick={() => setOpen((o) => !o)}
       >
         {item.label}
@@ -420,7 +422,7 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
                   href={child.href}
                   onClick={onClose}
                   className={`rounded-lg px-3 py-2 text-sm transition hover:bg-slate-50 ${
-                    pathname === child.href ? "font-medium text-blue-700" : "text-slate-700"
+                    pathname === child.href ? "font-medium text-ink" : "text-slate-700"
                   }`}
                 >
                   {child.label}
@@ -438,10 +440,24 @@ function MobileNavItem({ item, onClose }: { item: NavItem; onClose: () => void }
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>("light");
   const { scrollY } = useScroll();
   const [elevated, setElevated] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (y) => setElevated(y > 8));
+
+  useEffect(() => {
+    const sync = () => setTheme(getTheme());
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  const overDarkHero = !elevated && theme === "dark";
 
   useEffect(() => {
     if (open) document.body.style.overflow = "hidden";
@@ -452,8 +468,9 @@ export function Navbar() {
   return (
     <>
       <motion.header
+        data-elevated={elevated ? "true" : "false"}
         className={`fixed inset-x-0 top-0 z-50 border-b transition-colors ${
-          elevated ? "border-slate-200/80 glass shadow-sm" : "border-transparent bg-transparent"
+          elevated ? "border-line/80 glass shadow-sm" : "border-transparent bg-transparent"
         }`}
         initial={false}
         animate={{ y: 0 }}
@@ -464,7 +481,7 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-0.5 md:flex" aria-label="Primary">
-            <Link href="/" className="rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100/80 hover:text-slate-900">
+            <Link href="/" className="nav-link rounded-lg px-3 py-2 text-sm">
               Home
             </Link>
             <PlatformMegaMenu />
@@ -473,7 +490,7 @@ export function Navbar() {
                 <DesktopDropdown key={item.label} item={item} />
               ) : (
                 <Link key={(item as SimpleItem).href} href={(item as SimpleItem).href}
-                  className="rounded-lg px-3 py-2 text-sm text-slate-600 transition hover:bg-slate-100/80 hover:text-slate-900"
+                  className="nav-link rounded-lg px-3 py-2 text-sm"
                 >
                   {item.label}
                 </Link>
@@ -482,18 +499,24 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
-            <ButtonLink href="/try-it" variant="secondary">Try It</ButtonLink>
+            <ThemeToggle overHero={overDarkHero} />
+            <ButtonLink href="/try-it" variant={elevated || !overDarkHero ? "secondary" : "secondaryOnDark"}>
+              Try It
+            </ButtonLink>
             <ButtonLink href="/about#contact" variant="primarySm">Book a Demo</ButtonLink>
           </div>
 
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle overHero={overDarkHero} />
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200/80 bg-white/80 text-slate-800 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded border border-line/80 bg-paper/80 text-ink"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((o) => !o)}
           >
             <span className="text-lg leading-none">{open ? "×" : "☰"}</span>
           </button>
+          </div>
         </Container>
       </motion.header>
 
@@ -509,19 +532,23 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.aside
-            className="fixed right-0 top-0 z-50 h-full w-full max-w-xs overflow-y-auto border-l border-slate-200 bg-white p-6 shadow-xl md:hidden"
+            className="fixed right-0 top-0 z-50 h-full w-full max-w-xs overflow-y-auto border-l border-line bg-background p-6 shadow-xl md:hidden"
             initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 320, damping: 32 }}
           >
-            <p className="text-xs font-medium uppercase tracking-widest text-slate-500">Menu</p>
+            <p className="section-kicker">Menu</p>
             <div className="mt-4 flex flex-col gap-1">
-              <Link href="/" onClick={() => setOpen(false)} className="rounded-xl px-3 py-2.5 text-base text-slate-800 hover:bg-slate-100">Home</Link>
+              <Link href="/" onClick={() => setOpen(false)} className="theme-menu-link rounded-[4px] px-3 py-2.5 text-base">Home</Link>
               <MobilePlatform onClose={() => setOpen(false)} />
               {SIMPLE_NAV.filter((n) => n.label !== "Home").map((item) => (
                 <MobileNavItem key={item.label} item={item} onClose={() => setOpen(false)} />
               ))}
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex items-center gap-3">
+              <ThemeToggle />
+              <span className="text-xs text-mute-paper">Theme</span>
+            </div>
+            <div className="mt-4">
               <ButtonLink href="/about#contact" variant="primary" onClick={() => setOpen(false)} className="w-full">Book a Demo</ButtonLink>
               <ButtonLink href="/try-it" variant="secondary" onClick={() => setOpen(false)} className="mt-3 w-full">Try It</ButtonLink>
             </div>

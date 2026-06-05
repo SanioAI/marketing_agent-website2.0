@@ -14,7 +14,7 @@ type PageHeroProps = {
  */
 export function PageHero({ kicker, title, description, children }: PageHeroProps) {
   return (
-    <section className="gradient-surface border-b border-slate-200/60 py-14 sm:py-20">
+    <section className="gradient-surface border-b border-line/60 py-14 sm:py-20">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
@@ -22,10 +22,10 @@ export function PageHero({ kicker, title, description, children }: PageHeroProps
               <span className="dot" aria-hidden />
               {kicker}
             </p>
-            <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+            <h1 className="heading-page text-surface text-balance">
               {title}
             </h1>
-            <p className="mt-4 text-pretty text-slate-600 sm:text-lg">{description}</p>
+            <p className="section-lede mx-auto mt-6 text-pretty">{description}</p>
             {children ? <div className="mt-8 flex flex-wrap items-center justify-center gap-3">{children}</div> : null}
           </div>
         </Reveal>

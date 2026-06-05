@@ -13,7 +13,7 @@ export default function TermsPage() {
         title="Terms of Service"
         description="This is a placeholder terms page. Replace with your final legal text before going live."
       />
-      <section className="bg-white py-14 sm:py-16">
+      <section className="gradient-surface py-14 sm:py-16">
         <Container>
           <div className="mx-auto max-w-3xl text-sm leading-relaxed text-slate-700">
             <p className="font-medium text-slate-900">Summary</p>

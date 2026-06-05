@@ -11,12 +11,12 @@ type PageBottomCtaProps = {
 
 export function PageBottomCta({ title, description, primary, secondary }: PageBottomCtaProps) {
   return (
-    <section className="border-t border-slate-200/60 bg-gradient-to-b from-slate-50/90 via-white to-white py-16 sm:py-20">
+    <section className="gradient-surface border-t border-line/60 py-16 sm:py-20">
       <Container>
         <Reveal>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">{title}</h2>
-            <p className="mt-3 text-pretty text-slate-600 sm:text-lg">{description}</p>
+            <h2 className="heading-section text-surface text-2xl sm:text-3xl">{title}</h2>
+            <p className="text-surface-muted mt-3 text-pretty sm:text-lg">{description}</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <ButtonLink href={primary.href} variant="primaryLg">
                 {primary.label}

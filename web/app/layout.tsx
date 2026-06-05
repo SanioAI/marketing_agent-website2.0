@@ -1,27 +1,30 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Inter_Tight, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { getSiteUrl } from "@/lib/site-config";
+import { themeInitScript } from "@/lib/theme";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { Navbar } from "@/components/landing/Navbar";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-display",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
 const siteUrl = getSiteUrl();
@@ -57,7 +60,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#fafbfc",
+  themeColor: "#f5f6f7",
   width: "device-width",
   initialScale: 1,
 };
@@ -68,10 +71,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-theme="light" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} min-h-dvh font-sans antialiased text-foreground bg-background`}
+        className={`${interTight.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} min-h-dvh font-sans antialiased text-foreground bg-background`}
       >
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <ThemeProvider />
         <Navbar />
         {children}
         <SiteFooter />

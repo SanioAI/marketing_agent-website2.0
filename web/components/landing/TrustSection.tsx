@@ -3,47 +3,28 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
+import { AppIcon, type AppIconName } from "@/lib/icons";
 
-const trustPoints = [
+const trustPoints: { title: string; desc: string; icon: AppIconName }[] = [
   {
     title: "Evaluated against real inputs",
     desc: "Every agent output is checked against the original source data — not just validated by format.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-        <path d="M10 2L3 6v4c0 4.418 3.134 8.55 7 9.5C13.866 18.55 17 14.418 17 10V6L10 2z" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M7 10l2 2 4-4" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
+    icon: "Shield",
   },
   {
     title: "Corrected using structured reasoning",
     desc: "Agents explain what changed, why it changed, and what rule or signal triggered the correction.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-        <circle cx="10" cy="10" r="8" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M10 6v4l3 2" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: "GitBranch",
   },
   {
     title: "Produced with confidence indicators",
     desc: "Every output includes a confidence score — your team knows when to trust automatically and when to review.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-        <rect x="3" y="12" width="3" height="5" rx="1" fill="#2563eb" opacity="0.4" />
-        <rect x="8.5" y="8" width="3" height="9" rx="1" fill="#2563eb" opacity="0.7" />
-        <rect x="14" y="4" width="3" height="13" rx="1" fill="#2563eb" />
-      </svg>
-    ),
+    icon: "BarChart3",
   },
   {
     title: "Explainable to humans",
     desc: "Before/after exports, audit trails, and review workflows your team can read, sign off on, and act on from day one.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden>
-        <path d="M2 5h16M2 10h10M2 15h7" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: "ScrollText",
   },
 ];
 
@@ -54,20 +35,19 @@ const integrations = [
 export function TrustSection() {
   const reduce = useReducedMotion();
   return (
-    <section className="border-t border-slate-200/60 py-20 sm:py-24">
+    <section className="gradient-surface border-t border-line/60 py-20 sm:py-24">
       <Container>
         <div className="grid items-start gap-12 lg:grid-cols-2">
-          {/* Left: Trust points */}
           <div>
             <Reveal>
               <p className="section-kicker mb-4">
                 <span className="dot" aria-hidden />
                 Trust, Verification &amp; Safety
               </p>
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Every output from Catalog Agents is:
               </h2>
-              <p className="mt-3 text-slate-600">
+              <p className="section-lede mt-6">
                 Catalog Agents are the foundation. Everything else depends on them. That&apos;s why safety and explainability are built in from the start.
               </p>
             </Reveal>
@@ -81,47 +61,46 @@ export function TrustSection() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.4, delay: i * 0.08, ease: "easeOut" }}
                 >
-                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-blue-50">
-                    {t.icon}
+                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[4px] border border-line bg-paper-dim text-lime">
+                    <AppIcon name={t.icon} size={18} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-slate-900">{t.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{t.desc}</p>
+                    <h3 className="heading-card text-surface">{t.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-surface-muted">{t.desc}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Right: Stack integration */}
           <Reveal delay={0.15}>
-            <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-b from-slate-50 to-white p-8">
-              <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+            <div className="card p-8">
+              <p className="section-kicker">
                 Integrates with Your Existing Stack
               </p>
-              <h3 className="mt-2 text-xl font-semibold text-slate-900">
+              <h3 className="heading-card mt-3 text-surface">
                 No rip-and-replace.
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+              <p className="mt-2 text-sm leading-relaxed text-surface-muted">
                 Deploy in weeks, not quarters. Catalog Agents sit upstream and improve the data flowing into your PIM and channels — without replacing anything.
               </p>
 
               <div className="mt-6">
-                <p className="text-xs font-medium uppercase tracking-wider text-slate-400">Data sources we ingest</p>
+                <p className="section-kicker">Data sources we ingest</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {integrations.map((s) => (
-                    <span key={s} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm">
+                    <span key={s} className="rounded-[4px] border border-line bg-paper px-3 py-1 text-xs font-medium text-surface">
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-8 rounded-xl border border-blue-100 bg-blue-50/50 p-5">
-                <p className="text-sm font-medium text-slate-900">
+              <div className="mt-8 rounded-[4px] border border-line bg-paper-dim/50 p-5">
+                <p className="text-sm font-medium text-surface">
                   &ldquo;If you want catalogs your team can trust, you need continuous evaluation — not more cleanup tools.&rdquo;
                 </p>
-                <p className="mt-3 text-xs text-slate-500">Paladio.ai · Catalog Agents</p>
+                <p className="mt-3 text-xs text-surface-muted">Paladio.ai · Catalog Agents</p>
               </div>
             </div>
           </Reveal>

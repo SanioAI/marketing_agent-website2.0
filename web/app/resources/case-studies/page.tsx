@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
         description="Every case study is a production deployment — with real numbers, real trade-offs, and a detailed look at how Paladio Catalog Agents performed."
       />
 
-      <section className="gradient-surface border-t border-slate-200/60 py-16 sm:py-20">
+      <section className="gradient-surface border-t border-line/60 py-16 sm:py-20">
         <Container>
           <div className="grid gap-6 lg:grid-cols-2">
             {caseStudies.map((cs) => (
@@ -53,7 +53,7 @@ export default function CaseStudiesPage() {
                 <div className="card group flex h-full flex-col p-7">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <span className="inline-flex items-center rounded-full border border-blue-200/70 bg-blue-50 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-blue-700">
+                      <span className="inline-flex items-center rounded-full border border-line/70 bg-paper-dim px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-ink">
                         {cs.tag}
                       </span>
                       <h2 className="mt-2 text-xl font-semibold text-slate-900">
@@ -85,7 +85,7 @@ export default function CaseStudiesPage() {
 
                   <Link
                     href={cs.href}
-                    className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-blue-600 transition hover:gap-2 hover:text-blue-800"
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-ink transition hover:gap-2 hover:text-ink-deep"
                   >
                     Read case study <span aria-hidden>→</span>
                   </Link>

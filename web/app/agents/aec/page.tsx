@@ -95,7 +95,7 @@ export default function AecAgentsPage() {
       </PageHero>
 
       {/* Problems */}
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="problems">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="problems">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -103,7 +103,7 @@ export default function AecAgentsPage() {
                 <span className="dot" aria-hidden />
                 The problem
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Preconstruction is still mostly manual
               </h2>
               <p className="mt-3 text-slate-600">
@@ -115,7 +115,7 @@ export default function AecAgentsPage() {
             {problems.map((p, i) => (
               <Reveal key={p.n} delay={0.04 * i}>
                 <div className="card-soft h-full p-6">
-                  <p className="font-display text-3xl font-semibold text-slate-200">{p.n}</p>
+                  <p className="stat-value text-3xl text-surface-muted">{p.n}</p>
                   <p className="mt-2 text-base font-semibold text-slate-900">{p.t}</p>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">{p.p}</p>
                 </div>
@@ -126,7 +126,7 @@ export default function AecAgentsPage() {
       </section>
 
       {/* Capabilities */}
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="capabilities">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="capabilities">
         <Container>
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:items-start">
             <Reveal>
@@ -135,7 +135,7 @@ export default function AecAgentsPage() {
                   <span className="dot" aria-hidden />
                   What AEC Agents do
                 </p>
-                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                <h2 className="heading-section text-surface">
                   From drawings to decisions
                 </h2>
                 <p className="mt-4 text-pretty text-slate-600 sm:text-lg">
@@ -152,7 +152,7 @@ export default function AecAgentsPage() {
                   {capabilities.map((b) => (
                     <li key={b} className="flex gap-2.5">
                       <span
-                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[#0ea5e9] to-[#06b6d4]"
+                        className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-[var(--lime-dim)] to-[#06b6d4]"
                         aria-hidden
                       />
                       <span>{b}</span>
@@ -166,7 +166,7 @@ export default function AecAgentsPage() {
       </section>
 
       {/* Workflow */}
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20" id="workflow">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="workflow">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -174,7 +174,7 @@ export default function AecAgentsPage() {
                 <span className="dot" aria-hidden />
                 How it works
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Five steps from upload to insight
               </h2>
             </div>
@@ -198,7 +198,7 @@ export default function AecAgentsPage() {
       </section>
 
       {/* KPIs */}
-      <section className="border-t border-slate-200/60 gradient-surface py-16 sm:py-20" id="results">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20" id="results">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -206,7 +206,7 @@ export default function AecAgentsPage() {
                 <span className="dot" aria-hidden />
                 Results
               </p>
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 What teams see in production
               </h2>
               <p className="mt-3 text-slate-600">
@@ -229,11 +229,11 @@ export default function AecAgentsPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-slate-200/60 bg-white py-16 sm:py-20">
+      <section className="border-t border-line/60 gradient-surface py-16 sm:py-20">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+              <h2 className="heading-section text-surface">
                 Ready to cut your preconstruction cycle?
               </h2>
               <p className="mt-3 text-slate-600">

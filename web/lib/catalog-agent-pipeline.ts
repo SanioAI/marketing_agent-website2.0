@@ -1,3 +1,4 @@
+import type { AppIconName } from "@/lib/icons";
 import type {
   AgentRunState,
   CatalogAgentId,
@@ -8,8 +9,8 @@ export interface PipelineBucketDef {
   id: string;
   title: string;
   subtitle: string;
-  headerEmoji: string;
-  agents: { id: CatalogAgentId; emoji: string; label: string }[];
+  headerIcon: AppIconName;
+  agents: { id: CatalogAgentId; icon: AppIconName; label: string }[];
 }
 
 export const PIPELINE_BUCKETS: PipelineBucketDef[] = [
@@ -17,34 +18,34 @@ export const PIPELINE_BUCKETS: PipelineBucketDef[] = [
     id: "data_quality",
     title: "Data Quality",
     subtitle: "Extract, classify, and enrich your product data",
-    headerEmoji: "📋",
+    headerIcon: "ClipboardList",
     agents: [
-      { id: "extraction", emoji: "📋", label: "Extraction Agent — structured attributes" },
-      { id: "bundle", emoji: "📦", label: "Bundle Agent — multi-item bundles" },
-      { id: "taxonomy", emoji: "🏷️", label: "Taxonomy Agent — 6000+ categories" },
-      { id: "schema", emoji: "🗂️", label: "Schema Agent — Schema.org markup" },
-      { id: "enrichment", emoji: "🌐", label: "Enrichment Agent — missing product data" },
+      { id: "extraction", icon: "ClipboardList", label: "Extraction Agent — structured attributes" },
+      { id: "bundle", icon: "Boxes", label: "Bundle Agent — multi-item bundles" },
+      { id: "taxonomy", icon: "Tag", label: "Taxonomy Agent — 6000+ categories" },
+      { id: "schema", icon: "FolderTree", label: "Schema Agent — Schema.org markup" },
+      { id: "enrichment", icon: "Globe", label: "Enrichment Agent — missing product data" },
     ],
   },
   {
     id: "content_seo",
     title: "Content & SEO",
     subtitle: "Optimized content and search rankings",
-    headerEmoji: "✍️",
+    headerIcon: "PenLine",
     agents: [
-      { id: "content", emoji: "✍️", label: "Content Agent — titles & descriptions" },
-      { id: "seo", emoji: "🔍", label: "SEO Agent — meta titles & descriptions" },
-      { id: "faq", emoji: "❓", label: "FAQ Generator — product FAQs" },
+      { id: "content", icon: "PenLine", label: "Content Agent — titles & descriptions" },
+      { id: "seo", icon: "Search", label: "SEO Agent — meta titles & descriptions" },
+      { id: "faq", icon: "CircleHelp", label: "FAQ Generator — product FAQs" },
     ],
   },
   {
     id: "compliance",
     title: "Compliance",
     subtitle: "Regulatory compliance and safety",
-    headerEmoji: "📜",
+    headerIcon: "ScrollText",
     agents: [
-      { id: "hazmat", emoji: "⚠️", label: "Hazmat Agent — hazardous materials" },
-      { id: "compliance", emoji: "📜", label: "Compliance Agent — tax codes & regulations" },
+      { id: "hazmat", icon: "AlertTriangle", label: "Hazmat Agent — hazardous materials" },
+      { id: "compliance", icon: "ScrollText", label: "Compliance Agent — tax codes & regulations" },
     ],
   },
 ];

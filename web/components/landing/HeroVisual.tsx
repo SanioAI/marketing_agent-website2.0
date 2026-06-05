@@ -8,7 +8,7 @@ export function HeroVisual() {
 
   return (
     <div className="relative mx-auto w-full max-w-lg">
-      <div className="absolute -inset-6 -z-10 rounded-[2.75rem] bg-gradient-to-br from-blue-200/30 via-sky-100/20 to-slate-100/40 blur-2xl" />
+      <div className="absolute -inset-6 -z-10 rounded-[2.75rem] bg-gradient-to-br from-lime/20 via-paper-dim/20 to-line/30 blur-2xl" />
       <div className="absolute -inset-8 -z-20 rounded-[3rem] bg-[radial-gradient(600px_260px_at_65%_10%,rgba(14,165,233,0.14),transparent_60%),radial-gradient(640px_280px_at_10%_20%,rgba(37,99,235,0.18),transparent_60%)]" />
       <motion.figure
         className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 p-2 shadow-2xl shadow-slate-900/10"

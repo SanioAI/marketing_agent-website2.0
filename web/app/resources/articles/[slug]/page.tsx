@@ -51,8 +51,8 @@ const mdComponents: Components = {
     <ol className="my-4 list-decimal space-y-2 pl-6 text-slate-700">{children}</ol>
   ),
   li: ({ children }) => (
-    <li className="flex gap-3 leading-relaxed text-slate-600 marker:text-blue-400">
-      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
+    <li className="flex gap-3 leading-relaxed text-slate-600 marker:text-lime">
+      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-lime" aria-hidden />
       <span>{children}</span>
     </li>
   ),
@@ -63,13 +63,13 @@ const mdComponents: Components = {
   a: ({ href, children }) => (
     <a
       href={href}
-      className="rounded bg-blue-50 px-1 py-0.5 text-blue-700 transition-colors hover:bg-blue-100"
+      className="rounded bg-paper-dim px-1 py-0.5 text-ink transition-colors hover:bg-paper-dim"
     >
       {children}
     </a>
   ),
   blockquote: ({ children }) => (
-    <blockquote className="my-6 rounded-xl border-l-4 border-blue-400 bg-blue-50/60 px-5 py-4 text-slate-700">
+    <blockquote className="my-6 rounded-xl border-l-4 border-lime bg-paper-dim/60 px-5 py-4 text-slate-700">
       {children}
     </blockquote>
   ),
@@ -125,18 +125,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="gradient-surface border-b border-slate-200/60 py-14 sm:py-20">
+      <section className="gradient-surface border-b border-line/60 py-14 sm:py-20">
         <Container>
           <div className="mx-auto max-w-3xl">
             {/* Breadcrumb */}
             <div className="mb-4 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-              <Link href="/resources/articles" className="transition-colors hover:text-blue-600">
+              <Link href="/resources/articles" className="transition-colors hover:text-ink">
                 Articles
               </Link>
               <span>›</span>
               {hub && (
                 <>
-                  <Link href={hub.href} className="transition-colors hover:text-blue-600">
+                  <Link href={hub.href} className="transition-colors hover:text-ink">
                     {hub.label}
                   </Link>
                   <span>›</span>
@@ -145,7 +145,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <span className="max-w-[200px] truncate text-slate-400">{data.title}</span>
             </div>
             <div className="mb-4 flex flex-wrap items-center gap-3">
-              <span className="rounded-full border border-blue-200/70 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+              <span className="rounded-full border border-line/70 bg-paper-dim px-3 py-1 text-xs font-medium text-ink">
                 {data.pillar || "Catalog Agents"}
               </span>
               <span className="text-xs text-slate-400">
@@ -182,7 +182,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                 {/* Related Articles */}
                 {relatedArticles.length > 0 && (
-                  <div className="mt-12 border-t border-slate-200/60 pt-10">
+                  <div className="mt-12 border-t border-line/60 pt-10">
                     <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-400">
                       Related Articles
                     </p>
@@ -191,12 +191,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         <Link
                           key={a.href}
                           href={a.href}
-                          className="group rounded-xl border border-slate-200 bg-slate-50/60 p-4 transition hover:border-blue-200 hover:bg-blue-50/40"
+                          className="group rounded-xl border border-slate-200 bg-slate-50/60 p-4 transition hover:border-line hover:bg-paper-dim/40"
                         >
-                          <p className="text-sm font-medium leading-snug text-slate-900 transition-colors group-hover:text-blue-700">
+                          <p className="text-sm font-medium leading-snug text-slate-900 transition-colors group-hover:text-ink">
                             {a.title}
                           </p>
-                          <p className="mt-1 text-xs text-blue-600">Read →</p>
+                          <p className="mt-1 text-xs text-ink">Read →</p>
                         </Link>
                       ))}
                     </div>
@@ -208,13 +208,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <aside className="hidden w-56 shrink-0 lg:block">
                 <div className="sticky top-24 space-y-4">
                   <RelatedPlatform />
-                  <div className="rounded-2xl border border-blue-100 bg-blue-50/60 p-4">
-                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-600">
+                  <div className="rounded-2xl border border-line bg-paper-dim/60 p-4">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-ink">
                       Try it
                     </p>
                     <Link
                       href="/about#contact"
-                      className="inline-flex w-full items-center justify-center rounded-xl bg-[#2563eb] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[#1d4ed8]"
+                      className="inline-flex w-full items-center justify-center rounded-xl bg-[var(--lime)] px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-[var(--lime-dim)]"
                     >
                       Book a pilot
                     </Link>
